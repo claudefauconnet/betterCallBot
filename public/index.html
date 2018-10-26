@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://unpkg.com/adaptivecards/dist/adaptivecards.js"></script>
+<script type="text/javascript" src="https://unpkg.com/markdown-it/dist/markdown-it.js"></script>
+<script>
+
+
+    function test() {
+
+        var card = {
+            "type":
+                "AdaptiveCard",
+            "version":
+                "1.0",
+            "body":
+                [
+                    {
+                        "type": "Image",
+                        "url": "http://adaptivecards.io/content/adaptive-card-50.png"
+                    },
+                    {
+                        "type": "TextBlock",
+                        "text": "Hello **Adaptive Cards!**"
+                    }
+                ],
+            "actions":
+                [
+                    {
+                        "type": "Action.OpenUrl",
+                        "title": "Learn more",
+                        "url": "http://adaptivecards.io"
+                    },
+                    {
+                        "type": "Action.OpenUrl",
+                        "title": "GitHub",
+                        "url": "http://github.com/Microsoft/AdaptiveCards"
+                    }
+                ]
+        };
+        var html = getRenderedCard(card);
+        $("#cardRendering").html(html);
+    }
+
+    function getRenderedCard(card) {
+
+        var adaptiveCard = new AdaptiveCards.AdaptiveCard();
+
+        adaptiveCard.hostConfig = new AdaptiveCards.HostConfig({
+            fontFamily: "Segoe UI, Helvetica Neue, sans-serif"
+            // More host config options
+        });
+
+        adaptiveCard.onExecuteAction = function (action) {
+            alert("Ow!");
+        }
+
+
+        AdaptiveCards.processMarkdown = function (text) {
+            return markdownit().render(text);
+        }
+
+        adaptiveCard.parse(card);
+
+        var renderedCard = adaptiveCard.render();
+
+        return renderedCard;
+
+
+    }
+
+
+    function renderDocxs() {
+        var card = {
+            "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+            "type": "AdaptiveCard",
+            "version": "1.0",
+            "body":[]
+        }
+
+        $.ajax({
+            type: "POST",
+            url: "/getCards",
+            data: {},
+            dataType: "json",
+            success: function (json) {
+                $("#cardRendering").html("");
+                json.forEach(function (body) {
+                    card.body=body;
+                 console.log(body);
+                 //   card.body= [{"type":"Container","items":[{"separator":true,"spacing":"medium","type":"TextBlock","text":"Reference documents","weight":"bolder","size":"medium","wrap":true},{"type":"TextBlock","text":"CR RC MIT 402: Implementation and control of use of Refining & Chemicals Industrial Standards ","wrap":true,"color":"accent","maxlines":4},{"type":"FactSet","facts":[{"title":"Document :"},{"title":"Score :","value":"88"}]}]}];
+                    var cardDiv = getRenderedCard(card);
+                    $("#cardRendering").append(cardDiv);
+                })
+
+
+            }, error: function (err) {
+                console.log(err);
+            }
+
+
+        })
+
+
+    }
+
+
+</script>
+
+
+<style>
+
+
+    .boxes {
+        display: table;
+        width: 100%;
+        height: 500px;
+    }
+
+    .box {
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 13em;
+    }
+
+    .ac-container{
+
+        border-style: solid;
+    }
+
+
+</style>
+<body>
+
+
+<button onclick="renderDocxs()">renderDocxs</button>
+<button onclick="test()">text</button>
+<br>
+<div class="boxes">
+    <textarea id="cardText" class="box" cols="10"> </textarea>
+
+    <div id="cardRendering" class="box"></div>
+
+</div>
+</body>
+</html>
