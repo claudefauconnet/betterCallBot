@@ -219,7 +219,7 @@ var docExtractorToCsv = {
 
         var elasticAllParagraphs=[];
 
-
+        var docId = 1
         xmlPaths.forEach(function (xmlPath) {
 
 
@@ -251,12 +251,12 @@ var docExtractorToCsv = {
 
                 var docTitle = extractDocTitle(headerTables);
 
-                var docId = Math.round((Math.random() * 100000))
-                var paragraphId = Math.round((Math.random() * 100000))
-                var chapterId = Math.round((Math.random() * 100000))
+
+
+                var chapterId = 1
 
                 jsonContent.forEach(function (chapter, index) {
-
+                    var paragraphId = 1
                     if (!chapter.key)
                         chapter.key = "";
                     chapter.title = removeHtmlTags(chapter.title);
@@ -291,7 +291,7 @@ var docExtractorToCsv = {
                             columnTexts += columnText + "\n";
 
 
-                            elasticAllParagraphs.push(formatToElastic.formatParagraphs(elasticSourceObj,docId,chapterId,paragraphId));
+                            elasticAllParagraphs.push(formatToElastic.formatParagraphs(elasticSourceObj,docId,(docId*10000)+chapterId,(docId*10000)+(chapterId*100)+paragraphId));
 
                             // console.log(botText + "\n");
 
@@ -305,12 +305,13 @@ var docExtractorToCsv = {
 
 
                 })
+                docId++;
             } catch (e) {
                 console.log(e);
                 //     str += "ERROR processing " + fileName + " : " + e + "\n";
                 //    botObjs.push({ERROR: " processing " + fileName + " : " + e})
             }
-            docId++;
+
 
         });
         //  console.log(str)
@@ -337,7 +338,7 @@ module.exports = docExtractorToCsv;
 
 
 var dir = "D:\\Total\\docs\\GM MEC Word\\documents\\test"
-//dir = "D:\\Total\\docs\\GM MEC Word\\documents"
+dir = "D:\\Total\\docs\\GM MEC Word\\documents"
 //dir = "D:\\Total\\docs\\GS MEC Word\\documents"
 //dir="D:\\ATD_Baillet\\applicationTemporaire\\fichiersVersement\\documents"
 if (true) {

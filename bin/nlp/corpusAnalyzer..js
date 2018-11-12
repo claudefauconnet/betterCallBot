@@ -2,10 +2,10 @@ var fs = require('fs');
 var path = require('path');
 var async = require('async')
 var coreNlp = require("../nlp/coreNlp..js");
-var thesaurus = require("../nlp/thesaurus..js");
+var elasticQuery = require("./elasticQuery..js");
 
 
-var graphBuilder = {
+var corpusAnalyzer = {
 
     extractAllTokens: function (docs, callback) {
         var tokenizedDocs = [];
@@ -36,15 +36,33 @@ if (!tokens)
                         doc.numTokens = [];
 
                     tokenizedDocs.push(doc);
-                    async.eachSeries(tokens.nouns, function (token, callbackEachToken) {
+   corpusAnalyzer.getThesaurusConcepts(tokens.nouns,function(err,result) {
+       if (result.concepts && result.concepts.length > 0) {
+           result.concepts.forEach(function (concept) {
+               doc.nounTokens.push(concept);
+               allNounTokens[result.noun].concepts.push(thesaurusEntry._source)
+           })
+
+       }
+       else {
+           doc.nounTokens.push(result.noun);
+       }
+   })
+
+
+
+
+                 /*   async.eachSeries(tokens.nouns, function (token, callbackEachToken) {
                         // tokens.nouns.forEach(function(token){
                         var lemma = token.lemma.toLocaleLowerCase();
                         if (lemma.length > 3 && lemma.indexOf("<") < 0) {
+
+
                             doc.nounTokens.push(lemma);
                             if (!allNounTokens[lemma] ) {
                                 var obj = {term: lemma, concepts: []}
                                 allNounTokens[lemma]=obj;
-                                thesaurus.findInElasticThesaurus(lemma, "totalref_thesaurus", function (err, result) {
+                                elasticQuery.findInElasticThesaurus(lemma, "totalref_thesaurus", function (err, result) {
                                     if(result && result.forEach) {
                                         result.forEach(function (thesaurusEntry) {
                                             allNounTokens[lemma].concepts.push(thesaurusEntry._source)
@@ -62,7 +80,7 @@ if (!tokens)
                          callbackEachDoc();
 
 
-                    })
+                    })*/
 
 
                 }
@@ -75,14 +93,52 @@ if (!tokens)
                 return callback(null, {tokenizedDocs: tokenizedDocs, allNounTokens: allNounTokens})
 
             } )
+    },
+
+
+    getThesaurusConcepts:function(nouns){
+
+        var queryStrings=[];
+        var groups=[];
+        for(var i=nouns.length;i>=0;i--) {
+            var group=[];
+            nouns.forEach(function (noun,index) {
+                if (index >= i)
+                    return;
+                group.push(noun)
+            })
+            console.log(group.toString())
+
+        }
+        for(var i=0;i<nouns.length;i++) {
+            var group=[];
+            nouns.forEach(function (noun,index) {
+                if (index <=i)
+                    return;
+                group.push(noun)
+            })
+            console.log(group.toString())
+
+        }
+      //  console.log(group.toString())
+        groups.push.apply(groups,group)
+
+
+
+
+
     }
 
 
 }
 
+if(true){
+    corpusAnalyzer.getThesaurusConcepts("anti surge system failure".split(" "))
 
-if (true
-) {
+}
+
+
+if (false) {
 
     var file = "D:\\Total\\docs\\GM MEC Word\\documents\\test\\elasticAllParagraphs.json";
     var file = "D:\\Total\\docs\\GM MEC Word\\documents\\elasticAllParagraphs.json";
@@ -97,4 +153,4 @@ if (true
 
 }
 
-module.exports = graphBuilder;
+module.exports = corpusAnalyzer;

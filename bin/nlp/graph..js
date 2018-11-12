@@ -37,7 +37,7 @@ var graph = {
             var groups = [];
             var currentGroup = [];
             statements.forEach(function (statement) {
-                if (currentGroup.length > 50) {
+                if (currentGroup.length > 95) {
                     groups.push(currentGroup);
                     currentGroup = [];
                 }
