@@ -1,0 +1,2204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:Rdf xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:proxem="http://www.proxem.com" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#ConceptsTransactionnels">
+    <skos:prefLabel xml:lang="en">concepts transactionnels</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#ConceptsTransactionnels-MoreThan">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#ConceptsTransactionnels" />
+    <skos:prefLabel xml:lang="en">More than</skos:prefLabel>
+    <skos:altLabel xml:lang="en">greater than</skos:altLabel>
+    <skos:altLabel xml:lang="en">higher than</skos:altLabel>
+    <skos:altLabel xml:lang="en">exceed</skos:altLabel>
+    <skos:altLabel xml:lang="en">higher pressure than</skos:altLabel>
+    <skos:altLabel xml:lang="en">Higher temperature than</skos:altLabel>
+    <skos:altLabel xml:lang="en">higher design pressures than</skos:altLabel>
+    <skos:altLabel xml:lang="en">more critical in steel and bronze than</skos:altLabel>
+    <skos:altLabel xml:lang="en">more randomly on a surface than</skos:altLabel>
+    <skos:altLabel xml:lang="en">more % higher than</skos:altLabel>
+    <skos:altLabel xml:lang="en">more bearing failures than</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#ConceptsTransactionnels-LessThan">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#ConceptsTransactionnels" />
+    <skos:prefLabel xml:lang="en">Less than</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Less subject to spurious trip than</skos:altLabel>
+    <skos:altLabel xml:lang="en">less important than</skos:altLabel>
+    <skos:altLabel xml:lang="en">less tolerant of misalignment than</skos:altLabel>
+    <skos:altLabel xml:lang="en">lower than</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Sites">
+    <skos:prefLabel xml:lang="en">Sites</skos:prefLabel>
+    <skos:altLabel xml:lang="en">plant</skos:altLabel>
+    <skos:altLabel xml:lang="en">plants</skos:altLabel>
+    <skos:altLabel xml:lang="en">site</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Sites-Donges">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Sites" />
+    <skos:prefLabel xml:lang="en">Donges</skos:prefLabel>
+    <skos:altLabel xml:lang="en">DGS</skos:altLabel>
+    <skos:altLabel xml:lang="en">Donges Refinery</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Sites-GrandPuits">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Sites" />
+    <skos:prefLabel xml:lang="en">Grand Puits</skos:prefLabel>
+    <skos:altLabel xml:lang="en">GPS</skos:altLabel>
+    <skos:altLabel xml:lang="en">GRANDPUITS</skos:altLabel>
+    <skos:altLabel xml:lang="en">GRANDPUITS refinery</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Sites-Antwerp">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Sites" />
+    <skos:prefLabel xml:lang="en">Antwerp</skos:prefLabel>
+    <skos:altLabel xml:lang="en">ANV</skos:altLabel>
+    <skos:altLabel xml:lang="en">ANTWERP PLATFORM</skos:altLabel>
+    <skos:altLabel xml:lang="en">TOTAL REFINERY ANTWERP</skos:altLabel>
+    <skos:altLabel xml:lang="en">TOA</skos:altLabel>
+    <skos:altLabel xml:lang="en">TOTAL OLEFINS ANTWERP</skos:altLabel>
+    <skos:altLabel xml:lang="en">FAO</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Sites-Lindsey">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Sites" />
+    <skos:prefLabel xml:lang="en">Lindsey</skos:prefLabel>
+    <skos:altLabel xml:lang="en">LOR</skos:altLabel>
+    <skos:altLabel xml:lang="en">LINDSEY OIL REFINERY</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Sites-Gonfreville">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Sites" />
+    <skos:prefLabel xml:lang="en">Gonfreville</skos:prefLabel>
+    <skos:altLabel xml:lang="en">PN</skos:altLabel>
+    <skos:altLabel xml:lang="en">NORMANDY</skos:altLabel>
+    <skos:altLabel xml:lang="en">NORMANDY PLATFORM</skos:altLabel>
+    <skos:altLabel xml:lang="en">RC RBE NOR</skos:altLabel>
+    <skos:altLabel xml:lang="en">RC/RBE/NOR</skos:altLabel>
+    <skos:altLabel xml:lang="en">Site : NOR</skos:altLabel>
+    <skos:altLabel xml:lang="en">NOR</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Sites-Leuna">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Sites" />
+    <skos:prefLabel xml:lang="en">Leuna</skos:prefLabel>
+    <skos:altLabel xml:lang="en">LEU</skos:altLabel>
+    <skos:altLabel xml:lang="en">LEUNA Refinery</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Sites-PortArthur">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Sites" />
+    <skos:prefLabel xml:lang="en">Port Arthur</skos:prefLabel>
+    <skos:altLabel xml:lang="en">PAR</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Sites-Feyzin">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Sites" />
+    <skos:prefLabel xml:lang="en">Feyzin</skos:prefLabel>
+    <skos:altLabel xml:lang="en">FZN</skos:altLabel>
+    <skos:altLabel xml:lang="en">FEYZIN REFINERY</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Sites-Provence">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Sites" />
+    <skos:prefLabel xml:lang="en">Provence</skos:prefLabel>
+    <skos:altLabel xml:lang="en">RC RBE RP</skos:altLabel>
+    <skos:altLabel xml:lang="en">RC/RBE/RP</skos:altLabel>
+    <skos:altLabel xml:lang="en">Provence refinery</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Sites-Laporte">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Sites" />
+    <skos:prefLabel xml:lang="en">Laporte</skos:prefLabel>
+    <skos:altLabel xml:lang="en">LPT</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Sites-Feluy">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Sites" />
+    <skos:prefLabel xml:lang="en">Feluy</skos:prefLabel>
+    <skos:altLabel xml:lang="en">FLY</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Sites-Carville">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Sites" />
+    <skos:prefLabel xml:lang="en">Carville</skos:prefLabel>
+    <skos:altLabel xml:lang="en">CRV</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Sites-Carling">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Sites" />
+    <skos:prefLabel xml:lang="en">Carling</skos:prefLabel>
+    <skos:altLabel xml:lang="en">CLN</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Sites-Samsung">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Sites" />
+    <skos:prefLabel xml:lang="en">Samsung</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Sites-Naphtachimie">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Sites" />
+    <skos:prefLabel xml:lang="en">Naphtachimie</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Sites-BasfFina">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Sites" />
+    <skos:prefLabel xml:lang="en">Basf-Fina</skos:prefLabel>
+    <skos:altLabel xml:lang="en">BFLP</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Component">
+    <skos:prefLabel xml:lang="en">Component</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Component-Bearing">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Component" />
+    <skos:prefLabel xml:lang="en">Bearing</skos:prefLabel>
+    <skos:altLabel xml:lang="en">bearings</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Component-Bearing-BearingIsolator">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Component-Bearing" />
+    <skos:prefLabel xml:lang="en">Bearing isolator</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Component-Bearing-BearingHousingSealing">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Component-Bearing" />
+    <skos:prefLabel xml:lang="en">Bearing housing sealing</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Component-Bearing-PerThrustBearing">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Component-Bearing" />
+    <skos:prefLabel xml:lang="en">Per thrust bearing</skos:prefLabel>
+    <skos:altLabel xml:lang="en">thrust bearing</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Component-Bearing-HydrodynamicRadialBearings">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Component-Bearing" />
+    <skos:prefLabel xml:lang="en">Hydrodynamic radial bearings</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Component-Bearing-LubricatedBearings">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Component-Bearing" />
+    <skos:prefLabel xml:lang="en">Lubricated bearings</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Component-Bearing-AntifrictionBearings">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Component-Bearing" />
+    <skos:prefLabel xml:lang="en">Antifriction bearings</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Component-Bearing-ThrustBearings">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Component-Bearing" />
+    <skos:prefLabel xml:lang="en">Thrust bearings</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Component-Bearing-SumpOilLubricatedBearings">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Component-Bearing" />
+    <skos:prefLabel xml:lang="en">Sump oil lubricated bearings</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Component-Bearing-ThrustBearing">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Component-Bearing" />
+    <skos:prefLabel xml:lang="en">Thrust bearing</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Component-Bearing-HydrodynamicBearings">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Component-Bearing" />
+    <skos:prefLabel xml:lang="en">Hydrodynamic bearings</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Component-Bearing-SleeveBearings">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Component-Bearing" />
+    <skos:prefLabel xml:lang="en">Sleeve bearings</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Component-Bearing-BearingIsolators">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Component-Bearing" />
+    <skos:prefLabel xml:lang="en">Bearing isolators</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Component-Bearing-RollingElementBearings">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Component-Bearing" />
+    <skos:prefLabel xml:lang="en">Rolling element bearings</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Component-Bearing-CompleteThrustBearings">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Component-Bearing" />
+    <skos:prefLabel xml:lang="en">Complete thrust bearings</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Component-Bearing-ConnectingRodBearing">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Component-Bearing" />
+    <skos:prefLabel xml:lang="en">Connecting rod bearing</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Component-Bearing-GreaseLubricatedBearings">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Component-Bearing" />
+    <skos:prefLabel xml:lang="en">Grease lubricated bearings</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Component-Bearing-JournalBearing">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Component-Bearing" />
+    <skos:prefLabel xml:lang="en">Journal bearing</skos:prefLabel>
+    <skos:altLabel xml:lang="en">journal bearings</skos:altLabel>
+    <skos:altLabel xml:lang="en">journal and thrust bearings</skos:altLabel>
+    <skos:altLabel xml:lang="en">journal sleeve bearings</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Component-Bearing-BearingHousing">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Component-Bearing" />
+    <skos:prefLabel xml:lang="en">Bearing housing</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Bearing housings</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Component-Valve">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Component" />
+    <skos:prefLabel xml:lang="en">Valve</skos:prefLabel>
+    <skos:altLabel xml:lang="en">valves</skos:altLabel>
+    <skos:altLabel xml:lang="en">valved</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Component-Valve-SolenoidValve">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Component-Valve" />
+    <skos:prefLabel xml:lang="en">Solenoid valve</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Component-Valve-GateValve">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Component-Valve" />
+    <skos:prefLabel xml:lang="en">Gate valve</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Component-Valve-AntiSurgeValve">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Component-Valve" />
+    <skos:prefLabel xml:lang="en">Anti surge valve</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Anti-surge valve</skos:altLabel>
+    <skos:altLabel xml:lang="en">antisurge valve</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Component-Valve-BlockValve">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Component-Valve" />
+    <skos:prefLabel xml:lang="en">Block valve</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Component-Valve-ControlValve">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Component-Valve" />
+    <skos:prefLabel xml:lang="en">Control valve</skos:prefLabel>
+    <skos:altLabel xml:lang="en">control valves</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Component-Valve-ReliefValve">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Component-Valve" />
+    <skos:prefLabel xml:lang="en">Relief valve</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Relief valves</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Component-Valve-CheckValve">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Component-Valve" />
+    <skos:prefLabel xml:lang="en">Check valve</skos:prefLabel>
+    <skos:altLabel xml:lang="en">check valves</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Component-Valve-FlangedValve">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Component-Valve" />
+    <skos:prefLabel xml:lang="en">Flanged valve</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Component-Piston">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Component" />
+    <skos:prefLabel xml:lang="en">Piston</skos:prefLabel>
+    <skos:altLabel xml:lang="en">pistons</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Component-Piston-PistonRod">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Component-Piston" />
+    <skos:prefLabel xml:lang="en">Piston rod</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Component-Piston-PistonRings">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Component-Piston" />
+    <skos:prefLabel xml:lang="en">Piston rings</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Component-HeatExchanger">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Component" />
+    <skos:prefLabel xml:lang="en">Heat exchanger</skos:prefLabel>
+    <skos:altLabel xml:lang="en">heat exchangers</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Component-Drum">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Component" />
+    <skos:prefLabel xml:lang="en">Drum</skos:prefLabel>
+    <skos:altLabel xml:lang="en">drums</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Component-Filter">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Component" />
+    <skos:prefLabel xml:lang="en">Filter</skos:prefLabel>
+    <skos:altLabel xml:lang="en">filters</skos:altLabel>
+    <skos:altLabel xml:lang="en">filtered</skos:altLabel>
+    <skos:altLabel xml:lang="en">filtering</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Component-Cooler">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Component" />
+    <skos:prefLabel xml:lang="en">Cooler</skos:prefLabel>
+    <skos:altLabel xml:lang="en">coolers</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Component-Coupling">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Component" />
+    <skos:prefLabel xml:lang="en">Coupling</skos:prefLabel>
+    <skos:altLabel xml:lang="en">couplings</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Component-Shaft">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Component" />
+    <skos:prefLabel xml:lang="en">Shaft</skos:prefLabel>
+    <skos:altLabel xml:lang="en">shafts</skos:altLabel>
+    <skos:altLabel xml:lang="en">shafting</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Component-Rotor">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Component" />
+    <skos:prefLabel xml:lang="en">Rotor</skos:prefLabel>
+    <skos:altLabel xml:lang="en">rotors</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Component-Impeller">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Component" />
+    <skos:prefLabel xml:lang="en">Impeller</skos:prefLabel>
+    <skos:altLabel xml:lang="en">impellers</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Component-Blade">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Component" />
+    <skos:prefLabel xml:lang="en">Blade</skos:prefLabel>
+    <skos:altLabel xml:lang="en">blades</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Component-Crankshaft">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Component" />
+    <skos:prefLabel xml:lang="en">Crankshaft</skos:prefLabel>
+    <skos:altLabel xml:lang="en">CRANKSHAFTS</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Component-Rod">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Component" />
+    <skos:prefLabel xml:lang="en">Rod</skos:prefLabel>
+    <skos:altLabel xml:lang="en">rods</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Component-Rod-RodPacking">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Component-Rod" />
+    <skos:prefLabel xml:lang="en">Rod packing</skos:prefLabel>
+    <skos:altLabel xml:lang="en">packing rings material, the rod</skos:altLabel>
+    <skos:altLabel xml:lang="en">rod roughness in the packing</skos:altLabel>
+    <skos:altLabel xml:lang="en">rod pressure packing</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Component-Liner">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Component" />
+    <skos:prefLabel xml:lang="en">Liner</skos:prefLabel>
+    <skos:altLabel xml:lang="en">liners</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Component-Bolt">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Component" />
+    <skos:prefLabel xml:lang="en">Bolt</skos:prefLabel>
+    <skos:altLabel xml:lang="en">bolts</skos:altLabel>
+    <skos:altLabel xml:lang="en">bolted</skos:altLabel>
+    <skos:altLabel xml:lang="en">bolting</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Component-BalancePiston">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Component" />
+    <skos:prefLabel xml:lang="en">Balance Piston</skos:prefLabel>
+    <skos:altLabel xml:lang="en">balance pistons</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Component-Seal">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Component" />
+    <skos:prefLabel xml:lang="en">Seal</skos:prefLabel>
+    <skos:altLabel xml:lang="en">packing</skos:altLabel>
+    <skos:altLabel xml:lang="en">packings</skos:altLabel>
+    <skos:altLabel xml:lang="en">Gas seal</skos:altLabel>
+    <skos:altLabel xml:lang="en">wet seal</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Component-Seal-GasSeal">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Component-Seal" />
+    <skos:prefLabel xml:lang="en">Gas seal</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Component-Seal-WetSeal">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Component-Seal" />
+    <skos:prefLabel xml:lang="en">Wet seal</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Component-Ring">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Component" />
+    <skos:prefLabel xml:lang="en">Ring</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Component-Ring-WearRing">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Component-Ring" />
+    <skos:prefLabel xml:lang="en">Wear ring</skos:prefLabel>
+    <skos:altLabel xml:lang="en">wear rings</skos:altLabel>
+    <skos:altLabel xml:lang="en">wearing rings</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Component-Ring-RiderRing">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Component-Ring" />
+    <skos:prefLabel xml:lang="en">Rider ring</skos:prefLabel>
+    <skos:altLabel xml:lang="en">rider rings</skos:altLabel>
+    <skos:altLabel xml:lang="en">rider band</skos:altLabel>
+    <skos:altLabel xml:lang="en">Rider bands</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Component-Ring-PistonRing">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Component-Ring" />
+    <skos:prefLabel xml:lang="en">Piston ring</skos:prefLabel>
+    <skos:altLabel xml:lang="en">piston rings</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Component-Ring-ORing">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Component-Ring" />
+    <skos:prefLabel xml:lang="en">O ring</skos:prefLabel>
+    <skos:altLabel xml:lang="en">O rings</skos:altLabel>
+    <skos:altLabel xml:lang="en">O"-rings</skos:altLabel>
+    <skos:altLabel xml:lang="en">O'ring</skos:altLabel>
+    <skos:altLabel xml:lang="en">O"-ring</skos:altLabel>
+    <skos:altLabel xml:lang="en">O" rings</skos:altLabel>
+    <skos:altLabel xml:lang="en">O" ring</skos:altLabel>
+    <skos:altLabel xml:lang="en">gasket ring</skos:altLabel>
+    <skos:altLabel xml:lang="en">Gaskets and "O"-rings</skos:altLabel>
+    <skos:altLabel xml:lang="en">gasket or o'ring</skos:altLabel>
+    <skos:altLabel xml:lang="en">gasket shall be O'ring</skos:altLabel>
+    <skos:altLabel xml:lang="en">gaskets shall have inner and outer rings</skos:altLabel>
+    <skos:altLabel xml:lang="en">gaskets or O rings</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Component-Sensors">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Component" />
+    <skos:prefLabel xml:lang="en">Sensors</skos:prefLabel>
+    <skos:altLabel xml:lang="en">position detection probes</skos:altLabel>
+    <skos:altLabel xml:lang="en">keyphasor</skos:altLabel>
+    <skos:altLabel xml:lang="en">probes</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Component-Sensors-PositionProbes">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Component-Sensors" />
+    <skos:prefLabel xml:lang="en">Position probes</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Position probe</skos:altLabel>
+    <skos:altLabel xml:lang="en">position detections and a phase reference probe</skos:altLabel>
+    <skos:altLabel xml:lang="en">position and axial position probe</skos:altLabel>
+    <skos:altLabel xml:lang="en">position detection probes</skos:altLabel>
+    <skos:altLabel xml:lang="en">position detection and a phase reference probe</skos:altLabel>
+    <skos:altLabel xml:lang="en">Position sensor</skos:altLabel>
+    <skos:altLabel xml:lang="en">Position sensors</skos:altLabel>
+    <skos:altLabel xml:lang="en">Position detection</skos:altLabel>
+    <skos:altLabel xml:lang="en">position detections</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Component-Sensors-VibrationProbes">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Component-Sensors" />
+    <skos:prefLabel xml:lang="en">Vibration probes</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Vibration probe</skos:altLabel>
+    <skos:altLabel xml:lang="en">vibration energy probe</skos:altLabel>
+    <skos:altLabel xml:lang="en">vibration (proximity probes</skos:altLabel>
+    <skos:altLabel xml:lang="en">vibration energy probes</skos:altLabel>
+    <skos:altLabel xml:lang="en">vibration proximity probes</skos:altLabel>
+    <skos:altLabel xml:lang="en">Vibration non contacting probes</skos:altLabel>
+    <skos:altLabel xml:lang="en">Vibration sensor</skos:altLabel>
+    <skos:altLabel xml:lang="en">vibration. The sensor</skos:altLabel>
+    <skos:altLabel xml:lang="en">vibration sensors</skos:altLabel>
+    <skos:altLabel xml:lang="en">Vibration detection</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Component-SurgeSystem">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Component" />
+    <skos:prefLabel xml:lang="en">Surge system</skos:prefLabel>
+    <skos:altLabel xml:lang="en">anti surge controller</skos:altLabel>
+    <skos:altLabel xml:lang="en">anti surge control</skos:altLabel>
+    <skos:altLabel xml:lang="en">anti surge system</skos:altLabel>
+    <skos:altLabel xml:lang="en">anti surge protection system</skos:altLabel>
+    <skos:altLabel xml:lang="en">Anti surge control system</skos:altLabel>
+    <skos:altLabel xml:lang="en">anti surge protection loop system</skos:altLabel>
+    <skos:altLabel xml:lang="en">anti-surge system</skos:altLabel>
+    <skos:altLabel xml:lang="en">Anti-surge protection system</skos:altLabel>
+    <skos:altLabel xml:lang="en">anti-surge control system</skos:altLabel>
+    <skos:altLabel xml:lang="en">Anti-surge Controller system</skos:altLabel>
+    <skos:altLabel xml:lang="en">anti-surge controller</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Component-TripSystem">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Component" />
+    <skos:prefLabel xml:lang="en">Trip System</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Trip Block</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Component-OverspeedSystem">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Component" />
+    <skos:prefLabel xml:lang="en">Overspeed system</skos:prefLabel>
+    <skos:altLabel xml:lang="en">overspeed shutdown system</skos:altLabel>
+    <skos:altLabel xml:lang="en">overspeed protection system</skos:altLabel>
+    <skos:altLabel xml:lang="en">overspeed detection system</skos:altLabel>
+    <skos:altLabel xml:lang="en">overspeed detected by turbine shutdown system</skos:altLabel>
+    <skos:altLabel xml:lang="en">overspeed speed system</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Component-PressureCasings">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Component" />
+    <skos:prefLabel xml:lang="en">Pressure casings</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Component-TripFunction">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Component" />
+    <skos:prefLabel xml:lang="en">Trip function</skos:prefLabel>
+    <skos:altLabel xml:lang="en">trip functions</skos:altLabel>
+    <skos:altLabel xml:lang="en">trip and alarm functions</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Component-Casing">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Component" />
+    <skos:prefLabel xml:lang="en">Casing</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Manufacturer">
+    <skos:prefLabel xml:lang="en">Manufacturer</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Manufacturer-Alstom">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Manufacturer" />
+    <skos:prefLabel xml:lang="en">Alstom</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Manufacturer-Siemens">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Manufacturer" />
+    <skos:prefLabel xml:lang="en">Siemens</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Manufacturer-FivesLille">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Manufacturer" />
+    <skos:prefLabel xml:lang="en">Fives Lille</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Manufacturer-Mitsubishi">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Manufacturer" />
+    <skos:prefLabel xml:lang="en">Mitsubishi</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Mitsubishi Heavy Industries</skos:altLabel>
+    <skos:altLabel xml:lang="en">MHI</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Manufacturer-Woodward">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Manufacturer" />
+    <skos:prefLabel xml:lang="en">Woodward</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Manufacturer-DresserClark">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Manufacturer" />
+    <skos:prefLabel xml:lang="en">Dresser Clark</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Clark</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Manufacturer-WeirTurbomachinery">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Manufacturer" />
+    <skos:prefLabel xml:lang="en">Weir Turbomachinery</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Manufacturer-Flowserve">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Manufacturer" />
+    <skos:prefLabel xml:lang="en">Flowserve</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Manufacturer-Sulzer">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Manufacturer" />
+    <skos:prefLabel xml:lang="en">Sulzer</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Manufacturer-SPXClydeUnion">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Manufacturer" />
+    <skos:prefLabel xml:lang="en">SPX Clyde-Union</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Manufacturer-EnsivalMoret">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Manufacturer" />
+    <skos:prefLabel xml:lang="en">Ensival-Moret</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Manufacturer-Ruhrpumpen">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Manufacturer" />
+    <skos:prefLabel xml:lang="en">Ruhrpumpen</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Manufacturer-KlausUnion">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Manufacturer" />
+    <skos:prefLabel xml:lang="en">Klaus-Union</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Manufacturer-Optimex">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Manufacturer" />
+    <skos:prefLabel xml:lang="en">Optimex</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Manufacturer-GeneralElectric">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Manufacturer" />
+    <skos:prefLabel xml:lang="en">General Electric</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Manufacturer-Sundyne">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Manufacturer" />
+    <skos:prefLabel xml:lang="en">Sundyne</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Manufacturer-BraunLuebbe">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Manufacturer" />
+    <skos:prefLabel xml:lang="en">Braun &amp; Luebbe</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Manufacturer-Lewa">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Manufacturer" />
+    <skos:prefLabel xml:lang="en">Lewa</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Manufacturer-Flender">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Manufacturer" />
+    <skos:prefLabel xml:lang="en">Flender</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Manufacturer-Uraca">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Manufacturer" />
+    <skos:prefLabel xml:lang="en">Uraca</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Manufacturer-OMG">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Manufacturer" />
+    <skos:prefLabel xml:lang="en">OMG</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Manufacturer-Lawrence">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Manufacturer" />
+    <skos:prefLabel xml:lang="en">Lawrence</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Manufacturer-Marelli">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Manufacturer" />
+    <skos:prefLabel xml:lang="en">Marelli</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Manufacturer-KSB">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Manufacturer" />
+    <skos:prefLabel xml:lang="en">KSB</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Manufacturer-ITTGoulds">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Manufacturer" />
+    <skos:prefLabel xml:lang="en">ITT Goulds</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Manufacturer-Coperion">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Manufacturer" />
+    <skos:prefLabel xml:lang="en">Coperion</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Manufacturer-Renk">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Manufacturer" />
+    <skos:prefLabel xml:lang="en">Renk</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Manufacturer-Mitchell">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Manufacturer" />
+    <skos:prefLabel xml:lang="en">Mitchell</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Manufacturer-Terry">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Manufacturer" />
+    <skos:prefLabel xml:lang="en">Terry</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Manufacturer-JohnCrane">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Manufacturer" />
+    <skos:prefLabel xml:lang="en">John Crane</skos:prefLabel>
+    <skos:altLabel xml:lang="en">JC</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Manufacturer-Burgmann">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Manufacturer" />
+    <skos:prefLabel xml:lang="en">Burgmann</skos:prefLabel>
+    <skos:altLabel xml:lang="en">EB</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Manufacturer-AtlasCopco">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Manufacturer" />
+    <skos:prefLabel xml:lang="en">Atlas Copco</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Manufacturer-GHH">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Manufacturer" />
+    <skos:prefLabel xml:lang="en">GHH</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Manufacturer-Worthington">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Manufacturer" />
+    <skos:prefLabel xml:lang="en">Worthington</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Manufacturer-KOBELCO">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Manufacturer" />
+    <skos:prefLabel xml:lang="en">KOBELCO</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Manufacturer-SIAD">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Manufacturer" />
+    <skos:prefLabel xml:lang="en">SIAD</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Manufacturer-ELLIOTTEBARA">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Manufacturer" />
+    <skos:prefLabel xml:lang="en">ELLIOTT EBARA</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Manufacturer-HOWDEN">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Manufacturer" />
+    <skos:prefLabel xml:lang="en">HOWDEN</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Manufacturer-HERMETIC">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Manufacturer" />
+    <skos:prefLabel xml:lang="en">HERMETIC </skos:prefLabel>
+    <skos:altLabel xml:lang="en">Hermetic</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Manufacturer-EBARA">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Manufacturer" />
+    <skos:prefLabel xml:lang="en">EBARA</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Manufacturer-Coppus">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Manufacturer" />
+    <skos:prefLabel xml:lang="en">Coppus</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Manufacturer-DresserRand">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Manufacturer" />
+    <skos:prefLabel xml:lang="en">Dresser Rand</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Manufacturer-Nadrowski">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Manufacturer" />
+    <skos:prefLabel xml:lang="en">Nadrowski</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Manufacturer-JapanSteelWorks">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Manufacturer" />
+    <skos:prefLabel xml:lang="en">Japan Steel Works</skos:prefLabel>
+    <skos:altLabel xml:lang="en">JSW</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Manufacturer-Gimpel">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Manufacturer" />
+    <skos:prefLabel xml:lang="en">Gimpel</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Product">
+    <skos:prefLabel xml:lang="en">Product</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Product-ProductComposition">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Product" />
+    <skos:prefLabel xml:lang="en">Product Composition</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Product-ProductComposition-Steel">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Product-ProductComposition" />
+    <skos:prefLabel xml:lang="en">steel</skos:prefLabel>
+    <skos:altLabel xml:lang="en">low alloy steel</skos:altLabel>
+    <skos:altLabel xml:lang="en">steel alloy</skos:altLabel>
+    <skos:altLabel xml:lang="en">steel castings, martensitic stainless and alloy</skos:altLabel>
+    <skos:altLabel xml:lang="en">Alloy steel</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Product-ProductComposition-Steel-StainlessSteel">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Product-ProductComposition-Steel" />
+    <skos:prefLabel xml:lang="en">Stainless steel</skos:prefLabel>
+    <skos:altLabel xml:lang="en">SS</skos:altLabel>
+    <skos:altLabel xml:lang="en">316SS</skos:altLabel>
+    <skos:altLabel xml:lang="en">SS 316</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Product-ProductComposition-Steel-StainlessSteel-StainlessSteel">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Product-ProductComposition-Steel-StainlessSteel" />
+    <skos:prefLabel xml:lang="en">Stainless Steel</skos:prefLabel>
+    <skos:altLabel xml:lang="en">SS</skos:altLabel>
+    <skos:altLabel xml:lang="en">316L</skos:altLabel>
+    <skos:altLabel xml:lang="en">316 L</skos:altLabel>
+    <skos:altLabel xml:lang="en">304</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Product-ProductComposition-Steel-StainlessSteel-Duplex">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Product-ProductComposition-Steel-StainlessSteel" />
+    <skos:prefLabel xml:lang="en">Duplex</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Product-ProductComposition-Steel-CarbonSteel">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Product-ProductComposition-Steel" />
+    <skos:prefLabel xml:lang="en">Carbon steel</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Product-ProductComposition-Aluminium">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Product-ProductComposition" />
+    <skos:prefLabel xml:lang="en">aluminium</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Product-ProductComposition-Copper">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Product-ProductComposition" />
+    <skos:prefLabel xml:lang="en">copper</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Product-ProductComposition-Nickel">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Product-ProductComposition" />
+    <skos:prefLabel xml:lang="en">nickel</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Product-ProductComposition-Brass">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Product-ProductComposition" />
+    <skos:prefLabel xml:lang="en">brass</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Product-ProductComposition-Hastelloy">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Product-ProductComposition" />
+    <skos:prefLabel xml:lang="en">Hastelloy</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Product-ProductComposition-NonMetallic">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Product-ProductComposition" />
+    <skos:prefLabel xml:lang="en">Non-metallic</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Product-ProductComposition-NonMetallic-PEEK">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Product-ProductComposition-NonMetallic" />
+    <skos:prefLabel xml:lang="en">PEEK</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Product-ProductComposition-NonMetallic-PTFE">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Product-ProductComposition-NonMetallic" />
+    <skos:prefLabel xml:lang="en">PTFE</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Product-ProductComposition-NonMetallic-Plastic">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Product-ProductComposition-NonMetallic" />
+    <skos:prefLabel xml:lang="en">plastic</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Product-ProductComposition-NonMetallic-Rubber">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Product-ProductComposition-NonMetallic" />
+    <skos:prefLabel xml:lang="en">rubber</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Product-ProductComposition-NonMetallic-Wood">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Product-ProductComposition-NonMetallic" />
+    <skos:prefLabel xml:lang="en">wood</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Product-ProductComposition-SiC">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Product-ProductComposition" />
+    <skos:prefLabel xml:lang="en">SiC</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Product-ProductComposition-Monel">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Product-ProductComposition" />
+    <skos:prefLabel xml:lang="en">Monel</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Product-ProductComposition-Hydrogen">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Product-ProductComposition" />
+    <skos:prefLabel xml:lang="en">hydrogen</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Product-ProductComposition-Gas">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Product-ProductComposition" />
+    <skos:prefLabel xml:lang="en">gas</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Product-ProductComposition-Fluid">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Product-ProductComposition" />
+    <skos:prefLabel xml:lang="en">fluid</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Product-ProductComposition-Fuel">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Product-ProductComposition" />
+    <skos:prefLabel xml:lang="en">fuel</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Product-ProductComposition-Water">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Product-ProductComposition" />
+    <skos:prefLabel xml:lang="en">water</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Product-ProductComposition-Air">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Product-ProductComposition" />
+    <skos:prefLabel xml:lang="en">air</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Product-ProductComposition-Oil">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Product-ProductComposition" />
+    <skos:prefLabel xml:lang="en">oil</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Product-ProductFunction">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Product" />
+    <skos:prefLabel xml:lang="en">Product function</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Product-ProductFunction-LubeOil">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Product-ProductFunction" />
+    <skos:prefLabel xml:lang="en">Lube oil</skos:prefLabel>
+    <skos:altLabel xml:lang="en">oil supply lines (lube</skos:altLabel>
+    <skos:altLabel xml:lang="en">lube services and a good oil</skos:altLabel>
+    <skos:altLabel xml:lang="en">oil film for mini lube</skos:altLabel>
+    <skos:altLabel xml:lang="en">oil purifier in parallel of lube</skos:altLabel>
+    <skos:altLabel xml:lang="en">oil coolers • Proceed regularly for lube</skos:altLabel>
+    <skos:altLabel xml:lang="en">oil circulation • Proper working of lube</skos:altLabel>
+    <skos:altLabel xml:lang="en">lube/seal oil</skos:altLabel>
+    <skos:altLabel xml:lang="en">oil system #30 Very low lube</skos:altLabel>
+    <skos:altLabel xml:lang="en">oil system • If lube</skos:altLabel>
+    <skos:altLabel xml:lang="en">oil regulator (lube</skos:altLabel>
+    <skos:altLabel xml:lang="en">oil (5% animal lube</skos:altLabel>
+    <skos:altLabel xml:lang="en">oil flash point in combined lube</skos:altLabel>
+    <skos:altLabel xml:lang="en">oil service 6 lube</skos:altLabel>
+    <skos:altLabel xml:lang="en">Oil Pressure (lube</skos:altLabel>
+    <skos:altLabel xml:lang="en">oil system #29 Start auxiliary lube</skos:altLabel>
+    <skos:altLabel xml:lang="en">lube oil- PCV regulation oil</skos:altLabel>
+    <skos:altLabel xml:lang="en">lube and seal oil</skos:altLabel>
+    <skos:altLabel xml:lang="en">oil system #26 Low lube</skos:altLabel>
+    <skos:altLabel xml:lang="en">Oil or Gas pressure supply (Lube</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Product-ProductFunction-OilReservoir">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Product-ProductFunction" />
+    <skos:prefLabel xml:lang="en">Oil reservoir</skos:prefLabel>
+    <skos:altLabel xml:lang="en">oil supply valve • Check oil reservoir</skos:altLabel>
+    <skos:altLabel xml:lang="en">reservoir. • Start oil</skos:altLabel>
+    <skos:altLabel xml:lang="en">reservoir • Refill with new oil</skos:altLabel>
+    <skos:altLabel xml:lang="en">reservoir and oil</skos:altLabel>
+    <skos:altLabel xml:lang="en">reservoir • Inspection of oil</skos:altLabel>
+    <skos:altLabel xml:lang="en">oil pressure PCV to reservoir</skos:altLabel>
+    <skos:altLabel xml:lang="en">oil from reservoir</skos:altLabel>
+    <skos:altLabel xml:lang="en">reservoir • Oil</skos:altLabel>
+    <skos:altLabel xml:lang="en">reservoir • Remove oil</skos:altLabel>
+    <skos:altLabel xml:lang="en">reservoir. Remove oil</skos:altLabel>
+    <skos:altLabel xml:lang="en">reservoir and Piping #18 An oil</skos:altLabel>
+    <skos:altLabel xml:lang="en">reservoir level, • oil</skos:altLabel>
+    <skos:altLabel xml:lang="en">oil tank • Remove oil from reservoir</skos:altLabel>
+    <skos:altLabel xml:lang="en">reservoir. • Remove oil</skos:altLabel>
+    <skos:altLabel xml:lang="en">reservoir oil</skos:altLabel>
+    <skos:altLabel xml:lang="en">reservoir to catch leaking oil</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Product-ProductFunction-TurbineDrivenOil">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Product-ProductFunction" />
+    <skos:prefLabel xml:lang="en">Turbine driven oil</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Product-ProductFunction-StandbyModusOil">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Product-ProductFunction" />
+    <skos:prefLabel xml:lang="en">Standby modus oil</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Product-ProductFunction-CloseMainOil">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Product-ProductFunction" />
+    <skos:prefLabel xml:lang="en">Close main oil</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Product-ProductFunction-CoolingWater">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Product-ProductFunction" />
+    <skos:prefLabel xml:lang="en">Cooling water</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Product-ProductFunction-InstrumentAir">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Product-ProductFunction" />
+    <skos:prefLabel xml:lang="en">Instrument air</skos:prefLabel>
+    <skos:altLabel xml:lang="en">air instrument</skos:altLabel>
+    <skos:altLabel xml:lang="en">air amplifier, fed by the instrument</skos:altLabel>
+    <skos:altLabel xml:lang="en">instrument Instrument action Transmission to DCS Air</skos:altLabel>
+    <skos:altLabel xml:lang="en">Instrument action Transmission to DCS Air</skos:altLabel>
+    <skos:altLabel xml:lang="en">instrument and service air</skos:altLabel>
+    <skos:altLabel xml:lang="en">instrument and control air</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment">
+    <skos:prefLabel xml:lang="en">Equipment</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Turbine">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment" />
+    <skos:prefLabel xml:lang="en">Turbine</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Turbines</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Turbine-GasTurbine">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Turbine" />
+    <skos:prefLabel xml:lang="en">Gas turbine</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Gas turbines</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Turbine-GasTurbine-ExternalCombustionTurbines">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Turbine-GasTurbine" />
+    <skos:prefLabel xml:lang="en">External combustion turbines</skos:prefLabel>
+    <skos:altLabel xml:lang="en">external combustion turbine</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Turbine-GasTurbine-AeroderivativeGasTurbines">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Turbine-GasTurbine" />
+    <skos:prefLabel xml:lang="en">Aeroderivative gas turbines</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Aeroderivative</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Turbine-GasTurbine-HeavyDutyGasTurbines">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Turbine-GasTurbine" />
+    <skos:prefLabel xml:lang="en">Heavy duty gas turbines</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Heavy duty</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Turbine-SteamTurbine">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Turbine" />
+    <skos:prefLabel xml:lang="en">Steam turbine</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Steam Turbines</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Turbine-SteamTurbine-ExtractionTurbine">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Turbine-SteamTurbine" />
+    <skos:prefLabel xml:lang="en">Extraction turbine</skos:prefLabel>
+    <skos:altLabel xml:lang="en">extraction steam turbines</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Turbine-SteamTurbine-GeneralPurposeSteamTurbine">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Turbine-SteamTurbine" />
+    <skos:prefLabel xml:lang="en">General purpose steam turbine</skos:prefLabel>
+    <skos:altLabel xml:lang="en">general purpose turbine</skos:altLabel>
+    <skos:altLabel xml:lang="en">General-Purpose Steam Turbines</skos:altLabel>
+    <skos:altLabel xml:lang="en">General purpose steam turbines</skos:altLabel>
+    <skos:altLabel xml:lang="en">general purpose turbines</skos:altLabel>
+    <skos:altLabel xml:lang="en">General-purpose turbine</skos:altLabel>
+    <skos:altLabel xml:lang="en">API 611</skos:altLabel>
+    <skos:altLabel xml:lang="en">API STD 611</skos:altLabel>
+    <skos:altLabel xml:lang="en">611) and specialpurpose specification (API</skos:altLabel>
+    <skos:altLabel xml:lang="en">API 610 GS RC MEC 611</skos:altLabel>
+    <skos:altLabel xml:lang="en">API 610 • GS RC MEC 611</skos:altLabel>
+    <skos:altLabel xml:lang="en">611 – General purpose steam turbines API</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Turbine-SteamTurbine-SpecialPurposeSteamTurbine">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Turbine-SteamTurbine" />
+    <skos:prefLabel xml:lang="en">Special purpose steam turbine</skos:prefLabel>
+    <skos:altLabel xml:lang="en">special purpose turbine</skos:altLabel>
+    <skos:altLabel xml:lang="en">Special-Purpose Steam Turbines</skos:altLabel>
+    <skos:altLabel xml:lang="en">Special Purpose Steam Turbines</skos:altLabel>
+    <skos:altLabel xml:lang="en">Special purposes steam turbines</skos:altLabel>
+    <skos:altLabel xml:lang="en">API 612</skos:altLabel>
+    <skos:altLabel xml:lang="en">API STD 612</skos:altLabel>
+    <skos:altLabel xml:lang="en">612 &amp; API</skos:altLabel>
+    <skos:altLabel xml:lang="en">API STD 617 and API STD 612</skos:altLabel>
+    <skos:altLabel xml:lang="en">612 – Special Purpose Steam Turbines API</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Turbine-SteamTurbine-BackPressureTurbine">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Turbine-SteamTurbine" />
+    <skos:prefLabel xml:lang="en">Back pressure turbine</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Back Pressure Steam Turbines</skos:altLabel>
+    <skos:altLabel xml:lang="en">back pressure turbines</skos:altLabel>
+    <skos:altLabel xml:lang="en">Back-pressure steam turbines</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Turbine-SteamTurbine-CondensingTurbine">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Turbine-SteamTurbine" />
+    <skos:prefLabel xml:lang="en">Condensing turbine</skos:prefLabel>
+    <skos:altLabel xml:lang="en">condensing turbines</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Pump">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment" />
+    <skos:prefLabel xml:lang="en">Pump</skos:prefLabel>
+    <skos:altLabel xml:lang="en">pumps</skos:altLabel>
+    <skos:altLabel xml:lang="en">pumped</skos:altLabel>
+    <skos:altLabel xml:lang="en">pumping</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Pump-CentrifugalPump">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Pump" />
+    <skos:prefLabel xml:lang="en">Centrifugal pump</skos:prefLabel>
+    <skos:altLabel xml:lang="en">centrifugal</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Pump-CentrifugalPump-CentrifugalPumpAPI610">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Pump-CentrifugalPump" />
+    <skos:prefLabel xml:lang="en">Centrifugal pump API 610</skos:prefLabel>
+    <skos:altLabel xml:lang="en">API 610</skos:altLabel>
+    <skos:altLabel xml:lang="en">API STD 610</skos:altLabel>
+    <skos:altLabel xml:lang="en">610: Centrifugal pumps according to API</skos:altLabel>
+    <skos:altLabel xml:lang="en">610 Centrifugal pumps API</skos:altLabel>
+    <skos:altLabel xml:lang="en">610 Centrifugal pumps - API</skos:altLabel>
+    <skos:altLabel xml:lang="en">610 – Centrifugal pumps API</skos:altLabel>
+    <skos:altLabel xml:lang="en">610: Centrifugal Pumps API</skos:altLabel>
+    <skos:altLabel xml:lang="en">610: Centrifugal pumps - API</skos:altLabel>
+    <skos:altLabel xml:lang="en">610 Centrifugal pumps according to API</skos:altLabel>
+    <skos:altLabel xml:lang="en">API 682 and API 610</skos:altLabel>
+    <skos:altLabel xml:lang="en">610: Centrifugal pump according to API</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Pump-CentrifugalPump-CentrifugalPumpAPI610-HighEnergyProcessHorizontalCentrifugalPumpsAPI610">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Pump-CentrifugalPump-CentrifugalPumpAPI610" />
+    <skos:prefLabel xml:lang="en">High energy process horizontal centrifugal pumps (API 610 )</skos:prefLabel>
+    <skos:altLabel xml:lang="en">High energy</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Pump-CentrifugalPump-CentrifugalPumpAPI610-ProcessVerticalCentrifugalPumpsAPI610">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Pump-CentrifugalPump-CentrifugalPumpAPI610" />
+    <skos:prefLabel xml:lang="en">Process vertical centrifugal pumps (API 610 )</skos:prefLabel>
+    <skos:altLabel xml:lang="en">vertical</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Pump-CentrifugalPump-CentrifugalPumpAPI610-ProcessVerticalCentrifugalPumpsAPI610-VerticalLongShaftPumpsAPI610">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Pump-CentrifugalPump-CentrifugalPumpAPI610-ProcessVerticalCentrifugalPumpsAPI610" />
+    <skos:prefLabel xml:lang="en">Vertical long shaft pumps (API 610)</skos:prefLabel>
+    <skos:altLabel xml:lang="en">long shaft</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Pump-CentrifugalPump-CentrifugalPumpAPI610-SubmersibleElectricDrivenVerticalPumpsAPI610">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Pump-CentrifugalPump-CentrifugalPumpAPI610" />
+    <skos:prefLabel xml:lang="en">Submersible electric driven vertical pumps (API 610)</skos:prefLabel>
+    <skos:altLabel xml:lang="en">submersible</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Pump-CentrifugalPump-CentrifugalISO5199">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Pump-CentrifugalPump" />
+    <skos:prefLabel xml:lang="en">Centrifugal ISO 5199</skos:prefLabel>
+    <skos:altLabel xml:lang="en">ISO 5199</skos:altLabel>
+    <skos:altLabel xml:lang="en">ISO 15783 solution prior to ISO 5199</skos:altLabel>
+    <skos:altLabel xml:lang="en">5199 #306 The ISO</skos:altLabel>
+    <skos:altLabel xml:lang="en">5199 #65 Fig 1 in ISO</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Pump-CentrifugalPump-FireWaterPumpsNFPA20">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Pump-CentrifugalPump" />
+    <skos:prefLabel xml:lang="en">Fire water pumps (NFPA 20)</skos:prefLabel>
+    <skos:altLabel xml:lang="en">NFPA 20</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Pump-CentrifugalPump-HighSpeedIntegralGearPump">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Pump-CentrifugalPump" />
+    <skos:prefLabel xml:lang="en">High-speed  integral gear pump</skos:prefLabel>
+    <skos:altLabel xml:lang="en">high speed</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Pump-CentrifugalPump-CryogenicPumps">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Pump-CentrifugalPump" />
+    <skos:prefLabel xml:lang="en">Cryogenic pumps</skos:prefLabel>
+    <skos:altLabel xml:lang="en">cryogenic or cryo</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Pump-CentrifugalPump-MultistagePump">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Pump-CentrifugalPump" />
+    <skos:prefLabel xml:lang="en">Multistage pump</skos:prefLabel>
+    <skos:altLabel xml:lang="en">multistage</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Pump-CentrifugalPump-MultistagePump-MultistageHorizontalDoubleCasingRadiallySplit">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Pump-CentrifugalPump-MultistagePump" />
+    <skos:prefLabel xml:lang="en">Multistage horizontal double casing, radially split</skos:prefLabel>
+    <skos:altLabel xml:lang="en">double casing</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Pump-CentrifugalPump-MultistagePump-MultistageVerticalDoubleCasing">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Pump-CentrifugalPump-MultistagePump" />
+    <skos:prefLabel xml:lang="en">Multistage vertical double casing</skos:prefLabel>
+    <skos:altLabel xml:lang="en">double casing</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Pump-CentrifugalPump-MultistagePump-MultistageVerticalBowlAssembly">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Pump-CentrifugalPump-MultistagePump" />
+    <skos:prefLabel xml:lang="en">Multistage vertical bowl assembly</skos:prefLabel>
+    <skos:altLabel xml:lang="en">bowl assembly</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Pump-CentrifugalPump-MultistagePump-MultistageHorizontalAxiallySplit">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Pump-CentrifugalPump-MultistagePump" />
+    <skos:prefLabel xml:lang="en">Multistage horizontal, axially split</skos:prefLabel>
+    <skos:altLabel xml:lang="en">horizontal</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Pump-CentrifugalPump-SingleStagePump">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Pump-CentrifugalPump" />
+    <skos:prefLabel xml:lang="en">Single stage pump</skos:prefLabel>
+    <skos:altLabel xml:lang="en">single</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Pump-CentrifugalPump-SingleStagePump-LowSpeed3600RPMSingleStageInLine">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Pump-CentrifugalPump-SingleStagePump" />
+    <skos:prefLabel xml:lang="en">Low speed (£ 3 600 RPM) single-stage in-line</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Low speed</skos:altLabel>
+    <skos:altLabel xml:lang="en">speed balancing report and low</skos:altLabel>
+    <skos:altLabel xml:lang="en">speed. A low</skos:altLabel>
+    <skos:altLabel xml:lang="en">speed and Low</skos:altLabel>
+    <skos:altLabel xml:lang="en">speed &amp; Low</skos:altLabel>
+    <skos:altLabel xml:lang="en">low or high speed</skos:altLabel>
+    <skos:altLabel xml:lang="en">speed balanced, coupling shall be low</skos:altLabel>
+    <skos:altLabel xml:lang="en">speed balancing on low</skos:altLabel>
+    <skos:altLabel xml:lang="en">low to medium speed</skos:altLabel>
+    <skos:altLabel xml:lang="en">speed balancing report if any and low</skos:altLabel>
+    <skos:altLabel xml:lang="en">speed balanced after low</skos:altLabel>
+    <skos:altLabel xml:lang="en">low lube-oil pressure pressure #18 Speed</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Pump-CentrifugalPump-SingleStagePump-SingleOrTwoStagesBetweenBearingsAxiallySplit">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Pump-CentrifugalPump-SingleStagePump" />
+    <skos:prefLabel xml:lang="en">Single or two stages between bearings, axially split</skos:prefLabel>
+    <skos:altLabel xml:lang="en">between bearings</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Pump-CentrifugalPump-SingleStagePump-SingleStageOverhungImpeller">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Pump-CentrifugalPump-SingleStagePump" />
+    <skos:prefLabel xml:lang="en">(Single stage, overhung impeller</skos:prefLabel>
+    <skos:altLabel xml:lang="en">overhung</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Pump-CentrifugalPump-SingleStagePump-SingleOrTwoStagesBetweenBearingsRadiallySplit">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Pump-CentrifugalPump-SingleStagePump" />
+    <skos:prefLabel xml:lang="en">Single or two stages between bearings, radially split</skos:prefLabel>
+    <skos:altLabel xml:lang="en">between bearings</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Pump-CentrifugalPump-VerticalPump">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Pump-CentrifugalPump" />
+    <skos:prefLabel xml:lang="en">Vertical pump</skos:prefLabel>
+    <skos:altLabel xml:lang="en">vertical</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Pump-CentrifugalPump-VerticalPump-VerticalSubmergedCentrifugalPumpsOtherThanAPI610">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Pump-CentrifugalPump-VerticalPump" />
+    <skos:prefLabel xml:lang="en">Vertical submerged centrifugal pumps - other than API 610</skos:prefLabel>
+    <skos:altLabel xml:lang="en">submerged</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Pump-CentrifugalPump-VerticalPump-VerticalLongShaftCentrifugalPumpsOtherThanAPI610">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Pump-CentrifugalPump-VerticalPump" />
+    <skos:prefLabel xml:lang="en">Vertical long-shaft centrifugal pumps - other than API 610</skos:prefLabel>
+    <skos:altLabel xml:lang="en">long</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Pump-ReciprocatingDisplacementPumps">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Pump" />
+    <skos:prefLabel xml:lang="en">Reciprocating displacement pumps</skos:prefLabel>
+    <skos:altLabel xml:lang="en">reciprocating pump</skos:altLabel>
+    <skos:altLabel xml:lang="en">Reciprocating wash water pumps</skos:altLabel>
+    <skos:altLabel xml:lang="en">Reciprocating Pumps</skos:altLabel>
+    <skos:altLabel xml:lang="en">Reciprocating or High Speed Integrally Geared Pumps</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Pump-RotatingPositiveDisplacementPumps">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Pump" />
+    <skos:prefLabel xml:lang="en">Rotating positive displacement pumps</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Pump-RotatingPositiveDisplacementPumps-RotatingDisplacementPumpsAPI676">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Pump-RotatingPositiveDisplacementPumps" />
+    <skos:prefLabel xml:lang="en">Rotating displacement pumps (API 676)</skos:prefLabel>
+    <skos:altLabel xml:lang="en">API 676</skos:altLabel>
+    <skos:altLabel xml:lang="en">API STD 676</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Pump-PolymerPump">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Pump" />
+    <skos:prefLabel xml:lang="en">Polymer pump</skos:prefLabel>
+    <skos:altLabel xml:lang="en">polymer</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Pump-ProportioningPumpsAPI675">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Pump" />
+    <skos:prefLabel xml:lang="en">Proportioning pumps (API 675)</skos:prefLabel>
+    <skos:altLabel xml:lang="en">proportioning pump</skos:altLabel>
+    <skos:altLabel xml:lang="en">API 675</skos:altLabel>
+    <skos:altLabel xml:lang="en">API STD 675</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Pump-GasOrSteamDrivenPumps">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Pump" />
+    <skos:prefLabel xml:lang="en">Gas or steam driven pumps</skos:prefLabel>
+    <skos:altLabel xml:lang="en">gas or steam</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Pump-ReciprocatingPumpsWithSteamCylinder">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Pump" />
+    <skos:prefLabel xml:lang="en">Reciprocating pumps with steam cylinder</skos:prefLabel>
+    <skos:altLabel xml:lang="en">reciprocating and steam</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Pump-AirGasDrivenPumps">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Pump" />
+    <skos:prefLabel xml:lang="en">Air / gas driven pumps</skos:prefLabel>
+    <skos:altLabel xml:lang="en">air driven pump</skos:altLabel>
+    <skos:altLabel xml:lang="en">gas driven pump</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Pump-ThickFluidsPumps">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Pump" />
+    <skos:prefLabel xml:lang="en">Thick fluids pumps</skos:prefLabel>
+    <skos:altLabel xml:lang="en">thick fluid pump</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Pump-WellPumps">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Pump" />
+    <skos:prefLabel xml:lang="en">Well pumps</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Well pump</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Pump-WellPumps-ReciprocatingWellPumpsWithHydraulicMotor">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Pump-WellPumps" />
+    <skos:prefLabel xml:lang="en">Reciprocating well pumps with hydraulic motor</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Reciprocating</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Pump-WellPumps-CentrifugalWellPumpsWithHydraulicMotor">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Pump-WellPumps" />
+    <skos:prefLabel xml:lang="en">Centrifugal well pumps with hydraulic motor</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Centrifugal</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Pump-WellPumps-ReciprocatingWellPumpsWithElectricMotor">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Pump-WellPumps" />
+    <skos:prefLabel xml:lang="en">Reciprocating well pumps with electric motor</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Reciprocating</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Pump-WellPumps-CentrifugalWellPumpsWithElectricMotor">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Pump-WellPumps" />
+    <skos:prefLabel xml:lang="en">Centrifugal well pumps with electric motor</skos:prefLabel>
+    <skos:altLabel xml:lang="en">centrifugal</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Pump-LongStrokeArmPumps">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Pump" />
+    <skos:prefLabel xml:lang="en">Long stroke arm pumps</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Long stroke arm</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Pump-SwingArmPumps">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Pump" />
+    <skos:prefLabel xml:lang="en">Swing arm pumps</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Swing arm</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Pump-SeallessPumpsHermeticallyClosed">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Pump" />
+    <skos:prefLabel xml:lang="en">Sealless pumps (hermetically closed)</skos:prefLabel>
+    <skos:altLabel xml:lang="en">sealless pump</skos:altLabel>
+    <skos:altLabel xml:lang="en">Sealless centrifugal pumps</skos:altLabel>
+    <skos:altLabel xml:lang="en">sealless pumps</skos:altLabel>
+    <skos:altLabel xml:lang="en">Sealless rotodynamic pumps</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Pump-SeallessPumpsHermeticallyClosed-CannedMotorCentrifugalPumps">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Pump-SeallessPumpsHermeticallyClosed" />
+    <skos:prefLabel xml:lang="en">Canned motor centrifugal pumps</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Canned</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Pump-SeallessPumpsHermeticallyClosed-MagneticDriveCentrifugalPumps">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Pump-SeallessPumpsHermeticallyClosed" />
+    <skos:prefLabel xml:lang="en">Magnetic drive centrifugal pumps</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Magnetic drive</skos:altLabel>
+    <skos:altLabel xml:lang="en">Mag drive</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Pump-SeallessPumpsHermeticallyClosed-MagneticDriveCentrifugalPumpsAPI685">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Pump-SeallessPumpsHermeticallyClosed" />
+    <skos:prefLabel xml:lang="en">Magnetic drive centrifugal pumps (API 685)</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Magnetic drive</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Pump-SeallessPumpsHermeticallyClosed-MagneticDriveCentrifugalPumpsAPIISO15783">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Pump-SeallessPumpsHermeticallyClosed" />
+    <skos:prefLabel xml:lang="en">Magnetic drive centrifugal pumps (API ISO 15783)</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Magnetic drive</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Pump-SeallessPumpsHermeticallyClosed-MagneticDrivePositiveDisplacementPumps">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Pump-SeallessPumpsHermeticallyClosed" />
+    <skos:prefLabel xml:lang="en">Magnetic drive positive displacement pumps</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Magnetic drive</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Pump-HydraulicDrivenCargoPumps">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Pump" />
+    <skos:prefLabel xml:lang="en">Hydraulic Driven Cargo Pumps</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Cargo Pumps</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Compressor">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment" />
+    <skos:prefLabel xml:lang="en">Compressor</skos:prefLabel>
+    <skos:altLabel xml:lang="en">compressors</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Compressor-CentrifugalAndAxialFlowCompressorsAPI617">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Compressor" />
+    <skos:prefLabel xml:lang="en">Centrifugal and axial-flow compressors (API 617)</skos:prefLabel>
+    <skos:altLabel xml:lang="en">API 617</skos:altLabel>
+    <skos:altLabel xml:lang="en">API STD 617</skos:altLabel>
+    <skos:altLabel xml:lang="en">617 and API</skos:altLabel>
+    <skos:altLabel xml:lang="en">centrifugal compressor</skos:altLabel>
+    <skos:altLabel xml:lang="en">Axial Compressor</skos:altLabel>
+    <skos:altLabel xml:lang="en">centrifugal air compressor</skos:altLabel>
+    <skos:altLabel xml:lang="en">centrifugal rather than reciprocating compressor</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Compressor-IntegrallyGearCentrifugalCompressorAPI617OrAPI672">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Compressor" />
+    <skos:prefLabel xml:lang="en">Integrally gear centrifugal compressor (API 617 or API 672)</skos:prefLabel>
+    <skos:altLabel xml:lang="en">API 617</skos:altLabel>
+    <skos:altLabel xml:lang="en">API STD 617</skos:altLabel>
+    <skos:altLabel xml:lang="en">617 and API</skos:altLabel>
+    <skos:altLabel xml:lang="en">API 672</skos:altLabel>
+    <skos:altLabel xml:lang="en">API STD 672</skos:altLabel>
+    <skos:altLabel xml:lang="en">Integrally gear</skos:altLabel>
+    <skos:altLabel xml:lang="en">integrally geared compressors: bull gear</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Compressor-ReciprocatingCompressorsAPI618">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Compressor" />
+    <skos:prefLabel xml:lang="en">Reciprocating compressors (API 618)</skos:prefLabel>
+    <skos:altLabel xml:lang="en">API 618</skos:altLabel>
+    <skos:altLabel xml:lang="en">API STD 618</skos:altLabel>
+    <skos:altLabel xml:lang="en">618 #200 Refer to API</skos:altLabel>
+    <skos:altLabel xml:lang="en">618 – Reciprocating Compressors API</skos:altLabel>
+    <skos:altLabel xml:lang="en">reciprocating compressor</skos:altLabel>
+    <skos:altLabel xml:lang="en">reciprocating compressors</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Compressor-ReciprocatingCompressorsAPI11PISO13631">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Compressor" />
+    <skos:prefLabel xml:lang="en">Reciprocating compressors (API 11P/ISO 13631)</skos:prefLabel>
+    <skos:altLabel xml:lang="en">API 11P</skos:altLabel>
+    <skos:altLabel xml:lang="en">ISO 13631</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Compressor-AutonomousCompressors">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Compressor" />
+    <skos:prefLabel xml:lang="en">Autonomous compressors</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Autonomous compressor</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Compressor-RotaryPositiveDisplacementCompressors">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Compressor" />
+    <skos:prefLabel xml:lang="en">Rotary positive displacement compressors</skos:prefLabel>
+    <skos:altLabel xml:lang="en">rotary compressor</skos:altLabel>
+    <skos:altLabel xml:lang="en">Rotary compressors</skos:altLabel>
+    <skos:altLabel xml:lang="en">rotary/centrifugal compressors</skos:altLabel>
+    <skos:altLabel xml:lang="en">rotary or centrifugal rather than reciprocating compressor</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Compressor-RootsCompressors">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Compressor" />
+    <skos:prefLabel xml:lang="en">Roots compressors</skos:prefLabel>
+    <skos:altLabel xml:lang="en">roots compressor</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Compressor-LiquidRingCompressors">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Compressor" />
+    <skos:prefLabel xml:lang="en">Liquid ring compressors</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Liquid ring compressor</skos:altLabel>
+    <skos:altLabel xml:lang="en">Liquid ring vacuum pumps and compressors</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Compressor-CompressorsForFlareGas">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Compressor" />
+    <skos:prefLabel xml:lang="en">compressors for flare gas</skos:prefLabel>
+    <skos:altLabel xml:lang="en">flare gas compressor</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Compressor-VaneTypeCompressors">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Compressor" />
+    <skos:prefLabel xml:lang="en">Vane type compressors</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Vane type compressor</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Compressor-ScrewCompressorsAccordingToManufacturerSStandard">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Compressor" />
+    <skos:prefLabel xml:lang="en">Screw compressors according to Manufacturer's standard</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Compressor-ScrewCompressorsAPI619">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Compressor" />
+    <skos:prefLabel xml:lang="en">Screw compressors (API 619)</skos:prefLabel>
+    <skos:altLabel xml:lang="en">API 619</skos:altLabel>
+    <skos:altLabel xml:lang="en">API STD 619</skos:altLabel>
+    <skos:altLabel xml:lang="en">screw compressor</skos:altLabel>
+    <skos:altLabel xml:lang="en">screw compressors</skos:altLabel>
+    <skos:altLabel xml:lang="en">screw type compressors</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Compressor-ReciprocatingCompressorsToManufacturerSStandardOtherThanAPI">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Compressor" />
+    <skos:prefLabel xml:lang="en">Reciprocating compressors to manufacturer's standard (other than API)</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Gearbox">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment" />
+    <skos:prefLabel xml:lang="en">Gearbox</skos:prefLabel>
+    <skos:altLabel xml:lang="en">speed increaser</skos:altLabel>
+    <skos:altLabel xml:lang="en">gearboxes</skos:altLabel>
+    <skos:altLabel xml:lang="en">speed reducer</skos:altLabel>
+    <skos:altLabel xml:lang="en">speed multiplier</skos:altLabel>
+    <skos:altLabel xml:lang="en">speed variator</skos:altLabel>
+    <skos:altLabel xml:lang="en">gear box</skos:altLabel>
+    <skos:altLabel xml:lang="en">gear boxes</skos:altLabel>
+    <skos:altLabel xml:lang="en">Box Major Overhaul #955 gears</skos:altLabel>
+    <skos:altLabel xml:lang="en">Box minor Overhaul 12 4.7 - Gear</skos:altLabel>
+    <skos:altLabel xml:lang="en">boxes (including stand by gear</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Gearbox-MechanicalHydraulicAndMagneticSpeedVariators">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Gearbox" />
+    <skos:prefLabel xml:lang="en">Mechanical, hydraulic and magnetic speed variators</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Gearbox-MonoblocTypeMotorGearbox">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Gearbox" />
+    <skos:prefLabel xml:lang="en">Monobloc type motor/gearbox</skos:prefLabel>
+    <skos:altLabel xml:lang="en">monobloc motor</skos:altLabel>
+    <skos:altLabel xml:lang="en">monobloc gearbox</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Gearbox-TypeMonoblocMotorspeedVariators">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Gearbox" />
+    <skos:prefLabel xml:lang="en">Type monobloc motorspeed variators</skos:prefLabel>
+    <skos:altLabel xml:lang="en">monobloc variator</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Gearbox-HydrostaticTransmissionSystems">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Gearbox" />
+    <skos:prefLabel xml:lang="en">Hydrostatic transmission systems</skos:prefLabel>
+    <skos:altLabel xml:lang="en">hydrostatic system</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Gearbox-GearboxAsPerAPI613">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Gearbox" />
+    <skos:prefLabel xml:lang="en">Gearbox as per API 613 </skos:prefLabel>
+    <skos:altLabel xml:lang="en">API 613</skos:altLabel>
+    <skos:altLabel xml:lang="en">API STD 613</skos:altLabel>
+    <skos:altLabel xml:lang="en">613 – Special Purpose Gear Units API</skos:altLabel>
+    <skos:altLabel xml:lang="en">API STD 677. API STD 613</skos:altLabel>
+    <skos:altLabel xml:lang="en">613: Special-Purpose Gear Units • API</skos:altLabel>
+    <skos:altLabel xml:lang="en">613 shall be used with API</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Gearbox-EpicycloidalTrain">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Gearbox" />
+    <skos:prefLabel xml:lang="en">Epicycloidal train </skos:prefLabel>
+    <skos:altLabel xml:lang="en">Epicycloidal train</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Gearbox-GearboxAsPerAGMAAndAPI677">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Gearbox" />
+    <skos:prefLabel xml:lang="en">Gearbox as per AGMA and API 677 </skos:prefLabel>
+    <skos:altLabel xml:lang="en">API 677</skos:altLabel>
+    <skos:altLabel xml:lang="en">API STD 677</skos:altLabel>
+    <skos:altLabel xml:lang="en">677 – General purpose gear units API</skos:altLabel>
+    <skos:altLabel xml:lang="en">677. API</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Gearbox-GearboxesAccordingToManufacturerSStandard">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Gearbox" />
+    <skos:prefLabel xml:lang="en">Gearboxes according to manufacturer's standard</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Mixers">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment" />
+    <skos:prefLabel xml:lang="en">Mixers</skos:prefLabel>
+    <skos:altLabel xml:lang="en">mixer</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Mixers-ChemicalProcessMixers">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Mixers" />
+    <skos:prefLabel xml:lang="en">Chemical process mixers</skos:prefLabel>
+    <skos:altLabel xml:lang="en">chemical process mixer</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-Mixers-TankMixers">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-Mixers" />
+    <skos:prefLabel xml:lang="en">Tank mixers</skos:prefLabel>
+    <skos:altLabel xml:lang="en">tank mixer</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-FansBlowersBoostersAndVacuumPumps">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment" />
+    <skos:prefLabel xml:lang="en">Fans, blowers, boosters and vacuum pumps</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-FansBlowersBoostersAndVacuumPumps-CentrifugalFans">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-FansBlowersBoostersAndVacuumPumps" />
+    <skos:prefLabel xml:lang="en">Centrifugal fans</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Centrifugal fan</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-FansBlowersBoostersAndVacuumPumps-CoolingTowerFans">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-FansBlowersBoostersAndVacuumPumps" />
+    <skos:prefLabel xml:lang="en">Cooling-tower fans</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Cooling fan</skos:altLabel>
+    <skos:altLabel xml:lang="en">Cooling tower fans</skos:altLabel>
+    <skos:altLabel xml:lang="en">Cooling tower fan</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-FansBlowersBoostersAndVacuumPumps-BlowersBoostersAndIndustrialVacuumPumps">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-FansBlowersBoostersAndVacuumPumps" />
+    <skos:prefLabel xml:lang="en">"Blowers, boosters and industrial vacuum pumps" </skos:prefLabel>
+    <skos:altLabel xml:lang="en">blower pump</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-FansBlowersBoostersAndVacuumPumps-VariousBlowersAndVacuumPumpsWithRotatingPiston">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-FansBlowersBoostersAndVacuumPumps" />
+    <skos:prefLabel xml:lang="en">Various blowers and vacuum pumps with rotating piston</skos:prefLabel>
+    <skos:altLabel xml:lang="en">blower vacuum pump piston</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-FansBlowersBoostersAndVacuumPumps-BoostersAndVacuumPumpsWithRegenerativeWheel">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-FansBlowersBoostersAndVacuumPumps" />
+    <skos:prefLabel xml:lang="en">Boosters and vacuum pumps with regenerative wheel</skos:prefLabel>
+    <skos:altLabel xml:lang="en">boosters vacuum pump wheel</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-FansBlowersBoostersAndVacuumPumps-BlowersAndVacuumPumpsLiquidRingType">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-FansBlowersBoostersAndVacuumPumps" />
+    <skos:prefLabel xml:lang="en">Blowers and vacuum pumps, liquid ring type</skos:prefLabel>
+    <skos:altLabel xml:lang="en">blower vacuum pump ring</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-FansBlowersBoostersAndVacuumPumps-BlowersAndVacuumPumpsVanesType">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-FansBlowersBoostersAndVacuumPumps" />
+    <skos:prefLabel xml:lang="en">Blowers and vacuum pumps, vanes type</skos:prefLabel>
+    <skos:altLabel xml:lang="en">blower pump vane</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-FansBlowersBoostersAndVacuumPumps-BlowersAndVacuumPumpsScrewType">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-FansBlowersBoostersAndVacuumPumps" />
+    <skos:prefLabel xml:lang="en">Blowers and vacuum pumps, screw type</skos:prefLabel>
+    <skos:altLabel xml:lang="en">blower pump screw</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-FansBlowersBoostersAndVacuumPumps-BlowersAndVacuumPumpsRootsType">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-FansBlowersBoostersAndVacuumPumps" />
+    <skos:prefLabel xml:lang="en">Blowers and vacuum pumps, roots type</skos:prefLabel>
+    <skos:altLabel xml:lang="en">blower pump root</skos:altLabel>
+    <skos:altLabel xml:lang="en">vacuum pump root</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-FansBlowersBoostersAndVacuumPumps-BlowersAndVacuumPumpsReciprocatingType">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-FansBlowersBoostersAndVacuumPumps" />
+    <skos:prefLabel xml:lang="en">Blowers and vacuum pumps, reciprocating type</skos:prefLabel>
+    <skos:altLabel xml:lang="en">blower reciprocating pump</skos:altLabel>
+    <skos:altLabel xml:lang="en">vacuum reciprocating pump</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-FansBlowersBoostersAndVacuumPumps-BlowersAndVacuumPumpsCentrifugalType">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-FansBlowersBoostersAndVacuumPumps" />
+    <skos:prefLabel xml:lang="en">Blowers and vacuum pumps, centrifugal type</skos:prefLabel>
+    <skos:altLabel xml:lang="en">blower pump centrifugal</skos:altLabel>
+    <skos:altLabel xml:lang="en">vacuum pump centrifugal</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-ElectricMotors">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment" />
+    <skos:prefLabel xml:lang="en">Electric motors</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Electric motor</skos:altLabel>
+    <skos:altLabel xml:lang="en">electric drive motor</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-DieselEngines">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment" />
+    <skos:prefLabel xml:lang="en">Diesel engines</skos:prefLabel>
+    <skos:altLabel xml:lang="en">diesel engine</skos:altLabel>
+    <skos:altLabel xml:lang="en">Diesel oil engines</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-DieselEngines-MiddleSpeed1500RpmDieselEngineForElectricalEmergencyApplicationAndMechanicalDrives">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-DieselEngines" />
+    <skos:prefLabel xml:lang="en">Middle speed 1500 rpm diesel engine for Electrical (Emergency application) and Mechanical drives</skos:prefLabel>
+    <skos:altLabel xml:lang="en">diesel engine 1500 rpm</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-DieselEngines-LowSpeedDieselEngineForElectricalEssentialApplicationAndMechanicalDrives">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-DieselEngines" />
+    <skos:prefLabel xml:lang="en"> Low speed diesel engine for Electrical (Essential application) and Mechanical drives</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Low speed diesel engine</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Equipment-DieselEngines-DieselEnginesForFireWaterPumps">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Equipment-DieselEngines" />
+    <skos:prefLabel xml:lang="en"> Diesel engines for Fire Water Pumps</skos:prefLabel>
+    <skos:altLabel xml:lang="en">diesel engine fire water pumps</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Phenomenon">
+    <skos:prefLabel xml:lang="en">Phenomenon</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Phenomenon-PhysicalPhenomenon">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Phenomenon" />
+    <skos:prefLabel xml:lang="en">Physical Phenomenon</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Phenomenon-PhysicalPhenomenon-Erosion">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Phenomenon-PhysicalPhenomenon" />
+    <skos:prefLabel xml:lang="en">Erosion</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Phenomenon-PhysicalPhenomenon-Surge">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Phenomenon-PhysicalPhenomenon" />
+    <skos:prefLabel xml:lang="en">Surge</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Characterisation">
+    <skos:prefLabel xml:lang="en">Characterisation</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Characterisation-Temperature">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Characterisation" />
+    <skos:prefLabel xml:lang="en">Temperature</skos:prefLabel>
+    <skos:altLabel xml:lang="en">temperatures</skos:altLabel>
+    <skos:altLabel xml:lang="en">°C</skos:altLabel>
+    <skos:altLabel xml:lang="en">°F</skos:altLabel>
+    <skos:altLabel xml:lang="en">degree</skos:altLabel>
+    <skos:altLabel xml:lang="en">degrees</skos:altLabel>
+    <skos:altLabel xml:lang="en">°K</skos:altLabel>
+    <skos:altLabel xml:lang="en">° C</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Characterisation-Temperature-PumpingTemperature">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Characterisation-Temperature" />
+    <skos:prefLabel xml:lang="en">Pumping temperature</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Characterisation-Temperature-AmbientTemperature">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Characterisation-Temperature" />
+    <skos:prefLabel xml:lang="en">Ambient temperature</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Characterisation-Temperature-BoilingTemperature">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Characterisation-Temperature" />
+    <skos:prefLabel xml:lang="en">Boiling temperature</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Characterisation-Pressure">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Characterisation" />
+    <skos:prefLabel xml:lang="en">Pressure</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Characterisation-Pressure-Mawp">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Characterisation-Pressure" />
+    <skos:prefLabel xml:lang="en">Mawp</skos:prefLabel>
+    <skos:altLabel xml:lang="en">maximum allowable working pressure</skos:altLabel>
+    <skos:altLabel xml:lang="en">maximum and installed), maximum allowable working pressure</skos:altLabel>
+    <skos:altLabel xml:lang="en">Pressure/temperature rating The maximum allowable working</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Characterisation-Pressure-CasingMawp">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Characterisation-Pressure" />
+    <skos:prefLabel xml:lang="en">Casing mawp</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Characterisation-Pressure-StaticPressure">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Characterisation-Pressure" />
+    <skos:prefLabel xml:lang="en">Static pressure</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Characterisation-Pressure-DifferentialPressure">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Characterisation-Pressure" />
+    <skos:prefLabel xml:lang="en">Differential pressure</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Characterisation-Pressure-LubeOilPressure">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Characterisation-Pressure" />
+    <skos:prefLabel xml:lang="en">Lube-oil pressure</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Characterisation-Pressure-PressureBarg">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Characterisation-Pressure" />
+    <skos:prefLabel xml:lang="en">Pressure barg</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Characterisation-Pressure-DischargePressure">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Characterisation-Pressure" />
+    <skos:prefLabel xml:lang="en">Discharge pressure</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Characterisation-Speed">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Characterisation" />
+    <skos:prefLabel xml:lang="en">Speed</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Characterisation-Speed-MaximumContinuousSpeed">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Characterisation-Speed" />
+    <skos:prefLabel xml:lang="en">Maximum continuous speed</skos:prefLabel>
+    <skos:altLabel xml:lang="en">MCS</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Characterisation-Speed-ContinuousSpeed">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Characterisation-Speed" />
+    <skos:prefLabel xml:lang="en">Continuous speed</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Characterisation-Speed-Overspeed">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Characterisation-Speed" />
+    <skos:prefLabel xml:lang="en">Overspeed</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Characterisation-Speed-RatedSpeed">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Characterisation-Speed" />
+    <skos:prefLabel xml:lang="en">Rated speed</skos:prefLabel>
+    <skos:altLabel xml:lang="en">rated operating speed</skos:altLabel>
+    <skos:altLabel xml:lang="en">rated input speed</skos:altLabel>
+    <skos:altLabel xml:lang="en">rated output speed</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Characterisation-Speed-VariableSpeed">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Characterisation-Speed" />
+    <skos:prefLabel xml:lang="en">Variable speed</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Characterisation-Speed-RotationalSpeed">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Characterisation-Speed" />
+    <skos:prefLabel xml:lang="en">Rotational speed</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Characterisation-Vibration">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Characterisation" />
+    <skos:prefLabel xml:lang="en">Vibration</skos:prefLabel>
+    <skos:altLabel xml:lang="en">vibrations</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Characterisation-Vibration-VibrationMeasurement">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Characterisation-Vibration" />
+    <skos:prefLabel xml:lang="en">Vibration measurement</skos:prefLabel>
+    <skos:altLabel xml:lang="en">vibration measurements</skos:altLabel>
+    <skos:altLabel xml:lang="en">vibration by measurements</skos:altLabel>
+    <skos:altLabel xml:lang="en">Vibrations measurements</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Characterisation-Vibration-OffLineVibrationMeasurement">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Characterisation-Vibration" />
+    <skos:prefLabel xml:lang="en">Off-line vibration measurement</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Characterisation-Flow">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Characterisation" />
+    <skos:prefLabel xml:lang="en">Flow</skos:prefLabel>
+    <skos:altLabel xml:lang="en">flows</skos:altLabel>
+    <skos:altLabel xml:lang="en">flowing</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Characterisation-Flow-RatedFlow">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Characterisation-Flow" />
+    <skos:prefLabel xml:lang="en">Rated flow</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Characterisation-Flow-FlowRate">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Characterisation-Flow" />
+    <skos:prefLabel xml:lang="en">Flow rate</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Characterisation-Flow-StableByPassFlow">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Characterisation-Flow" />
+    <skos:prefLabel xml:lang="en">Stable by-pass flow</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Characterisation-Power">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Characterisation" />
+    <skos:prefLabel xml:lang="en">Power</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Characterisation-Power-SoundPower">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Characterisation-Power" />
+    <skos:prefLabel xml:lang="en">Sound power</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Characterisation-Power-PowerConsumption">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Characterisation-Power" />
+    <skos:prefLabel xml:lang="en">Power consumption</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Characterisation-Power-AbsorbedPower">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Characterisation-Power" />
+    <skos:prefLabel xml:lang="en">Absorbed power</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Characterisation-Power-PowerLevels">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Characterisation-Power" />
+    <skos:prefLabel xml:lang="en">Power levels</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Characterisation-Power-RatedPower">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Characterisation-Power" />
+    <skos:prefLabel xml:lang="en">Rated power</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Characterisation-Displacement">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Characterisation" />
+    <skos:prefLabel xml:lang="en">Displacement</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Characterisation-Displacement-AxialDisplacement">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Characterisation-Displacement" />
+    <skos:prefLabel xml:lang="en">Axial displacement</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Characterisation-Displacement-PositiveDisplacement">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Characterisation-Displacement" />
+    <skos:prefLabel xml:lang="en">Positive displacement</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Characterisation-Displacement-RelativeDisplacement">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Characterisation-Displacement" />
+    <skos:prefLabel xml:lang="en">Relative displacement</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Characterisation-Distance">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Characterisation" />
+    <skos:prefLabel xml:lang="en">Distance</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Characterisation-Distance-Length">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Characterisation-Distance" />
+    <skos:prefLabel xml:lang="en">Length</skos:prefLabel>
+    <skos:altLabel xml:lang="en">lengths</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Characterisation-Distance-Distance">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Characterisation-Distance" />
+    <skos:prefLabel xml:lang="en">Distance</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Distances</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Characterisation-Sound">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Characterisation" />
+    <skos:prefLabel xml:lang="en">Sound</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Noise</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Characterisation-Sound-SoundPressureLevel">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Characterisation-Sound" />
+    <skos:prefLabel xml:lang="en">Sound pressure level</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Characterisation-Sound-SoundPowerLevel">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Characterisation-Sound" />
+    <skos:prefLabel xml:lang="en">Sound power level</skos:prefLabel>
+    <skos:altLabel xml:lang="en">sound pressure level and sound power level</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Events">
+    <skos:prefLabel xml:lang="en">Events</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Events-Trip">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Events" />
+    <skos:prefLabel xml:lang="en">Trip</skos:prefLabel>
+    <skos:altLabel xml:lang="en">spurious trip</skos:altLabel>
+    <skos:altLabel xml:lang="en">Trip valve - Less subject to spurious</skos:altLabel>
+    <skos:altLabel xml:lang="en">shutdown</skos:altLabel>
+    <skos:altLabel xml:lang="en">trips</skos:altLabel>
+    <skos:altLabel xml:lang="en">tripped</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Events-Slowdown">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Events" />
+    <skos:prefLabel xml:lang="en">Slowdown</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Events-Turnaround">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Events" />
+    <skos:prefLabel xml:lang="en">Turnaround</skos:prefLabel>
+    <skos:altLabel xml:lang="en">TA</skos:altLabel>
+    <skos:altLabel xml:lang="en">T</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Events-Domino">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Events" />
+    <skos:prefLabel xml:lang="en">Domino</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#ComponentVocabulary">
+    <skos:prefLabel xml:lang="en">Component vocabulary</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#ComponentVocabulary-Controller">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#ComponentVocabulary" />
+    <skos:prefLabel xml:lang="en">Controller</skos:prefLabel>
+    <skos:altLabel xml:lang="en">controllers</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#ComponentVocabulary-System">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#ComponentVocabulary" />
+    <skos:prefLabel xml:lang="en">System</skos:prefLabel>
+    <skos:altLabel xml:lang="en">systems</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#ComponentVocabulary-Transmitter">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#ComponentVocabulary" />
+    <skos:prefLabel xml:lang="en">Transmitter</skos:prefLabel>
+    <skos:altLabel xml:lang="en">transmitters</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#ComponentVocabulary-Inlet">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#ComponentVocabulary" />
+    <skos:prefLabel xml:lang="en">Inlet</skos:prefLabel>
+    <skos:altLabel xml:lang="en">inlets</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#PhenomVocabulary">
+    <skos:prefLabel xml:lang="en">Phenom vocabulary</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#PhenomVocabulary-Antisurge">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#PhenomVocabulary" />
+    <skos:prefLabel xml:lang="en">Antisurge</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#PhenomVocabulary-Speed">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#PhenomVocabulary" />
+    <skos:prefLabel xml:lang="en">Speed</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Method">
+    <skos:prefLabel xml:lang="en">Method</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Method-MathematicsMethod">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Method" />
+    <skos:prefLabel xml:lang="en">Mathematics Method</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Method-MathematicsMethod-Programming">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Method-MathematicsMethod" />
+    <skos:prefLabel xml:lang="en">Programming</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Method-MathematicsMethod-Programming-VotingLogic">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Method-MathematicsMethod-Programming" />
+    <skos:prefLabel xml:lang="en">Voting logic</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Dual Voting Logic</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Method-MathematicsMethod-Programming-VotingLogic-1oo2">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Method-MathematicsMethod-Programming-VotingLogic" />
+    <skos:prefLabel xml:lang="en">1oo2</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Method-MathematicsMethod-Programming-VotingLogic-1oo1">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Method-MathematicsMethod-Programming-VotingLogic" />
+    <skos:prefLabel xml:lang="en">1oo1</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Method-MathematicsMethod-Programming-VotingLogic-2oo3">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Method-MathematicsMethod-Programming-VotingLogic" />
+    <skos:prefLabel xml:lang="en">2oo3</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Method-MathematicsMethod-Programming-VotingLogic-2oo2">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Method-MathematicsMethod-Programming-VotingLogic" />
+    <skos:prefLabel xml:lang="en">2oo2</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Method-MathematicsMethod-Monitoring">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Method-MathematicsMethod" />
+    <skos:prefLabel xml:lang="en">Monitoring</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Method-MathematicsMethod-Monitoring-ConditionMonitoring">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Method-MathematicsMethod-Monitoring" />
+    <skos:prefLabel xml:lang="en">Condition monitoring</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Method-MathematicsMethod-Monitoring-MachineryConditionMonitoring">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Method-MathematicsMethod-Monitoring" />
+    <skos:prefLabel xml:lang="en">Machinery condition monitoring</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Method-MathematicsMethod-Monitoring-AxialPositionMonitoring">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Method-MathematicsMethod-Monitoring" />
+    <skos:prefLabel xml:lang="en">axial position monitoring</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Method-MathematicsMethod-Monitoring-AxialPositionMonitoring-AxialPositionMonitoring">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Method-MathematicsMethod-Monitoring-AxialPositionMonitoring" />
+    <skos:prefLabel xml:lang="en">axial position monitoring</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Method-OperationalMethod">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Method" />
+    <skos:prefLabel xml:lang="en">Operational method</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Method-OperationalMethod-Maintenance">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Method-OperationalMethod" />
+    <skos:prefLabel xml:lang="en">Maintenance</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Method-OperationalMethod-Maintenance-Overhaul">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Method-OperationalMethod-Maintenance" />
+    <skos:prefLabel xml:lang="en">Overhaul</skos:prefLabel>
+    <skos:altLabel xml:lang="en">overhauled</skos:altLabel>
+    <skos:altLabel xml:lang="en">overhauls</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Method-OperationalMethod-Maintenance-PartialRevision">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Method-OperationalMethod-Maintenance" />
+    <skos:prefLabel xml:lang="en">Partial revision</skos:prefLabel>
+    <skos:altLabel xml:lang="en">partial or major revision</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Method-OperationalMethod-Maintenance-MajorRevision">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Method-OperationalMethod-Maintenance" />
+    <skos:prefLabel xml:lang="en">Major revision</skos:prefLabel>
+    <skos:altLabel xml:lang="en">revision or major</skos:altLabel>
+    <skos:altLabel xml:lang="en">revision actions shall be performed during major</skos:altLabel>
+    <skos:altLabel xml:lang="en">revision and major</skos:altLabel>
+    <skos:altLabel xml:lang="en">Revision). • Major</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Method-OperationalMethod-Inspection">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Method-OperationalMethod" />
+    <skos:prefLabel xml:lang="en">Inspection</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Unit">
+    <skos:prefLabel xml:lang="en">Unit</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Unit-FluidCatalyticCrackerUnit">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Unit" />
+    <skos:prefLabel xml:lang="en">Fluid Catalytic Cracker unit</skos:prefLabel>
+    <skos:altLabel xml:lang="en">FCC</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Unit-ReformerUnit">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Unit" />
+    <skos:prefLabel xml:lang="en">Reformer unit</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Unit-DistilatteHydroteater">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Unit" />
+    <skos:prefLabel xml:lang="en">Distilatte Hydroteater</skos:prefLabel>
+    <skos:altLabel xml:lang="en">HDT</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Unit-HydrodesulfurizationUnit">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Unit" />
+    <skos:prefLabel xml:lang="en">Hydrodesulfurization unit</skos:prefLabel>
+    <skos:altLabel xml:lang="en">HDS</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Unit-MildHydroCrackingUnit">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Unit" />
+    <skos:prefLabel xml:lang="en">Mild Hydro Cracking unit</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Unit-SteamMethaneReformerUnit">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Unit" />
+    <skos:prefLabel xml:lang="en">Steam Methane Reformer unit</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Unit-PressureSwingAdsorptionUnit">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Unit" />
+    <skos:prefLabel xml:lang="en">Pressure Swing Adsorption unit</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Unit-VaccumDistillationUnit">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Unit" />
+    <skos:prefLabel xml:lang="en">Vaccum Distillation unit</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Unit-AtmosphericDistallationUnit">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Unit" />
+    <skos:prefLabel xml:lang="en">Atmospheric Distallation unit</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Unit-VisbreakingUnit">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Unit" />
+    <skos:prefLabel xml:lang="en">Visbreaking unit</skos:prefLabel>
+    <skos:altLabel xml:lang="en">VIS</skos:altLabel>
+    <skos:altLabel xml:lang="en">Vis braking</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Unit-AlkylationUnit">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Unit" />
+    <skos:prefLabel xml:lang="en">Alkylation Unit</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Unit-SteamCrackingUnit">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Unit" />
+    <skos:prefLabel xml:lang="en">Steam Cracking unit</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Unit-NaphtaCracker">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Unit" />
+    <skos:prefLabel xml:lang="en">Naphta Cracker</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Unit-ButadieneUnit">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Unit" />
+    <skos:prefLabel xml:lang="en">Butadiene Unit</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Unit-TolueneDisProportionationUnit">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Unit" />
+    <skos:prefLabel xml:lang="en">Toluene DisProportionation Unit</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Unit-CokerUnit">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Unit" />
+    <skos:prefLabel xml:lang="en">Coker Unit</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Unit-AtmosphericResidueDesulfurizationUnit">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Unit" />
+    <skos:prefLabel xml:lang="en">Atmospheric residue desulfurization Unit</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Unit-OffGazRegenerationUnit">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Unit" />
+    <skos:prefLabel xml:lang="en">Off-Gaz Regeneration unit</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Unit-GASOLINESELECTIVEDESULFURIZATIONUnit">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Unit" />
+    <skos:prefLabel xml:lang="en">GASOLINE SELECTIVE DESULFURIZATION Unit</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Unit-GasOilDistillation">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Unit" />
+    <skos:prefLabel xml:lang="en">GasOil distillation</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Unit-LubricantUnit">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Unit" />
+    <skos:prefLabel xml:lang="en">Lubricant unit</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Unit-PlatformerUnit">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Unit" />
+    <skos:prefLabel xml:lang="en">Platformer unit</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Unit-KeroseneHydrotreaterUnit">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Unit" />
+    <skos:prefLabel xml:lang="en">Kerosene Hydrotreater Unit</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Unit-CrudeDistillationUnit">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Unit" />
+    <skos:prefLabel xml:lang="en">Crude Distillation Unit</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Unit-GasCombustionUnit">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Unit" />
+    <skos:prefLabel xml:lang="en">Gas Combustion unit</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Unit-HydrotreatedVegetableOilUnit">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Unit" />
+    <skos:prefLabel xml:lang="en">Hydrotreated Vegetable Oil unit</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Unit-Polyetylène">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Unit" />
+    <skos:prefLabel xml:lang="en">Polyetylène</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Unit-PolyPropylène">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Unit" />
+    <skos:prefLabel xml:lang="en">PolyPropylène</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Unit-PolyEtylèneLineaire">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Unit" />
+    <skos:prefLabel xml:lang="en">PolyEtylène Lineaire</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Unit-LowDensityPolyEtylène">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Unit" />
+    <skos:prefLabel xml:lang="en">Low Density PolyEtylène</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Unit-HighDensityPolyEtylène">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Unit" />
+    <skos:prefLabel xml:lang="en">High Density PolyEtylène</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Failure">
+    <skos:prefLabel xml:lang="en">Failure</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Failure-SealFailure">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Failure" />
+    <skos:prefLabel xml:lang="en">Seal failure</skos:prefLabel>
+    <skos:altLabel xml:lang="en">seal or piping failure</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Failure-DryRun">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Failure" />
+    <skos:prefLabel xml:lang="en">Dry Run</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Dry-Run</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Failure-Cavitation">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Failure" />
+    <skos:prefLabel xml:lang="en">Cavitation</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Failure-Seizure">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Failure" />
+    <skos:prefLabel xml:lang="en">Seizure</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Failure-Unbalance">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Failure" />
+    <skos:prefLabel xml:lang="en">Unbalance</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Failure-BearingFailure">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Failure" />
+    <skos:prefLabel xml:lang="en">Bearing Failure</skos:prefLabel>
+    <skos:altLabel xml:lang="en">bearing wear or failure</skos:altLabel>
+    <skos:altLabel xml:lang="en">bearing damage / failure</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Failure-Leak">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Failure" />
+    <skos:prefLabel xml:lang="en">Leak</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Packing Leak</skos:altLabel>
+    <skos:altLabel xml:lang="en">Packing leakage OUT port connected to leak</skos:altLabel>
+    <skos:altLabel xml:lang="en">packing; the permanent leak</skos:altLabel>
+    <skos:altLabel xml:lang="en">Gasket Leak</skos:altLabel>
+    <skos:altLabel xml:lang="en">oil leak</skos:altLabel>
+    <skos:altLabel xml:lang="en">Seal leak</skos:altLabel>
+    <skos:altLabel xml:lang="en">seal might leak</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Failure-Vibration">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Failure" />
+    <skos:prefLabel xml:lang="en">Vibration</skos:prefLabel>
+    <skos:altLabel xml:lang="en">low vibration</skos:altLabel>
+    <skos:altLabel xml:lang="en">low sub synchronous vibrations</skos:altLabel>
+    <skos:altLabel xml:lang="en">low frequency sub synchronous vibration</skos:altLabel>
+    <skos:altLabel xml:lang="en">low the radial vibration</skos:altLabel>
+    <skos:altLabel xml:lang="en">low as compared to vibrations</skos:altLabel>
+    <skos:altLabel xml:lang="en">high vibration</skos:altLabel>
+    <skos:altLabel xml:lang="en">high crosshead vibration</skos:altLabel>
+    <skos:altLabel xml:lang="en">high vibrations</skos:altLabel>
+    <skos:altLabel xml:lang="en">high level AND (frame vibration</skos:altLabel>
+    <skos:altLabel xml:lang="en">high cylinder vibration</skos:altLabel>
+    <skos:altLabel xml:lang="en">high compressor frame vibrations</skos:altLabel>
+    <skos:altLabel xml:lang="en">high radial vibration</skos:altLabel>
+    <skos:altLabel xml:lang="en">high alarm level R Cylinder head vibration</skos:altLabel>
+    <skos:altLabel xml:lang="en">high amplitude and high sub synchronous vibrations</skos:altLabel>
+    <skos:altLabel xml:lang="en">high level. Crosshead vibrations</skos:altLabel>
+    <skos:altLabel xml:lang="en">high, • The new vibration</skos:altLabel>
+    <skos:altLabel xml:lang="en">high alarm level R Casing vibration</skos:altLabel>
+    <skos:altLabel xml:lang="en">High bearing vibration</skos:altLabel>
+    <skos:altLabel xml:lang="en">high alarm on the radial vibration</skos:altLabel>
+    <skos:altLabel xml:lang="en">high casing vibrations</skos:altLabel>
+    <skos:altLabel xml:lang="en">high sub synchronous vibrations</skos:altLabel>
+    <skos:altLabel xml:lang="en">severe vibration</skos:altLabel>
+    <skos:altLabel xml:lang="en">Severe vibrations</skos:altLabel>
+    <skos:altLabel xml:lang="en">abnormal vibration</skos:altLabel>
+    <skos:altLabel xml:lang="en">Abnormal vibrations</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Failure-Surge">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Failure" />
+    <skos:prefLabel xml:lang="en">Surge</skos:prefLabel>
+    <skos:altLabel xml:lang="en">severe surge</skos:altLabel>
+    <skos:altLabel xml:lang="en">surge event</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Dates">
+    <skos:prefLabel xml:lang="en">Dates</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#Dates-Avril">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#Dates" />
+    <skos:prefLabel xml:lang="en">Avril</skos:prefLabel>
+    <skos:altLabel xml:lang="en">00 / 4 / 00</skos:altLabel>
+    <skos:altLabel xml:lang="en">15/04/2008</skos:altLabel>
+    <skos:altLabel xml:lang="en">01/04/2004</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#ValueRegex">
+    <skos:prefLabel xml:lang="en">Value - regex</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#ValueRegex-PressureValue">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#ValueRegex" />
+    <skos:prefLabel xml:lang="en">Pressure value</skos:prefLabel>
+    <skos:altLabel xml:lang="en">00 bar</skos:altLabel>
+    <skos:altLabel xml:lang="en">100 bars</skos:altLabel>
+    <skos:altLabel xml:lang="en">16 bar</skos:altLabel>
+    <skos:altLabel xml:lang="en">1bar</skos:altLabel>
+    <skos:altLabel xml:lang="en">10 bars</skos:altLabel>
+    <skos:altLabel xml:lang="en">70bar</skos:altLabel>
+    <skos:altLabel xml:lang="en">35 bars</skos:altLabel>
+    <skos:altLabel xml:lang="en">70 bars</skos:altLabel>
+    <skos:altLabel xml:lang="en">160 bars</skos:altLabel>
+    <skos:altLabel xml:lang="en">70 bar</skos:altLabel>
+    <skos:altLabel xml:lang="en">270 H2 &gt; 100 bars</skos:altLabel>
+    <skos:altLabel xml:lang="en">1 bar</skos:altLabel>
+    <skos:altLabel xml:lang="en">149 204 Discharge pressure bar</skos:altLabel>
+    <skos:altLabel xml:lang="en">204 Discharge pressure bar</skos:altLabel>
+    <skos:altLabel xml:lang="en">7500 PSI (517 bars</skos:altLabel>
+    <skos:altLabel xml:lang="en">11 8.1 - Barring</skos:altLabel>
+    <skos:altLabel xml:lang="en">7 bar</skos:altLabel>
+    <skos:altLabel xml:lang="en">142 bar</skos:altLabel>
+    <skos:altLabel xml:lang="en">50 to 160 bars</skos:altLabel>
+    <skos:altLabel xml:lang="en">114 The spreader bar</skos:altLabel>
+    <skos:altLabel xml:lang="en">618 #89 Operating pressure (bar</skos:altLabel>
+    <skos:altLabel xml:lang="en">2) MSR3 Exhaust Pressure Bar</skos:altLabel>
+    <skos:altLabel xml:lang="en">320 460 Discharge Pressure &lt; 50 bars</skos:altLabel>
+    <skos:altLabel xml:lang="en">4 ~5 bars</skos:altLabel>
+    <skos:altLabel xml:lang="en">3 3.3.2.7 Spreader bar</skos:altLabel>
+    <skos:altLabel xml:lang="en">149 177 149 204 Discharge pressure bar</skos:altLabel>
+    <skos:altLabel xml:lang="en">5 bars</skos:altLabel>
+    <skos:altLabel xml:lang="en">80 bars</skos:altLabel>
+    <skos:altLabel xml:lang="en">220 H2 &lt; 100 bars</skos:altLabel>
+    <skos:altLabel xml:lang="en">2) MSR3 Extraction pressure bars</skos:altLabel>
+    <skos:altLabel xml:lang="en">50 bar</skos:altLabel>
+    <skos:altLabel xml:lang="en">220 NH3 &lt; 100 bars</skos:altLabel>
+    <skos:altLabel xml:lang="en">4) MSR5 Exhaust Pressure Bar</skos:altLabel>
+    <skos:altLabel xml:lang="en">617 #114 The spreader bar</skos:altLabel>
+    <skos:altLabel xml:lang="en">4) R5 Filter Differential Pressure bar</skos:altLabel>
+    <skos:altLabel xml:lang="en">100 R Suction strainer delta P bar</skos:altLabel>
+    <skos:altLabel xml:lang="en">517 bars</skos:altLabel>
+    <skos:altLabel xml:lang="en">50 bars</skos:altLabel>
+    <skos:altLabel xml:lang="en">89 Operating pressure (bar</skos:altLabel>
+    <skos:altLabel xml:lang="en">43 Cylinder delta Pressure (bar</skos:altLabel>
+    <skos:altLabel xml:lang="en">21 bars</skos:altLabel>
+    <skos:altLabel xml:lang="en">177 149 204 Discharge pressure bar</skos:altLabel>
+    <skos:altLabel xml:lang="en">460 Discharge Pressure &lt; 50 bars</skos:altLabel>
+    <skos:altLabel xml:lang="en">135°C Propane Pressure bar</skos:altLabel>
+    <skos:altLabel xml:lang="en">46 CO2 &lt; 100 bars</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#ValueRegex-LengthValue">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#ValueRegex" />
+    <skos:prefLabel xml:lang="en">Length value</skos:prefLabel>
+    <skos:altLabel xml:lang="en">00 μm</skos:altLabel>
+    <skos:altLabel xml:lang="en">3 mm</skos:altLabel>
+    <skos:altLabel xml:lang="en">25 mm</skos:altLabel>
+    <skos:altLabel xml:lang="en">1mm</skos:altLabel>
+    <skos:altLabel xml:lang="en">100 mm</skos:altLabel>
+    <skos:altLabel xml:lang="en">1m</skos:altLabel>
+    <skos:altLabel xml:lang="en">1 m</skos:altLabel>
+    <skos:altLabel xml:lang="en">90 mm</skos:altLabel>
+    <skos:altLabel xml:lang="en">1" or 25 mm</skos:altLabel>
+    <skos:altLabel xml:lang="en">2m</skos:altLabel>
+    <skos:altLabel xml:lang="en">30 mm</skos:altLabel>
+    <skos:altLabel xml:lang="en">10-1mm</skos:altLabel>
+    <skos:altLabel xml:lang="en">50 mm</skos:altLabel>
+    <skos:altLabel xml:lang="en">315 mm</skos:altLabel>
+    <skos:altLabel xml:lang="en">4 inch</skos:altLabel>
+    <skos:altLabel xml:lang="en">6 mm</skos:altLabel>
+    <skos:altLabel xml:lang="en">60 mm</skos:altLabel>
+    <skos:altLabel xml:lang="en">35mm</skos:altLabel>
+    <skos:altLabel xml:lang="en">750mm</skos:altLabel>
+    <skos:altLabel xml:lang="en">5mm</skos:altLabel>
+    <skos:altLabel xml:lang="en">18 m</skos:altLabel>
+    <skos:altLabel xml:lang="en">25mm</skos:altLabel>
+    <skos:altLabel xml:lang="en">1 mm</skos:altLabel>
+    <skos:altLabel xml:lang="en">1/4 inch</skos:altLabel>
+    <skos:altLabel xml:lang="en">19 mm</skos:altLabel>
+    <skos:altLabel xml:lang="en">150 =&gt; m</skos:altLabel>
+    <skos:altLabel xml:lang="en">2 expressed in mm</skos:altLabel>
+    <skos:altLabel xml:lang="en">250 m</skos:altLabel>
+    <skos:altLabel xml:lang="en">1W 2M</skos:altLabel>
+    <skos:altLabel xml:lang="en">48 G&amp;M</skos:altLabel>
+    <skos:altLabel xml:lang="en">1/2 inch</skos:altLabel>
+    <skos:altLabel xml:lang="en">35 M</skos:altLabel>
+    <skos:altLabel xml:lang="en">8 mm</skos:altLabel>
+    <skos:altLabel xml:lang="en">58125 @ 60 mm</skos:altLabel>
+    <skos:altLabel xml:lang="en">30mm</skos:altLabel>
+    <skos:altLabel xml:lang="en">150000 mm</skos:altLabel>
+    <skos:altLabel xml:lang="en">20 mm</skos:altLabel>
+    <skos:altLabel xml:lang="en">315mm</skos:altLabel>
+    <skos:altLabel xml:lang="en">150 m</skos:altLabel>
+    <skos:altLabel xml:lang="en">450 mm</skos:altLabel>
+    <skos:altLabel xml:lang="en">12mm</skos:altLabel>
+    <skos:altLabel xml:lang="en">50mm</skos:altLabel>
+    <skos:altLabel xml:lang="en">1 1D 1M</skos:altLabel>
+    <skos:altLabel xml:lang="en">11 6 mm</skos:altLabel>
+    <skos:altLabel xml:lang="en">3 ft</skos:altLabel>
+    <skos:altLabel xml:lang="en">71 Lift: 1.25mm</skos:altLabel>
+    <skos:altLabel xml:lang="en">60 and 90 mm</skos:altLabel>
+    <skos:altLabel xml:lang="en">10mm</skos:altLabel>
+    <skos:altLabel xml:lang="en">148 G&amp;M</skos:altLabel>
+    <skos:altLabel xml:lang="en">550 * 2.25 = m</skos:altLabel>
+    <skos:altLabel xml:lang="en">10-1 mm</skos:altLabel>
+    <skos:altLabel xml:lang="en">67500 @ 30 mm</skos:altLabel>
+    <skos:altLabel xml:lang="en">9 6 mm</skos:altLabel>
+    <skos:altLabel xml:lang="en">232500 @ 60 mm</skos:altLabel>
+    <skos:altLabel xml:lang="en">345000 @ 90 mm</skos:altLabel>
+    <skos:altLabel xml:lang="en">135000 @ 30 mm</skos:altLabel>
+    <skos:altLabel xml:lang="en">33750 @ 30 mm</skos:altLabel>
+    <skos:altLabel xml:lang="en">3/4 inch</skos:altLabel>
+    <skos:altLabel xml:lang="en">300 m</skos:altLabel>
+    <skos:altLabel xml:lang="en">25-mm</skos:altLabel>
+    <skos:altLabel xml:lang="en">1D 1M</skos:altLabel>
+    <skos:altLabel xml:lang="en">550 * 0.901 = m</skos:altLabel>
+    <skos:altLabel xml:lang="en">86250 @ 90 mm</skos:altLabel>
+    <skos:altLabel xml:lang="en">5 mm</skos:altLabel>
+    <skos:altLabel xml:lang="en">100 m</skos:altLabel>
+    <skos:altLabel xml:lang="en">3x Cylinder diameter mm</skos:altLabel>
+    <skos:altLabel xml:lang="en">6 at least 25mm</skos:altLabel>
+    <skos:altLabel xml:lang="en">22 mm</skos:altLabel>
+    <skos:altLabel xml:lang="en">80 mm</skos:altLabel>
+    <skos:altLabel xml:lang="en">150mm</skos:altLabel>
+    <skos:altLabel xml:lang="en">93 Lift: 0.75mm</skos:altLabel>
+    <skos:altLabel xml:lang="en">8' &lt; 0.20mm</skos:altLabel>
+    <skos:altLabel xml:lang="en">3mm</skos:altLabel>
+    <skos:altLabel xml:lang="en">116250 @ 60 mm</skos:altLabel>
+    <skos:altLabel xml:lang="en">2007 was 1,5 mm</skos:altLabel>
+    <skos:altLabel xml:lang="en">34 kW 22 mm</skos:altLabel>
+    <skos:altLabel xml:lang="en">10-7 m</skos:altLabel>
+    <skos:altLabel xml:lang="en">150 mm</skos:altLabel>
+    <skos:altLabel xml:lang="en">172500 @ 90 mm</skos:altLabel>
+    <skos:altLabel xml:lang="en">13 mm</skos:altLabel>
+    <skos:altLabel xml:lang="en">825 ft</skos:altLabel>
+    <skos:altLabel xml:lang="en">2 inch</skos:altLabel>
+    <skos:altLabel xml:lang="en">15 mm</skos:altLabel>
+    <skos:altLabel xml:lang="en">2 m</skos:altLabel>
+    <skos:altLabel xml:lang="en">7 m</skos:altLabel>
+    <skos:altLabel xml:lang="en">8 (1 m</skos:altLabel>
+    <skos:altLabel xml:lang="en">35 kW 19 mm</skos:altLabel>
+    <skos:altLabel xml:lang="en">20mm</skos:altLabel>
+    <skos:altLabel xml:lang="en">62 m</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#ValueRegex-TorqueValue">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#ValueRegex" />
+    <skos:prefLabel xml:lang="en">Torque value</skos:prefLabel>
+    <skos:altLabel xml:lang="en">00 g\.mm</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.proxem.com/onto/concept#ValueRegex-SurfaceValue">
+    <skos:broader rdf:resource="http://www.proxem.com/onto/concept#ValueRegex" />
+    <skos:prefLabel xml:lang="en">Surface value</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Surface value2</skos:altLabel>
+    <skos:altLabel xml:lang="en">2m²</skos:altLabel>
+  </skos:Concept>
+</rdf:Rdf>

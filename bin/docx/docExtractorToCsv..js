@@ -9,6 +9,7 @@ var docxExtractor = require("./docxExtractor..js");
 var formatToBot = require("./formatToBot..js");
 var formatToHtml = require("./formatToHtml..js");
 var formatToColumns = require("./formatToColumns..js");
+var formatToElastic=require("./formatToElastic..js");
 var config = require("./config..js");
 var docExtractorToCsv = {
 
@@ -216,6 +217,9 @@ var docExtractorToCsv = {
         var htmlTexts = "";
         var columnTexts = "title\ttext\ttable\tdocTitle\timage\n";
 
+        var elasticAllParagraphs=[];
+
+
         xmlPaths.forEach(function (xmlPath) {
 
 
@@ -236,6 +240,7 @@ var docExtractorToCsv = {
             var headerTables = docxExtractor.extractHeaderJson(filePath.replace(".xml", "_header.xml"))
             var docRels = docxExtractor.getRelsMap(filePath.replace(".xml", "_rels.xml"));
             var fileName = xmlPath.substring(0, xmlPath.lastIndexOf("."))
+
             try {
                 var jsonContent = docxExtractor.extractContentJson(doc, docRels);
                 // jsonContent = addTablesToChapters(jsonContent);
@@ -245,23 +250,23 @@ var docExtractorToCsv = {
 
 
                 var docTitle = extractDocTitle(headerTables);
-                var startId = Math.round((Math.random() * 100000))
 
+                var docId = Math.round((Math.random() * 100000))
+                var paragraphId = Math.round((Math.random() * 100000))
+                var chapterId = Math.round((Math.random() * 100000))
 
                 jsonContent.forEach(function (chapter, index) {
 
                     if (!chapter.key)
                         chapter.key = "";
                     chapter.title = removeHtmlTags(chapter.title);
-                    // "id\tFile\tdocTitle\tpurpose\tscope\tparentChapters\tChapterKey\tChapter\thtmlText\tbotText\n";
+
+
                     var rooTxt = fileName + "\t" + docTitle + "\t" + purposeAndScope + "\t" + chapter.parent + "\t" + chapter.tocNumber + "\t" + chapter.title + "\t";
-                    ;
+
                     chapter.paragraphs.forEach(function (paragraph) {
                         if (paragraph) {
-                            var paragraphText = paragraph.text;
 
-                            if (paragraph.images.length > 0)
-                                var xx = 1
 
 
                             var botSourceObj = {
@@ -273,6 +278,7 @@ var docExtractorToCsv = {
                             //clone before use
                             var htmlSourceObj = JSON.parse(JSON.stringify(botSourceObj));
                             var columnsSourceObj = JSON.parse(JSON.stringify(botSourceObj));
+                            var elasticSourceObj = JSON.parse(JSON.stringify(botSourceObj));
 
 
                             var botObj = formatToBot.format(botSourceObj);
@@ -285,13 +291,17 @@ var docExtractorToCsv = {
                             columnTexts += columnText + "\n";
 
 
+                            elasticAllParagraphs.push(formatToElastic.formatParagraphs(elasticSourceObj,docId,chapterId,paragraphId));
+
                             // console.log(botText + "\n");
 
-                            str += (startId++) + "\t" + rooTxt + htmlText + "\t" + botText + "\t" + columnText + "\n";
-
+                            str += (paragraphId) + "\t" + rooTxt + htmlText + "\t" + botText + "\t" + columnText + "\n";
+                            paragraphId++;
                         }
 
                     })
+                    chapterId++;
+
 
 
                 })
@@ -300,6 +310,7 @@ var docExtractorToCsv = {
                 //     str += "ERROR processing " + fileName + " : " + e + "\n";
                 //    botObjs.push({ERROR: " processing " + fileName + " : " + e})
             }
+            docId++;
 
         });
         //  console.log(str)
@@ -307,6 +318,9 @@ var docExtractorToCsv = {
         fs.writeFileSync(dir + "/allDocsContent2.csv", str)
         fs.writeFileSync(dir + "/botContent.json", JSON.stringify(botObjs, null, 2))
         fs.writeFileSync(dir + "/allColumns.csv", columnTexts)
+        fs.writeFileSync(dir + "/elasticAllParagraphs.json", JSON.stringify(elasticAllParagraphs, null, 2))
+    //    fs.writeFileSync(dir + "/elasticTree.json", JSON.stringify(elasticTree, null, 2))
+
 
     },
 
@@ -323,7 +337,7 @@ module.exports = docExtractorToCsv;
 
 
 var dir = "D:\\Total\\docs\\GM MEC Word\\documents\\test"
-dir = "D:\\Total\\docs\\GM MEC Word\\documents"
+//dir = "D:\\Total\\docs\\GM MEC Word\\documents"
 //dir = "D:\\Total\\docs\\GS MEC Word\\documents"
 //dir="D:\\ATD_Baillet\\applicationTemporaire\\fichiersVersement\\documents"
 if (true) {

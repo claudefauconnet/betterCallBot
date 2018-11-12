@@ -1,0 +1,744 @@
+{
+  "took": 13,
+  "timed_out": false,
+  "_shards": {
+    "total": 5,
+    "successful": 5,
+    "skipped": 0,
+    "failed": 0
+  },
+  "hits": {
+    "total": 88,
+    "max_score": 6.7212853,
+    "hits": [
+      {
+        "_index": "totalref_nouns",
+        "_type": "corpusnouns",
+        "_id": "_94750183",
+        "_score": 6.7212853,
+        "_source": {
+          "term": "wear",
+          "concepts": [
+            {
+              "text": "Wear ring",
+              "id": "concept#Component-Ring-WearRing",
+              "data": {
+                "synonyms": [
+                  "wear rings",
+                  "wearing rings"
+                ],
+                "parentText": "Ring"
+              },
+              "parent": "concept#Component-Ring"
+            },
+            {
+              "text": "Bearing Failure",
+              "id": "concept#Failure-BearingFailure",
+              "data": {
+                "synonyms": [
+                  "bearing wear or failure",
+                  "bearing damage / failure"
+                ],
+                "parentText": "Failure"
+              },
+              "parent": "concept#Failure"
+            }
+          ]
+        }
+      },
+      {
+        "_index": "totalref_nouns",
+        "_type": "corpusnouns",
+        "_id": "_39759468",
+        "_score": 6.6624246,
+        "_source": {
+          "term": "damage",
+          "concepts": [
+            {
+              "text": "Bearing Failure",
+              "id": "concept#Failure-BearingFailure",
+              "data": {
+                "synonyms": [
+                  "bearing wear or failure",
+                  "bearing damage / failure"
+                ],
+                "parentText": "Failure"
+              },
+              "parent": "concept#Failure"
+            }
+          ]
+        }
+      },
+      {
+        "_index": "totalref_nouns",
+        "_type": "corpusnouns",
+        "_id": "_94749547",
+        "_score": 6.518266,
+        "_source": {
+          "term": "failure",
+          "concepts": [
+            {
+              "text": "Bearing Failure",
+              "id": "concept#Failure-BearingFailure",
+              "data": {
+                "synonyms": [
+                  "bearing wear or failure",
+                  "bearing damage / failure"
+                ],
+                "parentText": "Failure"
+              },
+              "parent": "concept#Failure"
+            },
+            {
+              "text": "Surge",
+              "id": "concept#Failure-Surge",
+              "data": {
+                "synonyms": [
+                  "severe surge",
+                  "surge event"
+                ],
+                "parentText": "Failure"
+              },
+              "parent": "concept#Failure"
+            },
+            {
+              "text": "Failure",
+              "id": "concept#Failure",
+              "data": {
+                "synonyms": []
+              },
+              "parent": "#"
+            },
+            {
+              "text": "Seal failure",
+              "id": "concept#Failure-SealFailure",
+              "data": {
+                "synonyms": [
+                  "seal or piping failure"
+                ],
+                "parentText": "Failure"
+              },
+              "parent": "concept#Failure"
+            },
+            {
+              "text": "Cavitation",
+              "id": "concept#Failure-Cavitation",
+              "data": {
+                "synonyms": [],
+                "parentText": "Failure"
+              },
+              "parent": "concept#Failure"
+            },
+            {
+              "text": "Dry Run",
+              "id": "concept#Failure-DryRun",
+              "data": {
+                "synonyms": [
+                  "Dry-Run"
+                ],
+                "parentText": "Failure"
+              },
+              "parent": "concept#Failure"
+            },
+            {
+              "text": "Seizure",
+              "id": "concept#Failure-Seizure",
+              "data": {
+                "synonyms": [],
+                "parentText": "Failure"
+              },
+              "parent": "concept#Failure"
+            },
+            {
+              "text": "Leak",
+              "id": "concept#Failure-Leak",
+              "data": {
+                "synonyms": [
+                  "Packing Leak",
+                  "Packing leakage OUT port connected to leak",
+                  "packing; the permanent leak",
+                  "Gasket Leak",
+                  "oil leak",
+                  "Seal leak",
+                  "seal might leak"
+                ],
+                "parentText": "Failure"
+              },
+              "parent": "concept#Failure"
+            },
+            {
+              "text": "Unbalance",
+              "id": "concept#Failure-Unbalance",
+              "data": {
+                "synonyms": [],
+                "parentText": "Failure"
+              },
+              "parent": "concept#Failure"
+            },
+            {
+              "text": "Vibration",
+              "id": "concept#Failure-Vibration",
+              "data": {
+                "synonyms": [
+                  "low vibration",
+                  "low sub synchronous vibrations",
+                  "low frequency sub synchronous vibration",
+                  "low the radial vibration",
+                  "low as compared to vibrations",
+                  "high vibration",
+                  "high crosshead vibration",
+                  "high vibrations",
+                  "high level AND (frame vibration",
+                  "high cylinder vibration",
+                  "high compressor frame vibrations",
+                  "high radial vibration",
+                  "high alarm level R Cylinder head vibration",
+                  "high amplitude and high sub synchronous vibrations",
+                  "high level. Crosshead vibrations",
+                  "high, • The new vibration",
+                  "high alarm level R Casing vibration",
+                  "High bearing vibration",
+                  "high alarm on the radial vibration",
+                  "high casing vibrations",
+                  "high sub synchronous vibrations",
+                  "severe vibration",
+                  "Severe vibrations",
+                  "abnormal vibration",
+                  "Abnormal vibrations"
+                ],
+                "parentText": "Failure"
+              },
+              "parent": "concept#Failure"
+            }
+          ]
+        }
+      },
+      {
+        "_index": "totalref_nouns",
+        "_type": "corpusnouns",
+        "_id": "_39759265",
+        "_score": 6.3825593,
+        "_source": {
+          "term": "failure",
+          "concepts": [
+            {
+              "text": "Bearing Failure",
+              "id": "concept#Failure-BearingFailure",
+              "data": {
+                "synonyms": [
+                  "bearing wear or failure",
+                  "bearing damage / failure"
+                ],
+                "parentText": "Failure"
+              },
+              "parent": "concept#Failure"
+            },
+            {
+              "text": "Surge",
+              "id": "concept#Failure-Surge",
+              "data": {
+                "synonyms": [
+                  "severe surge",
+                  "surge event"
+                ],
+                "parentText": "Failure"
+              },
+              "parent": "concept#Failure"
+            },
+            {
+              "text": "Failure",
+              "id": "concept#Failure",
+              "data": {
+                "synonyms": []
+              },
+              "parent": "#"
+            },
+            {
+              "text": "Seal failure",
+              "id": "concept#Failure-SealFailure",
+              "data": {
+                "synonyms": [
+                  "seal or piping failure"
+                ],
+                "parentText": "Failure"
+              },
+              "parent": "concept#Failure"
+            },
+            {
+              "text": "Cavitation",
+              "id": "concept#Failure-Cavitation",
+              "data": {
+                "synonyms": [],
+                "parentText": "Failure"
+              },
+              "parent": "concept#Failure"
+            },
+            {
+              "text": "Dry Run",
+              "id": "concept#Failure-DryRun",
+              "data": {
+                "synonyms": [
+                  "Dry-Run"
+                ],
+                "parentText": "Failure"
+              },
+              "parent": "concept#Failure"
+            },
+            {
+              "text": "Seizure",
+              "id": "concept#Failure-Seizure",
+              "data": {
+                "synonyms": [],
+                "parentText": "Failure"
+              },
+              "parent": "concept#Failure"
+            },
+            {
+              "text": "Leak",
+              "id": "concept#Failure-Leak",
+              "data": {
+                "synonyms": [
+                  "Packing Leak",
+                  "Packing leakage OUT port connected to leak",
+                  "packing; the permanent leak",
+                  "Gasket Leak",
+                  "oil leak",
+                  "Seal leak",
+                  "seal might leak"
+                ],
+                "parentText": "Failure"
+              },
+              "parent": "concept#Failure"
+            },
+            {
+              "text": "Unbalance",
+              "id": "concept#Failure-Unbalance",
+              "data": {
+                "synonyms": [],
+                "parentText": "Failure"
+              },
+              "parent": "concept#Failure"
+            },
+            {
+              "text": "Vibration",
+              "id": "concept#Failure-Vibration",
+              "data": {
+                "synonyms": [
+                  "low vibration",
+                  "low sub synchronous vibrations",
+                  "low frequency sub synchronous vibration",
+                  "low the radial vibration",
+                  "low as compared to vibrations",
+                  "high vibration",
+                  "high crosshead vibration",
+                  "high vibrations",
+                  "high level AND (frame vibration",
+                  "high cylinder vibration",
+                  "high compressor frame vibrations",
+                  "high radial vibration",
+                  "high alarm level R Cylinder head vibration",
+                  "high amplitude and high sub synchronous vibrations",
+                  "high level. Crosshead vibrations",
+                  "high, • The new vibration",
+                  "high alarm level R Casing vibration",
+                  "High bearing vibration",
+                  "high alarm on the radial vibration",
+                  "high casing vibrations",
+                  "high sub synchronous vibrations",
+                  "severe vibration",
+                  "Severe vibrations",
+                  "abnormal vibration",
+                  "Abnormal vibrations"
+                ],
+                "parentText": "Failure"
+              },
+              "parent": "concept#Failure"
+            }
+          ]
+        }
+      },
+      {
+        "_index": "totalref_nouns",
+        "_type": "corpusnouns",
+        "_id": "_39759242",
+        "_score": 6.335214,
+        "_source": {
+          "term": "bearing",
+          "concepts": [
+            {
+              "text": "Bearing Failure",
+              "id": "concept#Failure-BearingFailure",
+              "data": {
+                "synonyms": [
+                  "bearing wear or failure",
+                  "bearing damage / failure"
+                ],
+                "parentText": "Failure"
+              },
+              "parent": "concept#Failure"
+            },
+            {
+              "text": "Per thrust bearing",
+              "id": "concept#Component-Bearing-PerThrustBearing",
+              "data": {
+                "synonyms": [
+                  "thrust bearing"
+                ],
+                "parentText": "Bearing"
+              },
+              "parent": "concept#Component-Bearing"
+            },
+            {
+              "text": "Bearing housing",
+              "id": "concept#Component-Bearing-BearingHousing",
+              "data": {
+                "synonyms": [
+                  "Bearing housings"
+                ],
+                "parentText": "Bearing"
+              },
+              "parent": "concept#Component-Bearing"
+            },
+            {
+              "text": "Bearing",
+              "id": "concept#Component-Bearing",
+              "data": {
+                "synonyms": [
+                  "bearings"
+                ],
+                "parentText": "Component"
+              },
+              "parent": "concept#Component"
+            },
+            {
+              "text": "Bearing housing sealing",
+              "id": "concept#Component-Bearing-BearingHousingSealing",
+              "data": {
+                "synonyms": [],
+                "parentText": "Bearing"
+              },
+              "parent": "concept#Component-Bearing"
+            },
+            {
+              "text": "Connecting rod bearing",
+              "id": "concept#Component-Bearing-ConnectingRodBearing",
+              "data": {
+                "synonyms": [],
+                "parentText": "Bearing"
+              },
+              "parent": "concept#Component-Bearing"
+            },
+            {
+              "text": "Bearing isolator",
+              "id": "concept#Component-Bearing-BearingIsolator",
+              "data": {
+                "synonyms": [],
+                "parentText": "Bearing"
+              },
+              "parent": "concept#Component-Bearing"
+            },
+            {
+              "text": "Journal bearing",
+              "id": "concept#Component-Bearing-JournalBearing",
+              "data": {
+                "synonyms": [
+                  "journal bearings",
+                  "journal and thrust bearings",
+                  "journal sleeve bearings"
+                ],
+                "parentText": "Bearing"
+              },
+              "parent": "concept#Component-Bearing"
+            },
+            {
+              "text": "Thrust bearing",
+              "id": "concept#Component-Bearing-ThrustBearing",
+              "data": {
+                "synonyms": [],
+                "parentText": "Bearing"
+              },
+              "parent": "concept#Component-Bearing"
+            },
+            {
+              "text": "Bearing isolators",
+              "id": "concept#Component-Bearing-BearingIsolators",
+              "data": {
+                "synonyms": [],
+                "parentText": "Bearing"
+              },
+              "parent": "concept#Component-Bearing"
+            }
+          ]
+        }
+      },
+      {
+        "_index": "totalref_nouns",
+        "_type": "corpusnouns",
+        "_id": "_94749750",
+        "_score": 5.725076,
+        "_source": {
+          "term": "damage",
+          "concepts": [
+            {
+              "text": "Bearing Failure",
+              "id": "concept#Failure-BearingFailure",
+              "data": {
+                "synonyms": [
+                  "bearing wear or failure",
+                  "bearing damage / failure"
+                ],
+                "parentText": "Failure"
+              },
+              "parent": "concept#Failure"
+            }
+          ]
+        }
+      },
+      {
+        "_index": "totalref_nouns",
+        "_type": "corpusnouns",
+        "_id": "_39759901",
+        "_score": 5.583576,
+        "_source": {
+          "term": "wear",
+          "concepts": [
+            {
+              "text": "Wear ring",
+              "id": "concept#Component-Ring-WearRing",
+              "data": {
+                "synonyms": [
+                  "wear rings",
+                  "wearing rings"
+                ],
+                "parentText": "Ring"
+              },
+              "parent": "concept#Component-Ring"
+            },
+            {
+              "text": "Bearing Failure",
+              "id": "concept#Failure-BearingFailure",
+              "data": {
+                "synonyms": [
+                  "bearing wear or failure",
+                  "bearing damage / failure"
+                ],
+                "parentText": "Failure"
+              },
+              "parent": "concept#Failure"
+            }
+          ]
+        }
+      },
+      {
+        "_index": "totalref_nouns",
+        "_type": "corpusnouns",
+        "_id": "_94749524",
+        "_score": 5.2586455,
+        "_source": {
+          "term": "bearing",
+          "concepts": [
+            {
+              "text": "Bearing Failure",
+              "id": "concept#Failure-BearingFailure",
+              "data": {
+                "synonyms": [
+                  "bearing wear or failure",
+                  "bearing damage / failure"
+                ],
+                "parentText": "Failure"
+              },
+              "parent": "concept#Failure"
+            },
+            {
+              "text": "Per thrust bearing",
+              "id": "concept#Component-Bearing-PerThrustBearing",
+              "data": {
+                "synonyms": [
+                  "thrust bearing"
+                ],
+                "parentText": "Bearing"
+              },
+              "parent": "concept#Component-Bearing"
+            },
+            {
+              "text": "Bearing housing",
+              "id": "concept#Component-Bearing-BearingHousing",
+              "data": {
+                "synonyms": [
+                  "Bearing housings"
+                ],
+                "parentText": "Bearing"
+              },
+              "parent": "concept#Component-Bearing"
+            },
+            {
+              "text": "Bearing",
+              "id": "concept#Component-Bearing",
+              "data": {
+                "synonyms": [
+                  "bearings"
+                ],
+                "parentText": "Component"
+              },
+              "parent": "concept#Component"
+            },
+            {
+              "text": "Bearing housing sealing",
+              "id": "concept#Component-Bearing-BearingHousingSealing",
+              "data": {
+                "synonyms": [],
+                "parentText": "Bearing"
+              },
+              "parent": "concept#Component-Bearing"
+            },
+            {
+              "text": "Connecting rod bearing",
+              "id": "concept#Component-Bearing-ConnectingRodBearing",
+              "data": {
+                "synonyms": [],
+                "parentText": "Bearing"
+              },
+              "parent": "concept#Component-Bearing"
+            },
+            {
+              "text": "Bearing isolator",
+              "id": "concept#Component-Bearing-BearingIsolator",
+              "data": {
+                "synonyms": [],
+                "parentText": "Bearing"
+              },
+              "parent": "concept#Component-Bearing"
+            },
+            {
+              "text": "Journal bearing",
+              "id": "concept#Component-Bearing-JournalBearing",
+              "data": {
+                "synonyms": [
+                  "journal bearings",
+                  "journal and thrust bearings",
+                  "journal sleeve bearings"
+                ],
+                "parentText": "Bearing"
+              },
+              "parent": "concept#Component-Bearing"
+            },
+            {
+              "text": "Thrust bearing",
+              "id": "concept#Component-Bearing-ThrustBearing",
+              "data": {
+                "synonyms": [],
+                "parentText": "Bearing"
+              },
+              "parent": "concept#Component-Bearing"
+            },
+            {
+              "text": "Bearing isolators",
+              "id": "concept#Component-Bearing-BearingIsolators",
+              "data": {
+                "synonyms": [],
+                "parentText": "Bearing"
+              },
+              "parent": "concept#Component-Bearing"
+            }
+          ]
+        }
+      },
+      {
+        "_index": "totalref_nouns",
+        "_type": "corpusnouns",
+        "_id": "_39760184",
+        "_score": 4.24837,
+        "_source": {
+          "term": "piping",
+          "concepts": [
+            {
+              "text": "Seal failure",
+              "id": "concept#Failure-SealFailure",
+              "data": {
+                "synonyms": [
+                  "seal or piping failure"
+                ],
+                "parentText": "Failure"
+              },
+              "parent": "concept#Failure"
+            },
+            {
+              "text": "Oil reservoir",
+              "id": "concept#Product-ProductFunction-OilReservoir",
+              "data": {
+                "synonyms": [
+                  "oil supply valve • Check oil reservoir",
+                  "reservoir. • Start oil",
+                  "reservoir • Refill with new oil",
+                  "reservoir and oil",
+                  "reservoir • Inspection of oil",
+                  "oil pressure PCV to reservoir",
+                  "oil from reservoir",
+                  "reservoir • Oil",
+                  "reservoir • Remove oil",
+                  "reservoir. Remove oil",
+                  "reservoir and Piping #18 An oil",
+                  "reservoir level, • oil",
+                  "oil tank • Remove oil from reservoir",
+                  "reservoir. • Remove oil",
+                  "reservoir oil",
+                  "reservoir to catch leaking oil"
+                ],
+                "parentText": "Product function"
+              },
+              "parent": "concept#Product-ProductFunction"
+            }
+          ]
+        }
+      },
+      {
+        "_index": "totalref_nouns",
+        "_type": "corpusnouns",
+        "_id": "_94750466",
+        "_score": 4.24837,
+        "_source": {
+          "term": "piping",
+          "concepts": [
+            {
+              "text": "Seal failure",
+              "id": "concept#Failure-SealFailure",
+              "data": {
+                "synonyms": [
+                  "seal or piping failure"
+                ],
+                "parentText": "Failure"
+              },
+              "parent": "concept#Failure"
+            },
+            {
+              "text": "Oil reservoir",
+              "id": "concept#Product-ProductFunction-OilReservoir",
+              "data": {
+                "synonyms": [
+                  "oil supply valve • Check oil reservoir",
+                  "reservoir. • Start oil",
+                  "reservoir • Refill with new oil",
+                  "reservoir and oil",
+                  "reservoir • Inspection of oil",
+                  "oil pressure PCV to reservoir",
+                  "oil from reservoir",
+                  "reservoir • Oil",
+                  "reservoir • Remove oil",
+                  "reservoir. Remove oil",
+                  "reservoir and Piping #18 An oil",
+                  "reservoir level, • oil",
+                  "oil tank • Remove oil from reservoir",
+                  "reservoir. • Remove oil",
+                  "reservoir oil",
+                  "reservoir to catch leaking oil"
+                ],
+                "parentText": "Product function"
+              },
+              "parent": "concept#Product-ProductFunction"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

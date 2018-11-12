@@ -86,7 +86,7 @@ var formatToColumns = {
 
             var bulletsText = "";
             var start = 0;
-            var bulletPrefix="<"+paragraph.style+">";
+           var bulletPrefix="";//<"+paragraph.style+">";
             bulletsText+=bulletPrefix;
             bullets.forEach(function (bullet, index) {
 
@@ -138,7 +138,7 @@ var formatToColumns = {
 if(sourceJson.chapter.title=="Definitions of terms")
     var xx=2
 
-        if(  sourceJson.paragraph.text.indexOf("a fan is according G 6.3, a car wheel is G 60")>-1)
+        if(  sourceJson.paragraph.text.indexOf("considered according API are")>-1)
             var ww=1
 
 

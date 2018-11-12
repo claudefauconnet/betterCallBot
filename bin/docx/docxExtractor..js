@@ -15,6 +15,9 @@ var extractRunText = function (run) {
     var runStr = "";
     var textStr = ""
     var texts = run.getElementsByTagName("w:t")
+    var shapes = run.getElementsByTagName("v:shape");
+    if(shapes && shapes.length>0)// annotations d'images voir 118 7944
+        return "";
     for (var k = 0; k < texts.length; k++) {
         var textStr = ""
         for (var l = 0; l < texts[k].childNodes.length; l++) {
@@ -165,7 +168,7 @@ var docxExtactor = {
 
     pStyles: {
         RfrentielTexte1avecpuces: "ul",
-        Paragraphedeliste: "ol",
+        Paragraphedeliste: "h5",// on ne considère pas comme des bullets
         Listepuces2: "ul2",
         RfrentielTexte2: "ul2",
         //  Listepuces2: "ul",
@@ -342,6 +345,8 @@ var docxExtactor = {
         }
 
 //https://blogs.msdn.microsoft.com/brian_jones/2006/12/11/whats-up-with-all-those-rsids/
+
+        //https://docs.microsoft.com/en-us/office/open-xml/how-to-accept-all-revisions-in-a-word-processing-document
         function extractCurrentVersion(paragraphs) {
             var docVersions = {};
             var currentVersionNumber // the most frequent
@@ -408,6 +413,10 @@ var docxExtactor = {
                 docTableCells.push(paragraph);
                 continue;
             }
+
+            if (paragraph.parentNode.parentNode.tagName == "v:textbox") {// annotations
+                continue;
+            }
             var pVersionId = paragraph.getAttribute("w:rsidRPr");
             var obj = {status: "normal", title: "", text: "", paragraphIndex: i, images: [], version: pVersionId};
 
@@ -438,11 +447,6 @@ var docxExtactor = {
 
                 obj.text = runStr;
 
-           if(obj.text.indexOf("The surge phenomenon in a centrifugal ")>-1)
-               var x=2;
-
-            if(obj.text.indexOf("If the pressure ratio increases across a compressor ")>-1)
-                var x=2;
 
             //si pas de run et pas de formule c'est un saut de ligne qui délimite un paragraphe
             if (paragraph.getElementsByTagName("w:r").length == 0 && paragraph.getElementsByTagName("m:oMath").length == 0) {

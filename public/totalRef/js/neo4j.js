@@ -1,8 +1,8 @@
 var neo4jProxy = (function () {
         var self = {};
-        self.neo4jProxyUrl = "../../neo"
+        self.neo4jProxyUrl = souslesensUrl+"/neo"
         self.httpParams = {
-            url: "../../../http"
+            url: souslesensUrl+"/http"
         }
 
 
@@ -455,17 +455,21 @@ var neo4jProxy = (function () {
             var files = {};
             //split data for each file in chapter and text paragraph
             docs.forEach(function (line) {
-                if (!files[line.doc.File]) {
-                    files[line.doc.File] = {title: line.doc.TitleDoc, purpose: line.doc.PurposeDoc, chapters: {}};
+               var doc=self.cleanFieldsForNeo(line,["nounTokens","numTokens"]);
+                if (!files[doc.File]) {
+                    files[doc.File] = {title: doc.docTitle, purpose: doc.purpose,scope:doc.scope, chapters: {}};
                 }
-                var chapter = line.doc.Title;
-                if (!files[line.doc.File].chapters[chapter]) {
-                    files[line.doc.File].chapters[chapter] = []
+                var chapter = doc.File+"_"+doc.Chapter;
+                if (!files[doc.File].chapters[chapter]) {
+                    files[doc.File].chapters[chapter] = {key: doc.ChapterKey,parentChapters: doc.parentChapters,paragraphs:[]};
                 }
-                files[line.doc.File].chapters[chapter].push({
-                    text: line.doc.Texte,
-                    id: line.doc.id,
-                    tokens: line.tokens
+                files[doc.File].chapters[chapter].paragraphs.push({
+                    text: doc.text,
+                    table: doc.table,
+                    images: doc.images,
+                    id: doc.id,
+                    nounTokens: doc.nounTokens,
+                    numTokens: doc.numTokens,
                 })
 
             })
@@ -473,22 +477,21 @@ var neo4jProxy = (function () {
 
             for (var key in files) {
                 var file = files[key];
-                statements.push({statement: "MERGE  (n:file { name: \"" + key + "\",title:\"" + file.title + "\",purpose:\"" + file.PurposeDoc + "\",subGraph:\"totalRef\"})"});
+                statements.push({statement: "MERGE  (n:file { name: \"" + key + "\",title:\"" + file.title + "\",purpose:\"" + file.purpose + "\",scope:\"" + file.scope + "\",subGraph:\"totalRef\"})"});
 
                 for (var key2 in file.chapters) {
                     var chapter = file.chapters[key2];
-                    statements.push({statement: "MERGE  (n:chapter { name: \"" + key2 + "\",subGraph:\"totalRef\"})"});
-                    statements.push({statement: "match (n:file { name: \"" + key + "\"}),  (m:chapter { name: \"" + key2 + "\"}) create (n)-[:haschapter]->(m)"});
-                    chapter.forEach(function (paragraph) {
-                        statements.push({statement: "MERGE  (n:paragraph { name: \"" + paragraph.id + "\",text:\"" + paragraph.text + "\",subGraph:\"totalRef\"})"});
+                    statements.push({statement: "MERGE  (n:chapter { name: \"" + key2 + "\",key:\"" + chapter.key +"\",parentChapters:\""+chapter.parentChapters+"\",subGraph:\"totalRef\"})"});
+                    statements.push({statement: "match (n:file { name: \"" + key + "\"}),  (m:chapter { name: \"" + key2 +"\"}) create (n)-[:haschapter]->(m)"});
+                    chapter.paragraphs.forEach(function (paragraph) {
+                        statements.push({statement: "MERGE  (n:paragraph { name: \"" + paragraph.id + "\",text:\"" + paragraph.text + "\",table:\"" + paragraph.table + "\",images:\"" + paragraph.images + "\",subGraph:\"totalRef\"})"});
                         statements.push({statement: "match (n:chapter { name: \"" + key2 + "\"}), (m:paragraph { name: \"" + paragraph.id + "\"}) create (n)-[:hasText]->(m)"});
 
-                        var tokens = paragraph.tokens.tokens;
 
-                        tokens.nouns.forEach(function (noun) {
 
-                            if (noun.word.toLowerCase() == "surge")
-                                var xx = 2;
+                        paragraph.nounTokens.forEach(function (noun) {
+
+
 
                             var attrs = "{startIndex: \"" + noun.characterOffsetBegin + "\",";
                             attrs += "endIndex: \"" + noun.characterOffsetEnd + "\",";
@@ -500,7 +503,7 @@ var neo4jProxy = (function () {
 
                         })
 
-                        tokens.numValues.forEach(function (numValue) {
+                        paragraph.numTokens.forEach(function (numValue) {
                             var attrs = "{startIndex: \"" + numValue.characterOffsetBegin + "\",";
                             attrs += "endIndex: \"" + numValue.characterOffsetEnd + "\",";
                             attrs += "type: \"" + numValue.pos + "\",";
@@ -554,7 +557,7 @@ var neo4jProxy = (function () {
 
                     }
                     , error: function (err) {
-                        //     console.log(err.responseText)
+                       //     console.log(err.responseText)
                         return callback(err);
 
 
@@ -735,6 +738,49 @@ var neo4jProxy = (function () {
                 }
 
             });
+        }
+        self.cleanFieldsForNeo= function (obj, dontProcessArray) {
+            var obj2 = {};
+            for (var key in obj) {
+                if(dontProcessArray.indexOf(key)<0) {
+
+                    var key2 = key.replace(/-/g, "_");
+
+                    key2 = key2.replace(/ /g, "_");
+                    if (key2 != "") {
+                        var valueObj = obj[key];
+                        if (valueObj) {
+
+                            if (isNaN(valueObj) && valueObj.indexOf && valueObj.indexOf("http") == 0) {
+                                value = encodeURI(valueObj)
+                            } else {
+                                var value = "" + valueObj;
+                                if (isNaN(valueObj)) {
+                                    value = value.replace(/[\n|\r|\t]+/g, " ");
+                                    value = value.replace(/&/g, " and ");
+                                    value = value.replace(/"/g, "'");
+                                    value = value.replace(/,/g, "\\,");
+                                    // value = value.replace(/\//g, "%2F");
+                                    value = value.replace(/\\/g, "")
+                                    //  value = value.replace(/:/g, "")
+                                }
+                                else if (value.indexOf(".") > -1)
+                                    value = parseFloat(value)
+                                else
+                                    value = parseInt(value)
+                            }
+
+                            obj2[key2] = value;
+                        }
+                    }
+                }
+                else{
+                    obj2[key] = obj[key];
+                }
+            }
+
+            return obj2;
+
         }
 
 

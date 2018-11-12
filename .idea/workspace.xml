@@ -4,7 +4,37 @@
     <bookmark url="file://$PROJECT_DIR$/public/index.html" line="94" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62fcbe95-4f85-494a-9b3a-1eca7bab2dd2" name="Default" comment="" />
+    <list default="true" id="62fcbe95-4f85-494a-9b3a-1eca7bab2dd2" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/bin/docx/formatToElastic..js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/bin/graph/graphBuilder..js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/bin/nlp/controlledVocabulary..js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/bin/nlp/coreNlp..js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/bin/nlp/elasticQuery..js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/bin/nlp/graph..js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/bin/nlp/skos..js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/bin/nlp/thesaurus..js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/bin/nlp/totalRef.rdf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/totalRef/bot.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/totalRef/js/bot.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/totalRef/js/coreNlp2.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/totalRef/js/graphBuilder.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/totalRef/js/test3.json" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/bin/docx/docExtractorToCsv..js" afterPath="$PROJECT_DIR$/bin/docx/docExtractorToCsv..js" />
+      <change beforePath="$PROJECT_DIR$/bin/docx/docxExtractor..js" afterPath="$PROJECT_DIR$/bin/docx/docxExtractor..js" />
+      <change beforePath="$PROJECT_DIR$/bin/docx/docxParagraphAggregator..js" afterPath="$PROJECT_DIR$/bin/docx/docxParagraphAggregator..js" />
+      <change beforePath="$PROJECT_DIR$/bin/docx/formatToColumns..js" afterPath="$PROJECT_DIR$/bin/docx/formatToColumns..js" />
+      <change beforePath="$PROJECT_DIR$/bin/docx/stanford..js" afterPath="$PROJECT_DIR$/bin/docx/stanford..js" />
+      <change beforePath="$PROJECT_DIR$/bin/www" afterPath="$PROJECT_DIR$/bin/www" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
+      <change beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change beforePath="$PROJECT_DIR$/public/totalRef/index.html" afterPath="$PROJECT_DIR$/public/totalRef/index.html" />
+      <change beforePath="$PROJECT_DIR$/public/totalRef/js/elastic.js" afterPath="$PROJECT_DIR$/public/totalRef/js/elastic.js" />
+      <change beforePath="$PROJECT_DIR$/public/totalRef/js/neo4j.js" afterPath="$PROJECT_DIR$/public/totalRef/js/neo4j.js" />
+      <change beforePath="$PROJECT_DIR$/public/totalRef/js/nlp.js" afterPath="$PROJECT_DIR$/public/totalRef/js/nlp.js" />
+      <change beforePath="$PROJECT_DIR$/public/totalRef/js/skosTree.js" afterPath="$PROJECT_DIR$/public/totalRef/js/skosTree.js" />
+      <change beforePath="$PROJECT_DIR$/routes/index.js" afterPath="$PROJECT_DIR$/routes/index.js" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -17,71 +47,104 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="elastic.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/totalRef/js/elastic.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="35" column="18" lean-forward="false" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="docExtractorToCsv..js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/docx/docExtractorToCsv..js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="325" column="47" lean-forward="true" selection-start-line="325" selection-start-column="47" selection-end-line="325" selection-end-column="47" />
+            <state relative-caret-position="71">
+              <caret line="335" column="49" lean-forward="false" selection-start-line="335" selection-start-column="49" selection-end-line="335" selection-end-column="49" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="docxParagraphAggregator..js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="docxParagraphAggregator..js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/docx/docxParagraphAggregator..js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="320" column="41" lean-forward="true" selection-start-line="320" selection-start-column="41" selection-end-line="320" selection-end-column="41" />
+            <state relative-caret-position="155">
+              <caret line="351" column="0" lean-forward="true" selection-start-line="351" selection-start-column="0" selection-end-line="351" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="docxExtractor..js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="formatToHtml..js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/docx/formatToHtml..js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1836">
+              <caret line="3" column="4" lean-forward="false" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+              <folding>
+                <marker date="1540323685587" expanded="true" signature="185:244" ph="..." />
+                <marker date="1540323685587" expanded="true" signature="3337:3396" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="formatToElastic..js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/docx/formatToElastic..js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="9" column="32" lean-forward="false" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="graphBuilder..js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/graph/graphBuilder..js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="558">
+              <caret line="46" column="64" lean-forward="false" selection-start-line="46" selection-start-column="42" selection-end-line="46" selection-end-column="64" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="thesaurus..js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/nlp/thesaurus..js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="368">
+              <caret line="58" column="132" lean-forward="false" selection-start-line="58" selection-start-column="6" selection-end-line="58" selection-end-column="132" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="118.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/docx/118.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="155">
+              <caret line="5875" column="34" lean-forward="false" selection-start-line="5875" selection-start-column="27" selection-end-line="5875" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="docxExtractor..js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/docx/docxExtractor..js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
-              <caret line="479" column="32" lean-forward="false" selection-start-line="479" selection-start-column="32" selection-end-line="479" selection-end-column="32" />
+            <state relative-caret-position="137">
+              <caret line="411" column="60" lean-forward="true" selection-start-line="411" selection-start-column="60" selection-end-line="411" selection-end-column="60" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="117.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/docx/117.xml">
+      <file leaf-file-name="graph..js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/nlp/graph..js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-405">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="128">
+              <caret line="272" column="20" lean-forward="false" selection-start-line="272" selection-start-column="20" selection-end-line="272" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="neo4j.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/totalRef/js/neo4j.js">
+      <file leaf-file-name="async.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/node_modules/async/dist/async.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1456">
-              <caret line="657" column="64" lean-forward="false" selection-start-line="657" selection-start-column="64" selection-end-line="657" selection-end-column="64" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="docxBot..js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/docxBot..js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="17" column="23" lean-forward="false" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+            <state relative-caret-position="209">
+              <caret line="965" column="31" lean-forward="false" selection-start-line="965" selection-start-column="31" selection-end-line="965" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -92,47 +155,94 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JS module" />
+        <option value="package_json" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
+        <option value="JS module" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>im</find>
-      <find>repla</find>
-      <find>rdf</find>
-      <find>config</find>
-      <find>docparagraph</find>
-      <find>createCorpusGraph</find>
-      <find>title</find>
-      <find>&quot;h&quot;</find>
-      <find>isChapter</find>
-      <find>isLine</find>
-      <find>isParagraphChapter</find>
-      <find>isFa</find>
+      <find>elastic</find>
+      <find>totalRef</find>
+      <find>QuestionConceptsInput</find>
+      <find>fs.writ</find>
+      <find>async</find>
+      <find>elasticParagraphs</find>
+      <find>60</find>
+      <find>console</find>
+      <find>forNe</find>
+      <find>request</find>
+      <find>createConcepts</find>
+      <find>elasticAllParagraphs</find>
+      <find>DONE</find>
+      <find>startId</find>
+      <find>createNodes</find>
+      <find>limit 200000</find>
+      <find>tokenizedDocs</find>
+      <find>carefully check</find>
+      <find>clearance</find>
+      <find>position:absolute</find>
+      <find>shape</find>
+      <find>chapterId</find>
+      <find>images</find>
+      <find>extractImage</find>
+      <find>setImages</find>
+      <find>run</find>
+      <find>extract</find>
+      <find>Dubbel</find>
+      <find>extractRunText</find>
+      <find>image</find>
     </findStrings>
     <replaceStrings>
       <replace>docParagraph</replace>
+      <replace>tokenizedDocs</replace>
+      <replace>doc</replace>
+      <replace>paragraphId</replace>
     </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/bin/www" />
         <option value="$PROJECT_DIR$/bin/adaptativeCardRenderer..js" />
-        <option value="$PROJECT_DIR$/routes/index.js" />
         <option value="$PROJECT_DIR$/public/xxx.html" />
         <option value="$PROJECT_DIR$/public/index.html" />
-        <option value="$PROJECT_DIR$/bin/docx/formatToColumns..js" />
         <option value="$PROJECT_DIR$/bin/docx/formatToBot..js" />
-        <option value="$PROJECT_DIR$/public/totalRef/index.html" />
-        <option value="$PROJECT_DIR$/public/totalRef/js/nlp.js" />
-        <option value="$PROJECT_DIR$/public/totalRef/js/neo4j.js" />
         <option value="$PROJECT_DIR$/bin/docxBot..js" />
-        <option value="$PROJECT_DIR$/bin/docx/docxExtractor..js" />
+        <option value="$PROJECT_DIR$/bin/www" />
+        <option value="$PROJECT_DIR$/bin/docx/formatToColumns..js" />
+        <option value="$PROJECT_DIR$/bin/docx/517.xml" />
+        <option value="$PROJECT_DIR$/public/totalRef/js/skosTree.js" />
+        <option value="$PROJECT_DIR$/public/totalRef/js/neo4j.js" />
+        <option value="$PROJECT_DIR$/public/totalRef/js/elastic.js" />
+        <option value="$PROJECT_DIR$/public/totalRef/index.html" />
+        <option value="$PROJECT_DIR$/bin/graph/package.json" />
+        <option value="$PROJECT_DIR$/public/totalRef/js/graphBuilder.js" />
+        <option value="$PROJECT_DIR$/bin/nlp/skos.js" />
+        <option value="$PROJECT_DIR$/bin/nlp/skos..js" />
+        <option value="$PROJECT_DIR$/bin/nlp/thesaurus..js" />
+        <option value="$PROJECT_DIR$/bin/docx/stanford..js" />
+        <option value="$PROJECT_DIR$/bin/nlp/controlledVocabulary..js" />
+        <option value="$PROJECT_DIR$/public/totalRef/js/nlp.js" />
+        <option value="$PROJECT_DIR$/public/bot.html" />
+        <option value="$PROJECT_DIR$/public/totalRef/js/coreNlp2.js" />
+        <option value="$PROJECT_DIR$/public/totalRef/js/test2.json" />
+        <option value="$PROJECT_DIR$/routes/index.js" />
+        <option value="$PROJECT_DIR$/bin/nlp/elasticQuery..js" />
+        <option value="$PROJECT_DIR$/public/totalRef/bot.html" />
+        <option value="$PROJECT_DIR$/public/totalRef/js/bot.js" />
+        <option value="$PROJECT_DIR$/public/totalRef/js/test3.json" />
+        <option value="$PROJECT_DIR$/bin/nlp/coreNlp..js" />
+        <option value="$PROJECT_DIR$/bin/graph/graphBuilder..js" />
+        <option value="$PROJECT_DIR$/bin/docx/formatToElastic..js" />
+        <option value="$PROJECT_DIR$/bin/nlp/graph..js" />
         <option value="$PROJECT_DIR$/bin/docx/docExtractorToCsv..js" />
         <option value="$PROJECT_DIR$/bin/docx/docxParagraphAggregator..js" />
+        <option value="$PROJECT_DIR$/bin/docx/docxExtractor..js" />
       </list>
     </option>
   </component>
@@ -152,6 +262,7 @@
     <option name="width" value="1281" />
     <option name="height" value="685" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -167,8 +278,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -180,6 +289,24 @@
               <item name="betterCallBot" type="b2602c69:ProjectViewProjectNode" />
               <item name="betterCallBot" type="462c0819:PsiDirectoryNode" />
               <item name="bin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="betterCallBot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="betterCallBot" type="462c0819:PsiDirectoryNode" />
+              <item name="bin" type="462c0819:PsiDirectoryNode" />
+              <item name="docx" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="betterCallBot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="betterCallBot" type="462c0819:PsiDirectoryNode" />
+              <item name="bin" type="462c0819:PsiDirectoryNode" />
+              <item name="graph" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="betterCallBot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="betterCallBot" type="462c0819:PsiDirectoryNode" />
+              <item name="bin" type="462c0819:PsiDirectoryNode" />
+              <item name="nlp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="betterCallBot" type="b2602c69:ProjectViewProjectNode" />
@@ -208,6 +335,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -218,17 +347,18 @@
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../bailletArchives" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\GitHub\betterCallBot\bin\docx" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\GitHub\betterCallBot\bin\docx" />
+      <recent name="D:\GitHub\betterCallBot\public\totalRef\js" />
+      <recent name="D:\GitHub\betterCallBot\bin\nlp" />
       <recent name="D:\GitHub\betterCallBot\node_modules" />
       <recent name="D:\GitHub\betterCallBot\bin" />
-      <recent name="D:\GitHub\betterCallBot\public" />
-      <recent name="D:\GitHub\betterCallBot\public\totalRef\js" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\GitHub\betterCallBot\public\totalRef" />
       <recent name="D:\GitHub\betterCallBot\bin\docx" />
     </key>
   </component>
@@ -244,21 +374,27 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Node.js.bin\www">
-    <configuration name="adaptativeCardRenderer..js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="adaptativeCardRenderer..js" working-dir="$PROJECT_DIR$/bin" />
+  <component name="RunManager" selected="Node.js.docExtractorToCsv..js">
     <configuration name="docExtractorToCsv..js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="docExtractorToCsv..js" working-dir="$PROJECT_DIR$/bin/docx" />
-    <configuration name="docxExtractor..js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="docxExtractor..js" working-dir="$PROJECT_DIR$/bin/docx" />
-    <list size="4">
+    <configuration name="docxParagraphAggregator..js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="docxParagraphAggregator..js" working-dir="$PROJECT_DIR$/bin/docx" />
+    <configuration name="elasticQuery..js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="elasticQuery..js" working-dir="$PROJECT_DIR$/bin/nlp" />
+    <configuration name="graphBuilder..js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="graphBuilder..js" working-dir="$PROJECT_DIR$/bin/graph" />
+    <configuration name="graph..js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="graph..js" working-dir="$PROJECT_DIR$/bin/nlp" />
+    <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Node.js.bin\www" />
-      <item index="1" class="java.lang.String" itemvalue="Node.js.adaptativeCardRenderer..js" />
-      <item index="2" class="java.lang.String" itemvalue="Node.js.docExtractorToCsv..js" />
-      <item index="3" class="java.lang.String" itemvalue="Node.js.docxExtractor..js" />
+      <item index="1" class="java.lang.String" itemvalue="Node.js.docExtractorToCsv..js" />
+      <item index="2" class="java.lang.String" itemvalue="Node.js.graphBuilder..js" />
+      <item index="3" class="java.lang.String" itemvalue="Node.js.elasticQuery..js" />
+      <item index="4" class="java.lang.String" itemvalue="Node.js.graph..js" />
+      <item index="5" class="java.lang.String" itemvalue="Node.js.docxParagraphAggregator..js" />
     </list>
     <recent_temporary>
-      <list size="3">
+      <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Node.js.docExtractorToCsv..js" />
-        <item index="1" class="java.lang.String" itemvalue="Node.js.docxExtractor..js" />
-        <item index="2" class="java.lang.String" itemvalue="Node.js.adaptativeCardRenderer..js" />
+        <item index="1" class="java.lang.String" itemvalue="Node.js.graph..js" />
+        <item index="2" class="java.lang.String" itemvalue="Node.js.graphBuilder..js" />
+        <item index="3" class="java.lang.String" itemvalue="Node.js.docxParagraphAggregator..js" />
+        <item index="4" class="java.lang.String" itemvalue="Node.js.elasticQuery..js" />
       </list>
     </recent_temporary>
   </component>
@@ -278,29 +414,36 @@
       <workItem from="1539506895173" duration="9557000" />
       <workItem from="1539634006821" duration="7513000" />
       <workItem from="1539812564783" duration="190000" />
-      <workItem from="1539856552552" duration="18686000" />
+      <workItem from="1539856552552" duration="18719000" />
+      <workItem from="1540741587125" duration="606000" />
+      <workItem from="1540896048332" duration="4106000" />
+      <workItem from="1541006422532" duration="1988000" />
+      <workItem from="1541010307303" duration="1299000" />
+      <workItem from="1541066070502" duration="192000" />
+      <workItem from="1541066435557" duration="70038000" />
+      <workItem from="1541773012518" duration="37096000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35946000" />
+    <option name="totallyTimeSpent" value="151304000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="2902" height="1582" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24956064" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17175975" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.048913043" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24991213" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32857144" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973656" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32826087" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2731884" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29130435" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -324,9 +467,66 @@
         </line-breakpoint>
         <line-breakpoint type="javascript">
           <url>file://$PROJECT_DIR$/bin/docx/docxExtractor..js</url>
-          <line>266</line>
-          <properties lambdaOrdinal="-1" />
+          <line>269</line>
           <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint type="javascript">
+          <url>file://$PROJECT_DIR$/public/totalRef/js/elastic.js</url>
+          <line>70</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint type="javascript">
+          <url>file://$PROJECT_DIR$/public/totalRef/js/elastic.js</url>
+          <line>106</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint type="javascript">
+          <url>file://$PROJECT_DIR$/public/totalRef/js/elastic.js</url>
+          <line>117</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint type="javascript">
+          <url>file://$PROJECT_DIR$/public/totalRef/js/neo4j.js</url>
+          <line>457</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint type="javascript">
+          <url>file://$PROJECT_DIR$/public/totalRef/js/neo4j.js</url>
+          <line>560</line>
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint type="javascript">
+          <url>file://$PROJECT_DIR$/bin/nlp/thesaurus..js</url>
+          <line>12</line>
+          <option name="timeStamp" value="61" />
+        </line-breakpoint>
+        <line-breakpoint type="javascript">
+          <url>file://$PROJECT_DIR$/bin/nlp/thesaurus..js</url>
+          <line>90</line>
+          <option name="timeStamp" value="67" />
+        </line-breakpoint>
+        <line-breakpoint type="javascript">
+          <url>file://$PROJECT_DIR$/public/totalRef/js/bot.js</url>
+          <line>83</line>
+          <option name="timeStamp" value="113" />
+        </line-breakpoint>
+        <line-breakpoint type="javascript">
+          <url>file://$PROJECT_DIR$/public/totalRef/js/bot.js</url>
+          <line>139</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="116" />
+        </line-breakpoint>
+        <line-breakpoint type="javascript">
+          <url>file://$PROJECT_DIR$/bin/graph/graphBuilder..js</url>
+          <line>91</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="120" />
+        </line-breakpoint>
+        <line-breakpoint type="javascript">
+          <url>file://$PROJECT_DIR$/bin/graph/graphBuilder..js</url>
+          <line>74</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="123" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
@@ -337,180 +537,15 @@
           <properties />
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="28" />
+      <option name="time" value="245" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bin/adaptativeCardRenderer..js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="999">
-          <caret line="37" column="20" lean-forward="false" selection-start-line="7" selection-start-column="1" selection-end-line="37" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/www">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="8" column="27" lean-forward="false" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="11" column="4" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/xxx.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="7" lean-forward="false" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3807">
-          <caret line="141" column="36" lean-forward="false" selection-start-line="141" selection-start-column="36" selection-end-line="141" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/adaptivecards/lib/card-elements.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="89775">
           <caret line="3325" column="30" lean-forward="false" selection-start-line="3325" selection-start-column="22" selection-end-line="3325" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/docxBot..js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="8" column="41" lean-forward="false" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/adaptativeCardRenderer..js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="666">
-          <caret line="37" column="20" lean-forward="false" selection-start-line="7" selection-start-column="1" selection-end-line="37" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="4" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/www">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="27" lean-forward="false" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/xxx.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="7" lean-forward="true" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2538">
-          <caret line="141" column="36" lean-forward="false" selection-start-line="141" selection-start-column="36" selection-end-line="141" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/adaptivecards/lib/card-elements.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="59850">
-          <caret line="3325" column="30" lean-forward="false" selection-start-line="3325" selection-start-column="22" selection-end-line="3325" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/docxBot..js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="41" lean-forward="true" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/adaptativeCardRenderer..js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="666">
-          <caret line="37" column="20" lean-forward="false" selection-start-line="7" selection-start-column="1" selection-end-line="37" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="4" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/www">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="27" lean-forward="false" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1476">
-          <caret line="82" column="9" lean-forward="true" selection-start-line="82" selection-start-column="9" selection-end-line="82" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/adaptivecards/lib/card-elements.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="59850">
-          <caret line="3325" column="30" lean-forward="false" selection-start-line="3325" selection-start-column="22" selection-end-line="3325" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/docxBot..js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="54" lean-forward="true" selection-start-line="7" selection-start-column="54" selection-end-line="7" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/adaptivecards/lib/card-elements.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89775">
-          <caret line="3325" column="30" lean-forward="false" selection-start-line="3325" selection-start-column="22" selection-end-line="3325" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -522,37 +557,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/www">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="8" column="27" lean-forward="false" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="11" column="4" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/xxx.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="5" column="7" lean-forward="false" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3807">
-          <caret line="141" column="36" lean-forward="false" selection-start-line="141" selection-start-column="36" selection-end-line="141" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -560,39 +568,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/docx/formatToHtml..js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="153" column="86" lean-forward="false" selection-start-line="153" selection-start-column="5" selection-end-line="153" selection-end-column="86" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/docx/formatToColumns..js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="84" column="27" lean-forward="true" selection-start-line="83" selection-start-column="9" selection-end-line="84" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/javascript/nodejs/8.10.0/core-modules/module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="546" column="14" lean-forward="false" selection-start-line="546" selection-start-column="14" selection-end-line="546" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/docx/formatToBot..js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="37" lean-forward="false" selection-start-line="0" selection-start-column="37" selection-end-line="0" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -600,7 +575,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -608,68 +582,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/totalRef/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="837">
-          <caret line="31" column="25" lean-forward="false" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/totalRef/js/jsTreeController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/totalRef/js/nlp.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
-          <folding>
-            <marker date="1540366138347" expanded="true" signature="2439:2469" ph="..." />
-            <marker date="1540366138347" expanded="true" signature="2982:3011" ph="..." />
-            <marker date="1540366138347" expanded="true" signature="11929:11968" ph="..." />
-            <marker date="1540366138347" expanded="true" signature="15018:15045" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/totalRef/js/neo4j.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1456">
-          <caret line="657" column="64" lean-forward="false" selection-start-line="657" selection-start-column="64" selection-end-line="657" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/docx/117.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-405">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/totalRef/js/elastic.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="35" column="18" lean-forward="false" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/docxBot..js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
+        <state relative-caret-position="306">
           <caret line="17" column="23" lean-forward="false" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -677,30 +596,347 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="7" column="9" lean-forward="true" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/docx/docxParagraphAggregatorOld..js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3186">
+          <caret line="177" column="9" lean-forward="false" selection-start-line="161" selection-start-column="6" selection-end-line="177" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/docx/517.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184500">
+          <caret line="10250" column="50" lean-forward="false" selection-start-line="10250" selection-start-column="33" selection-end-line="10250" selection-end-column="50" />
+          <folding>
+            <element signature="e#7109#7114#1" expanded="false" />
+            <element signature="e#121839#121844#0" expanded="false" />
+            <element signature="e#1352731#1352735#0" expanded="false" />
+            <element signature="e#1354368#1354372#0" expanded="false" />
+            <element signature="e#1362178#1362182#0" expanded="false" />
+            <element signature="e#1363798#1363802#0" expanded="false" />
+            <element signature="e#1386323#1386327#0" expanded="false" />
+            <element signature="e#1387885#1387889#0" expanded="false" />
+            <element signature="e#1397714#1397718#0" expanded="false" />
+            <element signature="e#1408657#1408661#0" expanded="false" />
+            <element signature="e#1410277#1410281#0" expanded="false" />
+            <element signature="e#1420119#1420123#0" expanded="false" />
+            <element signature="e#1421737#1421741#0" expanded="false" />
+            <element signature="e#1433203#1433207#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/totalRef/js/allParagraphs.json" />
+    <entry file="file://$PROJECT_DIR$/bin/graph/package.json" />
+    <entry file="file://$PROJECT_DIR$/bin/docx/formatToBot..js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="882">
+          <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/totalRef/js/jsTreeController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-324">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/totalRef/js/jstree.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-702">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/totalRef/js/skosTree.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/docx/stanford..js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/nlp/totalRef.rdf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/nlp/skos..js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-231">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" column="22" lean-forward="false" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/docx/docxExtractor..js">
+    <entry file="file://$PROJECT_DIR$/public/totalRef/js/elastic.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="479" column="32" lean-forward="false" selection-start-line="479" selection-start-column="32" selection-end-line="479" selection-end-column="32" />
+        <state relative-caret-position="-54">
+          <caret line="21" column="46" lean-forward="false" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/totalRef/js/test2.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-166">
+          <caret line="12" column="8" lean-forward="true" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/totalRef/js/test.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/www">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/totalRef/js/coreNlp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2988">
+          <caret line="204" column="37" lean-forward="true" selection-start-line="204" selection-start-column="37" selection-end-line="204" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="43" lean-forward="false" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/totalRef/js/nlp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1980">
+          <caret line="110" column="98" lean-forward="false" selection-start-line="110" selection-start-column="98" selection-end-line="110" selection-end-column="98" />
+          <folding>
+            <marker date="1541503139658" expanded="true" signature="2274:2304" ph="..." />
+            <marker date="1541503139658" expanded="true" signature="2817:2846" ph="..." />
+            <marker date="1541503139658" expanded="true" signature="11772:11811" ph="..." />
+            <marker date="1541503139658" expanded="true" signature="14861:14888" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/javascript/nodejs/8.10.0/core-modules/module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8730">
+          <caret line="504" column="11" lean-forward="false" selection-start-line="504" selection-start-column="11" selection-end-line="504" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/docx/formatToColumns..js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2034">
+          <caret line="113" column="39" lean-forward="false" selection-start-line="113" selection-start-column="33" selection-end-line="113" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/nlp/elasticQuery..js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/totalRef/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2826">
+          <caret line="157" column="0" lean-forward="false" selection-start-line="157" selection-start-column="0" selection-end-line="157" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/totalRef/bot.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="23" column="27" lean-forward="false" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/nlp/totalRefNouns.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-342">
+          <caret line="2" column="14" lean-forward="false" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/docx/117.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="7321" column="64" lean-forward="false" selection-start-line="7321" selection-start-column="59" selection-end-line="7321" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/totalRef/js/test3.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="552" column="43" lean-forward="false" selection-start-line="552" selection-start-column="43" selection-end-line="552" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/totalRef/js/bot.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1044">
+          <caret line="214" column="25" lean-forward="false" selection-start-line="214" selection-start-column="25" selection-end-line="214" selection-end-column="25" />
+          <folding>
+            <marker date="1541779362393" expanded="true" signature="6331:6361" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/totalRef/js/graphBuilder.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="846">
+          <caret line="47" column="5" lean-forward="false" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/nlp/controlledVocabulary..js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="36" column="5" lean-forward="false" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/totalRef/js/neo4j.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="684">
+          <caret line="606" column="28" lean-forward="false" selection-start-line="606" selection-start-column="28" selection-end-line="606" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/totalRef/js/coreNlp2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="16" column="25" lean-forward="false" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/nlp/coreNlp..js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="32" column="38" lean-forward="false" selection-start-line="31" selection-start-column="13" selection-end-line="32" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/async/dist/async.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="965" column="31" lean-forward="false" selection-start-line="965" selection-start-column="31" selection-end-line="965" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/docx/formatToHtml..js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1836">
+          <caret line="3" column="4" lean-forward="false" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+          <folding>
+            <marker date="1540323685587" expanded="true" signature="185:244" ph="..." />
+            <marker date="1540323685587" expanded="true" signature="3337:3396" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/docx/formatToElastic..js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="32" lean-forward="false" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/nlp/graph..js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="272" column="20" lean-forward="false" selection-start-line="272" selection-start-column="20" selection-end-line="272" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/graph/graphBuilder..js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="46" column="64" lean-forward="false" selection-start-line="46" selection-start-column="42" selection-end-line="46" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/nlp/thesaurus..js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="58" column="132" lean-forward="false" selection-start-line="58" selection-start-column="6" selection-end-line="58" selection-end-column="132" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/docx/docExtractorToCsv..js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="325" column="47" lean-forward="true" selection-start-line="325" selection-start-column="47" selection-end-line="325" selection-end-column="47" />
+        <state relative-caret-position="71">
+          <caret line="335" column="49" lean-forward="false" selection-start-line="335" selection-start-column="49" selection-end-line="335" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/docx/118.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="5875" column="34" lean-forward="false" selection-start-line="5875" selection-start-column="27" selection-end-line="5875" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/docx/docxParagraphAggregator..js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="320" column="41" lean-forward="true" selection-start-line="320" selection-start-column="41" selection-end-line="320" selection-end-column="41" />
+        <state relative-caret-position="155">
+          <caret line="351" column="0" lean-forward="true" selection-start-line="351" selection-start-column="0" selection-end-line="351" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/docx/docxExtractor..js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="411" column="60" lean-forward="true" selection-start-line="411" selection-start-column="60" selection-end-line="411" selection-end-column="60" />
           <folding />
         </state>
       </provider>

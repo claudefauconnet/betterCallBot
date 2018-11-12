@@ -7,15 +7,9 @@ var nlp = (function () {
         self.currentQuestionWordsAssociations = []
         var treeData;
 
-        self.elasticParams = {
-            size: 5000,
-            index: "totalref2",
-            queryField: "Texte",
-            elasticUrl: "../../elastic"
-        }
 
 
-        self.combination = function (arr) {r
+        self.combination = function (arr) {
 
             var i, j, temp
             var result = []
@@ -48,6 +42,12 @@ var nlp = (function () {
 
             return result2;
         }
+
+
+
+
+
+
 
 
         self.analyzeQuestion = function (question) {
@@ -289,7 +289,7 @@ var nlp = (function () {
                 findDocuments: 1,
                 options: {
                     from: 0,
-                    size: self.elasticParams.size,
+                    size: elasticProxy.elasticParams.size,
                     indexName: self.elasticParams.index,
                     word: mainWord,
                     booleanSearchMode: "and",

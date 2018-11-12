@@ -33,7 +33,7 @@ var skosTree = (function () {
 
         $.ajax({
             type: "POST",
-            url: "http://localhost:3002/rdf",
+            url: souslesensUrl+"/rdf",
             data: payload,
             dataType: "json",
             success: function (data, textStatus, jqXHR) {

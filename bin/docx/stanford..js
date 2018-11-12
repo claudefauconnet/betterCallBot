@@ -1,7 +1,7 @@
 /**
  * Created by claud on 09/05/2017.
  */
-
+// D:\Total\NLP\stanford-corenlp-full-2015-12-09\startup.bat
 
 /*
 CC Coordinating conjunction

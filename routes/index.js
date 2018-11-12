@@ -2,10 +2,23 @@ var express = require('express');
 var router = express.Router();
 var adaptativeCardRenderer = require("../bin/adaptativeCardRenderer..js")
 var docxBot = require("../bin/docxBot..js")
+var elasticQuery = require("../bin/nlp/elasticQuery..js")
 /* GET home page. */
 router.get('/', function (req, res, next) {
     res.render('index', {title: 'Express'});
 });
+
+
+router.post("/elastic", function (req, res, next) {
+    if(req.body.queryString)
+        elasticQuery.searchWithQueryString(req.body.index,req.body.queryString,req.body.fields,req.body.size,function(err,result){
+
+        processResponse(res,err,result);
+    })
+
+
+})
+
 
 
 router.post("/getCards", function (req, res, next) {
@@ -16,6 +29,7 @@ router.post("/getCards", function (req, res, next) {
 
 
 })
+
 
 function processResponse(response, error, result) {
     if (response && !response.finished) {

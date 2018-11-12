@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../common/js/jquery/jquery.min.js"></script>
+    <script src="../common/js/jquery/jquery-ui.min.js"></script>
+
+    <script src="js/bot.js"></script>
+    <script src="js/coreNlp2.js"></script>
+    <script src="js/async.js"></script>
+
+
+    <style>
+        select, input {
+            margin: 5px;
+            padding: 5px;
+        }
+
+        #answersDiv {
+            font-family: Verdana;
+            font-size: 12px;
+            height: 500px;
+            overflow: auto;
+
+        }
+
+        .answer {
+            border: solid;
+            border-width: thin;
+            border-radius: 8px;
+            background-color: #CCCCCC;
+            margin: 5px;
+            padding:5px
+
+        }
+
+
+    </style>
+</head>
+<body>
+
+<div id="questionDiv">
+    Question <input id="QuestionInput" size="70"
+                    value="What is the maximum response time of an anti-surge system">
+    <button onclick="bot.analyzeQuestion($('#QuestionInput').val())">Analyze question</button>
+    <!--   <br>Question words <input id="QuestionWordsInput" size="70" >-->
+    <br>Question translation
+    <div id="QuestionConceptsInput"></div>
+    <!--<button onclick="nlp.searchQuestionRules(true)">Search Rules</button>-->
+    <br><br>
+
+</div>
+
+<div id="neo4jResponseDiv">
+</div>
+<button onclick="bot.searchElastic()">Search</button>
+<div id="answersDiv"></div>
+</body>
+</html>

@@ -2,8 +2,7 @@ var intraParagraphSeparator = "<br>"
 var docxParagraphAggregator = {
 
 
-
-    isParagraphChapter:function(paragraph){
+    isParagraphChapter: function (paragraph) {
         var isChapter = false;
         // nouveau chapitre (style h..)
         if (paragraph.style) {
@@ -12,7 +11,7 @@ var docxParagraphAggregator = {
                 if (level < 4)
                     isChapter = true;
                 else
-                    paragraph.isFalseChapter=true;
+                    paragraph.isFalseChapter = true;
             }
 
         }
@@ -289,6 +288,27 @@ var docxParagraphAggregator = {
 
         }
 
+        function removeEmptyTextLines(chapters) {
+            var goodChapter = [];
+            chapters.forEach(function (chapter, chapterIndex) {
+                var goodParagraphs = [];
+                if (chapter.paragraphs) {
+                    chapter.paragraphs.forEach(function (paragraph) {
+                        if ((paragraph.title && paragraph.title.length > 0) || (paragraph.text && paragraph.text.length > 0) || (paragraph.images && paragraph.images.length > 0) || (paragraph.tables && paragraph.tables.length > 0) || (paragraph.bullets && paragraph.bullets.length > 0))
+                            goodParagraphs.push(paragraph);
+                        else {
+                            ;//  console.log("rejected" + JSON.stringify(paragraph, null, 2))
+                        }
+
+                    })
+                }
+                chapter.paragraphs = goodParagraphs;
+                goodChapter.push(chapter);
+            })
+
+            return goodChapter;
+        }
+
 
         //**************************************************identify chapters****************************
         jsonParagraphs.forEach(function (paragraph, indexParagraph) {
@@ -301,8 +321,8 @@ var docxParagraphAggregator = {
             }
 
 
-           if(docxParagraphAggregator.isParagraphChapter(paragraph)){
-         //   else if (paragraph.style && paragraph.style.indexOf("h") == 0) {
+            if (docxParagraphAggregator.isParagraphChapter(paragraph)) {
+                //   else if (paragraph.style && paragraph.style.indexOf("h") == 0) {
 
                 var chapter = {
                     title: paragraph.text,
@@ -322,14 +342,22 @@ var docxParagraphAggregator = {
 
         jsonParagraphs.forEach(function (paragraph, indexParagraph) {
 
-    //  console.log("" + indexParagraph + " / " + paragraph.title + " / " + paragraph.text + " / " + paragraph.style + " / " + paragraph.version)
+            console.log("" + indexParagraph + " / " + paragraph.title + " / " + paragraph.text + " / " + paragraph.style + " / " + paragraph.version)
 
 
-              if (indexParagraph == 44)
-                   var x = 1
-         /* if (paragraph.text && paragraph.text.indexOf("Rotor and test bench status before HSB:") > -1)
-                var x = 2*/
+            if (indexParagraph == 44)
+                var x = 1
+            /* if (paragraph.text && paragraph.text.indexOf("Rotor and test bench status before HSB:") > -1)
+                   var x = 2*/
 
+            if (paragraph.images) {
+                paragraph.images.forEach(function (image) {
+                    currentGroupedParagraph.images.push(image);
+                })
+                // on ne change pas de currentGroupedParagraph si paragraph ne contient qu'une image
+                if  (paragraph.title == ""  && paragraph.text == "")
+                    return;
+            }
 
             if (!currentGroupedParagraph)
                 closeGroupedParagraphAndSetNew(0);
@@ -413,7 +441,7 @@ var docxParagraphAggregator = {
                 closeGroupedParagraphAndSetNew(indexParagraph)
 
             }
-            else if( paragraph.isFalseChapter){// h style >=4
+            else if (paragraph.isFalseChapter) {// h style >=4
 
                 currentGroupedParagraph.text += paragraph.text;
                 closeGroupedParagraphAndSetNew(indexParagraph)
@@ -425,10 +453,6 @@ var docxParagraphAggregator = {
                 currentGroupedParagraph.text += paragraph.text;
                 if (currentGroupedParagraph.text == "")
                     currentGroupedParagraph.text += paragraph.title;
-
-                paragraph.images.forEach(function (image) {
-                    currentGroupedParagraph.images.push(image);
-                })
 
 
             }
@@ -463,8 +487,9 @@ var docxParagraphAggregator = {
         })
         applyChapterLevelMap(groupedJson)
         setChapterParents(groupedJson);
+
+        groupedJson = removeEmptyTextLines(groupedJson)
         groupedJson.tables = jsonParagraphs.tables
-//  removeEmptyTextLines(groupedJson)
         return groupedJson;
     }
 
