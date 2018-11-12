@@ -342,11 +342,10 @@ var docxParagraphAggregator = {
 
         jsonParagraphs.forEach(function (paragraph, indexParagraph) {
 
-            console.log("" + indexParagraph + " / " + paragraph.title + " / " + paragraph.text + " / " + paragraph.style + " / " + paragraph.version)
+          //  console.log("" + indexParagraph + " / " + paragraph.title + " / " + paragraph.text + " / " + paragraph.style + " / " + paragraph.version)
 
 
-            if (indexParagraph == 44)
-                var x = 1
+
             /* if (paragraph.text && paragraph.text.indexOf("Rotor and test bench status before HSB:") > -1)
                    var x = 2*/
 

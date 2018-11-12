@@ -5,35 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="62fcbe95-4f85-494a-9b3a-1eca7bab2dd2" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/bin/docx/formatToElastic..js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bin/graph/graphBuilder..js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bin/nlp/controlledVocabulary..js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bin/nlp/coreNlp..js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bin/nlp/elasticQuery..js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bin/nlp/graph..js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bin/nlp/skos..js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bin/nlp/thesaurus..js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bin/nlp/totalRef.rdf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/totalRef/bot.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/totalRef/js/bot.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/totalRef/js/coreNlp2.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/totalRef/js/graphBuilder.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/totalRef/js/test3.json" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/bin/docx/docExtractorToCsv..js" afterPath="$PROJECT_DIR$/bin/docx/docExtractorToCsv..js" />
       <change beforePath="$PROJECT_DIR$/bin/docx/docxExtractor..js" afterPath="$PROJECT_DIR$/bin/docx/docxExtractor..js" />
       <change beforePath="$PROJECT_DIR$/bin/docx/docxParagraphAggregator..js" afterPath="$PROJECT_DIR$/bin/docx/docxParagraphAggregator..js" />
-      <change beforePath="$PROJECT_DIR$/bin/docx/formatToColumns..js" afterPath="$PROJECT_DIR$/bin/docx/formatToColumns..js" />
-      <change beforePath="$PROJECT_DIR$/bin/docx/stanford..js" afterPath="$PROJECT_DIR$/bin/docx/stanford..js" />
-      <change beforePath="$PROJECT_DIR$/bin/www" afterPath="$PROJECT_DIR$/bin/www" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
-      <change beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change beforePath="$PROJECT_DIR$/public/totalRef/index.html" afterPath="$PROJECT_DIR$/public/totalRef/index.html" />
-      <change beforePath="$PROJECT_DIR$/public/totalRef/js/elastic.js" afterPath="$PROJECT_DIR$/public/totalRef/js/elastic.js" />
-      <change beforePath="$PROJECT_DIR$/public/totalRef/js/neo4j.js" afterPath="$PROJECT_DIR$/public/totalRef/js/neo4j.js" />
-      <change beforePath="$PROJECT_DIR$/public/totalRef/js/nlp.js" afterPath="$PROJECT_DIR$/public/totalRef/js/nlp.js" />
-      <change beforePath="$PROJECT_DIR$/public/totalRef/js/skosTree.js" afterPath="$PROJECT_DIR$/public/totalRef/js/skosTree.js" />
-      <change beforePath="$PROJECT_DIR$/routes/index.js" afterPath="$PROJECT_DIR$/routes/index.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -50,8 +24,8 @@
       <file leaf-file-name="docExtractorToCsv..js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/docx/docExtractorToCsv..js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="71">
-              <caret line="335" column="49" lean-forward="false" selection-start-line="335" selection-start-column="49" selection-end-line="335" selection-end-column="49" />
+            <state relative-caret-position="17">
+              <caret line="332" column="1" lean-forward="false" selection-start-line="332" selection-start-column="1" selection-end-line="332" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -60,8 +34,8 @@
       <file leaf-file-name="docxParagraphAggregator..js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/docx/docxParagraphAggregator..js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
-              <caret line="351" column="0" lean-forward="true" selection-start-line="351" selection-start-column="0" selection-end-line="351" selection-end-column="0" />
+            <state relative-caret-position="209">
+              <caret line="354" column="18" lean-forward="false" selection-start-line="354" selection-start-column="18" selection-end-line="354" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -113,18 +87,8 @@
       <file leaf-file-name="118.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/docx/118.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
-              <caret line="5875" column="34" lean-forward="false" selection-start-line="5875" selection-start-column="27" selection-end-line="5875" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="docxExtractor..js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/bin/docx/docxExtractor..js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="137">
-              <caret line="411" column="60" lean-forward="true" selection-start-line="411" selection-start-column="60" selection-end-line="411" selection-end-column="60" />
+            <state relative-caret-position="-169">
+              <caret line="5875" column="34" lean-forward="false" selection-start-line="5875" selection-start-column="25" selection-end-line="5875" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -140,11 +104,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="async.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node_modules/async/dist/async.js">
+      <file leaf-file-name="docxExtractor..js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bin/docx/docxExtractor..js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="965" column="31" lean-forward="false" selection-start-line="965" selection-start-column="31" selection-end-line="965" selection-end-column="31" />
+            <state relative-caret-position="201">
+              <caret line="100" column="58" lean-forward="true" selection-start-line="100" selection-start-column="58" selection-end-line="100" selection-end-column="58" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="117.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/docx/117.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="429">
+              <caret line="5206" column="26" lean-forward="false" selection-start-line="5206" selection-start-column="21" selection-end-line="5206" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -164,10 +138,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>elastic</find>
-      <find>totalRef</find>
-      <find>QuestionConceptsInput</find>
-      <find>fs.writ</find>
       <find>async</find>
       <find>elasticParagraphs</find>
       <find>60</find>
@@ -185,15 +155,19 @@
       <find>clearance</find>
       <find>position:absolute</find>
       <find>shape</find>
-      <find>chapterId</find>
       <find>images</find>
       <find>extractImage</find>
       <find>setImages</find>
       <find>run</find>
       <find>extract</find>
-      <find>Dubbel</find>
+      <find>textbox</find>
       <find>extractRunText</find>
+      <find>tagName</find>
+      <find>Dubbel</find>
       <find>image</find>
+      <find>oMath</find>
+      <find>follow</find>
+      <find>chapterId</find>
     </findStrings>
     <replaceStrings>
       <replace>docParagraph</replace>
@@ -240,8 +214,8 @@
         <option value="$PROJECT_DIR$/bin/graph/graphBuilder..js" />
         <option value="$PROJECT_DIR$/bin/docx/formatToElastic..js" />
         <option value="$PROJECT_DIR$/bin/nlp/graph..js" />
-        <option value="$PROJECT_DIR$/bin/docx/docExtractorToCsv..js" />
         <option value="$PROJECT_DIR$/bin/docx/docxParagraphAggregator..js" />
+        <option value="$PROJECT_DIR$/bin/docx/docExtractorToCsv..js" />
         <option value="$PROJECT_DIR$/bin/docx/docxExtractor..js" />
       </list>
     </option>
@@ -376,25 +350,25 @@
   </component>
   <component name="RunManager" selected="Node.js.docExtractorToCsv..js">
     <configuration name="docExtractorToCsv..js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="docExtractorToCsv..js" working-dir="$PROJECT_DIR$/bin/docx" />
+    <configuration name="docxExtractor..js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="docxExtractor..js" working-dir="$PROJECT_DIR$/bin/docx" />
     <configuration name="docxParagraphAggregator..js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="docxParagraphAggregator..js" working-dir="$PROJECT_DIR$/bin/docx" />
-    <configuration name="elasticQuery..js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="elasticQuery..js" working-dir="$PROJECT_DIR$/bin/nlp" />
     <configuration name="graphBuilder..js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="graphBuilder..js" working-dir="$PROJECT_DIR$/bin/graph" />
     <configuration name="graph..js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="graph..js" working-dir="$PROJECT_DIR$/bin/nlp" />
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Node.js.bin\www" />
       <item index="1" class="java.lang.String" itemvalue="Node.js.docExtractorToCsv..js" />
       <item index="2" class="java.lang.String" itemvalue="Node.js.graphBuilder..js" />
-      <item index="3" class="java.lang.String" itemvalue="Node.js.elasticQuery..js" />
-      <item index="4" class="java.lang.String" itemvalue="Node.js.graph..js" />
-      <item index="5" class="java.lang.String" itemvalue="Node.js.docxParagraphAggregator..js" />
+      <item index="3" class="java.lang.String" itemvalue="Node.js.graph..js" />
+      <item index="4" class="java.lang.String" itemvalue="Node.js.docxParagraphAggregator..js" />
+      <item index="5" class="java.lang.String" itemvalue="Node.js.docxExtractor..js" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Node.js.docExtractorToCsv..js" />
-        <item index="1" class="java.lang.String" itemvalue="Node.js.graph..js" />
-        <item index="2" class="java.lang.String" itemvalue="Node.js.graphBuilder..js" />
-        <item index="3" class="java.lang.String" itemvalue="Node.js.docxParagraphAggregator..js" />
-        <item index="4" class="java.lang.String" itemvalue="Node.js.elasticQuery..js" />
+        <item index="1" class="java.lang.String" itemvalue="Node.js.docxExtractor..js" />
+        <item index="2" class="java.lang.String" itemvalue="Node.js.graph..js" />
+        <item index="3" class="java.lang.String" itemvalue="Node.js.graphBuilder..js" />
+        <item index="4" class="java.lang.String" itemvalue="Node.js.docxParagraphAggregator..js" />
       </list>
     </recent_temporary>
   </component>
@@ -421,12 +395,12 @@
       <workItem from="1541010307303" duration="1299000" />
       <workItem from="1541066070502" duration="192000" />
       <workItem from="1541066435557" duration="70038000" />
-      <workItem from="1541773012518" duration="37096000" />
+      <workItem from="1541773012518" duration="41427000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="151304000" />
+    <option name="totallyTimeSpent" value="155635000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -439,7 +413,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.048913043" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973656" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32826087" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -467,7 +441,7 @@
         </line-breakpoint>
         <line-breakpoint type="javascript">
           <url>file://$PROJECT_DIR$/bin/docx/docxExtractor..js</url>
-          <line>269</line>
+          <line>296</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint type="javascript">
@@ -528,6 +502,12 @@
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="123" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/bin/docx/docxExtractor..js</url>
+          <line>52</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="252" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
@@ -537,7 +517,7 @@
           <properties />
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="245" />
+      <option name="time" value="258" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -792,14 +772,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/docx/117.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="7321" column="64" lean-forward="false" selection-start-line="7321" selection-start-column="59" selection-end-line="7321" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/totalRef/js/test3.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
@@ -866,17 +838,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/docx/formatToHtml..js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1836">
-          <caret line="3" column="4" lean-forward="false" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
-          <folding>
-            <marker date="1540323685587" expanded="true" signature="185:244" ph="..." />
-            <marker date="1540323685587" expanded="true" signature="3337:3396" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/docx/formatToElastic..js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -909,34 +870,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/docx/docExtractorToCsv..js">
+    <entry file="file://$PROJECT_DIR$/bin/docx/118.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="71">
-          <caret line="335" column="49" lean-forward="false" selection-start-line="335" selection-start-column="49" selection-end-line="335" selection-end-column="49" />
+        <state relative-caret-position="-169">
+          <caret line="5875" column="34" lean-forward="false" selection-start-line="5875" selection-start-column="25" selection-end-line="5875" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/docx/118.xml">
+    <entry file="file://$PROJECT_DIR$/bin/docx/formatToHtml..js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="5875" column="34" lean-forward="false" selection-start-line="5875" selection-start-column="27" selection-end-line="5875" selection-end-column="34" />
-          <folding />
+        <state relative-caret-position="-1836">
+          <caret line="3" column="4" lean-forward="false" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+          <folding>
+            <marker date="1540323685587" expanded="true" signature="185:244" ph="..." />
+            <marker date="1540323685587" expanded="true" signature="3337:3396" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/docx/docxParagraphAggregator..js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="351" column="0" lean-forward="true" selection-start-line="351" selection-start-column="0" selection-end-line="351" selection-end-column="0" />
+        <state relative-caret-position="209">
+          <caret line="354" column="18" lean-forward="false" selection-start-line="354" selection-start-column="18" selection-end-line="354" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/docx/117.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="5206" column="26" lean-forward="false" selection-start-line="5206" selection-start-column="21" selection-end-line="5206" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/docx/docExtractorToCsv..js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="332" column="1" lean-forward="false" selection-start-line="332" selection-start-column="1" selection-end-line="332" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/docx/docxExtractor..js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="411" column="60" lean-forward="true" selection-start-line="411" selection-start-column="60" selection-end-line="411" selection-end-column="60" />
+        <state relative-caret-position="201">
+          <caret line="100" column="58" lean-forward="true" selection-start-line="100" selection-start-column="58" selection-end-line="100" selection-end-column="58" />
           <folding />
         </state>
       </provider>

@@ -11,13 +11,21 @@ var docxParagraphAggregator = require("./docxParagraphAggregator..js")
 
 // utilitary functions
 
-var extractRunText = function (run) {
+var extractRunText;
+extractRunText = function (run) {
     var runStr = "";
     var textStr = ""
     var texts = run.getElementsByTagName("w:t")
-    var shapes = run.getElementsByTagName("v:shape");
-    if(shapes && shapes.length>0)// annotations d'images voir 118 7944
+    // remove annotations
+    if (run.parentNode.parentNode.parentNode.tagName == "v:textbox")
         return "";
+    // remove annotations
+    var shapes = run.getElementsByTagName("v:shape");
+    if (shapes && shapes.length > 0)// annotations d'images voir 118 7944
+        return "";
+
+
+
     for (var k = 0; k < texts.length; k++) {
         var textStr = ""
         for (var l = 0; l < texts[k].childNodes.length; l++) {
@@ -33,7 +41,7 @@ var extractRunText = function (run) {
     }
 
     return runStr;
-}
+};
 
 
 // provisoire
@@ -77,6 +85,25 @@ var extractImage = function (imageRun, docRels) {
     }
     return imgName;
 
+
+}
+
+extractMathFromula=function (paragraph) {
+    var mathElts=paragraph.getElementsByTagName("m:oMath");
+    var str="";
+    for (var i = 0; i< mathElts.length; i++) {
+        var mathTextElts=paragraph.getElementsByTagName("m:t");
+        for (var k = 0; k <mathTextElts.length; k++) {
+
+            if(mathTextElts[k].parentNode.parentNode.tagName=="m:den")
+            str+="/";
+            if (mathTextElts[k].childNodes[0].data && mathTextElts[k].childNodes[0].data != "")
+                str += mathTextElts[k].childNodes[0].data;
+
+        }
+
+    }
+    return str;
 
 }
 
@@ -351,8 +378,7 @@ var docxExtactor = {
             var docVersions = {};
             var currentVersionNumber // the most frequent
             paragraphs.forEach(function (paragraph) {
-                if (paragraph.text && paragraph.text.indexOf("GS RC MEC 617") > -1)
-                    var xx = 1
+
                 if (!docVersions[paragraph.version]) {//version id frequency
                     docVersions[paragraph.version] = 0;
                 }
@@ -415,6 +441,7 @@ var docxExtactor = {
             }
 
             if (paragraph.parentNode.parentNode.tagName == "v:textbox") {// annotations
+                var x=i;
                 continue;
             }
             var pVersionId = paragraph.getAttribute("w:rsidRPr");
@@ -444,8 +471,8 @@ var docxExtactor = {
                     var old = extractRunText(runs[j])
 
             }
-
                 obj.text = runStr;
+            obj.text+=extractMathFromula(paragraph);
 
 
             //si pas de run et pas de formule c'est un saut de ligne qui délimite un paragraphe
