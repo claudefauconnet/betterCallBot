@@ -1,11 +1,64 @@
 var skos = require("./skos..js");
 var fs = require('fs');
 var request = require("request");
+var async = require('async');
 var thesaurus = {
     elasticUrl: "http://localhost:9200/totalref_thesaurus/_search?",
 
 
-    thesaurusTrees: {},
+    buildElasticThesaurus: function () {
+
+
+
+
+
+
+
+
+        async.series([
+
+            //transform skos toJson
+            function(callback){
+                skos.loadSkosToTree("totalRef", function (err, result) {
+                    var xx = result;
+                    var thesaurus = [];
+                    result.forEach(function (entry) {
+
+                        var ancestors = entry.parent.substring(entry.parent.indexOf("#") + 1).split("-")
+                        ancestors.forEach(function(ancestor, indice){
+                            ancestors[indice]=ancestor.toLowerCase()
+                        })
+                        var synonyms = [];
+                        entry.data.synonyms.forEach(function (entry) {
+                            synonyms.push(entry.toLowerCase())
+                        })
+                        thesaurus.push({name: entry.text.toLowerCase(), synonyms: synonyms, ancestors: ancestors});
+
+                    })
+
+                    fs.writeFileSync("D:\\Total\\docs\\nlp\\thesaurusRefTotal.json", JSON.stringify(thesaurus, null, 2))
+                    callback(null);
+                })
+            },
+            function (callback) {
+                if (false) {
+                    var str = "" + fs.readFileSync("D:\\Total\\docs\\nlp\\thesaurusRefTotal.json")
+                    var json = JSON.parse(str);
+                    elasticProxy.indexJsonArray("totalref_thesaurus2", "concept", json, {}, function (err, result) {
+                        var x = result;
+                        callback(null);
+                    })
+
+
+                }
+            }
+            ],function(err){
+            console.log("done")
+
+        })
+
+
+    },
 
 
     getWordConceptsInThesaurus: function (word, thesaurusTree) {
@@ -73,12 +126,12 @@ var thesaurus = {
                     callback(res.body.errors)
                 }
                 else
-                    var json =JSON.parse(res.body);
-var result="{}"
-                if (json.hits )
-                    result=json.hits.hits;
+                    var json = JSON.parse(res.body);
+                var result = "{}"
+                if (json.hits)
+                    result = json.hits.hits;
 
-                    return callback(null,result );
+                return callback(null, result);
 
             })
 
@@ -97,8 +150,8 @@ var result="{}"
 
 }
 
-if (false) {
-
+if (true) {
+thesaurus.buildElasticThesaurus();
     // https://www.monterail.com/blog/how-to-index-objects-elasticsearch
     /*
     {"mappings": {
@@ -119,10 +172,7 @@ if (false) {
 
 }
      */
-    skos.loadSkosToTree("totalRef", function (err, result) {
 
-        fs.writeFileSync("d:\\thesaurusRefTotal.json", JSON.stringify(result, null, 2))
-    })
 }
 
 

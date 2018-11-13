@@ -16,7 +16,7 @@ var graph = {
 
     }
     ,
-    createGraph: function (fileTokens, fileDocs, callbackGraph) {
+    createGraph: function (subGraph,fileTokens, fileDocs, callbackGraph) {
         function cleanForNeo(value) {
             if (isNaN(value)) {
                 value = value.replace(/[\n|\r|\t]+/g, " ");
@@ -112,17 +112,24 @@ var graph = {
         var ids = {};
 
 
-
-
         async.series([
+                //create nouns nodes
+
                 //create nouns nodes
                 function (callbackSeries) {
 
                     var statements = [];
-                    statements.push({statement: 'Match (n) where n.subGraph="totalRef4" DETACH DELETE n'})
-                    for (var key in jsonTokens) {
-                        statements.push({statement: "CREATE (n:noun { name: \"" + cleanForNeo(key) + "\",subGraph:\"totalRef4\"}) RETURN n.name ,id(n) "})
-                    }
+                    var distincts=[];
+                    statements.push({statement: 'Match (n) where n.subGraph="'+subGraph+'" DETACH DELETE n'})
+                    jsonDocs.forEach(function (doc) {
+                        doc.nounTokens.forEach(function (noun) {
+                            if(distincts.indexOf(noun)<0){
+                                distincts.push(noun);
+                                statements.push({statement: "CREATE (n:noun { name: \"" + cleanForNeo(noun) + "\",subGraph:\""+subGraph+"\"}) RETURN n.name ,id(n) "})
+                            }
+
+                        })
+                    })
                     statements.push({statement: "match(n:noun) RETURN n.name ,id(n) "});
                     createNodes(statements, function (err, result) {
                         if (err) {
@@ -138,14 +145,17 @@ var graph = {
                 //create concepts nodes
                 function (callbackSeries) {
                     var statements = [];
-                    for (var key in jsonTokens) {
-                        var concepts = jsonTokens[key].concepts;
-                        if (concepts) {
-                            concepts.forEach(function (concept) {
-                                statements.push({statement: "CREATE (n:concept { name: \"" + cleanForNeo(concept.text) + "\",subGraph:\"totalRef4\"}) RETURN n.name ,id(n) "})
-                            })
-                        }
-                    }
+                    var distincts=[];
+                    jsonDocs.forEach(function (doc) {
+
+                        doc.concepts.forEach(function (concept) {
+                            if(distincts.indexOf(concept.text)<0) {
+                                distincts.push(concept.text);
+                                statements.push({statement: "CREATE (n:concept { name: \"" + cleanForNeo(concept.text) + "\",subGraph:\"" + subGraph + "\"}) RETURN n.name ,id(n) "})
+                            }
+                        })
+                    })
+
                     statements.push({statement: "match(n:concept) RETURN n.name ,id(n) "});
                     createNodes(statements, function (err, result) {
                         if (err) {
@@ -157,25 +167,78 @@ var graph = {
                 },
 
 
-                // create relations nouns concepts
+
+                // create paragraph nodes
                 function (callbackSeries) {
-                    var relations = [];
-                    for (var key in jsonTokens) {
-                        var concepts = jsonTokens[key].concepts;
-                        if (concepts) {
-                            concepts.forEach(function (concept) {
-                                relations.push({start: key, end: concept.text});
-                            })
+                    var statements = [];
+                    jsonDocs.forEach(function (doc) {
+                        statements.push({
+                            statement: "CREATE (n:paragraph {" +
+                            " id: \"" + cleanForNeo(doc.paragraphId) + "\"" +
+                            " ,name: \"" + cleanForNeo("P_" + doc.paragraphId) + "\"" +
+                            " ,text: \"" + cleanForNeo(doc.text) + "\"" +
+                            ",subGraph:\""+subGraph+"\"}" +
+                            ") RETURN n.id ,id(n) "
+                        })
+
+
+                    })
+                    statements.push({statement: "match(n:paragraph) RETURN n.id ,id(n) "});
+                    createNodes(statements, function (err, result) {
+                        if (err) {
+                            return callbackSeries(err);
                         }
-                    }
-                    createRelations(relations, "hasConcept", "nouns", "concepts", ids, function (err, result) {
+                        ids["paragraphs"] = result;
+                        return callbackSeries(null, result);
+                    })
+
+
+                },
+                // saveIds
+            /*    function (callbackSeries) {
+                    fs.writeFileSync("D:\\Total\\docs\\nlp\\ids.json", JSON.stringify(ids, null, 2))
+                    return callbackSeries(null, "rels");
+                },*/
+
+                // create nouns paragraph relations
+                function (callbackSeries) {
+
+
+                    return callbackSeries(null, []);
+
+                    var relations = []
+                    jsonDocs.forEach(function (doc) {
+                        doc.nounTokens.forEach(function (token) {
+                            relations.push({start: doc.paragraphId, end: token});
+                        })
+                    })
+
+                    createRelations(relations, "hasToken", "paragraphs", "nouns", ids, function (err, result) {
                         if (err)
                             console.log(err);
                         return callbackSeries(null, result);
                     })
+
+
                 },
+                // create  paragraph concepts relations
+                function (callbackSeries) {
+                    var relations = []
+
+                    jsonDocs.forEach(function (doc) {
+                        doc.concepts.forEach(function (concept) {
+                            relations.push({start: doc.paragraphId, end: concept.text});
+                        })
+                    })
+
+                    createRelations(relations, "hasConcept", "paragraphs", "concepts", ids, function (err, result) {
+                        if (err)
+                            console.log(err);
+                        return callbackSeries(null, result);
+                    })
 
 
+                },
                 // create document nodes
                 function (callbackSeries) {
                     var documents = []
@@ -188,7 +251,7 @@ var graph = {
                                 " id: \"" + cleanForNeo(doc.docId) + "\"" +
                                 " ,name: \"" + cleanForNeo(doc.fileName) + "\"" +
                                 " ,title: \"" + cleanForNeo(doc.docTitle) + "\"" +
-                                ",subGraph:\"totalRef4\"}" +
+                                ",subGraph:\""+subGraph+"\"}" +
                                 ") RETURN n.id ,id(n) "
                             })
 
@@ -218,7 +281,7 @@ var graph = {
                                 " ,name: \"" + cleanForNeo(doc.chapter) + "\"" +
                                 " ,tocNumber: \"" + cleanForNeo(doc.chapterTocNumber) + "\"" +
                                 " ,parent: \"" + cleanForNeo(doc.parentChapter) + "\"" +
-                                ",subGraph:\"totalRef4\"}" +
+                                ",subGraph:\""+subGraph+"\"}" +
                                 ") RETURN n.id ,id(n) "
                             })
 
@@ -235,55 +298,7 @@ var graph = {
 
 
                 },
-                // create paragraph nodes
-                function (callbackSeries) {
-                    var statements = [];
-                    jsonDocs.forEach(function (doc) {
-                        statements.push({
-                            statement: "CREATE (n:paragraph {" +
-                            " id: \"" + cleanForNeo(doc.paragraphId) + "\"" +
-                            " ,name: \"" + cleanForNeo("P_" + doc.paragraphId) + "\"" +
-                            " ,text: \"" + cleanForNeo(doc.text) + "\"" +
-                            ",subGraph:\"totalRef4\"}" +
-                            ") RETURN n.id ,id(n) "
-                        })
 
-
-                    })
-                    statements.push({statement: "match(n:paragraph) RETURN n.id ,id(n) "});
-                    createNodes(statements, function (err, result) {
-                        if (err) {
-                            return callbackSeries(err);
-                        }
-                        ids["paragraphs"] = result;
-                        return callbackSeries(null, result);
-                    })
-
-
-                },
-                // saveIds
-                function (callbackSeries) {
-                    fs.writeFileSync("D:\\Total\\docs\\nlp\\ids.json", JSON.stringify(ids, null, 2))
-                    return callbackSeries(null, "rels");
-                },
-
-                // create nouns paragraph relations
-                function (callbackSeries) {
-                    var relations = []
-                    jsonDocs.forEach(function (doc) {
-                        doc.nounTokens.forEach(function (token) {
-                            relations.push({start: doc.paragraphId, end: token});
-                        })
-                    })
-
-                    createRelations(relations, "hasToken", "paragraphs", "nouns", ids, function (err, result) {
-                        if (err)
-                            console.log(err);
-                        return callbackSeries(null, result);
-                    })
-
-
-                },
                 // create paragraph chapter relations
                 function (callbackSeries) {
                     var relations = []
@@ -291,7 +306,7 @@ var graph = {
                         relations.push({start: doc.paragraphId, end: doc.chapterId});
                     })
 
-                    createRelations(relations, "inChapter", "paragraphs", "chapters", ids, function (err, result) {
+                    createRelations(relations, "inChapter", "paragraphs", "concepts", ids, function (err, result) {
                         if (err)
                             console.log(err);
                         return callbackSeries(null, result);
@@ -301,9 +316,9 @@ var graph = {
                 // create chapter doc relations
                 function (callbackSeries) {
                     var relations = [];
-                    var chapters=[];
+                    var chapters = [];
                     jsonDocs.forEach(function (doc) {
-                        if(chapters.indexOf(doc.chapterId)<0) {
+                        if (chapters.indexOf(doc.chapterId) < 0) {
                             chapters.push(doc.chapterId)
                             relations.push({start: doc.chapterId, end: doc.docId});
                         }
@@ -316,23 +331,8 @@ var graph = {
                     })
 
 
-                }
+                },
 
-                // create concepts paragraph relations
-                /*   function (callbackSeries) {
-                       var relations = []
-                       jsonDocs.forEach(function (doc) {
-                           relations.push({start: doc.chapterId, end: doc.docId});
-                       })
-
-                       createRelations(relations, "inDocument", "chapters", "documents", ids, function (err, result) {
-                           if (err)
-                               console.log(err);
-                           return callbackSeries(null, result);
-                       })
-
-
-                   }*/
 
 
             ],
@@ -344,73 +344,77 @@ var graph = {
                 }
 
 
-            })
+            }
+        )
 
     }
 
     ,
 
-    executeStatements: function (statements, callback) {
+    executeStatements:
 
-        //   console.log(statements.length)
+        function (statements, callback) {
 
-
-        function execute(group) {
-            var payload = {
-                "statements": group
-            }
-            var path = "/db/data/transaction/commit";
-            request({
-                    url: 'http://neo4j:souslesens@127.0.0.1:7474' + path,
-                    json: payload,
-                    method: 'POST',
-                    headers: {'Content-Type': 'application/json',}
-                },
-                function (err, res) {
-
-                    if (err)
-                        callback(err)
-                    else if (res.body && res.body.errors && res.body.errors.length > 0) {
-                        console.log(JSON.stringify(res.body.errors))
-                        callback(res.body.errors)
-                    }
-                    else {
+            //   console.log(statements.length)
 
 
-                        callback(null, res.body)
-                    }
-                })
+            function execute(group) {
+                var payload = {
+                    "statements": group
+                }
+                var path = "/db/data/transaction/commit";
+                request({
+                        url: 'http://neo4j:souslesens@127.0.0.1:7474' + path,
+                        json: payload,
+                        method: 'POST',
+                        headers: {'Content-Type': 'application/json',}
+                    },
+                    function (err, res) {
+
+                        if (err)
+                            callback(err)
+                        else if (res.body && res.body.errors && res.body.errors.length > 0) {
+                            console.log(JSON.stringify(res.body.errors))
+                            callback(res.body.errors)
+                        }
+                        else {
 
 
-        }
+                            callback(null, res.body)
+                        }
+                    })
 
-        var groups = [];
-        var currentGroup = [];
 
-        statements.forEach(function (statement, index) {
-
-            currentGroup.push(statement)
-            if (currentGroup.length > 100 || index >= statements.length - 1) {
-                groups.push(currentGroup);
-                currentGroup = [];
             }
 
-        })
+            var groups = [];
+            var currentGroup = [];
 
-        async.eachSeries(groups, function (group, callback) {
+            statements.forEach(function (statement, index) {
 
-            execute(group, function (err, result) {
-                if (err)
-                    return callback(err);
-                return callback();
+                currentGroup.push(statement)
+                if (currentGroup.length > 100 || index >= statements.length - 1) {
+                    groups.push(currentGroup);
+                    currentGroup = [];
+                }
+
             })
 
-        }, function (err) {
-            if (err) {
-                console.log(err);
-            }
-        })
-    }
+            async.eachSeries(groups, function (group, callback) {
+
+                execute(group, function (err, result) {
+                    if (err)
+                        return callback(err);
+                    return callback();
+                })
+
+            }, function (err) {
+                if (err) {
+                    console.log(err);
+                }
+            })
+        }
+
     ,
 
 
@@ -422,7 +426,7 @@ if (true
     var fileTokens = "D:\\Total\\docs\\nlp\\allNounTokens.json";
     var fileDocs = "D:\\Total\\docs\\nlp\\tokenizedDocs.json";
 
-    graph.createGraph(fileTokens, fileDocs, function (err, result) {
+    graph.createGraph("totalRef5",fileTokens, fileDocs, function (err, result) {
         var x = err;
     })
 
@@ -433,7 +437,7 @@ if (true
 if (false) {
     var str = "aaa"
 
-    var st = {statement: "CREATE (n:noun { name: \"" + str + "\",subGraph:\"totalRef4\"}) RETURN n.name ,id(n)"};
+    var st = {statement: "CREATE (n:noun { name: \"" + str + "\",subGraph:\""+subGraph+"\"}) RETURN n.name ,id(n)"};
 
     var statements = [st];
     graph.executeStatements(statements, function (err, result) {

@@ -1,0 +1,12 @@
+{
+  "size": 10,
+  "query": {
+    "term": {
+      "name": {
+        "value": "Stable by-pass flow"
+      }
+    }
+  }
+}
+
+
