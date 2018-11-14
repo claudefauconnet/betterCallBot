@@ -6,17 +6,33 @@ var thesaurus = {
     elasticUrl: "http://localhost:9200/totalref_thesaurus/_search?",
 
 
+
+    mappings:{
+        index: "totalRefThesaurus2",
+        type: "concept",
+        body: {
+            mappings: {
+                concept: {
+                    properties: {
+                        name: { type: "keyword" },
+                        parents: { type: "text" },
+                        synonyms: {type: "keyword" },
+
+                    }
+                }
+            }
+        }
+    },
+
+
+
+
+
+
+
+
     buildElasticThesaurus: function () {
-
-
-
-
-
-
-
-
         async.series([
-
             //transform skos toJson
             function(callback){
                 skos.loadSkosToTree("totalRef", function (err, result) {
