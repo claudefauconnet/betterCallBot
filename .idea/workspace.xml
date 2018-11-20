@@ -2,15 +2,20 @@
 <project version="4">
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/public/index.html" line="94" />
+    <bookmark url="file://$PROJECT_DIR$/bin/nlp/corpusAnalyzer..js" line="287" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="62fcbe95-4f85-494a-9b3a-1eca7bab2dd2" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/bin/docx/docExtractorToCsv..js" afterPath="$PROJECT_DIR$/bin/docx/docExtractorToCsv..js" />
       <change beforePath="$PROJECT_DIR$/bin/nlp/corpusAnalyzer..js" afterPath="$PROJECT_DIR$/bin/nlp/corpusAnalyzer..js" />
       <change beforePath="$PROJECT_DIR$/bin/nlp/elasticQuery..js" afterPath="$PROJECT_DIR$/bin/nlp/elasticQuery..js" />
       <change beforePath="$PROJECT_DIR$/bin/nlp/graph..js" afterPath="$PROJECT_DIR$/bin/nlp/graph..js" />
-      <change beforePath="$PROJECT_DIR$/bin/nlp/thesaurus..js" afterPath="$PROJECT_DIR$/bin/nlp/thesaurus..js" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
-      <change beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change beforePath="$PROJECT_DIR$/bin/nlp/test.json" afterPath="$PROJECT_DIR$/bin/nlp/test.json" />
+      <change beforePath="$PROJECT_DIR$/public/totalRef/bot.html" afterPath="$PROJECT_DIR$/public/totalRef/bot.html" />
+      <change beforePath="$PROJECT_DIR$/public/totalRef/js/bot.js" afterPath="$PROJECT_DIR$/public/totalRef/js/bot.js" />
+      <change beforePath="$PROJECT_DIR$/public/totalRef/js/test3.json" afterPath="$PROJECT_DIR$/public/totalRef/js/test3.json" />
+      <change beforePath="$PROJECT_DIR$/routes/index.js" afterPath="$PROJECT_DIR$/routes/index.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -27,8 +32,8 @@
       <file leaf-file-name="docExtractorToCsv..js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/docx/docExtractorToCsv..js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-79">
-              <caret line="253" column="0" lean-forward="false" selection-start-line="253" selection-start-column="0" selection-end-line="253" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="258" column="0" lean-forward="false" selection-start-line="258" selection-start-column="0" selection-end-line="258" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -37,8 +42,8 @@
       <file leaf-file-name="corpusAnalyzer..js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/nlp/corpusAnalyzer..js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="65">
-              <caret line="140" column="30" lean-forward="true" selection-start-line="140" selection-start-column="30" selection-end-line="140" selection-end-column="30" />
+            <state relative-caret-position="245">
+              <caret line="168" column="10" lean-forward="false" selection-start-line="168" selection-start-column="10" selection-end-line="168" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -47,58 +52,60 @@
       <file leaf-file-name="test.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/nlp/test.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <state relative-caret-position="342">
+              <caret line="19" column="1" lean-forward="false" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="skos..js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/nlp/skos..js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="totalRef.rdf" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/nlp/totalRef.rdf">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="13" column="17" lean-forward="false" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="thesaurus..js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/nlp/thesaurus..js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="graph..js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="graph..js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/nlp/graph..js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="191">
-              <caret line="262" column="28" lean-forward="false" selection-start-line="262" selection-start-column="28" selection-end-line="262" selection-end-column="28" />
+              <caret line="475" column="36" lean-forward="false" selection-start-line="475" selection-start-column="36" selection-end-line="475" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="docxExtractor..js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/docx/docxExtractor..js">
+      <file leaf-file-name="www" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/www">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2016">
-              <caret line="112" column="121" lean-forward="false" selection-start-line="112" selection-start-column="106" selection-end-line="112" selection-end-column="121" />
+            <state relative-caret-position="162">
+              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bot.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/totalRef/js/bot.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="159">
+              <caret line="219" column="0" lean-forward="true" selection-start-line="219" selection-start-column="0" selection-end-line="219" selection-end-column="0" />
+              <folding>
+                <marker date="1542641392155" expanded="true" signature="6437:6467" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bot.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/totalRef/bot.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="314">
+              <caret line="65" column="6" lean-forward="true" selection-start-line="65" selection-start-column="6" selection-end-line="65" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="414">
+              <caret line="23" column="26" lean-forward="false" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -107,18 +114,18 @@
       <file leaf-file-name="elasticQuery..js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/nlp/elasticQuery..js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="130" column="0" lean-forward="false" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
+            <state relative-caret-position="191">
+              <caret line="108" column="34" lean-forward="false" selection-start-line="108" selection-start-column="34" selection-end-line="108" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="117.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/docx/117.xml">
+      <file leaf-file-name="request.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/node_modules/request/request.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="93708">
-              <caret line="5206" column="26" lean-forward="false" selection-start-line="5206" selection-start-column="21" selection-end-line="5206" selection-end-column="26" />
+            <state relative-caret-position="199">
+              <caret line="184" column="21" lean-forward="false" selection-start-line="184" selection-start-column="21" selection-end-line="184" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -138,18 +145,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>clearance</find>
-      <find>position:absolute</find>
-      <find>shape</find>
-      <find>images</find>
-      <find>extractImage</find>
-      <find>setImages</find>
-      <find>run</find>
-      <find>extract</find>
-      <find>textbox</find>
-      <find>extractRunText</find>
-      <find>tagName</find>
-      <find>Dubbel</find>
       <find>image</find>
       <find>oMath</find>
       <find>follow</find>
@@ -168,6 +163,18 @@
       <find>docs</find>
       <find>fileTokens</find>
       <find>extractAllTokens</find>
+      <find>index</find>
+      <find>setConceptsInCorpusFromThesaurus</find>
+      <find>documents</find>
+      <find>advancedSearchButton</find>
+      <find>searchDialog_Criteriatext</find>
+      <find>advancedSearchNodeLabelsDiv</find>
+      <find>showQuestionProposal</find>
+      <find>concept.text</find>
+      <find>phrase</find>
+      <find>getWordsAssociations</find>
+      <find>showSearchResults</find>
+      <find>foundTokens</find>
     </findStrings>
     <replaceStrings>
       <replace>docParagraph</replace>
@@ -205,22 +212,22 @@
         <option value="$PROJECT_DIR$/public/bot.html" />
         <option value="$PROJECT_DIR$/public/totalRef/js/coreNlp2.js" />
         <option value="$PROJECT_DIR$/public/totalRef/js/test2.json" />
-        <option value="$PROJECT_DIR$/routes/index.js" />
-        <option value="$PROJECT_DIR$/public/totalRef/bot.html" />
-        <option value="$PROJECT_DIR$/public/totalRef/js/bot.js" />
-        <option value="$PROJECT_DIR$/public/totalRef/js/test3.json" />
         <option value="$PROJECT_DIR$/bin/nlp/coreNlp..js" />
         <option value="$PROJECT_DIR$/bin/graph/graphBuilder..js" />
         <option value="$PROJECT_DIR$/bin/docx/formatToElastic..js" />
         <option value="$PROJECT_DIR$/bin/docx/docxParagraphAggregator..js" />
         <option value="$PROJECT_DIR$/bin/docx/docxExtractor..js" />
-        <option value="$PROJECT_DIR$/bin/docx/docExtractorToCsv..js" />
         <option value="$PROJECT_DIR$/bin/nlp/graphBuilder..js" />
-        <option value="$PROJECT_DIR$/bin/nlp/test.json" />
         <option value="$PROJECT_DIR$/bin/nlp/thesaurus..js" />
-        <option value="$PROJECT_DIR$/bin/nlp/elasticQuery..js" />
+        <option value="$PROJECT_DIR$/public/totalRef/js/test3.json" />
+        <option value="$PROJECT_DIR$/bin/docx/docExtractorToCsv..js" />
         <option value="$PROJECT_DIR$/bin/nlp/graph..js" />
+        <option value="$PROJECT_DIR$/bin/nlp/test.json" />
         <option value="$PROJECT_DIR$/bin/nlp/corpusAnalyzer..js" />
+        <option value="$PROJECT_DIR$/bin/nlp/elasticQuery..js" />
+        <option value="$PROJECT_DIR$/routes/index.js" />
+        <option value="$PROJECT_DIR$/public/totalRef/js/bot.js" />
+        <option value="$PROJECT_DIR$/public/totalRef/bot.html" />
       </list>
     </option>
   </component>
@@ -236,9 +243,8 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="5" />
-    <option name="width" value="1281" />
-    <option name="height" value="685" />
+    <option name="width" value="1280" />
+    <option name="height" value="680" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -256,6 +262,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -307,7 +314,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -319,7 +325,7 @@
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../bailletArchives" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/GitHub/betterCallBot/bin/nlp/corpusAnalyzer..js" />
   </component>
   <component name="RecentsManager">
@@ -352,23 +358,22 @@
     <configuration name="corpusAnalyzer..js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="corpusAnalyzer..js" working-dir="$PROJECT_DIR$/bin/nlp" />
     <configuration name="docExtractorToCsv..js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="docExtractorToCsv..js" working-dir="$PROJECT_DIR$/bin/docx" />
     <configuration name="docxExtractor..js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="docxExtractor..js" working-dir="$PROJECT_DIR$/bin/docx" />
-    <configuration name="graph..js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="graph..js" working-dir="$PROJECT_DIR$/bin/nlp" />
+    <configuration name="graph..js" type="NodeJSConfigurationType" factoryName="Node.js" path-to-js-file="graph..js" working-dir="$PROJECT_DIR$/bin/nlp" />
     <configuration name="thesaurus..js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="thesaurus..js" working-dir="$PROJECT_DIR$/bin/nlp" />
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Node.js.bin\www" />
-      <item index="1" class="java.lang.String" itemvalue="Node.js.docExtractorToCsv..js" />
-      <item index="2" class="java.lang.String" itemvalue="Node.js.graph..js" />
+      <item index="1" class="java.lang.String" itemvalue="Node.js.graph..js" />
+      <item index="2" class="java.lang.String" itemvalue="Node.js.docExtractorToCsv..js" />
       <item index="3" class="java.lang.String" itemvalue="Node.js.docxExtractor..js" />
       <item index="4" class="java.lang.String" itemvalue="Node.js.corpusAnalyzer..js" />
       <item index="5" class="java.lang.String" itemvalue="Node.js.thesaurus..js" />
     </list>
     <recent_temporary>
-      <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Node.js.graph..js" />
-        <item index="1" class="java.lang.String" itemvalue="Node.js.corpusAnalyzer..js" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Node.js.corpusAnalyzer..js" />
+        <item index="1" class="java.lang.String" itemvalue="Node.js.docExtractorToCsv..js" />
         <item index="2" class="java.lang.String" itemvalue="Node.js.thesaurus..js" />
-        <item index="3" class="java.lang.String" itemvalue="Node.js.docExtractorToCsv..js" />
-        <item index="4" class="java.lang.String" itemvalue="Node.js.docxExtractor..js" />
+        <item index="3" class="java.lang.String" itemvalue="Node.js.docxExtractor..js" />
       </list>
     </recent_temporary>
   </component>
@@ -398,27 +403,30 @@
       <workItem from="1541773012518" duration="43476000" />
       <workItem from="1542044624530" duration="3078000" />
       <workItem from="1542048282950" duration="30742000" />
+      <workItem from="1542264075244" duration="16252000" />
+      <workItem from="1542532296468" duration="30406000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="191504000" />
+    <option name="totallyTimeSpent" value="238162000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17175975" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17175975" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.048913043" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973656" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32826087" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29130435" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32391304" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -426,6 +434,26 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32826087" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17175975" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.048913043" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973656" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32391304" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -436,106 +464,23 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint type="javascript">
-          <url>file://$PROJECT_DIR$/bin/adaptativeCardRenderer..js</url>
-          <line>11</line>
-        </line-breakpoint>
-        <line-breakpoint type="javascript">
-          <url>file://$PROJECT_DIR$/bin/docx/docxExtractor..js</url>
-          <line>296</line>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint type="javascript">
-          <url>file://$PROJECT_DIR$/public/totalRef/js/elastic.js</url>
-          <line>70</line>
-          <option name="timeStamp" value="36" />
-        </line-breakpoint>
-        <line-breakpoint type="javascript">
-          <url>file://$PROJECT_DIR$/public/totalRef/js/elastic.js</url>
-          <line>106</line>
-          <option name="timeStamp" value="37" />
-        </line-breakpoint>
-        <line-breakpoint type="javascript">
-          <url>file://$PROJECT_DIR$/public/totalRef/js/elastic.js</url>
-          <line>117</line>
-          <option name="timeStamp" value="38" />
-        </line-breakpoint>
-        <line-breakpoint type="javascript">
-          <url>file://$PROJECT_DIR$/public/totalRef/js/neo4j.js</url>
-          <line>457</line>
-          <option name="timeStamp" value="39" />
-        </line-breakpoint>
-        <line-breakpoint type="javascript">
-          <url>file://$PROJECT_DIR$/public/totalRef/js/neo4j.js</url>
-          <line>560</line>
-          <option name="timeStamp" value="40" />
-        </line-breakpoint>
-        <line-breakpoint type="javascript">
-          <url>file://$PROJECT_DIR$/bin/nlp/thesaurus..js</url>
-          <line>81</line>
-          <option name="timeStamp" value="61" />
-        </line-breakpoint>
-        <line-breakpoint type="javascript">
-          <url>file://$PROJECT_DIR$/bin/nlp/thesaurus..js</url>
-          <line>159</line>
-          <option name="timeStamp" value="67" />
-        </line-breakpoint>
-        <line-breakpoint type="javascript">
+        <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/public/totalRef/js/bot.js</url>
-          <line>83</line>
-          <option name="timeStamp" value="113" />
+          <line>27</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="410" />
         </line-breakpoint>
-        <line-breakpoint type="javascript">
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/bin/nlp/elasticQuery..js</url>
+          <line>57</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="489" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/public/totalRef/js/bot.js</url>
-          <line>139</line>
-          <option name="timeStamp" value="116" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/bin/docx/docxExtractor..js</url>
-          <line>52</line>
-          <option name="timeStamp" value="252" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/bin/nlp/graph..js</url>
-          <line>287</line>
+          <line>116</line>
           <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="293" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/bin/nlp/thesaurus..js</url>
-          <line>71</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="297" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/bin/nlp/corpusAnalyzer..js</url>
-          <line>267</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="318" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/bin/nlp/corpusAnalyzer..js</url>
-          <line>265</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="320" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/bin/nlp/graph..js</url>
-          <line>20</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="321" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/bin/nlp/graph..js</url>
-          <line>262</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="339" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/bin/nlp/corpusAnalyzer..js</url>
-          <line>147</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="343" />
+          <option name="timeStamp" value="502" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
@@ -546,18 +491,11 @@
           <properties />
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="349" />
+      <option name="time" value="506" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/xxx.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="7" lean-forward="false" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/elasticProxy.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -679,7 +617,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-54">
           <caret line="21" column="46" lean-forward="false" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -697,24 +634,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/www">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/totalRef/js/coreNlp.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2988">
           <caret line="204" column="37" lean-forward="true" selection-start-line="204" selection-start-column="37" selection-end-line="204" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="43" lean-forward="false" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -746,32 +669,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/totalRef/bot.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="23" column="27" lean-forward="false" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/nlp/totalRefNouns.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-342">
           <caret line="2" column="14" lean-forward="false" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/totalRef/js/test3.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="552" column="43" lean-forward="false" selection-start-line="552" selection-start-column="43" selection-end-line="552" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/totalRef/js/bot.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1044">
-          <caret line="214" column="25" lean-forward="false" selection-start-line="214" selection-start-column="25" selection-end-line="214" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -838,10 +739,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="3" column="4" lean-forward="false" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
-          <folding>
-            <marker date="1540323685587" expanded="true" signature="185:244" ph="..." />
-            <marker date="1540323685587" expanded="true" signature="3337:3396" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -849,7 +746,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6372">
           <caret line="354" column="18" lean-forward="false" selection-start-line="354" selection-start-column="18" selection-end-line="354" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -877,50 +773,73 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/nlp/test.json">
+    <entry file="file://$PROJECT_DIR$/public/totalRef/js/test3.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state relative-caret-position="-21646">
+          <caret line="59" column="21" lean-forward="false" selection-start-line="59" selection-start-column="21" selection-end-line="59" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/docx/docxExtractor..js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1530">
+          <caret line="85" column="19" lean-forward="false" selection-start-line="85" selection-start-column="19" selection-end-line="85" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/nlp/thesaurus..js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/docx/docxExtractor..js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2016">
-          <caret line="112" column="121" lean-forward="false" selection-start-line="112" selection-start-column="106" selection-end-line="112" selection-end-column="121" />
+        <state relative-caret-position="2862">
+          <caret line="159" column="79" lean-forward="false" selection-start-line="159" selection-start-column="61" selection-end-line="159" selection-end-column="79" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/docx/docExtractorToCsv..js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-79">
-          <caret line="253" column="0" lean-forward="false" selection-start-line="253" selection-start-column="0" selection-end-line="253" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="258" column="0" lean-forward="false" selection-start-line="258" selection-start-column="0" selection-end-line="258" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/nlp/elasticQuery..js">
+    <entry file="file://$PROJECT_DIR$/bin/www">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="130" column="0" lean-forward="false" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
+        <state relative-caret-position="162">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/request/request.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="184" column="21" lean-forward="false" selection-start-line="184" selection-start-column="21" selection-end-line="184" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/nlp/test.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" column="1" lean-forward="false" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/nlp/corpusAnalyzer..js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="65">
-          <caret line="140" column="30" lean-forward="true" selection-start-line="140" selection-start-column="30" selection-end-line="140" selection-end-column="30" />
+        <state relative-caret-position="245">
+          <caret line="168" column="10" lean-forward="false" selection-start-line="168" selection-start-column="10" selection-end-line="168" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/nlp/elasticQuery..js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="108" column="34" lean-forward="false" selection-start-line="108" selection-start-column="34" selection-end-line="108" selection-end-column="34" />
           <folding />
         </state>
       </provider>
@@ -928,8 +847,34 @@
     <entry file="file://$PROJECT_DIR$/bin/nlp/graph..js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="191">
-          <caret line="262" column="28" lean-forward="false" selection-start-line="262" selection-start-column="28" selection-end-line="262" selection-end-column="28" />
+          <caret line="475" column="36" lean-forward="false" selection-start-line="475" selection-start-column="36" selection-end-line="475" selection-end-column="36" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="23" column="26" lean-forward="false" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/totalRef/bot.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="65" column="6" lean-forward="true" selection-start-line="65" selection-start-column="6" selection-end-line="65" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/totalRef/js/bot.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="219" column="0" lean-forward="true" selection-start-line="219" selection-start-column="0" selection-end-line="219" selection-end-column="0" />
+          <folding>
+            <marker date="1542641392155" expanded="true" signature="6437:6467" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

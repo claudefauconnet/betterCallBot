@@ -1,744 +1,1305 @@
 {
-  "took": 13,
-  "timed_out": false,
-  "_shards": {
-    "total": 5,
-    "successful": 5,
-    "skipped": 0,
-    "failed": 0
-  },
-  "hits": {
-    "total": 88,
-    "max_score": 6.7212853,
-    "hits": [
-      {
-        "_index": "totalref_nouns",
-        "_type": "corpusnouns",
-        "_id": "_94750183",
-        "_score": 6.7212853,
-        "_source": {
-          "term": "wear",
-          "concepts": [
-            {
-              "text": "Wear ring",
-              "id": "concept#Component-Ring-WearRing",
-              "data": {
-                "synonyms": [
-                  "wear rings",
-                  "wearing rings"
-                ],
-                "parentText": "Ring"
-              },
-              "parent": "concept#Component-Ring"
-            },
-            {
-              "text": "Bearing Failure",
-              "id": "concept#Failure-BearingFailure",
-              "data": {
-                "synonyms": [
-                  "bearing wear or failure",
-                  "bearing damage / failure"
-                ],
-                "parentText": "Failure"
-              },
-              "parent": "concept#Failure"
+  "totalreferentiel5": {
+    "mappings": {
+      "totalrefparagraphs": {
+        "properties": {
+          "chapter": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
             }
-          ]
-        }
-      },
-      {
-        "_index": "totalref_nouns",
-        "_type": "corpusnouns",
-        "_id": "_39759468",
-        "_score": 6.6624246,
-        "_source": {
-          "term": "damage",
-          "concepts": [
-            {
-              "text": "Bearing Failure",
-              "id": "concept#Failure-BearingFailure",
-              "data": {
-                "synonyms": [
-                  "bearing wear or failure",
-                  "bearing damage / failure"
-                ],
-                "parentText": "Failure"
-              },
-              "parent": "concept#Failure"
+          },
+          "chapterId": {
+            "type": "long"
+          },
+          "chapterTocNumber": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
             }
-          ]
-        }
-      },
-      {
-        "_index": "totalref_nouns",
-        "_type": "corpusnouns",
-        "_id": "_94749547",
-        "_score": 6.518266,
-        "_source": {
-          "term": "failure",
-          "concepts": [
-            {
-              "text": "Bearing Failure",
-              "id": "concept#Failure-BearingFailure",
-              "data": {
-                "synonyms": [
-                  "bearing wear or failure",
-                  "bearing damage / failure"
-                ],
-                "parentText": "Failure"
-              },
-              "parent": "concept#Failure"
-            },
-            {
-              "text": "Surge",
-              "id": "concept#Failure-Surge",
-              "data": {
-                "synonyms": [
-                  "severe surge",
-                  "surge event"
-                ],
-                "parentText": "Failure"
-              },
-              "parent": "concept#Failure"
-            },
-            {
-              "text": "Failure",
-              "id": "concept#Failure",
-              "data": {
-                "synonyms": []
-              },
-              "parent": "#"
-            },
-            {
-              "text": "Seal failure",
-              "id": "concept#Failure-SealFailure",
-              "data": {
-                "synonyms": [
-                  "seal or piping failure"
-                ],
-                "parentText": "Failure"
-              },
-              "parent": "concept#Failure"
-            },
-            {
-              "text": "Cavitation",
-              "id": "concept#Failure-Cavitation",
-              "data": {
-                "synonyms": [],
-                "parentText": "Failure"
-              },
-              "parent": "concept#Failure"
-            },
-            {
-              "text": "Dry Run",
-              "id": "concept#Failure-DryRun",
-              "data": {
-                "synonyms": [
-                  "Dry-Run"
-                ],
-                "parentText": "Failure"
-              },
-              "parent": "concept#Failure"
-            },
-            {
-              "text": "Seizure",
-              "id": "concept#Failure-Seizure",
-              "data": {
-                "synonyms": [],
-                "parentText": "Failure"
-              },
-              "parent": "concept#Failure"
-            },
-            {
-              "text": "Leak",
-              "id": "concept#Failure-Leak",
-              "data": {
-                "synonyms": [
-                  "Packing Leak",
-                  "Packing leakage OUT port connected to leak",
-                  "packing; the permanent leak",
-                  "Gasket Leak",
-                  "oil leak",
-                  "Seal leak",
-                  "seal might leak"
-                ],
-                "parentText": "Failure"
-              },
-              "parent": "concept#Failure"
-            },
-            {
-              "text": "Unbalance",
-              "id": "concept#Failure-Unbalance",
-              "data": {
-                "synonyms": [],
-                "parentText": "Failure"
-              },
-              "parent": "concept#Failure"
-            },
-            {
-              "text": "Vibration",
-              "id": "concept#Failure-Vibration",
-              "data": {
-                "synonyms": [
-                  "low vibration",
-                  "low sub synchronous vibrations",
-                  "low frequency sub synchronous vibration",
-                  "low the radial vibration",
-                  "low as compared to vibrations",
-                  "high vibration",
-                  "high crosshead vibration",
-                  "high vibrations",
-                  "high level AND (frame vibration",
-                  "high cylinder vibration",
-                  "high compressor frame vibrations",
-                  "high radial vibration",
-                  "high alarm level R Cylinder head vibration",
-                  "high amplitude and high sub synchronous vibrations",
-                  "high level. Crosshead vibrations",
-                  "high, • The new vibration",
-                  "high alarm level R Casing vibration",
-                  "High bearing vibration",
-                  "high alarm on the radial vibration",
-                  "high casing vibrations",
-                  "high sub synchronous vibrations",
-                  "severe vibration",
-                  "Severe vibrations",
-                  "abnormal vibration",
-                  "Abnormal vibrations"
-                ],
-                "parentText": "Failure"
-              },
-              "parent": "concept#Failure"
+          },
+          "docId": {
+            "type": "long"
+          },
+          "docTitle": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
             }
-          ]
-        }
-      },
-      {
-        "_index": "totalref_nouns",
-        "_type": "corpusnouns",
-        "_id": "_39759265",
-        "_score": 6.3825593,
-        "_source": {
-          "term": "failure",
-          "concepts": [
-            {
-              "text": "Bearing Failure",
-              "id": "concept#Failure-BearingFailure",
-              "data": {
-                "synonyms": [
-                  "bearing wear or failure",
-                  "bearing damage / failure"
-                ],
-                "parentText": "Failure"
-              },
-              "parent": "concept#Failure"
-            },
-            {
-              "text": "Surge",
-              "id": "concept#Failure-Surge",
-              "data": {
-                "synonyms": [
-                  "severe surge",
-                  "surge event"
-                ],
-                "parentText": "Failure"
-              },
-              "parent": "concept#Failure"
-            },
-            {
-              "text": "Failure",
-              "id": "concept#Failure",
-              "data": {
-                "synonyms": []
-              },
-              "parent": "#"
-            },
-            {
-              "text": "Seal failure",
-              "id": "concept#Failure-SealFailure",
-              "data": {
-                "synonyms": [
-                  "seal or piping failure"
-                ],
-                "parentText": "Failure"
-              },
-              "parent": "concept#Failure"
-            },
-            {
-              "text": "Cavitation",
-              "id": "concept#Failure-Cavitation",
-              "data": {
-                "synonyms": [],
-                "parentText": "Failure"
-              },
-              "parent": "concept#Failure"
-            },
-            {
-              "text": "Dry Run",
-              "id": "concept#Failure-DryRun",
-              "data": {
-                "synonyms": [
-                  "Dry-Run"
-                ],
-                "parentText": "Failure"
-              },
-              "parent": "concept#Failure"
-            },
-            {
-              "text": "Seizure",
-              "id": "concept#Failure-Seizure",
-              "data": {
-                "synonyms": [],
-                "parentText": "Failure"
-              },
-              "parent": "concept#Failure"
-            },
-            {
-              "text": "Leak",
-              "id": "concept#Failure-Leak",
-              "data": {
-                "synonyms": [
-                  "Packing Leak",
-                  "Packing leakage OUT port connected to leak",
-                  "packing; the permanent leak",
-                  "Gasket Leak",
-                  "oil leak",
-                  "Seal leak",
-                  "seal might leak"
-                ],
-                "parentText": "Failure"
-              },
-              "parent": "concept#Failure"
-            },
-            {
-              "text": "Unbalance",
-              "id": "concept#Failure-Unbalance",
-              "data": {
-                "synonyms": [],
-                "parentText": "Failure"
-              },
-              "parent": "concept#Failure"
-            },
-            {
-              "text": "Vibration",
-              "id": "concept#Failure-Vibration",
-              "data": {
-                "synonyms": [
-                  "low vibration",
-                  "low sub synchronous vibrations",
-                  "low frequency sub synchronous vibration",
-                  "low the radial vibration",
-                  "low as compared to vibrations",
-                  "high vibration",
-                  "high crosshead vibration",
-                  "high vibrations",
-                  "high level AND (frame vibration",
-                  "high cylinder vibration",
-                  "high compressor frame vibrations",
-                  "high radial vibration",
-                  "high alarm level R Cylinder head vibration",
-                  "high amplitude and high sub synchronous vibrations",
-                  "high level. Crosshead vibrations",
-                  "high, • The new vibration",
-                  "high alarm level R Casing vibration",
-                  "High bearing vibration",
-                  "high alarm on the radial vibration",
-                  "high casing vibrations",
-                  "high sub synchronous vibrations",
-                  "severe vibration",
-                  "Severe vibrations",
-                  "abnormal vibration",
-                  "Abnormal vibrations"
-                ],
-                "parentText": "Failure"
-              },
-              "parent": "concept#Failure"
+          },
+          "fileName": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
             }
-          ]
-        }
-      },
-      {
-        "_index": "totalref_nouns",
-        "_type": "corpusnouns",
-        "_id": "_39759242",
-        "_score": 6.335214,
-        "_source": {
-          "term": "bearing",
-          "concepts": [
-            {
-              "text": "Bearing Failure",
-              "id": "concept#Failure-BearingFailure",
-              "data": {
-                "synonyms": [
-                  "bearing wear or failure",
-                  "bearing damage / failure"
-                ],
-                "parentText": "Failure"
-              },
-              "parent": "concept#Failure"
-            },
-            {
-              "text": "Per thrust bearing",
-              "id": "concept#Component-Bearing-PerThrustBearing",
-              "data": {
-                "synonyms": [
-                  "thrust bearing"
-                ],
-                "parentText": "Bearing"
-              },
-              "parent": "concept#Component-Bearing"
-            },
-            {
-              "text": "Bearing housing",
-              "id": "concept#Component-Bearing-BearingHousing",
-              "data": {
-                "synonyms": [
-                  "Bearing housings"
-                ],
-                "parentText": "Bearing"
-              },
-              "parent": "concept#Component-Bearing"
-            },
-            {
-              "text": "Bearing",
-              "id": "concept#Component-Bearing",
-              "data": {
-                "synonyms": [
-                  "bearings"
-                ],
-                "parentText": "Component"
-              },
-              "parent": "concept#Component"
-            },
-            {
-              "text": "Bearing housing sealing",
-              "id": "concept#Component-Bearing-BearingHousingSealing",
-              "data": {
-                "synonyms": [],
-                "parentText": "Bearing"
-              },
-              "parent": "concept#Component-Bearing"
-            },
-            {
-              "text": "Connecting rod bearing",
-              "id": "concept#Component-Bearing-ConnectingRodBearing",
-              "data": {
-                "synonyms": [],
-                "parentText": "Bearing"
-              },
-              "parent": "concept#Component-Bearing"
-            },
-            {
-              "text": "Bearing isolator",
-              "id": "concept#Component-Bearing-BearingIsolator",
-              "data": {
-                "synonyms": [],
-                "parentText": "Bearing"
-              },
-              "parent": "concept#Component-Bearing"
-            },
-            {
-              "text": "Journal bearing",
-              "id": "concept#Component-Bearing-JournalBearing",
-              "data": {
-                "synonyms": [
-                  "journal bearings",
-                  "journal and thrust bearings",
-                  "journal sleeve bearings"
-                ],
-                "parentText": "Bearing"
-              },
-              "parent": "concept#Component-Bearing"
-            },
-            {
-              "text": "Thrust bearing",
-              "id": "concept#Component-Bearing-ThrustBearing",
-              "data": {
-                "synonyms": [],
-                "parentText": "Bearing"
-              },
-              "parent": "concept#Component-Bearing"
-            },
-            {
-              "text": "Bearing isolators",
-              "id": "concept#Component-Bearing-BearingIsolators",
-              "data": {
-                "synonyms": [],
-                "parentText": "Bearing"
-              },
-              "parent": "concept#Component-Bearing"
+          },
+          "paragraphId": {
+            "type": "long"
+          },
+          "parentChapter": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
             }
-          ]
-        }
-      },
-      {
-        "_index": "totalref_nouns",
-        "_type": "corpusnouns",
-        "_id": "_94749750",
-        "_score": 5.725076,
-        "_source": {
-          "term": "damage",
-          "concepts": [
-            {
-              "text": "Bearing Failure",
-              "id": "concept#Failure-BearingFailure",
-              "data": {
-                "synonyms": [
-                  "bearing wear or failure",
-                  "bearing damage / failure"
-                ],
-                "parentText": "Failure"
+          },
+          "tables": {
+            "properties": {
+              "rows": {
+                "properties": {
+                  "images": {
+                    "type": "text",
+                    "fields": {
+                      "keyword": {
+                        "type": "keyword",
+                        "ignore_above": 256
+                      }
+                    }
+                  },
+                  "text": {
+                    "type": "text",
+                    "fields": {
+                      "keyword": {
+                        "type": "keyword",
+                        "ignore_above": 256
+                      }
+                    }
+                  }
+                }
               },
-              "parent": "concept#Failure"
+              "type": {
+                "type": "text",
+                "fields": {
+                  "keyword": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  }
+                }
+              },
+              "values": {
+                "properties": {
+                  "#": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "1": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "100": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "1100 to 1900": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "150": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "1D": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "1H": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "1M": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "1W": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "220": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "2M": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "2oo2 vibration": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "2oo2 with dual sensors": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "2oo3S": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "3": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "320": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "4": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "460": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "5": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "6": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "A": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Actions": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Adjustable system:": {
+                    "properties": {
+                      "images": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      },
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Alarm": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Alarm ": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Alternate definition": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Angle variation": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Applications": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "BEFORE": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Bearing temperature": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Before Overhaul (if possible during operation)": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Before overhaul": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Belt tension gauge": {
+                    "properties": {
+                      "images": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      },
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Chapter": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Class": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Component": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Concrete grouting": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Condition": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Condition ": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Criticality": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Criticality ": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Criticality level": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Cylinder delta Pressure (bar)": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Danger": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Epoxy grouting": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Example": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Fan diameter": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Fan situation": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Fan static pressure": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Fixed system: courtesy of COFIMCO": {
+                    "properties": {
+                      "images": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      },
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Flow": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Gas": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Gauss Level": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "ISO 6743-3 Categories": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "MSR": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Max 250": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Measured airflow": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Motor current Consumption": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "New Pitch Angle": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Notes": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Number of rings": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Oil analysis": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Original Pitch Angle": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Parameter": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Pitch angle": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Plant": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Plant shutdown": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Power measured at substation": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "R": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Remove necessary instrumentation": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Resp": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "SPM": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Shutdown": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Sonic Tension meter (courtesy of GATES)": {
+                    "properties": {
+                      "images": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      },
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Specific cases": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Static pressure": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Status Channel 1": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Status channel 1": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Stop the turbine ": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "TOTAL Product": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Task": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Tip Clearance": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Type of Product": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Vibration monitoring": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Vibrations analysis": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Viscosity Classification (cSt)  ISO3448": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Water wash efficiency": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "m3/h": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "water wash": {
+                    "properties": {
+                      "text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
             }
-          ]
-        }
-      },
-      {
-        "_index": "totalref_nouns",
-        "_type": "corpusnouns",
-        "_id": "_39759901",
-        "_score": 5.583576,
-        "_source": {
-          "term": "wear",
-          "concepts": [
-            {
-              "text": "Wear ring",
-              "id": "concept#Component-Ring-WearRing",
-              "data": {
-                "synonyms": [
-                  "wear rings",
-                  "wearing rings"
-                ],
-                "parentText": "Ring"
-              },
-              "parent": "concept#Component-Ring"
-            },
-            {
-              "text": "Bearing Failure",
-              "id": "concept#Failure-BearingFailure",
-              "data": {
-                "synonyms": [
-                  "bearing wear or failure",
-                  "bearing damage / failure"
-                ],
-                "parentText": "Failure"
-              },
-              "parent": "concept#Failure"
+          },
+          "text": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
             }
-          ]
-        }
-      },
-      {
-        "_index": "totalref_nouns",
-        "_type": "corpusnouns",
-        "_id": "_94749524",
-        "_score": 5.2586455,
-        "_source": {
-          "term": "bearing",
-          "concepts": [
-            {
-              "text": "Bearing Failure",
-              "id": "concept#Failure-BearingFailure",
-              "data": {
-                "synonyms": [
-                  "bearing wear or failure",
-                  "bearing damage / failure"
-                ],
-                "parentText": "Failure"
-              },
-              "parent": "concept#Failure"
-            },
-            {
-              "text": "Per thrust bearing",
-              "id": "concept#Component-Bearing-PerThrustBearing",
-              "data": {
-                "synonyms": [
-                  "thrust bearing"
-                ],
-                "parentText": "Bearing"
-              },
-              "parent": "concept#Component-Bearing"
-            },
-            {
-              "text": "Bearing housing",
-              "id": "concept#Component-Bearing-BearingHousing",
-              "data": {
-                "synonyms": [
-                  "Bearing housings"
-                ],
-                "parentText": "Bearing"
-              },
-              "parent": "concept#Component-Bearing"
-            },
-            {
-              "text": "Bearing",
-              "id": "concept#Component-Bearing",
-              "data": {
-                "synonyms": [
-                  "bearings"
-                ],
-                "parentText": "Component"
-              },
-              "parent": "concept#Component"
-            },
-            {
-              "text": "Bearing housing sealing",
-              "id": "concept#Component-Bearing-BearingHousingSealing",
-              "data": {
-                "synonyms": [],
-                "parentText": "Bearing"
-              },
-              "parent": "concept#Component-Bearing"
-            },
-            {
-              "text": "Connecting rod bearing",
-              "id": "concept#Component-Bearing-ConnectingRodBearing",
-              "data": {
-                "synonyms": [],
-                "parentText": "Bearing"
-              },
-              "parent": "concept#Component-Bearing"
-            },
-            {
-              "text": "Bearing isolator",
-              "id": "concept#Component-Bearing-BearingIsolator",
-              "data": {
-                "synonyms": [],
-                "parentText": "Bearing"
-              },
-              "parent": "concept#Component-Bearing"
-            },
-            {
-              "text": "Journal bearing",
-              "id": "concept#Component-Bearing-JournalBearing",
-              "data": {
-                "synonyms": [
-                  "journal bearings",
-                  "journal and thrust bearings",
-                  "journal sleeve bearings"
-                ],
-                "parentText": "Bearing"
-              },
-              "parent": "concept#Component-Bearing"
-            },
-            {
-              "text": "Thrust bearing",
-              "id": "concept#Component-Bearing-ThrustBearing",
-              "data": {
-                "synonyms": [],
-                "parentText": "Bearing"
-              },
-              "parent": "concept#Component-Bearing"
-            },
-            {
-              "text": "Bearing isolators",
-              "id": "concept#Component-Bearing-BearingIsolators",
-              "data": {
-                "synonyms": [],
-                "parentText": "Bearing"
-              },
-              "parent": "concept#Component-Bearing"
-            }
-          ]
-        }
-      },
-      {
-        "_index": "totalref_nouns",
-        "_type": "corpusnouns",
-        "_id": "_39760184",
-        "_score": 4.24837,
-        "_source": {
-          "term": "piping",
-          "concepts": [
-            {
-              "text": "Seal failure",
-              "id": "concept#Failure-SealFailure",
-              "data": {
-                "synonyms": [
-                  "seal or piping failure"
-                ],
-                "parentText": "Failure"
-              },
-              "parent": "concept#Failure"
-            },
-            {
-              "text": "Oil reservoir",
-              "id": "concept#Product-ProductFunction-OilReservoir",
-              "data": {
-                "synonyms": [
-                  "oil supply valve • Check oil reservoir",
-                  "reservoir. • Start oil",
-                  "reservoir • Refill with new oil",
-                  "reservoir and oil",
-                  "reservoir • Inspection of oil",
-                  "oil pressure PCV to reservoir",
-                  "oil from reservoir",
-                  "reservoir • Oil",
-                  "reservoir • Remove oil",
-                  "reservoir. Remove oil",
-                  "reservoir and Piping #18 An oil",
-                  "reservoir level, • oil",
-                  "oil tank • Remove oil from reservoir",
-                  "reservoir. • Remove oil",
-                  "reservoir oil",
-                  "reservoir to catch leaking oil"
-                ],
-                "parentText": "Product function"
-              },
-              "parent": "concept#Product-ProductFunction"
-            }
-          ]
-        }
-      },
-      {
-        "_index": "totalref_nouns",
-        "_type": "corpusnouns",
-        "_id": "_94750466",
-        "_score": 4.24837,
-        "_source": {
-          "term": "piping",
-          "concepts": [
-            {
-              "text": "Seal failure",
-              "id": "concept#Failure-SealFailure",
-              "data": {
-                "synonyms": [
-                  "seal or piping failure"
-                ],
-                "parentText": "Failure"
-              },
-              "parent": "concept#Failure"
-            },
-            {
-              "text": "Oil reservoir",
-              "id": "concept#Product-ProductFunction-OilReservoir",
-              "data": {
-                "synonyms": [
-                  "oil supply valve • Check oil reservoir",
-                  "reservoir. • Start oil",
-                  "reservoir • Refill with new oil",
-                  "reservoir and oil",
-                  "reservoir • Inspection of oil",
-                  "oil pressure PCV to reservoir",
-                  "oil from reservoir",
-                  "reservoir • Oil",
-                  "reservoir • Remove oil",
-                  "reservoir. Remove oil",
-                  "reservoir and Piping #18 An oil",
-                  "reservoir level, • oil",
-                  "oil tank • Remove oil from reservoir",
-                  "reservoir. • Remove oil",
-                  "reservoir oil",
-                  "reservoir to catch leaking oil"
-                ],
-                "parentText": "Product function"
-              },
-              "parent": "concept#Product-ProductFunction"
-            }
-          ]
+          }
         }
       }
-    ]
+    }
   }
 }

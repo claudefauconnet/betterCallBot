@@ -3,6 +3,7 @@ var router = express.Router();
 var adaptativeCardRenderer = require("../bin/adaptativeCardRenderer..js")
 var docxBot = require("../bin/docxBot..js")
 var elasticQuery = require("../bin/nlp/elasticQuery..js")
+var corpusAnalyzer = require("../bin/nlp/corpusAnalyzer..js")
 /* GET home page. */
 router.get('/', function (req, res, next) {
     res.render('index', {title: 'Express'});
@@ -10,21 +11,43 @@ router.get('/', function (req, res, next) {
 
 
 router.post("/elastic", function (req, res, next) {
-    if(req.body.queryString)
-        elasticQuery.searchWithQueryString(req.body.index,req.body.queryString,req.body.fields,req.body.size,function(err,result){
+    if (req.body.queryString) {
+        var fields = JSON.parse(req.body.fields);
+        elasticQuery.searchWithQueryString(req.body.index, req.body.queryString, fields, req.body.size, function (err, result) {
 
-        processResponse(res,err,result);
-    })
+            processResponse(res, err, result);
+
+        })
+    }
+    if (req.body.search) {
+       // if (!req.body.payload instanceof Object)
+            var payload = JSON.parse(req.body.payload);
+        elasticQuery.search(req.body.index, payload, function (err, result) {
+
+            processResponse(res, err, result);
+
+        })
+    }
+
+
+})
+router.post("/analyzer", function (req, res, next) {
+    if (req.body.extractConcepts) {
+        var nouns = JSON.parse(req.body.nouns);
+        corpusAnalyzer.getThesaurusConcepts(nouns, function (err, result) {
+            processResponse(res, err, result);
+
+        })
+    }
 
 
 })
 
 
-
 router.post("/getCards", function (req, res, next) {
-    docxBot.getCards(function(err,result){
+    docxBot.getCards(function (err, result) {
 
-        processResponse(res,err,result);
+        processResponse(res, err, result);
     })
 
 
@@ -81,7 +104,6 @@ function processResponse(response, error, result) {
 
     }
 }
-
 
 
 module.exports = router;

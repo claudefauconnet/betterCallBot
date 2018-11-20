@@ -218,6 +218,7 @@ var docExtractorToCsv = {
         var columnTexts = "title\ttext\ttable\tdocTitle\timage\n";
 
         var elasticAllParagraphs=[];
+        var elasticAllDocuments=[];
 
         var docId = 1
         xmlPaths.forEach(function (xmlPath) {
@@ -251,6 +252,9 @@ var docExtractorToCsv = {
 
                 var docTitle = extractDocTitle(headerTables);
 
+
+
+                elasticAllDocuments.push({id:docId,fileName:fileName,purposeAndScope:purposeAndScope})
 
 
                 var chapterId = 1
@@ -320,6 +324,7 @@ var docExtractorToCsv = {
         fs.writeFileSync(dir + "/botContent.json", JSON.stringify(botObjs, null, 2))
         fs.writeFileSync(dir + "/allColumns.csv", columnTexts)
         fs.writeFileSync(dir + "/elasticAllParagraphs.json", JSON.stringify(elasticAllParagraphs, null, 2))
+        fs.writeFileSync(dir + "/elasticAllDocuments.json", JSON.stringify(elasticAllDocuments, null, 2))
     //    fs.writeFileSync(dir + "/elasticTree.json", JSON.stringify(elasticTree, null, 2))
 
 

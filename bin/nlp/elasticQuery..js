@@ -52,9 +52,9 @@ var elasticQuery = {
                 else
                     payload.query.query_string.query += " OR "
 
-                payload.query.query_string.query = field + ":" + term
+                payload.query.query_string.query += field + ":" + term
             })
-
+console.log(JSON.stringify(payload,null,2))
         elasticQuery.search(index, payload, function (err, result) {
             if (err)
                 return callback(err);
@@ -89,7 +89,7 @@ var elasticQuery = {
         request({
                 url: server + "/" + index + "/_search",
                 method: 'POST',
-                // headers: {'Content-Type': 'application/json',},
+                headers: {'Content-Type': 'application/json',},
                 json: payload,
             },
             function (err, res) {
@@ -102,9 +102,13 @@ var elasticQuery = {
                 }
                 else
                     var json = res.body;
-                var result = "{}"
+                if(!json instanceof Object)
+                    json=JSON.parse(json)
+                var result = [];
                 if (json.hits)
                     result = json.hits.hits;
+                else
+                    return callback(null, []);
 
                 return callback(null, result);
 
@@ -124,8 +128,16 @@ var elasticQuery = {
                 //  console.log(JSON.stringify(elasticPayload, null, 2))
                 return callback(null);
 
+            } else if (resp.errors) {
+                resp.items.forEach(function (item, index) {
+                    if (item.index.result != "created") {
+                        console.log(JSON.stringify(payload[index]))
+                        console.log(JSON.stringify(item))
+                    }
+                })
+                return callback(resp.errors);
             } else {
-                return callback(null);
+                return callback(null,resp);
             }
         });
 

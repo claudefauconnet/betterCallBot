@@ -89,34 +89,58 @@ var corpusAnalyzer = {
         var thesaurus = JSON.parse(data);
         var allSynonyms = []
         thesaurus.forEach(function (entry) {
+            /*  if(entry.name=="shaft") {*/
+
             entry.synonyms.push(entry.name)
             entry.synonyms.forEach(function (synonym) {
                 allSynonyms.push({concept: entry.name, synonym: synonym})
             })
+            // }
         })
         var allconceptsInParagraphs = []
         async.eachSeries(allSynonyms, function (synEntry, callbackEachSynonym) {
-                var payload = {
-                    "query": {
-                        "match_phrase": {
-                            "text": {
-                                "query": synEntry.synonym,
-                                "slop": 3
+            //if(synEntry.synonym!="anti surge controller")
+              // return  callbackEachSynonym();
+                var payload = {};
+                if (type == "totalrefparagraphs") {
+                    var payload = {
+                        "size": 5000,
+                        "query": {
+                            "match_phrase": {
+                                "text": {
+                                    "query": synEntry.synonym,
+                                    "slop": 3
+                                }
                             }
                         }
-                    }
-                };
-                elasticQuery.search("totalreferentiel3", payload, function (err, result) {
+                    };
+                }
+                else if (type == "totalrefdocuments") {
+                    var payload = {
+                        "size": 5000,
+                        "query": {
+                            "match_phrase": {
+                                "purposeAndScope": {
+                                    "query": synEntry.synonym,
+                                    "slop": 3
+                                }
+                            }
+                        }
+                    };
+                }
+                elasticQuery.search(index, payload, function (err, result) {
                     if (err)
                         return callbackEachSynonym(err);
-                    result.forEach(function (entry) {
-                        allconceptsInParagraphs.push({
-                            elasticId: entry._id,
-                            paragraphId: entry._source.paragraphId,
-                            synonym: synEntry.synonym,
-                            concept: synEntry.concept
+                    if (result && result.forEach) {
+                        result.forEach(function (entry) {
+                            allconceptsInParagraphs.push({
+                                elasticId: entry._id,
+                                paragraphId: entry._source.paragraphId,
+                                synonym: synEntry.synonym,
+                                concept: synEntry.concept
+                            })
                         })
-                    })
+                    }
                     callbackEachSynonym();
 
                 })
@@ -132,8 +156,8 @@ var corpusAnalyzer = {
                 allconceptsInParagraphs.forEach(function (paragraph) {
                     if (!allParagraphsWithConcepts[paragraph.elasticId])
                         allParagraphsWithConcepts[paragraph.elasticId] = [];
-                    if( allParagraphsWithConcepts[paragraph.elasticId].indexOf(paragraph.concept)<0)
-                    allParagraphsWithConcepts[paragraph.elasticId].push(paragraph.concept)
+                    if (allParagraphsWithConcepts[paragraph.elasticId].indexOf(paragraph.concept) < 0)
+                        allParagraphsWithConcepts[paragraph.elasticId].push(paragraph.concept)
 
                 })
 
@@ -141,28 +165,29 @@ var corpusAnalyzer = {
                 //update index
                 var elasticPayload = []
                 for (var key in  allParagraphsWithConcepts) {
-
-                    elasticPayload.push({ "update" :{_index: index, _type: type, _id: "" + key}})
-                    elasticPayload.push({doc:{concepts: allParagraphsWithConcepts[key]}})
+if(key=="_9259676")
+    var x=3
+                    elasticPayload.push({"update": {_index: index, _type: type, _id: "" + key}})
+                    elasticPayload.push({doc: {concepts: allParagraphsWithConcepts[key]}})
                 }
-             elasticQuery.execBulk(elasticPayload,function(err, result){
-                 if(err)
-                     return callback(err);
-                 return callback(null,result)
-             })
+                elasticQuery.execBulk(elasticPayload, function (err, result) {
+                    if (err)
+                        return callback(err);
+                    return callback(null, result)
+                })
 
-             /*   request({
-                        url: server + "/_bulk",
-                        method: 'POST',
-                        encoding: null,
-                        // headers: {'Content-Type': 'application/json',},
-                        body: elasticPayload,
-                    },
-                    function (err, res) {
-                        if (err)
-                            callback(err)
-                        return callback(null, res)
-                    })*/
+                /*   request({
+                           url: server + "/_bulk",
+                           method: 'POST',
+                           encoding: null,
+                           // headers: {'Content-Type': 'application/json',},
+                           body: elasticPayload,
+                       },
+                       function (err, res) {
+                           if (err)
+                               callback(err)
+                           return callback(null, res)
+                       })*/
 
             })
     }
@@ -175,66 +200,102 @@ var corpusAnalyzer = {
         function getCombinations() {
             var queryStrings = [];
             var groups = [];
-            for (var i = nouns.length; i >= 0; i--) {
-                var group = "";
-                nouns.forEach(function (noun, index) {
-                    if (index >= i)
-                        return;
-                    if (group != "")
-                        group += " AND "
-                    group += noun
-                })
-                // if (group.indexOf(" AND ") > -1)
-                groups.push(group);
-            }
             for (var i = 0; i < nouns.length; i++) {
-                var group = "";
-                nouns.forEach(function (noun, index) {
-                    if (index <= i)
+                for (var j = nouns.length; j >= 0; j--) {
+                    var group = "";
+                    nouns.forEach(function (noun, index) {
+                        if (index >= j)
+                            return;
+                        if (index < i)
+                            return;
                         if (group != "")
-                            group += " AND "
-                    group += noun
-                })
-                //  if (group.indexOf(" AND ") > -1)
-                groups.push(group);
+                            group += " "
+                        group += noun
+                    })
+                    if (group != "")
+                        groups.push(group);
+                }
             }
+            groups.sort(function(a,b){
+                var aLength=a.split(" ").length;
+                var bLength=b.split(" ").length;
+               return bLength-aLength;
 
-            return groups
+
+
+            })
+
+            return groups;
+
         }
 
         var queryStrings = getCombinations();
         //  console.log(queryStrings.toString());
         // on cherche le concept avec le plus de mots ordonnés correspondant dans le thesaurus
+        var allConcepts = [];
+        var i = 0;
+        var foundTokens = ""
         async.eachSeries(queryStrings, function (query, callbackEachQuery) {
-                elasticQuery.searchInThesaurus("totalref_thesaurus", query, 20, function (err, result) {
+            if (foundTokens.indexOf(query) > -1)
+                return callbackEachQuery();
+            console.log(foundTokens);
+            if ((++i) >= 6)
+                console.log(JSON.stringify(query,null,2));
+            var nTokens = query.split(" ").length;
+            var payload ={
+                "size": 5000,
+                "query": {
+                    "match_phrase": {
+                        "synonyms": {
+                            "query": query,
+                            "slop": nTokens
+                        }
+                    }
+                }
+            }
 
-                    //  elasticQuery.searchWithQueryString("totalref_thesaurus", query, ["text", "data.synonyms"], 20, function (err, result) {
+            var index = "totalref_thesaurus";
+            request({
+                    url: server + "/" + index + "/_search",
+                    method: 'POST',
+                    // headers: {'Content-Type': 'application/json',},
+                    json: payload,
+                },
+                function (err, res) {
+
                     if (err)
-                        return callbackEachQuery("error" + err);
-                    if (result.length == 0)
-                        callbackEachQuery(null)
+                        return callbackEachQuery(err)
+                    else if (res.body && res.body.errors && res.body.errors.length > 0) {
+                        console.log(JSON.stringify(res.body.errors))
+                        return callbackEachQuery(res.body.errors)
+                    }
                     else
-                        callbackEachQuery(result)
+                        var json = res.body;
+
+                    if (json.hits) {
+
+                        if (json.hits.hits.length > 0) {
+                            foundTokens += query + " ";
+                            var concepts=[];
+                            json.hits.hits.forEach(function(hit){
+                                concepts.push(hit._source)
+                            })
+                            allConcepts.push({token: query, concepts: concepts});
+                        }
+                        return callbackEachQuery();
+                    }
+                    else
+                        return callbackEachQuery();
 
 
                 })
-            }, function (result) {
-                if (!result)
-                    return callback(null, []);
-                if (result.indexOf("error") == 0)
-                    return callback(result);
-
-                var concepts = [];
 
 
-                if (result.forEach)
+        }, function (err) {
 
-                    result.forEach(function (line) {
-                        concepts.push(line._source)
-                    })
-                return callback(null, concepts);
-            }
-        )
+
+            return callback(null, allConcepts);
+        })
 
 
     }
@@ -242,10 +303,9 @@ var corpusAnalyzer = {
 
 }
 
-if (false
-) {
+if (false) {
 
-    corpusAnalyzer.getThesaurusConcepts("purpose,guide,good,technical,solution,equipment,Bad,Actors,<br>,revision,minimum,standard,requirement,msr,feature,".split(","), function (err, result) {
+    corpusAnalyzer.getThesaurusConcepts("response time anti surge".split(" "), function (err, result) {
         //   corpusAnalyzer.getThesaurusConcepts("anti surge system failure".split(" "), function (err, result) {
         var x = 1
     })
@@ -253,8 +313,18 @@ if (false
 }
 
 if (true) {
-    corpusAnalyzer.setConceptsInCorpusFromThesaurus("totalreferentiel3", "totalrefparagraphs");
+    corpusAnalyzer.setConceptsInCorpusFromThesaurus("totalreferentiel5", "totalrefparagraphs", function (err, result) {
+        var x = result;
+    });
 }
+
+
+if (false) {
+    corpusAnalyzer.setConceptsInCorpusFromThesaurus("totalreferentieldocuments5", "totalrefdocuments", function (err, result) {
+        var x = result;
+    });
+}
+
 if (false) {
 
     /*  var file = "D:\\Total\\docs\\GM MEC Word\\documents\\test\\elasticAllParagraphs.json";
@@ -263,12 +333,12 @@ if (false) {
       var docs = JSON.parse(data);*/
 
 
-        corpusAnalyzer.extractAllTokens(docs, function (err, result) {
-            fs.writeFileSync("D:\\Total\\docs\\nlp\\allNounTokens.json", JSON.stringify(result.allNounTokens, null, 2))
-            fs.writeFileSync("D:\\Total\\docs\\nlp\\tokenizedDocs.json", JSON.stringify(result.tokenizedDocs, null, 2))
-            //   thesaurus.getWordsConcepts(result.allNounTokens,"totalRef")
+    corpusAnalyzer.extractAllTokens(docs, function (err, result) {
+        fs.writeFileSync("D:\\Total\\docs\\nlp\\allNounTokens.json", JSON.stringify(result.allNounTokens, null, 2))
+        fs.writeFileSync("D:\\Total\\docs\\nlp\\tokenizedDocs.json", JSON.stringify(result.tokenizedDocs, null, 2))
+        //   thesaurus.getWordsConcepts(result.allNounTokens,"totalRef")
 
-        });
+    });
 
 
 }

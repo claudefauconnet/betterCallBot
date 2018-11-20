@@ -3,10 +3,11 @@ var bot = (function () {
         self.elasticUrl = "http://localhost:9200"
         self.index = "totalref_nouns"
         self.currentConcepts = {}
-
+        self.currentTokens = [];
 
         self.analyzeQuestion = function (question) {
             $("#neo4jResponseDiv").html("");
+            self.currentTokens = [];
 
             coreNlp.extractTokens(question, function (err, tokens) {
                 if (err) {
@@ -20,63 +21,39 @@ var bot = (function () {
                 //1) split question into tokens
                 tokens = coreNlp.parseCoreNlpJson(tokens);
                 var terms = []
-                async.eachSeries(tokens.nouns, function (noun, callback) {
+                tokens.nouns.forEach(function (noun) {
+                    terms.push(noun.lemma);
+                    self.currentTokens.push(noun.lemma);
+                })
+                var payload = {
+                    extractConcepts: 1,
+                    nouns: JSON.stringify(terms),
+                }
 
-                        //2) search tokens in thesaurus
-                        var obj = {term: noun.lemma, parents: []}
-                        self.elasticQuery("totalref_thesaurus", noun.lemma, ["text", "data.synonyms"], function (err, results) {
-                            if (err)
-                                console.log(err)
-
-                            results.forEach(function (result) {
-                                var concept = result._source;
-                                if (!obj.concepts)
-                                    obj.concepts = [];
-                                obj.concepts.push(concept.text);
-                                var ancestors = (concept.parent.substring(concept.parent.indexOf('#') + 1)).replace(/\-/g, "/");
-                                self.currentConcepts[concept.text] = {
-                                    name: concept.text,
-                                    ancestors: ancestors,
-                                    synonyms: concept.data.synonyms
-                                }
-
-                                if (obj.parents.indexOf(concept.parent) < 0)
-                                    obj.parents.push(concept.parent)
-
-                                /*  if (thesaurusTerm.text) {
-                                      thesaurusTerm.data.synonyms.forEach(function (concept) {
-                                          if (!obj.concepts)
-                                              obj.concepts = [];
-                                          if (obj.concepts.indexOf(concept) < 0) {
-                                              obj.concepts.push(concept);
-
-                                              // console.log(noun.lemma+" : "+concept.text)
-                                          }
-
-                                      })
-                                  }*/
+                $.ajax({
+                    type: "POST",
+                    url: "../analyzer",
+                    data: payload,
+                    dataType: "json",
+                    success: function (json) {
 
 
-                            })
-                            terms.push(obj);
-                            callback(null);
-
-                        })
-
-
+                        self.currentQuestionTerms = json;
+                        self.showQuestionProposal(json);
+                        self.showQuestionProposalDivs(json);
                     },
-                    function (err) {
-                        self.currentQuestionTerms = terms;
-                        self.showQuestionProposal(terms);
-                    })
-                var xx = terms;
+                    error: function (err) {
+                        console.log(err.responseText)
 
+                    }
+                })
 
             })
         }
 
 
-        self.searchElastic = function () {
+        self.searchResponseInElastic = function () {
+
             $("#answersDiv").html("");
             var allResults = [];
             var maxIterations = 20;
@@ -84,9 +61,13 @@ var bot = (function () {
             var associations = self.getWordsAssociations();
 
             async.eachSeries(associations, function (association, callbackAssociation) {
-
+                var foundTokens = "";
                 var queryString = ""
                 association.forEach(function (term, indexTerm) {
+
+                    foundTokens += term + " ";
+
+
                     if (indexTerm > 0)
                         queryString += " AND"
                     queryString += " ("
@@ -99,40 +80,75 @@ var bot = (function () {
                             if (indexTerm > 0 || indexSyn > 0)
                                 queryString += " OR ";
                             queryString += synonym;
-
-
                         })
                         queryString += " "
                     }
-
                     queryString += " )"
 
+                });
+                var nonConceptQuery = [];
+
+                self.currentTokens.forEach(function (token) {
+                    if (foundTokens.indexOf(token) < 0) {
+                        nonConceptQuery.push({"match": {"text": token}})
+                        foundTokens+=token+ " ";
+                    }
                 })
-                console.log(queryString)
-                if(queryString=="")
-                    callbackAssociation();
-                self.elasticQuery("totalreferentiel3", queryString, null, function (err, elasticResults) {
-                    if (!elasticResults || elasticResults.length == 0)
-                        callbackAssociation();
+                var _payload = {
+                    search: 1,
+                    index: "totalreferentiel5",
+                    payload:JSON.stringify( {
+                        "query": {
+                            "bool": {
+                                "should": nonConceptQuery
 
-                    else
-                        elasticResults.forEach(function (elasticResult) {
+                                , "filter":
+                                    [{
+                                        "query_string": {
+                                            "query": queryString
+                                        }
+                                    }]
+                            }
+                        }
+                    },null,2)
+                }
 
-                            allResults.push({
-                                association: association,
-                                data: elasticResult._source,
-                                score: elasticResult._score,
-                                queryString: queryString
+
+                console.log(_payload.payload)
+                $.ajax({
+                    type: "POST",
+                    url: "../elastic",
+                    data: _payload,
+                    dataType: "json",
+                    success: function (elasticResults) {
+
+                        if (!elasticResults || elasticResults.length == 0)
+                            return callbackAssociation();
+
+                        else
+                            elasticResults.forEach(function (elasticResult) {
+
+                                allResults.push({
+                                    association: association,
+                                    data: elasticResult._source,
+                                    score: elasticResult._score,
+                                    queryString: queryString
+                                })
+
+
                             })
+                        if (allResults.length < 11)
+                            return callbackAssociation();
+                        else
+                            return callbackAssociation("end");
 
 
-                        })
-                    if (allResults.length < 11)
-                        callbackAssociation();
-                    else
-                        callbackAssociation("end");
-
-
+                    }
+                    ,
+                    error: function (err) {
+                        console.log(err.responseText)
+                        return callbackAssociation(err);
+                    }
                 })
 
 
@@ -144,14 +160,14 @@ var bot = (function () {
         }
 
 
-        self.elasticQuery = function (index, terms, field, callback) {
+        self.elasticQuery = function (index, terms, fields, callback) {
 
             var payload = {
 
                 index: index,
                 queryString: terms,
-                size: 10,
-                field: field
+                fields: JSON.stringify(fields),
+                size: 100,
 
             }
 
@@ -176,31 +192,30 @@ var bot = (function () {
             var str = "<table>";
             terms.forEach(function (termObj, index) {
 
-                str += "<tr><td>" + termObj.term + "<td><td>";
+                str += "<tr><td>" + termObj.token + "<td><td>";
                 if (termObj.concepts) {
                     str += "<select class='questionItem questionConcept' style='color :green;font-weight: bold'><option>" + "" + "</option><option></option>";
-var selected=false;
+                    var selected = false;
 
                     termObj.concepts.forEach(function (concept) {
-                        if(concept.toLowerCase()==termObj.term.toLowerCase())
-                            selected="selected='selected'";
-                        str += "<option "+selected+">" + concept + "</option>"
+                        if (concept.name.toLowerCase() == termObj.token.toLowerCase())
+                            selected = "selected='selected'";
+                        var conceptName = "";
+                        concept.ancestors.forEach(function (ancestor, index) {
+                            conceptName += ancestor;
+                            conceptName += "."
+                        })
+                        conceptName += concept.name
+                        str += "<option " + selected + " value='" + concept.name + "'" + concept.name + ">" + conceptName + "</option>"
                     })
                     str += "</select>"
                 }
                 else {
-                    str += "<input class='questionItem questionWord' value='" + termObj.term + "'/>";
+                    str += "<input class='questionItem questionWord' value='" + termObj.token + "'/>";
                 }
 
                 str += "</td>";
 
-                str += "<td>";
-                str += "<select class='questionItem conceptConceptParent'>"
-                termObj.parents.forEach(function (parent) {
-                    str += "<option>" + parent + "</option>"
-                })
-                str += "</select>"
-                str += "</td>";
                 str += "</tr>"
 
             })
@@ -208,6 +223,23 @@ var selected=false;
 
 
             $("#QuestionConceptsInput").html(str);
+        }
+
+        self.showQuestionProposalDivs= function (terms) {
+
+            terms.forEach(function (termObj, index) {
+
+
+                termObj.concepts.forEach(function (concept) {
+                    var divStr = "<div id='" + concept.name + "' class='conceptDiv'>" + concept.name + "</div>";
+                    $("#sourceConcepts").append(divStr).promise().done(function () {
+                        $(".conceptDiv").draggable({helper: "clone", opacity: 0.5, cursor: "crosshair", scope: "drop"});
+
+                    });
+
+
+                })
+            })
         }
 
         self.showSearchResults = function (results) {
@@ -310,4 +342,5 @@ var selected=false;
 
         return self;
     }
-)()
+)
+()

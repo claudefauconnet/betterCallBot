@@ -1,12 +1,20 @@
 {
-  "size": 10,
   "query": {
-    "term": {
-      "name": {
-        "value": "Stable by-pass flow"
-      }
+    "bool": {
+      "should": [
+        {
+          "term": {
+            "name": "time"
+          }
+        },
+        {
+          "term": {
+            "synonyms": "time"
+          }
+        }
+      ],
+      "minimum_should_match": 1,
+      "boost": 1.0
     }
   }
 }
-
-

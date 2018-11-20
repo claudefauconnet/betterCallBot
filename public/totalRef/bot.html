@@ -31,12 +31,37 @@
             border-radius: 8px;
             background-color: #CCCCCC;
             margin: 5px;
-            padding:5px
+            padding: 5px
 
+        }
+
+        .questionTokensDiv {
+            border: solid;
+            border-width: thin;
+            border-radius: 8px;
+            margin: 5px;
+            padding: 5px;
+            width:200px;
+            height:200px
+        }
+
+        .conceptDiv .questionTokensDiv {
+            border: solid;
+            border-width: thin;
+            border-radius: 8px;
+            background-color: #d9bb73;
         }
 
 
     </style>
+    <script>
+        $(function () {
+           // $(".questionTokensDiv").draggable({helper: "clone", opacity: 0.5, cursor: "crosshair", scope: "drop"});
+            $("#targetConcepts").droppable({accept: ".draggable", scope: "drop"});
+            $("#sourceConcepts").droppable({accept: ".draggable", scope: "drop"});
+        })
+
+    </script>
 </head>
 <body>
 
@@ -46,15 +71,35 @@
     <button onclick="bot.analyzeQuestion($('#QuestionInput').val())">Analyze question</button>
     <!--   <br>Question words <input id="QuestionWordsInput" size="70" >-->
     <br>Question translation
-    <div id="QuestionConceptsInput"></div>
+
     <!--<button onclick="nlp.searchQuestionRules(true)">Search Rules</button>-->
     <br><br>
+    <table>
+        <tr>
+            <td>
+                <div id="sourceConcepts" class="questionTokensDiv"></div>
+            </td>
+            <td>
+                <div id="targetConcepts"  class="questionTokensDiv"></div>
+            </td>
+        </tr>
 
+        <tr>
+            <td>
+                <div id="sourceWords"  class="questionTokensDiv"></div>
+            </td>
+            <td>
+                <div id="targetWords" class="questionTokensDiv"></div>
+            </td>
+        </tr>
+
+
+        <div id="QuestionConceptsInput"></div>
 </div>
 
 <div id="neo4jResponseDiv">
 </div>
-<button onclick="bot.searchElastic()">Search</button>
+<button onclick="bot.searchResponseInElastic()">Search</button>
 <div id="answersDiv"></div>
 </body>
 </html>

@@ -15,6 +15,59 @@ var graph = {
         })
 
 
+    },
+    createParentConceptsGraph: function (index, subGraph, jsonDocs, callbackGraph) {
+        elasticQuery.searchAll("totalref_thesaurus", 10000, function (err, result) {
+            var parents = {}
+            result.forEach(function (line) {
+                var concept = line._source;
+                if (concept.ancestors && concept.ancestors.length > 0 && concept.ancestors[0] !== "")
+                    parents[concept.name] = concept.ancestors[0]
+            })
+
+            var xx = parents;
+
+
+            graph.executeMatch("match (n:concept) return n.name, id(n) limit 10", function (err, resultNeo) {
+
+                resultNeo.forEach()
+
+                async.eachSeries(resultNeo.data, function (neoConcept, callbackEachNeoConcept) {
+
+                    if (parents[neoConcept.name]) {
+                        var path = startId + "/relationships";
+                        var payload = {
+                            to: "" + endId,
+                            data: {},
+                            type: relName
+                        }
+                        request({
+                                url: 'http://neo4j:souslesens@127.0.0.1:7474/db/data/node/' + path,
+                                json: payload,
+                                method: 'POST',
+                                headers: {'Content-Type': 'application/json',}
+                            },
+                            function (err, res) {
+                                if (err)
+                                    return callbackEachNeoConcept(err);
+                                callbackEachNeoConcept();
+                            })
+                    } else {
+                        callbackEachNeoConcept();
+                    }
+
+
+                }, function (err) {
+                    if (err)
+                        return callbackGraph(err);
+                    return callbackGraph("done");
+
+                })
+
+            })
+
+
+        })
     }
     ,
     createGraph: function (subGraph, jsonDocs, callbackGraph) {
@@ -45,6 +98,7 @@ var graph = {
                 currentGroup.push(statement);
             })
             groups.push(currentGroup);
+
 
             async.eachSeries(groups, function (statements, callbackEachSerie) {
                 graph.executeStatements(statements, function (err, result) {
@@ -112,8 +166,37 @@ var graph = {
            var jsonDocs = JSON.parse(str2);*/
         var ids = {};
 
-
+        var thesaurusConcepts = {};
+        var distinctDocuments = {};
         async.series([
+                //load thesaurusConcepts
+                function (callbackSeries) {
+
+                    elasticQuery.searchAll("totalref_thesaurus", 10000, function (err, result) {
+                        result.forEach(function (line) {
+                            var x = result;
+                            thesaurusConcepts[line._source.name] = line._source;
+                        })
+
+                        callbackSeries();
+
+                    })
+                },
+                //load documentsPurposeAndscope
+                function (callbackSeries) {
+
+                    elasticQuery.searchAll("totalreferentieldocuments5", 10000, function (err, result) {
+                        result.forEach(function (line) {
+                            var x = result;
+                            distinctDocuments[line._source.id] = line._source;
+                        })
+
+                        callbackSeries();
+
+                    })
+                },
+
+
                 //create nouns nodes
 
                 //create nouns nodes
@@ -143,42 +226,14 @@ var graph = {
                   },*/
 
 
-                //create concepts nodes
-                function (callbackSeries) {
-                    var statements = [];
-                    var distincts = [];
-                    jsonDocs.forEach(function (doc,index) {
-                        if (doc.concepts) {
-                           if(!doc.concepts.forEach)
-                                doc.concepts=[doc.concepts]
-                            doc.concepts.forEach(function (concept) {
-                                var xx=index;
-                                if (distincts.indexOf(concept) < 0) {
-                                    distincts.push(concept);
-                                    statements.push({statement: "CREATE (n:concept { name: \"" + cleanForNeo(concept) + "\",subGraph:\"" + subGraph + "\"}) RETURN n.name ,id(n) "})
-                                }
-                            })
-                        }
-                    })
 
-
-                    statements.push({statement: "match(n:concept) RETURN n.name ,id(n) "});
-                    createNodes(statements, function (err, result) {
-                        if (err) {
-                            return callbackSeries(err);
-                        }
-                        ids["concepts"] = result;
-                        return callbackSeries(null, result);
-                    })
-                }
-                ,
 
 
                 // create paragraph nodes
                 function (callbackSeries) {
                     var statements = [];
                     jsonDocs.forEach(function (doc) {
-                        if(doc.paragraphId) {
+                        if (doc.paragraphId) {
                             statements.push({
                                 statement: "CREATE (n:paragraph {" +
                                 " id: \"" + cleanForNeo(doc.paragraphId) + "\"" +
@@ -230,59 +285,6 @@ var graph = {
 
 
                 },
-                // create  paragraph concepts relations
-                function (callbackSeries) {
-                    var relations = []
-
-                    jsonDocs.forEach(function (doc) {
-                        if(doc.paragraphId){
-                        if (doc.concepts) {
-                            if(!doc.concepts.forEach)
-                                doc.concepts=[doc.concepts]
-                            doc.concepts.forEach(function (concept) {
-                                    relations.push({start: doc.paragraphId, end: concept});
-                                })
-                            }
-                        }
-                    })
-
-                    createRelations(relations, "hasConcept", "paragraphs", "concepts", ids, function (err, result) {
-                        if (err)
-                            console.log(err);
-                        return callbackSeries(null, result);
-                    })
-
-
-                },
-                // create document nodes
-                function (callbackSeries) {
-                    var documents = []
-                    var statements = [];
-                    jsonDocs.forEach(function (doc) {
-                        if (documents.indexOf(doc.docId) < 0) {
-                            documents.push(doc.docId)
-                            statements.push({
-                                statement: "CREATE (n:document {" +
-                                " id: \"" + cleanForNeo(doc.docId) + "\"" +
-                                " ,name: \"" + cleanForNeo(doc.fileName) + "\"" +
-                                " ,title: \"" + cleanForNeo(doc.docTitle) + "\"" +
-                                ",subGraph:\"" + subGraph + "\"}" +
-                                ") RETURN n.id ,id(n) "
-                            })
-
-                        }
-                    })
-                    statements.push({statement: "match(n:document) RETURN n.id ,id(n) "});
-                    createNodes(statements, function (err, result) {
-                        if (err) {
-                            return callbackSeries(err);
-                        }
-                        ids["documents"] = result;
-                        return callbackSeries(null, result);
-                    })
-
-
-                },
                 // create chapter nodes
                 function (callbackSeries) {
                     var chapters = []
@@ -293,7 +295,7 @@ var graph = {
                             statements.push({
                                 statement: "CREATE (n:chapter {" +
                                 " id: \"" + cleanForNeo(doc.chapterId) + "\"" +
-                                " ,name: \"" + cleanForNeo(doc.chapter) + "\"" +
+                                " ,name: \"" + cleanForNeo(doc.chapterTocNumber + " " + doc.chapter) + "\"" +
                                 " ,tocNumber: \"" + cleanForNeo(doc.chapterTocNumber) + "\"" +
                                 " ,parent: \"" + cleanForNeo(doc.parentChapter) + "\"" +
                                 ",subGraph:\"" + subGraph + "\"}" +
@@ -314,6 +316,147 @@ var graph = {
 
                 },
 
+                // create document nodes
+                function (callbackSeries) {
+                    var documents=[];
+                    var statements = [];
+                    jsonDocs.forEach(function (doc) {
+                        if (documents.indexOf(doc.docId) < 0) {
+                            documents.push(doc.docId)
+
+                            var purposeAndScopeStr = "";
+                            var document = distinctDocuments[doc.docId];
+                            if (document) {
+                                purposeAndScopeStr = document.purposeAndScope;
+                                // on ajoute les concepts du document au tableau des tous les paragraphes pour faire simple
+                                if (document.concepts)
+                                    jsonDocs.push({docId: document.id, concepts: document.concepts})
+
+                            }
+                            statements.push({
+                                statement: "CREATE (n:document {" +
+                                " id: \"" + cleanForNeo(doc.docId) + "\"" +
+                                " ,name: \"" + cleanForNeo(doc.fileName) + "\"" +
+                                " ,title: \"" + cleanForNeo(doc.docTitle) + "\"" +
+                                " ,purposeAndScope: \"" + cleanForNeo(purposeAndScopeStr) + "\"" +
+                                ",subGraph:\"" + subGraph + "\"}" +
+                                ") RETURN n.id ,id(n) "
+                            })
+
+                        }
+                    })
+                    statements.push({statement: "match(n:document) RETURN n.id ,id(n) "});
+                    createNodes(statements, function (err, result) {
+                        if (err) {
+                            return callbackSeries(err);
+                        }
+                        ids["documents"] = result;
+                        return callbackSeries(null, result);
+                    })
+
+
+                },
+
+                //create concepts (paragraphs and document purpose and scope) nodes
+                function (callbackSeries) {
+                    var statements = [];
+                    var distincts = [];
+                    jsonDocs.forEach(function (doc, index) {
+                        if (doc.concepts) {
+                            if (!doc.concepts.forEach)
+                                doc.concepts = [doc.concepts]
+                            doc.concepts.forEach(function (concept) {
+                                var xx = index;
+                                if (distincts.indexOf(concept) < 0) {
+                                    distincts.push(concept);
+                                    var synonymsStr = "";
+                                    var ancestorsStr = "";
+                                    var thesaurusConcept = thesaurusConcepts[concept];
+                                    if (thesaurusConcept) {
+                                        if (thesaurusConcept.synonyms) {
+                                            synonymsStr = thesaurusConcept.synonyms.toString().replace("[", "").replace("]", "")
+                                        }
+                                        if (thesaurusConcept.ancestors) {
+                                            ancestorsStr = thesaurusConcept.ancestors.toString().replace("[", "").replace("]", "")
+                                        }
+                                    }
+
+
+                                    statements.push({
+                                        statement: "CREATE (n:concept { name: \"" + cleanForNeo(concept) + "\"" +
+                                        " ,synonyms: \"" + cleanForNeo(synonymsStr) + "\"" +
+                                        " ,ancestors: \"" + cleanForNeo(ancestorsStr) + "\"" +
+                                        ",subGraph:\"" + subGraph + "\"}) RETURN n.name ,id(n) "
+                                    })
+                                }
+                            })
+                        }
+                    })
+
+
+                    statements.push({statement: "match(n:concept) RETURN n.name ,id(n) "});
+                    createNodes(statements, function (err, result) {
+                        if (err) {
+                            return callbackSeries(err);
+                        }
+                        ids["concepts"] = result;
+                        return callbackSeries(null, result);
+                    })
+                }
+                ,
+
+
+
+                // create  paragraph concepts relations
+                function (callbackSeries) {
+                    var relations = []
+
+                    jsonDocs.forEach(function (doc) {
+                        if (doc.paragraphId) {
+                            if (doc.concepts) {
+                                if (!doc.concepts.forEach)
+                                    doc.concepts = [doc.concepts]
+                                doc.concepts.forEach(function (concept) {
+                                    relations.push({start: doc.paragraphId, end: concept});
+                                })
+                            }
+                        }
+                    })
+
+                    createRelations(relations, "hasConcept", "paragraphs", "concepts", ids, function (err, result) {
+                        if (err)
+                            console.log(err);
+                        return callbackSeries(null, result);
+                    })
+
+
+                },
+
+                // create  document concepts relations
+                function (callbackSeries) {
+                    var relations = []
+                    var distincts = [];
+                    jsonDocs.forEach(function (doc) {
+                        if (doc.docId && distincts.indexOf(doc.docId) < 0) {
+                            distincts.push(doc.docId);
+                            if (doc.concepts) {
+                                if (!doc.concepts.forEach)
+                                    doc.concepts = [doc.concepts]
+                                doc.concepts.forEach(function (concept) {
+                                    relations.push({start: doc.docId, end: concept});
+                                })
+                            }
+                        }
+                    })
+
+                    createRelations(relations, "hasConcept", "documents", "concepts", ids, function (err, result) {
+                        if (err)
+                            console.log(err);
+                        return callbackSeries(null, result);
+                    })
+
+
+                },
                 // create paragraph chapter relations
                 function (callbackSeries) {
                     var relations = []
@@ -321,7 +464,7 @@ var graph = {
                         relations.push({start: doc.paragraphId, end: doc.chapterId});
                     })
 
-                    createRelations(relations, "inChapter", "paragraphs", "concepts", ids, function (err, result) {
+                    createRelations(relations, "inChapter", "paragraphs", "chapters", ids, function (err, result) {
                         if (err)
                             console.log(err);
                         return callbackSeries(null, result);
@@ -364,7 +507,34 @@ var graph = {
     }
 
     ,
+    executeMatch: function (match, callback) {
+        var path = "/db/data/cypher";
+        var payload = {query: match}
+        request({
+                url: 'http://neo4j:souslesens@127.0.0.1:7474' + path,
+                json: payload,
+                method: 'POST',
+                headers: {'Content-Type': 'application/json',}
+            },
+            function (err, res) {
 
+                if (err)
+                    callback(err)
+                else if (res.body && res.body.errors && res.body.errors.length > 0) {
+                    console.log(JSON.stringify(res.body.errors))
+                    callback(res.body.errors)
+                }
+                else {
+
+
+                    callback(null, res.body)
+                }
+            })
+
+    }
+
+
+    ,
     executeStatements:
 
         function (statements, callback) {
@@ -436,10 +606,9 @@ var graph = {
 
 
 if (true) {
-    var fileTokens = "D:\\Total\\docs\\nlp\\allNounTokens.json";
-    var fileDocs = "D:\\Total\\docs\\nlp\\tokenizedDocs.json";
 
-    elasticQuery.searchAll("totalreferentiel3", 10000, function (err, result) {
+
+    elasticQuery.searchAll("totalreferentiel5", 10000, function (err, result) {
 
         var docs = [];
         result.forEach(function (line) {
@@ -450,6 +619,15 @@ if (true) {
         graph.createGraph("totalRef5", docs, function (err, result) {
             var x = err;
         })
+    })
+
+}
+
+if (false) {
+
+
+    graph.createParentConceptsGraph("totalreferentiel5", function (err, result) {
+        var x = err;
     })
 
 }
