@@ -91,13 +91,13 @@ var bot = (function () {
                 self.currentTokens.forEach(function (token) {
                     if (foundTokens.indexOf(token) < 0) {
                         nonConceptQuery.push({"match": {"text": token}})
-                        foundTokens+=token+ " ";
+                        foundTokens += token + " ";
                     }
                 })
                 var _payload = {
                     search: 1,
                     index: "totalreferentiel5",
-                    payload:JSON.stringify( {
+                    payload: JSON.stringify({
                         "query": {
                             "bool": {
                                 "should": nonConceptQuery
@@ -110,7 +110,7 @@ var bot = (function () {
                                     }]
                             }
                         }
-                    },null,2)
+                    }, null, 2)
                 }
 
 
@@ -225,15 +225,16 @@ var bot = (function () {
             $("#QuestionConceptsInput").html(str);
         }
 
-        self.showQuestionProposalDivs= function (terms) {
+        self.showQuestionProposalDivs = function (terms) {
 
             terms.forEach(function (termObj, index) {
 
 
                 termObj.concepts.forEach(function (concept) {
-                    var divStr = "<div id='" + concept.name + "' class='conceptDiv'>" + concept.name + "</div>";
+                    var divStr = "<div id='" + concept.name + "' class='conceptDiv draghere'>" + concept.name + "</div>";
                     $("#sourceConcepts").append(divStr).promise().done(function () {
-                        $(".conceptDiv").draggable({helper: "clone", opacity: 0.5, cursor: "crosshair", scope: "drop"});
+                        dnd.makeDraggable()
+
 
                     });
 

@@ -2,20 +2,16 @@
 <project version="4">
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/public/index.html" line="94" />
-    <bookmark url="file://$PROJECT_DIR$/bin/nlp/corpusAnalyzer..js" line="287" />
+    <bookmark url="file://$PROJECT_DIR$/bin/nlp/corpusAnalyzer..js" line="286" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="62fcbe95-4f85-494a-9b3a-1eca7bab2dd2" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/totalRef/js/dnd.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/bin/docx/docExtractorToCsv..js" afterPath="$PROJECT_DIR$/bin/docx/docExtractorToCsv..js" />
       <change beforePath="$PROJECT_DIR$/bin/nlp/corpusAnalyzer..js" afterPath="$PROJECT_DIR$/bin/nlp/corpusAnalyzer..js" />
-      <change beforePath="$PROJECT_DIR$/bin/nlp/elasticQuery..js" afterPath="$PROJECT_DIR$/bin/nlp/elasticQuery..js" />
       <change beforePath="$PROJECT_DIR$/bin/nlp/graph..js" afterPath="$PROJECT_DIR$/bin/nlp/graph..js" />
-      <change beforePath="$PROJECT_DIR$/bin/nlp/test.json" afterPath="$PROJECT_DIR$/bin/nlp/test.json" />
       <change beforePath="$PROJECT_DIR$/public/totalRef/bot.html" afterPath="$PROJECT_DIR$/public/totalRef/bot.html" />
       <change beforePath="$PROJECT_DIR$/public/totalRef/js/bot.js" afterPath="$PROJECT_DIR$/public/totalRef/js/bot.js" />
-      <change beforePath="$PROJECT_DIR$/public/totalRef/js/test3.json" afterPath="$PROJECT_DIR$/public/totalRef/js/test3.json" />
-      <change beforePath="$PROJECT_DIR$/routes/index.js" afterPath="$PROJECT_DIR$/routes/index.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -29,21 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="docExtractorToCsv..js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/docx/docExtractorToCsv..js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="258" column="0" lean-forward="false" selection-start-line="258" selection-start-column="0" selection-end-line="258" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="corpusAnalyzer..js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/nlp/corpusAnalyzer..js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="168" column="10" lean-forward="false" selection-start-line="168" selection-start-column="10" selection-end-line="168" selection-end-column="10" />
+            <state relative-caret-position="322">
+              <caret line="166" column="46" lean-forward="false" selection-start-line="166" selection-start-column="46" selection-end-line="166" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -62,8 +48,8 @@
       <file leaf-file-name="graph..js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/nlp/graph..js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="475" column="36" lean-forward="false" selection-start-line="475" selection-start-column="36" selection-end-line="475" selection-end-column="36" />
+            <state relative-caret-position="83">
+              <caret line="439" column="48" lean-forward="false" selection-start-line="439" selection-start-column="48" selection-end-line="439" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -79,14 +65,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bot.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="bot.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/totalRef/js/bot.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="219" column="0" lean-forward="true" selection-start-line="219" selection-start-column="0" selection-end-line="219" selection-end-column="0" />
+            <state relative-caret-position="303">
+              <caret line="236" column="0" lean-forward="true" selection-start-line="236" selection-start-column="0" selection-end-line="236" selection-end-column="0" />
               <folding>
-                <marker date="1542641392155" expanded="true" signature="6437:6467" ph="..." />
+                <marker date="1542744166570" expanded="true" signature="6442:6472" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dnd.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/totalRef/js/dnd.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="22" column="41" lean-forward="true" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -94,8 +90,8 @@
       <file leaf-file-name="bot.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/totalRef/bot.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
-              <caret line="65" column="6" lean-forward="true" selection-start-line="65" selection-start-column="6" selection-end-line="65" selection-end-column="6" />
+            <state relative-caret-position="934">
+              <caret line="75" column="21" lean-forward="false" selection-start-line="75" selection-start-column="21" selection-end-line="75" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -138,8 +134,8 @@
       <list>
         <option value="package_json" />
         <option value="HTML File" />
-        <option value="JavaScript File" />
         <option value="JS module" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -221,13 +217,14 @@
         <option value="$PROJECT_DIR$/bin/nlp/thesaurus..js" />
         <option value="$PROJECT_DIR$/public/totalRef/js/test3.json" />
         <option value="$PROJECT_DIR$/bin/docx/docExtractorToCsv..js" />
-        <option value="$PROJECT_DIR$/bin/nlp/graph..js" />
         <option value="$PROJECT_DIR$/bin/nlp/test.json" />
-        <option value="$PROJECT_DIR$/bin/nlp/corpusAnalyzer..js" />
         <option value="$PROJECT_DIR$/bin/nlp/elasticQuery..js" />
         <option value="$PROJECT_DIR$/routes/index.js" />
-        <option value="$PROJECT_DIR$/public/totalRef/js/bot.js" />
+        <option value="$PROJECT_DIR$/bin/nlp/corpusAnalyzer..js" />
+        <option value="$PROJECT_DIR$/bin/nlp/graph..js" />
         <option value="$PROJECT_DIR$/public/totalRef/bot.html" />
+        <option value="$PROJECT_DIR$/public/totalRef/js/bot.js" />
+        <option value="$PROJECT_DIR$/public/totalRef/js/dnd.js" />
       </list>
     </option>
   </component>
@@ -404,18 +401,18 @@
       <workItem from="1542044624530" duration="3078000" />
       <workItem from="1542048282950" duration="30742000" />
       <workItem from="1542264075244" duration="16252000" />
-      <workItem from="1542532296468" duration="30406000" />
+      <workItem from="1542532296468" duration="34224000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="238162000" />
+    <option name="totallyTimeSpent" value="241980000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17175975" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17175975" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -426,7 +423,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973656" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32826087" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32391304" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32391304" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -482,6 +479,12 @@
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="502" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/bin/nlp/graph..js</url>
+          <line>451</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="519" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
@@ -491,18 +494,11 @@
           <properties />
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="506" />
+      <option name="time" value="520" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bin/elasticProxy.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/docx/config..js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -828,26 +824,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/nlp/corpusAnalyzer..js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="168" column="10" lean-forward="false" selection-start-line="168" selection-start-column="10" selection-end-line="168" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/nlp/elasticQuery..js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="191">
           <caret line="108" column="34" lean-forward="false" selection-start-line="108" selection-start-column="34" selection-end-line="108" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/nlp/graph..js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="475" column="36" lean-forward="false" selection-start-line="475" selection-start-column="36" selection-end-line="475" selection-end-column="36" />
           <folding />
         </state>
       </provider>
@@ -860,21 +840,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bin/nlp/corpusAnalyzer..js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="166" column="46" lean-forward="false" selection-start-line="166" selection-start-column="46" selection-end-line="166" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/nlp/graph..js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="439" column="48" lean-forward="false" selection-start-line="439" selection-start-column="48" selection-end-line="439" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/totalRef/bot.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="65" column="6" lean-forward="true" selection-start-line="65" selection-start-column="6" selection-end-line="65" selection-end-column="6" />
+        <state relative-caret-position="934">
+          <caret line="75" column="21" lean-forward="false" selection-start-line="75" selection-start-column="21" selection-end-line="75" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/totalRef/js/bot.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="219" column="0" lean-forward="true" selection-start-line="219" selection-start-column="0" selection-end-line="219" selection-end-column="0" />
+        <state relative-caret-position="303">
+          <caret line="236" column="0" lean-forward="true" selection-start-line="236" selection-start-column="0" selection-end-line="236" selection-end-column="0" />
           <folding>
-            <marker date="1542641392155" expanded="true" signature="6437:6467" ph="..." />
+            <marker date="1542744166570" expanded="true" signature="6442:6472" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/totalRef/js/dnd.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="22" column="41" lean-forward="true" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
+          <folding />
         </state>
       </provider>
     </entry>

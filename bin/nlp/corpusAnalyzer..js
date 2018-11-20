@@ -165,8 +165,7 @@ var corpusAnalyzer = {
                 //update index
                 var elasticPayload = []
                 for (var key in  allParagraphsWithConcepts) {
-if(key=="_9259676")
-    var x=3
+
                     elasticPayload.push({"update": {_index: index, _type: type, _id: "" + key}})
                     elasticPayload.push({doc: {concepts: allParagraphsWithConcepts[key]}})
                 }
@@ -312,14 +311,14 @@ if (false) {
 
 }
 
-if (true) {
+if (false) {
     corpusAnalyzer.setConceptsInCorpusFromThesaurus("totalreferentiel5", "totalrefparagraphs", function (err, result) {
         var x = result;
     });
 }
 
 
-if (false) {
+if (true) {
     corpusAnalyzer.setConceptsInCorpusFromThesaurus("totalreferentieldocuments5", "totalrefdocuments", function (err, result) {
         var x = result;
     });

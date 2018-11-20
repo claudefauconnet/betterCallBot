@@ -9,6 +9,7 @@
     <script src="js/bot.js"></script>
     <script src="js/coreNlp2.js"></script>
     <script src="js/async.js"></script>
+    <script src="js/dnd.js"></script>
 
 
     <style>
@@ -52,13 +53,36 @@
             background-color: #d9bb73;
         }
 
+        .drophere {
+            float: left;
+            margin-left: 100px;
+            width: 200px;
+            height: 50px;
+            border: 1px solid red;
+            padding: 5px;
+        }
+
+        .draghere {
+            width: 200px;
+            height: 50px;
+            background: green;
+            text-align: center;
+            line-height: 50px;
+        }
+        .ui-draggable-dragging {
+            background: blue;
+        }
+
+        .hoverClass {
+            border: 2px solid red;
+            background: black;
+        }
+
 
     </style>
     <script>
         $(function () {
-           // $(".questionTokensDiv").draggable({helper: "clone", opacity: 0.5, cursor: "crosshair", scope: "drop"});
-            $("#targetConcepts").droppable({accept: ".draggable", scope: "drop"});
-            $("#sourceConcepts").droppable({accept: ".draggable", scope: "drop"});
+          dnd.init()
         })
 
     </script>
@@ -77,19 +101,19 @@
     <table>
         <tr>
             <td>
-                <div id="sourceConcepts" class="questionTokensDiv"></div>
+                <div id="sourceConcepts" class="drophere"></div>
             </td>
             <td>
-                <div id="targetConcepts"  class="questionTokensDiv"></div>
+                <div id="targetConcepts"  class="drophere"></div>
             </td>
         </tr>
 
         <tr>
             <td>
-                <div id="sourceWords"  class="questionTokensDiv"></div>
+                <div id="sourceWords"  class="drophere"></div>
             </td>
             <td>
-                <div id="targetWords" class="questionTokensDiv"></div>
+                <div id="targetWords" class="drophere"></div>
             </td>
         </tr>
 

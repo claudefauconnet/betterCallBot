@@ -437,7 +437,7 @@ var graph = {
                     var relations = []
                     var distincts = [];
                     jsonDocs.forEach(function (doc) {
-                        if (doc.docId && distincts.indexOf(doc.docId) < 0) {
+                        if (!doc.paragraphId ) {
                             distincts.push(doc.docId);
                             if (doc.concepts) {
                                 if (!doc.concepts.forEach)
