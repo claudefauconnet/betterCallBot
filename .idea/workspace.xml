@@ -6,10 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="62fcbe95-4f85-494a-9b3a-1eca7bab2dd2" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/totalRef/js/dnd.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/bin/nlp/corpusAnalyzer..js" afterPath="$PROJECT_DIR$/bin/nlp/corpusAnalyzer..js" />
-      <change beforePath="$PROJECT_DIR$/bin/nlp/graph..js" afterPath="$PROJECT_DIR$/bin/nlp/graph..js" />
       <change beforePath="$PROJECT_DIR$/public/totalRef/bot.html" afterPath="$PROJECT_DIR$/public/totalRef/bot.html" />
       <change beforePath="$PROJECT_DIR$/public/totalRef/js/bot.js" afterPath="$PROJECT_DIR$/public/totalRef/js/bot.js" />
     </list>
@@ -35,16 +32,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/nlp/test.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="19" column="1" lean-forward="false" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="graph..js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/nlp/graph..js">
           <provider selected="true" editor-type-id="text-editor">
@@ -55,33 +42,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="www" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/www">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bot.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="bot.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/totalRef/js/bot.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
-              <caret line="236" column="0" lean-forward="true" selection-start-line="236" selection-start-column="0" selection-end-line="236" selection-end-column="0" />
+            <state relative-caret-position="216">
+              <caret line="244" column="37" lean-forward="true" selection-start-line="244" selection-start-column="37" selection-end-line="244" selection-end-column="37" />
               <folding>
-                <marker date="1542744166570" expanded="true" signature="6442:6472" ph="..." />
+                <marker date="1542790375739" expanded="true" signature="9877:9907" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dnd.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dnd.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/totalRef/js/dnd.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="234">
-              <caret line="22" column="41" lean-forward="true" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
+              <caret line="22" column="41" lean-forward="false" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -90,8 +67,48 @@
       <file leaf-file-name="bot.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/totalRef/bot.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="934">
-              <caret line="75" column="21" lean-forward="false" selection-start-line="75" selection-start-column="21" selection-end-line="75" selection-end-column="21" />
+            <state relative-caret-position="340">
+              <caret line="122" column="0" lean-forward="false" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="coreNlp.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/totalRef/js/coreNlp.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="191">
+              <caret line="217" column="9" lean-forward="false" selection-start-line="217" selection-start-column="9" selection-end-line="217" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/totalRef/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="417">
+              <caret line="152" column="79" lean-forward="false" selection-start-line="152" selection-start-column="52" selection-end-line="152" selection-end-column="79" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="neo4j.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/totalRef/js/neo4j.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="8" column="40" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="coreNlp2.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/totalRef/js/coreNlp2.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="206">
+              <caret line="16" column="25" lean-forward="false" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -102,26 +119,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="414">
               <caret line="23" column="26" lean-forward="false" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="elasticQuery..js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/nlp/elasticQuery..js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="108" column="34" lean-forward="false" selection-start-line="108" selection-start-column="34" selection-end-line="108" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="request.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node_modules/request/request.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="184" column="21" lean-forward="false" selection-start-line="184" selection-start-column="21" selection-end-line="184" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -141,11 +138,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>image</find>
-      <find>oMath</find>
-      <find>follow</find>
-      <find>chapterId</find>
-      <find>tokenizedDocs</find>
       <find>limit 200000</find>
       <find>onChangeObjectName</find>
       <find>docId</find>
@@ -165,12 +157,17 @@
       <find>advancedSearchButton</find>
       <find>searchDialog_Criteriatext</find>
       <find>advancedSearchNodeLabelsDiv</find>
-      <find>showQuestionProposal</find>
       <find>concept.text</find>
       <find>phrase</find>
       <find>getWordsAssociations</find>
-      <find>showSearchResults</find>
       <find>foundTokens</find>
+      <find>showQuestionProposalDivs</find>
+      <find>showQuestionProposal</find>
+      <find>showSearchResults</find>
+      <find>searchResponseInElastic</find>
+      <find>match</find>
+      <find>nonConceptwordsStr</find>
+      <find>neo4jProxyUrl</find>
     </findStrings>
     <replaceStrings>
       <replace>docParagraph</replace>
@@ -178,6 +175,8 @@
       <replace>doc</replace>
       <replace>paragraphId</replace>
       <replace>&quot;+subGraph+&quot;</replace>
+      <replace>searchResponse</replace>
+      <replace>showResponses</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -222,9 +221,9 @@
         <option value="$PROJECT_DIR$/routes/index.js" />
         <option value="$PROJECT_DIR$/bin/nlp/corpusAnalyzer..js" />
         <option value="$PROJECT_DIR$/bin/nlp/graph..js" />
+        <option value="$PROJECT_DIR$/public/totalRef/js/dnd.js" />
         <option value="$PROJECT_DIR$/public/totalRef/bot.html" />
         <option value="$PROJECT_DIR$/public/totalRef/js/bot.js" />
-        <option value="$PROJECT_DIR$/public/totalRef/js/dnd.js" />
       </list>
     </option>
   </component>
@@ -401,12 +400,12 @@
       <workItem from="1542044624530" duration="3078000" />
       <workItem from="1542048282950" duration="30742000" />
       <workItem from="1542264075244" duration="16252000" />
-      <workItem from="1542532296468" duration="34224000" />
+      <workItem from="1542532296468" duration="38941000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="241980000" />
+    <option name="totallyTimeSpent" value="246697000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -463,7 +462,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/public/totalRef/js/bot.js</url>
-          <line>27</line>
+          <line>28</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="410" />
         </line-breakpoint>
@@ -472,12 +471,6 @@
           <line>57</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="489" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/public/totalRef/js/bot.js</url>
-          <line>116</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="502" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/bin/nlp/graph..js</url>
@@ -613,6 +606,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-54">
           <caret line="21" column="46" lean-forward="false" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -627,13 +621,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/totalRef/js/coreNlp.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2988">
-          <caret line="204" column="37" lean-forward="true" selection-start-line="204" selection-start-column="37" selection-end-line="204" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -658,13 +645,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/totalRef/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2826">
-          <caret line="157" column="0" lean-forward="false" selection-start-line="157" selection-start-column="0" selection-end-line="157" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/nlp/totalRefNouns.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-342">
@@ -683,21 +663,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="638">
           <caret line="36" column="5" lean-forward="false" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/totalRef/js/neo4j.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="606" column="28" lean-forward="false" selection-start-line="606" selection-start-column="28" selection-end-line="606" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/totalRef/js/coreNlp2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="16" column="25" lean-forward="false" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -856,29 +821,61 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/totalRef/js/dnd.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="22" column="41" lean-forward="false" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/totalRef/bot.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="934">
-          <caret line="75" column="21" lean-forward="false" selection-start-line="75" selection-start-column="21" selection-end-line="75" selection-end-column="21" />
+        <state relative-caret-position="340">
+          <caret line="122" column="0" lean-forward="false" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/totalRef/js/coreNlp2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="16" column="25" lean-forward="false" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/totalRef/js/coreNlp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="217" column="9" lean-forward="false" selection-start-line="217" selection-start-column="9" selection-end-line="217" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/totalRef/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="417">
+          <caret line="152" column="79" lean-forward="false" selection-start-line="152" selection-start-column="52" selection-end-line="152" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/totalRef/js/neo4j.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="40" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/totalRef/js/bot.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="236" column="0" lean-forward="true" selection-start-line="236" selection-start-column="0" selection-end-line="236" selection-end-column="0" />
+        <state relative-caret-position="216">
+          <caret line="244" column="37" lean-forward="true" selection-start-line="244" selection-start-column="37" selection-end-line="244" selection-end-column="37" />
           <folding>
-            <marker date="1542744166570" expanded="true" signature="6442:6472" ph="..." />
+            <marker date="1542790375739" expanded="true" signature="9877:9907" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/totalRef/js/dnd.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="22" column="41" lean-forward="true" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>

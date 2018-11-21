@@ -2,6 +2,7 @@ var bot = (function () {
         var self = {};
         self.elasticUrl = "http://localhost:9200"
         self.index = "totalref_nouns"
+        self.neo4jProxyUrl = "http://localhost:3002/neo"
         self.currentConcepts = {}
         self.currentTokens = [];
 
@@ -40,7 +41,7 @@ var bot = (function () {
 
                         self.currentQuestionTerms = json;
                         self.showQuestionProposal(json);
-                        self.showQuestionProposalDivs(json);
+                        // self.showQuestionProposalDivs(json);
                     },
                     error: function (err) {
                         console.log(err.responseText)
@@ -52,110 +53,215 @@ var bot = (function () {
         }
 
 
-        self.searchResponseInElastic = function () {
+        self.searchResponse = function (mean) {
 
             $("#answersDiv").html("");
             var allResults = [];
             var maxIterations = 20;
             var iteration = 0
             var associations = self.getWordsAssociations();
-
+            var nonConceptwordsStr = "";
             async.eachSeries(associations, function (association, callbackAssociation) {
-                var foundTokens = "";
-                var queryString = ""
-                association.forEach(function (term, indexTerm) {
 
-                    foundTokens += term + " ";
-
-
-                    if (indexTerm > 0)
-                        queryString += " AND"
-                    queryString += " ("
-                    queryString += " " + term;
-
-                    var concept = self.currentConcepts[term];
-                    if (concept) {
-                        queryString += " "
-                        concept.synonyms.forEach(function (synonym, indexSyn) {
-                            if (indexTerm > 0 || indexSyn > 0)
-                                queryString += " OR ";
-                            queryString += synonym;
-                        })
-                        queryString += " "
-                    }
-                    queryString += " )"
-
-                });
-                var nonConceptQuery = [];
-
-                self.currentTokens.forEach(function (token) {
-                    if (foundTokens.indexOf(token) < 0) {
-                        nonConceptQuery.push({"match": {"text": token}})
-                        foundTokens += token + " ";
-                    }
-                })
-                var _payload = {
-                    search: 1,
-                    index: "totalreferentiel5",
-                    payload: JSON.stringify({
-                        "query": {
-                            "bool": {
-                                "should": nonConceptQuery
-
-                                , "filter":
-                                    [{
-                                        "query_string": {
-                                            "query": queryString
-                                        }
-                                    }]
-                            }
+                if (mean == 'elastic') {
+                    self.searchResponseInElastic(association, function (err, result) {
+                        if (err) {
+                            console.log(err);
+                            return callbackAssociation(err);
                         }
-                    }, null, 2)
-                }
-
-
-                console.log(_payload.payload)
-                $.ajax({
-                    type: "POST",
-                    url: "../elastic",
-                    data: _payload,
-                    dataType: "json",
-                    success: function (elasticResults) {
-
-                        if (!elasticResults || elasticResults.length == 0)
-                            return callbackAssociation();
-
-                        else
-                            elasticResults.forEach(function (elasticResult) {
-
-                                allResults.push({
-                                    association: association,
-                                    data: elasticResult._source,
-                                    score: elasticResult._score,
-                                    queryString: queryString
-                                })
-
-
-                            })
+                        allResults.push.apply(allResults, result);
                         if (allResults.length < 11)
                             return callbackAssociation();
-                        else
-                            return callbackAssociation("end");
+                        else {
 
+                            return callbackAssociation("end")
+                        }
 
-                    }
-                    ,
-                    error: function (err) {
-                        console.log(err.responseText)
-                        return callbackAssociation(err);
-                    }
-                })
+                    })
+                }
+                else if (mean == 'graph') {
+                    self.searchResponseInGraph(association, function (err, result) {
+                        if (err) {
+                            console.log(err);
+                            return callbackAssociation(err);
+                        }
+                        allResults.push.apply(allResults, result);
+                        if (allResults.length < 11)
+                            return callbackAssociation();
+                        else {
 
+                            return callbackAssociation("end")
+                        }
+                    })
+                }
 
             }, function (err) {
                 self.showSearchResults(allResults);
                 //  console.log(JSON.stringify(allResults,null,2));
             })
+
+        }
+
+
+        self.searchResponseInElastic = function (association, callback) {
+            var foundTokens = "";
+            var queryString = "";
+            var results = [];
+            var nonConceptwordsStr = "";
+            association.forEach(function (term, indexTerm) {
+                foundTokens += term + " ";
+                if (indexTerm > 0)
+                    queryString += " AND"
+                queryString += " ("
+                queryString += " " + term;
+
+                var concept = self.currentConcepts[term];
+                if (concept) {
+                    queryString += " "
+                    concept.synonyms.forEach(function (synonym, indexSyn) {
+                        if (indexTerm > 0 || indexSyn > 0)
+                            queryString += " OR ";
+                        queryString += synonym;
+                    })
+                    queryString += " "
+                }
+                queryString += " )"
+
+            });
+            var nonConceptQuery = [];
+
+
+            self.currentTokens.forEach(function (token, index) {
+                if (foundTokens.indexOf(token) < 0) {
+                    nonConceptQuery.push({"match": {"text": token}})
+                    foundTokens += token + " ";
+                    nonConceptwordsStr += token + " ";
+
+                }
+            })
+            var _payload = {
+                search: 1,
+                index: "totalreferentiel5",
+                payload: JSON.stringify({
+                    "query": {
+                        "bool": {
+                            "should": nonConceptQuery
+
+                            , "filter":
+                                [{
+                                    "query_string": {
+                                        "query": queryString
+                                    }
+                                }]
+                        }
+                    }
+                }, null, 2)
+            }
+
+
+            console.log(_payload.payload)
+            $.ajax({
+                type: "POST",
+                url: "../elastic",
+                data: _payload,
+                dataType: "json",
+                success: function (elasticResults) {
+
+                    if (!elasticResults || elasticResults.length == 0)
+                        return callback();
+
+                    else
+                        elasticResults.forEach(function (elasticResult) {
+
+                            results.push({
+                                nonConceptWords: nonConceptwordsStr,
+                                association: association,
+                                data: elasticResult._source,
+                                score: elasticResult._score,
+                                queryString: queryString
+                            })
+
+
+                        })
+
+                    return callback(null, results);
+
+
+                }
+                ,
+                error: function (err) {
+                    console.log(err.responseText)
+                    return callback(err);
+                }
+            })
+        }
+
+        self.searchResponseInGraph = function (association, callback) {
+            var nonConceptwordsStr = "";
+
+            var match;
+            association.forEach(function (concept, index) {
+                var type = "concept"
+
+                if (index == 0) {
+                    match = " match(n:" + type + ")-[r2]-(p:paragraph) where n.name=\"" + concept + "\" "
+                }
+                else {
+                    match += " WITH p match (p)-[r]-(m:" + type + ") where m.name=\"" + concept + "\""
+
+                }
+            })
+            match += " with p match (p)-[r]-(c:chapter)-[r2]-(d:document)  return distinct p,c,d"
+            console.log(match);
+            var payload = {match: match};
+
+
+            $.ajax({
+                type: "POST",
+                url: self.neo4jProxyUrl,
+                data: payload,
+                dataType: "json",
+                success: function (data, textStatus, jqXHR) {
+                    var results = [];
+                    data.forEach(function (line) {
+                        var chapter = line.c.properties;
+                        var document = line.d.properties;
+                        var paragraph = line.p.properties;
+
+                        var neoObj = {
+
+                            "fileName": document.name,
+                            "docTitle": document.title,
+                            "chapter": chapter.name,
+                            "parentChapter": parent,
+                            "chapterTocNumber": chapter.tocNumber,
+                            "text": paragraph.text
+                        }
+
+                        results.push({
+                            nonConceptWords: "",
+                            association: association,
+                            data: neoObj,
+                            score: 1,
+                            queryString: ""
+                        })
+
+                    })
+
+                    return callback(null, results);
+
+
+                }
+                , error: function (err) {
+
+                    console.log("done")
+                    //    console.log(err.responseText)
+                    return callback(err);
+
+
+                }
+
+            });
 
         }
 
@@ -252,7 +358,8 @@ var bot = (function () {
                 str += "<div class='answer'>"
                 str += "<table>";
                 str += "<tr><td>Score</td><td>" + result.score + "</td></tr>"
-                str += "<tr><td>words</td><td>" + result.association.toString() + "</td></tr>"
+                str += "<tr><td>Concepts</td><td><b>" + result.association.toString() + "</b></td></tr>"
+                str += "<tr><td>Words</td><td><i>" + result.nonConceptWords + "</i></td></tr>"
                 str += "<tr><td>FileName</td><td>" + result.data.fileName + "</td></tr>"
                 str += "<tr><td>DocTitle</td><td>" + result.data.docTitle + "</td></tr>"
                 str += "<tr><td>Chapter</td><td>" + result.data.chapter + "</td></tr>"

@@ -21,7 +21,7 @@
         #answersDiv {
             font-family: Verdana;
             font-size: 12px;
-            height: 500px;
+            height: 600px;
             overflow: auto;
 
         }
@@ -30,7 +30,7 @@
             border: solid;
             border-width: thin;
             border-radius: 8px;
-            background-color: #CCCCCC;
+            background-color: ivory;
             margin: 5px;
             padding: 5px
 
@@ -97,7 +97,7 @@
     <br>Question translation
 
     <!--<button onclick="nlp.searchQuestionRules(true)">Search Rules</button>-->
-    <br><br>
+  <!--  <br><br>
     <table>
         <tr>
             <td>
@@ -116,14 +116,15 @@
                 <div id="targetWords" class="drophere"></div>
             </td>
         </tr>
-
+    </table>-->
 
         <div id="QuestionConceptsInput"></div>
 </div>
 
 <div id="neo4jResponseDiv">
 </div>
-<button onclick="bot.searchResponseInElastic()">Search</button>
+<button onclick="bot.searchResponse('elastic')">Search Elastic</button>
+<button onclick="bot.searchResponse('graph')">Search Graph</button>
 <div id="answersDiv"></div>
 </body>
 </html>
