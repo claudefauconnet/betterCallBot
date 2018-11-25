@@ -198,9 +198,12 @@ var bot = (function () {
 
         self.searchResponseInGraph = function (association, callback) {
             var nonConceptwordsStr = "";
+var foundTokens="";
 
             var match;
             association.forEach(function (concept, index) {
+                foundTokens += concept + " ";
+
                 var type = "concept"
 
                 if (index == 0) {
@@ -210,6 +213,16 @@ var bot = (function () {
                     match += " WITH p match (p)-[r]-(m:" + type + ") where m.name=\"" + concept + "\""
 
                 }
+            })
+            var nonConceptWords=[]
+            self.currentTokens.forEach(function (token, index) {
+                if (foundTokens.indexOf(token) < 0) {
+                    nonConceptWords.push(token);
+                }
+            })
+
+            nonConceptWords.forEach(function (word, index) {
+            ;   match+=" WITH p OPTIONAL MATCH (n:paragraph)-[r3]-(p)  WHERE n.text=~'(?i).*"+word+".*' "
             })
             match += " with p match (p)-[r]-(c:chapter)-[r2]-(d:document)  return distinct p,c,d"
             console.log(match);

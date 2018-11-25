@@ -1,4 +1,32 @@
-var fs = require('fs');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: docxExtractor..js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: docxExtractor..js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>var fs = require('fs');
 
 
 var xml2js = require('xml2js');
@@ -21,22 +49,22 @@ extractRunText = function (run) {
         return "";
     // remove annotations
     var shapes = run.getElementsByTagName("v:shape");
-    if (shapes && shapes.length > 0)// annotations d'images voir 118 7944
+    if (shapes &amp;&amp; shapes.length > 0)// annotations d'images voir 118 7944
         return "";
 
 
 
-    for (var k = 0; k < texts.length; k++) {
+    for (var k = 0; k &lt; texts.length; k++) {
         var textStr = ""
-        for (var l = 0; l < texts[k].childNodes.length; l++) {
+        for (var l = 0; l &lt; texts[k].childNodes.length; l++) {
             var textChild = texts[k].childNodes[l]
-            if (textChild.data && textChild.data != "")
+            if (textChild.data &amp;&amp; textChild.data != "")
                 textStr += textChild.data;
         }
         runStr += textStr.replace(/\n/g, "");
     }
     var objects = run.getElementsByTagName("w:object");
-    if (objects && objects.length > 0) {
+    if (objects &amp;&amp; objects.length > 0) {
         runStr += " [[" + objects.length + " OLE objects(formulae...)]] ";
     }
 
@@ -49,11 +77,11 @@ var extractMathFormula = function (mathRun) {
     var runStr = "";
     var texts = mathRun.getElementsByTagName("m:t")
 
-    for (var k = 0; k < texts.length; k++) {
+    for (var k = 0; k &lt; texts.length; k++) {
         var textStr = ""
-        for (var l = 0; l < texts[k].childNodes.length; l++) {
+        for (var l = 0; l &lt; texts[k].childNodes.length; l++) {
             var textChild = texts[k].childNodes[l]
-            if (textChild.data && textChild.data != "")
+            if (textChild.data &amp;&amp; textChild.data != "")
                 textStr += textChild.data;
         }
         runStr += textStr.replace(/\n/g, "");
@@ -70,7 +98,7 @@ var extractImage = function (imageRun, docRels) {
     var imgName = "";
     var images = imageRun.getElementsByTagName("a:blip")
 
-    for (var k = 0; k < images.length; k++) {
+    for (var k = 0; k &lt; images.length; k++) {
         var id = images[k].getAttribute("r:embed");
         //  console.log(id)
         if (docRels[id])
@@ -91,13 +119,13 @@ var extractImage = function (imageRun, docRels) {
 extractMathFromula=function (paragraph) {
     var mathElts=paragraph.getElementsByTagName("m:oMath");
     var str="";
-    for (var i = 0; i< mathElts.length; i++) {
+    for (var i = 0; i&lt; mathElts.length; i++) {
         var mathTextElts=paragraph.getElementsByTagName("m:t");
-        for (var k = 0; k <mathTextElts.length; k++) {
+        for (var k = 0; k &lt;mathTextElts.length; k++) {
 
             if(mathTextElts[k].parentNode.parentNode.tagName=="m:den")
             str+="/";
-            if (mathTextElts[k].childNodes[0].data && mathTextElts[k].childNodes[0].data != "")
+            if (mathTextElts[k].childNodes[0].data &amp;&amp; mathTextElts[k].childNodes[0].data != "")
                 str += mathTextElts[k].childNodes[0].data;
 
         }
@@ -110,7 +138,7 @@ extractMathFromula=function (paragraph) {
 
 
 var extractPagesNumbers = function () {
-//<w:br w:type="page"/>
+//&lt;w:br w:type="page"/>
 }
 
 
@@ -120,12 +148,12 @@ var getAllElementsByTagNameDepth = function (element, tagName) {
             return result;
         result = result || [];
         var elements = element.getElementsByTagName(tagName);
-        for (var i = 0; i < elements.length; i++) {
+        for (var i = 0; i &lt; elements.length; i++) {
             result.push(elements[i])
         }
         if (elements.length > 0)
             ;//  return result;
-        for (var i = 0; i < element.childNodes.length; i++) {
+        for (var i = 0; i &lt; element.childNodes.length; i++) {
             recurse(element.childNodes[i], tagName, result)
         }
         return result;
@@ -136,11 +164,11 @@ var getAllElementsByTagNameDepth = function (element, tagName) {
 
 var getPstyles = function () {
     var styles = body.getElementsByTagName("w:pStyle");
-    for (var j = 0; j < styles.length; j++) {
+    for (var j = 0; j &lt; styles.length; j++) {
         var attrs = styles[j].attributes;
-        for (var k = 0; k < attrs.length; k++) {
+        for (var k = 0; k &lt; attrs.length; k++) {
             var value = attrs[k].value
-            if (docxExtactor.stylesArray.indexOf(value) < 0)
+            if (docxExtactor.stylesArray.indexOf(value) &lt; 0)
                 docxExtactor.stylesArray.push(value)
         }
     }
@@ -151,11 +179,11 @@ var getDocPstylesOffsets = function (body) {
     var stylesArray = [];
     if (body) {
         var pPrs = body.getElementsByTagName("w:pPr");
-        for (var i = 0; i < pPrs.length; i++) {
+        for (var i = 0; i &lt; pPrs.length; i++) {
             var styleObj = {offset: pPrs[i].columnNumber};
 
             var styles = pPrs[i].getElementsByTagName("w:pStyle");
-            for (var j = 0; j < styles.length; j++) {
+            for (var j = 0; j &lt; styles.length; j++) {
                 var styleValue = styles[j].getAttribute("w:val");
                 var htmlStyle = docxExtactor.pStyles[styleValue];
                 if (!htmlStyle) {
@@ -256,7 +284,7 @@ var docxExtactor = {
                     if (!jsonParagraphs[index].tables)
                         jsonParagraphs[index].tables = [];
 
-                    if (offset > paragraph.startOffset && offset < paragraph.endOffset) {
+                    if (offset > paragraph.startOffset &amp;&amp; offset &lt; paragraph.endOffset) {
                         jsonParagraphs[index].tables.push(table);
                         found = true;
                     }
@@ -276,19 +304,19 @@ var docxExtactor = {
             json.forEach(function (paragraph, index) {
                 var paragraphStyle = null;//get paragraph Style by offsets
                 stylesArray.some(function (style) {
-                    if (paragraph.startOffset < style.offset && paragraph.endOffset > style.offset) {
+                    if (paragraph.startOffset &lt; style.offset &amp;&amp; paragraph.endOffset > style.offset) {
                         paragraphStyle = style.style;
                         paragraph.style = style.style;
                         return true;
                     }
                     return false;
                 })
-                if (paragraph.text == "" && paragraph.title == "" && !paragraph.tableIndices)
+                if (paragraph.text == "" &amp;&amp; paragraph.title == "" &amp;&amp; !paragraph.tableIndices)
                     return;
                 if (paragraphStyle) {
 
                     if(docxParagraphAggregator.isParagraphChapter(paragraph)){
-                        paragraph.title = paragraph.title//"<" + paragraphStyle + ">" + paragraph.title + "</" + paragraphStyle + ">"
+                        paragraph.title = paragraph.title//"&lt;" + paragraphStyle + ">" + paragraph.title + "&lt;/" + paragraphStyle + ">"
                     }
                 }
                 json2.push(paragraph)
@@ -301,7 +329,7 @@ var docxExtactor = {
         function setImages(obj, run) {
             var images = run.getElementsByTagName("pic:pic");
             var imageSrcs = []
-            for (var k = 0; k < images.length; k++) {
+            for (var k = 0; k &lt; images.length; k++) {
                 // runStr += "{{\"image\":\"" + extractImage(images[k], docRels) + "\"}}"
                 if(! obj.images)
                     obj.images=[];
@@ -322,7 +350,7 @@ var docxExtactor = {
                 var tableElt = cellElt.parentNode.parentNode.parentNode;
                 if (currentTableElt != tableElt) {
                     currentTableElt = tableElt;
-                    if (cellElt.paragraphIndex < 0)
+                    if (cellElt.paragraphIndex &lt; 0)
                         cellElt.paragraphIndex = cellElt.paragraphIndex - (i++);
                     currentTable = {index: cellElt.paragraphIndex, rows: []}
                     currentRow = null;
@@ -413,7 +441,7 @@ var docxExtactor = {
         var previousTextIndex = -1;
         //extraction des tables
         var tables = body.getElementsByTagName("w:tbl");
-        for (var j = 0; j < tables.length; j++) {
+        for (var j = 0; j &lt; tables.length; j++) {
             var jsonTable = docxExtactor.extractTable(tables[j])
             jsonTable.startOffset = tables[j].columnNumber;
             jsonTables.push(jsonTable)
@@ -423,7 +451,7 @@ var docxExtactor = {
         var paragraphs = body.getElementsByTagName("w:p")
         var runStr;
 
-        for (var i = 0; i < paragraphs.length; i++) {
+        for (var i = 0; i &lt; paragraphs.length; i++) {
             var paragraph = paragraphs[i];
 
             //cellule de tableau
@@ -442,7 +470,7 @@ var docxExtactor = {
 
 
             obj.startOffset = paragraph.columnNumber
-            if (i < paragraphs.length - 1)
+            if (i &lt; paragraphs.length - 1)
                 obj.endOffset = paragraphs[i + 1].columnNumber - 1
             else
                 obj.sendOffset = 999999999;
@@ -451,12 +479,12 @@ var docxExtactor = {
 
             var styleElts = paragraph.getElementsByTagName("w:pStyle");
             var style = null;
-            if (styleElts && styleElts.length > 0)
+            if (styleElts &amp;&amp; styleElts.length > 0)
                 var style = styleElts[0].getAttribute("w:val");
             style = docxExtactor.pStyles[style];
             obj.style = style;
             var runStr = ""
-            for (var j = 0; j < runs.length; j++) {
+            for (var j = 0; j &lt; runs.length; j++) {
                 var rVersionId = runs[j].getAttribute("w:rsidRPr");
                 if (true || !pVersionId || !rVersionId || rVersionId == pVersionId)
                     runStr += extractRunText(runs[j])
@@ -469,7 +497,7 @@ var docxExtactor = {
 
 
             //si pas de run et pas de formule c'est un saut de ligne qui délimite un paragraphe
-            if (paragraph.getElementsByTagName("w:r").length == 0 && paragraph.getElementsByTagName("m:oMath").length == 0) {
+            if (paragraph.getElementsByTagName("w:r").length == 0 &amp;&amp; paragraph.getElementsByTagName("m:oMath").length == 0) {
                 json.push({paragraphIndex: i, isLineBreak: true, parentTocId: currentTocId, version: pVersionId})
                 continue;
             }
@@ -506,7 +534,7 @@ var docxExtactor = {
         var doc = new dom().parseFromString(xmlStr);
         var headerTablesElts = doc.documentElement.getElementsByTagName("w:tbl");
         if (headerTablesElts) {
-            for (var j = 0; j < headerTablesElts.length; j++) {
+            for (var j = 0; j &lt; headerTablesElts.length; j++) {
                 headerTables.push(docxExtactor.extractTable(headerTablesElts[j]))
             }
         }
@@ -528,7 +556,7 @@ var docxExtactor = {
                 if (!tocLine.title)
                     tocLine.title = "";
                 str = tocLine.title + sep + str;
-                if (tocLine.parentAnchor && tocLine.parentAnchor != "#") {
+                if (tocLine.parentAnchor &amp;&amp; tocLine.parentAnchor != "#") {
                     str = aggregregateTocAncestors(str, toc[tocLine.parentAnchor]);
                 }
             }
@@ -559,7 +587,7 @@ var docxExtactor = {
         var xmlStr = "" + fs.readFileSync(filePath);
         var doc = new dom().parseFromString(xmlStr);
         var relations = doc.documentElement.getElementsByTagName("Relationship");
-        for (var i = 0; i < relations.length; i++) {
+        for (var i = 0; i &lt; relations.length; i++) {
             var obj = {
                 id: relations[i].getAttribute("Id"),
                 target: relations[i].getAttribute("Target"),
@@ -581,12 +609,12 @@ var docxExtactor = {
 
 
         var columns = tblElt.getElementsByTagName("w:tr");
-        for (var k = 0; k < columns.length; k++) {
+        for (var k = 0; k &lt; columns.length; k++) {
             var row = [];
             table.rows.push(row)
             var cells = columns[k].getElementsByTagName("w:tc");
 
-            for (var y = 0; y < cells.length; y++) {
+            for (var y = 0; y &lt; cells.length; y++) {
                 var cell = extractRunText(cells[y]);
                 row.push(cell);
 
@@ -605,7 +633,7 @@ var docxExtactor = {
         var tables = body.getElementsByTagName("w:tbl");
 
 
-        for (var j = 0; j < tables.length; j++) {
+        for (var j = 0; j &lt; tables.length; j++) {
             jsonTables.push(extractTable(tables[j]));
         }
         return jsonTables;
@@ -642,7 +670,7 @@ var docxExtactor = {
             console.log("TOC is old Model  !!! not processed")
         }
 
-        for (var i = 0; i < elements.length; i++) {
+        for (var i = 0; i &lt; elements.length; i++) {
             var element = elements[i];
             var obj = {text: ""};
             var str = "";
@@ -654,8 +682,8 @@ var docxExtactor = {
 
             var attrs = element.attributes;
             var attrsObj = {}
-            for (var j = 0; j < attrs.length; j++) {
-                if (attrs[j].name && attrs[j].value) {
+            for (var j = 0; j &lt; attrs.length; j++) {
+                if (attrs[j].name &amp;&amp; attrs[j].value) {
                     attrsObj[attrs[j].name] = attrs[j].value;
                 }
                 if (attrsObj["w:anchor"])
@@ -687,7 +715,7 @@ var docxExtactor = {
 //set parents
         for (var key in tocMap) {
             var p = key.substring(0, key.length - 1).lastIndexOf(".")
-            if (p < 0) {
+            if (p &lt; 0) {
                 tocMap[key].parent = "#";
                 continue;
             }
@@ -718,7 +746,7 @@ var docxExtactor = {
         var tocStruct = [];
 
         function recurseParent(obj) {
-            while (obj && obj.parent != "#") {
+            while (obj &amp;&amp; obj.parent != "#") {
                 obj.parent.children.push(obj);
                 obj.parentKey = obj.parent;
                 recurseParent(obj.parent);
@@ -760,7 +788,7 @@ var docxExtactor = {
              return jsonContent;
          }*/
         jsonContent.forEach(function (line, index) {
-            if (line.tocId && !toc[line.tocId]) {
+            if (line.tocId &amp;&amp; !toc[line.tocId]) {
                 jsonContent[index].tocId = null;
                 if (index > 0)
                     if (jsonContent[index - 1].parentTocId)
@@ -824,7 +852,7 @@ var docxExtactor = {
             var docMediaPath = path.resolve(dir + "/" + docPath);
             var imageFiles = fs.readdirSync(docMediaPath)
             imageFiles.forEach(function (imageFile) {
-                if (imageFile.indexOf(".png") < 0) {
+                if (imageFile.indexOf(".png") &lt; 0) {
                     try {
                         var imagePath = path.resolve(docMediaPath + "/" + imageFile)
                         fs.unlinkSync(imagePath)
@@ -900,3 +928,26 @@ if (false) {
     console.log(csv);
     // var tablesJson = extractTables(cleanXml)
 }
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="extractRunText.html">extractRunText</a></li></ul><h3>Global</h3><ul><li><a href="global.html#docxExtactor">docxExtactor</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Fri Nov 23 2018 15:57:09 GMT+0100 (Paris, Madrid)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

@@ -9741,9 +9741,9 @@
                 <w:pStyle w:val="RfrentielTexte2"/>
             </w:pPr>
             <w:r w:rsidRPr="00B07218">
-                <w:t>Valve closed position should be maintain till 2-3% in order to get a correct valve sealing in
+w:t>                <Valve closed position should be maintain till 2-3% in order to get a correct valve sealing in
                     operation
-                </w:t>
+                </w:t>                <
             </w:r>
         </w:p>
         <w:p w:rsidR="00224F29" w:rsidRPr="004649A2" w:rsidRDefault="00224F29" w:rsidP="00C8654A">
