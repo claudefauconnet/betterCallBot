@@ -4,6 +4,7 @@ var adaptativeCardRenderer = require("../bin/adaptativeCardRenderer..js")
 var docxBot = require("../bin/docxBot..js")
 var elasticQuery = require("../bin/nlp/elasticQuery..js")
 var corpusAnalyzer = require("../bin/nlp/corpusAnalyzer..js")
+var httpProxy = require("../bin/httpProxy..js")
 /* GET home page. */
 router.get('/', function (req, res, next) {
     res.render('index', {title: 'Express'});
@@ -52,6 +53,18 @@ router.post("/getCards", function (req, res, next) {
 
 
 })
+
+router.post( '/http', function (req, response) {
+    if (req.body && req.body.get)
+        httpProxy.get(req.body.get, function (error, result) {
+            processResponse(response, error, result)
+        });
+    if (req.body && req.body.post)
+        httpProxy.post(req.body.url,req.body.port,req.body.path,req.body.body, function (error, result) {
+            processResponse(response, error, result)
+        });
+});
+
 
 
 function processResponse(response, error, result) {

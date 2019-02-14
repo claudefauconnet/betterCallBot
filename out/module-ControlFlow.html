@@ -1,0 +1,7353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Module: ControlFlow</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Module: ControlFlow</h1>
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        
+            
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+            <div class="description">A collection of `async` functions for controlling the flow through a script.</div>
+        
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="async.js.html">async.js</a>, <a href="async.js.html#line5378">line 5378</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".applyEach"><span class="type-signature">(static) </span>applyEach<span class="signature">(fns, &hellip;args<span class="signature-attributes">opt</span>, callback<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {function}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Applies the provided arguments to each function in the array, calling
+`callback` after all functions have completed. If you only provide the first
+argument, `fns`, then it will return a function which lets you pass in the
+arguments as if it were a single function call. If more arguments are
+provided, `callback` is required while `args` is still optional.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>fns</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+|
+
+<span class="param-type">Iterable</span>
+|
+
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">A collection of <a href="global.html">AsyncFunction</a>s
+to all call with the same arguments</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>args</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                    &lt;repeatable><br>
+                
+                </td>
+            
+
+            
+
+            <td class="description last">any number of separate arguments to pass to the
+function.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">the final argument should be the callback,
+called when all functions have completed processing.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="async.js.html">async.js</a>, <a href="async.js.html#line1168">line 1168</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    - If only the first argument, `fns`, is provided, it will
+return a function which lets you pass in the arguments as if it were a single
+function call. The signature is `(..args, callback)`. If invoked with any
+arguments, `callback` is required.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">function</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>async.applyEach([enableSearch, updateSchema], 'bucket', callback);
+
+// partial application example:
+async.each(
+    buckets,
+    async.applyEach([enableSearch, updateSchema]),
+    callback
+);</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".applyEachSeries"><span class="type-signature">(static) </span>applyEachSeries<span class="signature">(fns, &hellip;args<span class="signature-attributes">opt</span>, callback<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {function}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    The same as <a href="module-ControlFlow.html#.applyEach">`applyEach`</a> but runs only a single async operation at a time.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>fns</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+|
+
+<span class="param-type">Iterable</span>
+|
+
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">A collection of <a href="global.html">AsyncFunction</a>s to all
+call with the same arguments</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>args</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                    &lt;repeatable><br>
+                
+                </td>
+            
+
+            
+
+            <td class="description last">any number of separate arguments to pass to the
+function.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">the final argument should be the callback,
+called when all functions have completed processing.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="async.js.html">async.js</a>, <a href="async.js.html#line1250">line 1250</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="module-ControlFlow.html#.applyEach">async.applyEach</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    - If only the first argument is provided, it will return
+a function which lets you pass in the arguments as if it were a single
+function call.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">function</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".auto"><span class="type-signature">(static) </span>auto<span class="signature">(tasks, concurrency<span class="signature-attributes">opt</span>, callback<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Determines the best order for running the <a href="global.html">AsyncFunction</a>s in `tasks`, based on
+their requirements. Each function can optionally depend on other functions
+being completed first, and each function is run as soon as its requirements
+are satisfied.
+
+If any of the <a href="global.html">AsyncFunction</a>s pass an error to their callback, the `auto` sequence
+will stop. Further tasks will not execute (so any other functions depending
+on it will not run), and the main `callback` is immediately called with the
+error.
+
+<a href="global.html">AsyncFunction</a>s also receive an object containing the results of functions which
+have completed so far as the first argument, if they have dependencies. If a
+task function has no dependencies, it will only be passed a callback.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>tasks</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last">An object. Each of its properties is either a
+function or an array of requirements, with the <a href="global.html">AsyncFunction</a> itself the last item
+in the array. The object's key of a property serves as the name of the task
+defined by that property, i.e. can be used when specifying requirements for
+other tasks. The function receives one or two arguments:
+* a `results` object, containing the results of the previously executed
+  functions, only passed if the task has any dependencies,
+* a `callback(err, result)` function, which must be called when finished,
+  passing an `error` (which can be `null`) and the result of the function's
+  execution.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>concurrency</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    Infinity
+                
+                </td>
+            
+
+            <td class="description last">An optional `integer` for
+determining the maximum number of tasks that can be run in parallel. By
+default, as many as possible.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last">An optional callback which is called when all
+the tasks have been completed. It receives the `err` argument if any `tasks`
+pass an error to their callback. Results are always returned; however, if an
+error occurs, no further `tasks` will be performed, and the results object
+will only contain partial results. Invoked with (err, results).</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="async.js.html">async.js</a>, <a href="async.js.html#line1412">line 1412</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    undefined
+</div>
+
+
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>async.auto({
+    // this function will just be passed a callback
+    readData: async.apply(fs.readFile, 'data.txt', 'utf-8'),
+    showData: ['readData', function(results, cb) {
+        // results.readData is the file's contents
+        // ...
+    }]
+}, callback);
+
+async.auto({
+    get_data: function(callback) {
+        console.log('in get_data');
+        // async code to get some data
+        callback(null, 'data', 'converted to array');
+    },
+    make_folder: function(callback) {
+        console.log('in make_folder');
+        // async code to create a directory to store a file in
+        // this is run at the same time as getting the data
+        callback(null, 'folder');
+    },
+    write_file: ['get_data', 'make_folder', function(results, callback) {
+        console.log('in write_file', JSON.stringify(results));
+        // once there is some data and the directory exists,
+        // write the data to a file in the directory
+        callback(null, 'filename');
+    }],
+    email_link: ['write_file', function(results, callback) {
+        console.log('in email_link', JSON.stringify(results));
+        // once the file is written let's email a link to it...
+        // results.write_file contains the filename returned by write_file.
+        callback(null, {'file':results.write_file, 'email':'user@example.com'});
+    }]
+}, function(err, results) {
+    console.log('err = ', err);
+    console.log('results = ', results);
+});</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".autoInject"><span class="type-signature">(static) </span>autoInject<span class="signature">(tasks, callback<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    A dependency-injected version of the <a href="module-ControlFlow.html#.auto">async.auto</a> function. Dependent
+tasks are specified as parameters to the function, after the usual callback
+parameter, with the parameter names matching the names of the tasks it
+depends on. This can provide even more readable task graphs which can be
+easier to maintain.
+
+If a final callback is specified, the task results are similarly injected,
+specified as named parameters after the initial error parameter.
+
+The autoInject function is purely syntactic sugar and its semantics are
+otherwise equivalent to <a href="module-ControlFlow.html#.auto">async.auto</a>.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>tasks</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">An object, each of whose properties is an <a href="global.html">AsyncFunction</a> of
+the form 'func([dependencies...], callback). The object's key of a property
+serves as the name of the task defined by that property, i.e. can be used
+when specifying requirements for other tasks.
+* The `callback` parameter is a `callback(err, result)` which must be called
+  when finished, passing an `error` (which can be `null`) and the result of
+  the function's execution. The remaining parameters name other tasks on
+  which the task is dependent, and the results from those tasks are the
+  arguments of those parameters.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">An optional callback which is called when all
+the tasks have been completed. It receives the `err` argument if any `tasks`
+pass an error to their callback, and a `results` object with any completed
+task results, similar to `auto`.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="async.js.html">async.js</a>, <a href="async.js.html#line1981">line 1981</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="module-ControlFlow.html#.auto">async.auto</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>//  The example from `auto` can be rewritten as follows:
+async.autoInject({
+    get_data: function(callback) {
+        // async code to get some data
+        callback(null, 'data', 'converted to array');
+    },
+    make_folder: function(callback) {
+        // async code to create a directory to store a file in
+        // this is run at the same time as getting the data
+        callback(null, 'folder');
+    },
+    write_file: function(get_data, make_folder, callback) {
+        // once there is some data and the directory exists,
+        // write the data to a file in the directory
+        callback(null, 'filename');
+    },
+    email_link: function(write_file, callback) {
+        // once the file is written let's email a link to it...
+        // write_file contains the filename returned by write_file.
+        callback(null, {'file':write_file, 'email':'user@example.com'});
+    }
+}, function(err, results) {
+    console.log('err = ', err);
+    console.log('email_link = ', results.email_link);
+});
+
+// If you are using a JS minifier that mangles parameter names, `autoInject`
+// will not work with plain functions, since the parameter names will be
+// collapsed to a single letter identifier.  To work around this, you can
+// explicitly specify the names of the parameters your task function needs
+// in an array, similar to Angular.js dependency injection.
+
+// This still has an advantage over plain `auto`, since the results a task
+// depends on are still spread into arguments.
+async.autoInject({
+    //...
+    write_file: ['get_data', 'make_folder', function(get_data, make_folder, callback) {
+        callback(null, 'filename');
+    }],
+    email_link: ['write_file', function(write_file, callback) {
+        callback(null, {'file':write_file, 'email':'user@example.com'});
+    }]
+    //...
+}, function(err, results) {
+    console.log('err = ', err);
+    console.log('email_link = ', results.email_link);
+});</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".cargo"><span class="type-signature">(static) </span>cargo<span class="signature">(worker, payload<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {<a href="module-ControlFlow.html#.CargoObject">module:ControlFlow.CargoObject</a>}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Creates a `cargo` object with the specified payload. Tasks added to the
+cargo will be processed altogether (up to the `payload` limit). If the
+`worker` is in progress, the task is queued until it becomes available. Once
+the `worker` has completed some tasks, each callback of those tasks is
+called. Check out [these](https://camo.githubusercontent.com/6bbd36f4cf5b35a0f11a96dcd2e97711ffc2fb37/68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f313637363837312f36383130382f62626330636662302d356632392d313165322d393734662d3333393763363464633835382e676966) [animations](https://camo.githubusercontent.com/f4810e00e1c5f5f8addbe3e9f49064fd5d102699/68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f313637363837312f36383130312f38346339323036362d356632392d313165322d383134662d3964336430323431336266642e676966)
+for how `cargo` and `queue` work.
+
+While <a href="module-ControlFlow.html#.queue">`queue`</a> passes only one task to one of a group of workers
+at a time, cargo passes an array of tasks to a single worker, repeating
+when the worker is finished.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>worker</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html">AsyncFunction</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last">An asynchronous function for processing an array
+of queued tasks. Invoked with `(tasks, callback)`.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>payload</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    Infinity
+                
+                </td>
+            
+
+            <td class="description last">An optional `integer` for determining
+how many tasks should be processed per round; if omitted, the default is
+unlimited.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="async.js.html">async.js</a>, <a href="async.js.html#line2388">line 2388</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="module-ControlFlow.html#.queue">async.queue</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    A cargo object to manage the tasks. Callbacks can
+attached as certain properties to listen for specific events during the
+lifecycle of the cargo and inner queue.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="module-ControlFlow.html#.CargoObject">module:ControlFlow.CargoObject</a></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>// create a cargo object with payload 2
+var cargo = async.cargo(function(tasks, callback) {
+    for (var i=0; i&lt;tasks.length; i++) {
+        console.log('hello ' + tasks[i].name);
+    }
+    callback();
+}, 2);
+
+// add some items
+cargo.push({name: 'foo'}, function(err) {
+    console.log('finished processing foo');
+});
+cargo.push({name: 'bar'}, function(err) {
+    console.log('finished processing bar');
+});
+cargo.push({name: 'baz'}, function(err) {
+    console.log('finished processing baz');
+});</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".compose"><span class="type-signature">(static) </span>compose<span class="signature">(&hellip;functions)</span><span class="type-signature"> &rarr; {function}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Creates a function which is a composition of the passed asynchronous
+functions. Each function consumes the return value of the function that
+follows. Composing functions `f()`, `g()`, and `h()` would produce the result
+of `f(g(h()))`, only this version uses callbacks to obtain the return values.
+
+Each function is executed with the `this` binding of the composed function.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>functions</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html">AsyncFunction</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                    &lt;repeatable><br>
+                
+                </td>
+            
+
+            
+
+            <td class="description last">the asynchronous functions to compose</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="async.js.html">async.js</a>, <a href="async.js.html#line2574">line 2574</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    an asynchronous function that is the composed
+asynchronous `functions`
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">function</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>function add1(n, callback) {
+    setTimeout(function () {
+        callback(null, n + 1);
+    }, 10);
+}
+
+function mul3(n, callback) {
+    setTimeout(function () {
+        callback(null, n * 3);
+    }, 10);
+}
+
+var add1mul3 = async.compose(mul3, add1);
+add1mul3(4, function (err, result) {
+    // result now equals 15
+});</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".doDuring"><span class="type-signature">(static) </span>doDuring<span class="signature">(fn, test, callback<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    The post-check version of <a href="module-ControlFlow.html#.during">`during`</a>. To reflect the difference in
+the order of operations, the arguments `test` and `fn` are switched.
+
+Also a version of <a href="module-ControlFlow.html#.doWhilst">`doWhilst`</a> with asynchronous `test` function.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>fn</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html">AsyncFunction</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">An async function which is called each time
+`test` passes. Invoked with (callback).</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>test</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html">AsyncFunction</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">asynchronous truth test to perform before each
+execution of `fn`. Invoked with (...args, callback), where `...args` are the
+non-error args from the previous callback of `fn`.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">A callback which is called after the test
+function has failed and repeated execution of `fn` has stopped. `callback`
+will be passed an error if one occurred, otherwise `null`.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="async.js.html">async.js</a>, <a href="async.js.html#line2937">line 2937</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="module-ControlFlow.html#.during">async.during</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".doUntil"><span class="type-signature">(static) </span>doUntil<span class="signature">(iteratee, test, callback<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Like <a href="module-ControlFlow.html#.doWhilst">'doWhilst'</a>, except the `test` is inverted. Note the
+argument ordering differs from `until`.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>iteratee</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html">AsyncFunction</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">An async function which is called each time
+`test` fails. Invoked with (callback).</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>test</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">synchronous truth test to perform after each
+execution of `iteratee`. Invoked with any non-error callback results of
+`iteratee`.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">A callback which is called after the test
+function has passed and repeated execution of `iteratee` has stopped. `callback`
+will be passed an error and any arguments passed to the final `iteratee`'s
+callback. Invoked with (err, [results]);</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="async.js.html">async.js</a>, <a href="async.js.html#line3013">line 3013</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="module-ControlFlow.html#.doWhilst">async.doWhilst</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".doWhilst"><span class="type-signature">(static) </span>doWhilst<span class="signature">(iteratee, test, callback<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    The post-check version of <a href="module-ControlFlow.html#.whilst">`whilst`</a>. To reflect the difference in
+the order of operations, the arguments `test` and `iteratee` are switched.
+
+`doWhilst` is to `whilst` as `do while` is to `while` in plain JavaScript.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>iteratee</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html">AsyncFunction</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">A function which is called each time `test`
+passes. Invoked with (callback).</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>test</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">synchronous truth test to perform after each
+execution of `iteratee`. Invoked with any non-error callback results of
+`iteratee`.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">A callback which is called after the test
+function has failed and repeated execution of `iteratee` has stopped.
+`callback` will be passed an error and any arguments passed to the final
+`iteratee`'s callback. Invoked with (err, [results]);</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="async.js.html">async.js</a>, <a href="async.js.html#line2979">line 2979</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="module-ControlFlow.html#.whilst">async.whilst</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".during"><span class="type-signature">(static) </span>during<span class="signature">(test, fn, callback<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Like <a href="module-ControlFlow.html#.whilst">`whilst`</a>, except the `test` is an asynchronous function that
+is passed a callback in the form of `function (err, truth)`. If error is
+passed to `test` or `fn`, the main callback is immediately called with the
+value of the error.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>test</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html">AsyncFunction</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">asynchronous truth test to perform before each
+execution of `fn`. Invoked with (callback).</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>fn</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html">AsyncFunction</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">An async function which is called each time
+`test` passes. Invoked with (callback).</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">A callback which is called after the test
+function has failed and repeated execution of `fn` has stopped. `callback`
+will be passed an error, if one occurred, otherwise `null`.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="async.js.html">async.js</a>, <a href="async.js.html#line3039">line 3039</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="module-ControlFlow.html#.whilst">async.whilst</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>var count = 0;
+
+async.during(
+    function (callback) {
+        return callback(null, count &lt; 5);
+    },
+    function (callback) {
+        count++;
+        setTimeout(callback, 1000);
+    },
+    function (err) {
+        // 5 seconds have passed
+    }
+);</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".forever"><span class="type-signature">(static) </span>forever<span class="signature">(fn, errback<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Calls the asynchronous function `fn` with a callback parameter that allows it
+to call itself again, in series, indefinitely.
+If an error is passed to the callback then `errback` is called with the
+error, and execution stops, otherwise it will never be called.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>fn</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html">AsyncFunction</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">an async function to call repeatedly.
+Invoked with (next).</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>errback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">when `fn` passes an error to it's callback,
+this function will be called, and execution stops. Invoked with (err).</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="async.js.html">async.js</a>, <a href="async.js.html#line3465">line 3465</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>async.forever(
+    function(next) {
+        // next is suitable for passing to things that need a callback(err [, whatever]);
+        // it will result in this function being called again.
+    },
+    function(err) {
+        // if next is called with a value in its first parameter, it will appear
+        // in here as 'err', and execution will stop.
+    }
+);</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".parallel"><span class="type-signature">(static) </span>parallel<span class="signature">(tasks, callback<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Run the `tasks` collection of functions in parallel, without waiting until
+the previous function has completed. If any of the functions pass an error to
+its callback, the main `callback` is immediately called with the value of the
+error. Once the `tasks` have completed, the results are passed to the final
+`callback` as an array.
+
+**Note:** `parallel` is about kicking-off I/O tasks in parallel, not about
+parallel execution of code.  If your tasks do not use any timers or perform
+any I/O, they will actually be executed in series.  Any synchronous setup
+sections for each task will happen one after the other.  JavaScript remains
+single-threaded.
+
+**Hint:** Use <a href="module-Utils.html#.reflect">`reflect`</a> to continue the
+execution of other tasks when a task fails.
+
+It is also possible to use an object instead of an array. Each property will
+be run as a function and the results will be passed to the final `callback`
+as an object instead of an array. This can be a more readable way of handling
+results from async.parallel.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>tasks</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+|
+
+<span class="param-type">Iterable</span>
+|
+
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">A collection of
+<a href="global.html">async functions</a> to run.
+Each async function can complete with any number of optional `result` values.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">An optional callback to run once all the
+functions have completed successfully. This function gets a results array
+(or object) containing all the result arguments passed to the task callbacks.
+Invoked with (err, results).</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="async.js.html">async.js</a>, <a href="async.js.html#line3878">line 3878</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>async.parallel([
+    function(callback) {
+        setTimeout(function() {
+            callback(null, 'one');
+        }, 200);
+    },
+    function(callback) {
+        setTimeout(function() {
+            callback(null, 'two');
+        }, 100);
+    }
+],
+// optional callback
+function(err, results) {
+    // the results array will equal ['one','two'] even though
+    // the second function had a shorter timeout.
+});
+
+// an example using an object instead of an array
+async.parallel({
+    one: function(callback) {
+        setTimeout(function() {
+            callback(null, 1);
+        }, 200);
+    },
+    two: function(callback) {
+        setTimeout(function() {
+            callback(null, 2);
+        }, 100);
+    }
+}, function(err, results) {
+    // results is now equals to: {one: 1, two: 2}
+});</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".parallelLimit"><span class="type-signature">(static) </span>parallelLimit<span class="signature">(tasks, limit, callback<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    The same as <a href="module-ControlFlow.html#.parallel">`parallel`</a> but runs a maximum of `limit` async operations at a
+time.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>tasks</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+|
+
+<span class="param-type">Iterable</span>
+|
+
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">A collection of
+<a href="global.html">async functions</a> to run.
+Each async function can complete with any number of optional `result` values.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>limit</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The maximum number of async operations at a time.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">An optional callback to run once all the
+functions have completed successfully. This function gets a results array
+(or object) containing all the result arguments passed to the task callbacks.
+Invoked with (err, results).</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="async.js.html">async.js</a>, <a href="async.js.html#line3951">line 3951</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="module-ControlFlow.html#.parallel">async.parallel</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".priorityQueue"><span class="type-signature">(static) </span>priorityQueue<span class="signature">(worker, concurrency)</span><span class="type-signature"> &rarr; {<a href="module-ControlFlow.html#.QueueObject">module:ControlFlow.QueueObject</a>}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    The same as <a href="module-ControlFlow.html#.queue">async.queue</a> only tasks are assigned a priority and
+completed in ascending priority order.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>worker</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html">AsyncFunction</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">An async function for processing a queued task.
+If you want to handle errors from an individual task, pass a callback to
+`q.push()`.
+Invoked with (task, callback).</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>concurrency</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">An `integer` for determining how many `worker`
+functions should be run in parallel.  If omitted, the concurrency defaults to
+`1`.  If the concurrency is `0`, an error is thrown.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="async.js.html">async.js</a>, <a href="async.js.html#line4086">line 4086</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="module-ControlFlow.html#.queue">async.queue</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    A priorityQueue object to manage the tasks. There are two
+differences between `queue` and `priorityQueue` objects:
+* `push(task, priority, [callback])` - `priority` should be a number. If an
+  array of `tasks` is given, all tasks will be assigned the same priority.
+* The `unshift` method was removed.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="module-ControlFlow.html#.QueueObject">module:ControlFlow.QueueObject</a></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".queue"><span class="type-signature">(static) </span>queue<span class="signature">(worker, concurrency<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {<a href="module-ControlFlow.html#.QueueObject">module:ControlFlow.QueueObject</a>}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Creates a `queue` object with the specified `concurrency`. Tasks added to the
+`queue` are processed in parallel (up to the `concurrency` limit). If all
+`worker`s are in progress, the task is queued until one becomes available.
+Once a `worker` completes a `task`, that `task`'s callback is called.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>worker</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html">AsyncFunction</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last">An async function for processing a queued task.
+If you want to handle errors from an individual task, pass a callback to
+`q.push()`. Invoked with (task, callback).</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>concurrency</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    1
+                
+                </td>
+            
+
+            <td class="description last">An `integer` for determining how many
+`worker` functions should be run in parallel.  If omitted, the concurrency
+defaults to `1`.  If the concurrency is `0`, an error is thrown.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="async.js.html">async.js</a>, <a href="async.js.html#line4028">line 4028</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    A queue object to manage the tasks. Callbacks can
+attached as certain properties to listen for specific events during the
+lifecycle of the queue.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="module-ControlFlow.html#.QueueObject">module:ControlFlow.QueueObject</a></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>// create a queue object with concurrency 2
+var q = async.queue(function(task, callback) {
+    console.log('hello ' + task.name);
+    callback();
+}, 2);
+
+// assign a callback
+q.drain = function() {
+    console.log('all items have been processed');
+};
+
+// add some items to the queue
+q.push({name: 'foo'}, function(err) {
+    console.log('finished processing foo');
+});
+q.push({name: 'bar'}, function (err) {
+    console.log('finished processing bar');
+});
+
+// add some items to the queue (batch-wise)
+q.push([{name: 'baz'},{name: 'bay'},{name: 'bax'}], function(err) {
+    console.log('finished processing item');
+});
+
+// add some items to the front of the queue
+q.unshift({name: 'bar'}, function (err) {
+    console.log('finished processing bar');
+});</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".race"><span class="type-signature">(static) </span>race<span class="signature">(tasks, callback)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Runs the `tasks` array of functions in parallel, without waiting until the
+previous function has completed. Once any of the `tasks` complete or pass an
+error to its callback, the main `callback` is immediately called. It's
+equivalent to `Promise.race()`.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>tasks</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">An array containing <a href="global.html">async functions</a>
+to run. Each function can complete with an optional `result` value.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">A callback to run once any of the functions have
+completed. This function gets an error or result from the first function that
+completed. Invoked with (err, result).</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="async.js.html">async.js</a>, <a href="async.js.html#line4158">line 4158</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    undefined
+</div>
+
+
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>async.race([
+    function(callback) {
+        setTimeout(function() {
+            callback(null, 'one');
+        }, 200);
+    },
+    function(callback) {
+        setTimeout(function() {
+            callback(null, 'two');
+        }, 100);
+    }
+],
+// main callback
+function(err, result) {
+    // the result will be equal to 'two' as it finishes earlier
+});</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".retry"><span class="type-signature">(static) </span>retry<span class="signature">(opts<span class="signature-attributes">opt</span>, task, callback<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Attempts to get a successful response from `task` no more than `times` times
+before returning an error. If the task is successful, the `callback` will be
+passed the result of the successful task. If all attempts fail, the callback
+will be passed the error and result (if any) of the final attempt.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>opts</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+|
+
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    {times: 5, interval: 0}| 5
+                
+                </td>
+            
+
+            <td class="description last">Can be either an
+object with `times` and `interval` or a number.
+* `times` - The number of attempts to make before giving up.  The default
+  is `5`.
+* `interval` - The time to wait between retries, in milliseconds.  The
+  default is `0`. The interval may also be specified as a function of the
+  retry count (see example).
+* `errorFilter` - An optional synchronous function that is invoked on
+  erroneous result. If it returns `true` the retry attempts will continue;
+  if the function returns `false` the retry flow is aborted with the current
+  attempt's error and result being returned to the final callback.
+  Invoked with (err).
+* If `opts` is a number, the number specifies the number of times to retry,
+  with the default interval of `0`.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>task</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html">AsyncFunction</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last">An async function to retry.
+Invoked with (callback).</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last">An optional callback which is called when the
+task has succeeded, or after the final failed attempt. It receives the `err`
+and `result` arguments of the last attempt at completing the `task`. Invoked
+with (err, results).</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="async.js.html">async.js</a>, <a href="async.js.html#line4472">line 4472</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="module-ControlFlow.html#.retryable">async.retryable</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>// The `retry` function can be used as a stand-alone control flow by passing
+// a callback, as shown below:
+
+// try calling apiMethod 3 times
+async.retry(3, apiMethod, function(err, result) {
+    // do something with the result
+});
+
+// try calling apiMethod 3 times, waiting 200 ms between each retry
+async.retry({times: 3, interval: 200}, apiMethod, function(err, result) {
+    // do something with the result
+});
+
+// try calling apiMethod 10 times with exponential backoff
+// (i.e. intervals of 100, 200, 400, 800, 1600, ... milliseconds)
+async.retry({
+  times: 10,
+  interval: function(retryCount) {
+    return 50 * Math.pow(2, retryCount);
+  }
+}, apiMethod, function(err, result) {
+    // do something with the result
+});
+
+// try calling apiMethod the default 5 times no delay between each retry
+async.retry(apiMethod, function(err, result) {
+    // do something with the result
+});
+
+// try calling apiMethod only when error condition satisfies, all other
+// errors will abort the retry control flow and return to final callback
+async.retry({
+  errorFilter: function(err) {
+    return err.message === 'Temporary error'; // only retry on a specific error
+  }
+}, apiMethod, function(err, result) {
+    // do something with the result
+});
+
+// to retry individual methods that are not as reliable within other
+// control flow functions, use the `retryable` wrapper:
+async.auto({
+    users: api.getUsers.bind(api),
+    payments: async.retryable(3, api.getPayments.bind(api))
+}, function(err, results) {
+    // do something with the results
+});</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".retryable"><span class="type-signature">(static) </span>retryable<span class="signature">(opts<span class="signature-attributes">opt</span>, task)</span><span class="type-signature"> &rarr; {<a href="global.html">AsyncFunction</a>}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    A close relative of <a href="module-ControlFlow.html#.retry">`retry`</a>.  This method
+wraps a task and makes it retryable, rather than immediately calling it
+with retries.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>opts</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+|
+
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    {times: 5, interval: 0}| 5
+                
+                </td>
+            
+
+            <td class="description last">optional
+options, exactly the same as from `retry`</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>task</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html">AsyncFunction</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last">the asynchronous function to wrap.
+This function will be passed any arguments passed to the returned wrapper.
+Invoked with (...args, callback).</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="async.js.html">async.js</a>, <a href="async.js.html#line4611">line 4611</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="module-ControlFlow.html#.retry">async.retry</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    The wrapped function, which when invoked, will
+retry on an error, based on the parameters specified in `opts`.
+This function will accept the same parameters as `task`.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="global.html">AsyncFunction</a></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>async.auto({
+    dep1: async.retryable(3, getFromFlakyService),
+    process: ["dep1", async.retryable(3, function (results, cb) {
+        maybeProcessData(results.dep1, cb);
+    })]
+}, callback);</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".seq"><span class="type-signature">(static) </span>seq<span class="signature">(&hellip;functions)</span><span class="type-signature"> &rarr; {function}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Version of the compose function that is more natural to read. Each function
+consumes the return value of the previous function. It is the equivalent of
+<a href="module-ControlFlow.html#.compose">compose</a> with the arguments reversed.
+
+Each function is executed with the `this` binding of the composed function.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>functions</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html">AsyncFunction</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                    &lt;repeatable><br>
+                
+                </td>
+            
+
+            
+
+            <td class="description last">the asynchronous functions to compose</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="async.js.html">async.js</a>, <a href="async.js.html#line2511">line 2511</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="module-ControlFlow.html#.compose">async.compose</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    a function that composes the `functions` in order
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">function</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>// Requires lodash (or underscore), express3 and dresende's orm2.
+// Part of an app, that fetches cats of the logged user.
+// This example uses `seq` function to avoid overnesting and error
+// handling clutter.
+app.get('/cats', function(request, response) {
+    var User = request.models.User;
+    async.seq(
+        _.bind(User.get, User),  // 'User.get' has signature (id, callback(err, data))
+        function(user, fn) {
+            user.getCats(fn);      // 'getCats' has signature (callback(err, data))
+        }
+    )(req.session.user_id, function (err, cats) {
+        if (err) {
+            console.error(err);
+            response.json({ status: 'error', message: err.message });
+        } else {
+            response.json({ status: 'ok', message: 'Cats found', data: cats });
+        }
+    });
+});</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".series"><span class="type-signature">(static) </span>series<span class="signature">(tasks, callback<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Run the functions in the `tasks` collection in series, each one running once
+the previous function has completed. If any functions in the series pass an
+error to its callback, no more functions are run, and `callback` is
+immediately called with the value of the error. Otherwise, `callback`
+receives an array of results when `tasks` have completed.
+
+It is also possible to use an object instead of an array. Each property will
+be run as a function, and the results will be passed to the final `callback`
+as an object instead of an array. This can be a more readable way of handling
+ results from async.series.
+
+**Note** that while many implementations preserve the order of object
+properties, the [ECMAScript Language Specification](http://www.ecma-international.org/ecma-262/5.1/#sec-8.6)
+explicitly states that
+
+> The mechanics and order of enumerating the properties is not specified.
+
+So if you rely on the order in which your series of functions are executed,
+and want this to work on all platforms, consider using an array.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>tasks</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+|
+
+<span class="param-type">Iterable</span>
+|
+
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">A collection containing
+<a href="global.html">async functions</a> to run in series.
+Each function can complete with any number of optional `result` values.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">An optional callback to run once all the
+functions have completed. This function gets a results array (or object)
+containing all the result arguments passed to the `task` callbacks. Invoked
+with (err, result).</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="async.js.html">async.js</a>, <a href="async.js.html#line4656">line 4656</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>async.series([
+    function(callback) {
+        // do some stuff ...
+        callback(null, 'one');
+    },
+    function(callback) {
+        // do some more stuff ...
+        callback(null, 'two');
+    }
+],
+// optional callback
+function(err, results) {
+    // results is now equal to ['one', 'two']
+});
+
+async.series({
+    one: function(callback) {
+        setTimeout(function() {
+            callback(null, 1);
+        }, 200);
+    },
+    two: function(callback){
+        setTimeout(function() {
+            callback(null, 2);
+        }, 100);
+    }
+}, function(err, results) {
+    // results is now equal to: {one: 1, two: 2}
+});</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".times"><span class="type-signature">(static) </span>times<span class="signature">(n, iteratee, callback)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Calls the `iteratee` function `n` times, and accumulates results in the same
+manner you would use with <a href="module-Collections.html#.map">map</a>.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>n</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The number of times to run the function.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>iteratee</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html">AsyncFunction</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The async function to call `n` times.
+Invoked with the iteration index and a callback: (n, next).</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">see <a href="module-Collections.html#.map">module:Collections.map</a>.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="async.js.html">async.js</a>, <a href="async.js.html#line4986">line 4986</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="module-Collections.html#.map">async.map</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>// Pretend this is some complicated async factory
+var createUser = function(id, callback) {
+    callback(null, {
+        id: 'user' + id
+    });
+};
+
+// generate 5 users
+async.times(5, function(n, next) {
+    createUser(n, function(err, user) {
+        next(err, user);
+    });
+}, function(err, users) {
+    // we should now have 5 users
+});</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".timesLimit"><span class="type-signature">(static) </span>timesLimit<span class="signature">(count, limit, iteratee, callback)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    The same as <a href="module-ControlFlow.html#.times">times</a> but runs a maximum of `limit` async operations at a
+time.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>count</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The number of times to run the function.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>limit</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The maximum number of async operations at a time.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>iteratee</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html">AsyncFunction</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The async function to call `n` times.
+Invoked with the iteration index and a callback: (n, next).</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">see <a href="module-Collections.html#.map">async.map</a>.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="async.js.html">async.js</a>, <a href="async.js.html#line4965">line 4965</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="module-ControlFlow.html#.times">async.times</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".timesSeries"><span class="type-signature">(static) </span>timesSeries<span class="signature">(n, iteratee, callback)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    The same as <a href="module-ControlFlow.html#.times">times</a> but runs only a single async operation at a time.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>n</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The number of times to run the function.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>iteratee</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html">AsyncFunction</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The async function to call `n` times.
+Invoked with the iteration index and a callback: (n, next).</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">see <a href="module-Collections.html#.map">module:Collections.map</a>.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="async.js.html">async.js</a>, <a href="async.js.html#line5020">line 5020</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="module-ControlFlow.html#.times">async.times</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".tryEach"><span class="type-signature">(static) </span>tryEach<span class="signature">(tasks, callback<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    It runs each task in series but stops whenever any of the functions were
+successful. If one of the tasks were successful, the `callback` will be
+passed the result of the successful task. If all tasks fail, the callback
+will be passed the error and result (if any) of the final attempt.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>tasks</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+|
+
+<span class="param-type">Iterable</span>
+|
+
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">A collection containing functions to
+run, each function is passed a `callback(err, result)` it must call on
+completion with an error `err` (which can be `null`) and an optional `result`
+value.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">An optional callback which is called when one
+of the tasks has succeeded, or all have failed. It receives the `err` and
+`result` arguments of the last attempt at completing the `task`. Invoked with
+(err, results).</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="async.js.html">async.js</a>, <a href="async.js.html#line5094">line 5094</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>async.tryEach([
+    function getDataFromFirstWebsite(callback) {
+        // Try getting the data from the first website
+        callback(err, data);
+    },
+    function getDataFromSecondWebsite(callback) {
+        // First website failed,
+        // Try getting the data from the backup website
+        callback(err, data);
+    }
+],
+// optional callback
+function(err, results) {
+    Now do something with the data.
+});</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".until"><span class="type-signature">(static) </span>until<span class="signature">(test, iteratee, callback<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Repeatedly call `iteratee` until `test` returns `true`. Calls `callback` when
+stopped, or an error occurs. `callback` will be passed an error and any
+arguments passed to the final `iteratee`'s callback.
+
+The inverse of <a href="module-ControlFlow.html#.whilst">whilst</a>.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>test</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">synchronous truth test to perform before each
+execution of `iteratee`. Invoked with ().</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>iteratee</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html">AsyncFunction</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">An async function which is called each time
+`test` fails. Invoked with (callback).</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">A callback which is called after the test
+function has passed and repeated execution of `iteratee` has stopped. `callback`
+will be passed an error and any arguments passed to the final `iteratee`'s
+callback. Invoked with (err, [results]);</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="async.js.html">async.js</a>, <a href="async.js.html#line5216">line 5216</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="module-ControlFlow.html#.whilst">async.whilst</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".waterfall"><span class="type-signature">(static) </span>waterfall<span class="signature">(tasks, callback<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Runs the `tasks` array of functions in series, each passing their results to
+the next in the array. However, if any of the `tasks` pass an error to their
+own callback, the next function is not executed, and the main `callback` is
+immediately called with the error.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>tasks</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">An array of <a href="global.html">async functions</a>
+to run.
+Each function should complete with any number of `result` values.
+The `result` values will be passed as arguments, in order, to the next task.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">An optional callback to run once all the
+functions have completed. This will be passed the results of the last task's
+callback. Invoked with (err, [results]).</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="async.js.html">async.js</a>, <a href="async.js.html#line5244">line 5244</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    undefined
+</div>
+
+
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>async.waterfall([
+    function(callback) {
+        callback(null, 'one', 'two');
+    },
+    function(arg1, arg2, callback) {
+        // arg1 now equals 'one' and arg2 now equals 'two'
+        callback(null, 'three');
+    },
+    function(arg1, callback) {
+        // arg1 now equals 'three'
+        callback(null, 'done');
+    }
+], function (err, result) {
+    // result now equals 'done'
+});
+
+// Or, with named functions:
+async.waterfall([
+    myFirstFunction,
+    mySecondFunction,
+    myLastFunction,
+], function (err, result) {
+    // result now equals 'done'
+});
+function myFirstFunction(callback) {
+    callback(null, 'one', 'two');
+}
+function mySecondFunction(arg1, arg2, callback) {
+    // arg1 now equals 'one' and arg2 now equals 'two'
+    callback(null, 'three');
+}
+function myLastFunction(arg1, callback) {
+    // arg1 now equals 'three'
+    callback(null, 'done');
+}</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".whilst"><span class="type-signature">(static) </span>whilst<span class="signature">(test, iteratee, callback<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Repeatedly call `iteratee`, while `test` returns `true`. Calls `callback` when
+stopped, or an error occurs.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>test</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">synchronous truth test to perform before each
+execution of `iteratee`. Invoked with ().</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>iteratee</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html">AsyncFunction</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">An async function which is called each time
+`test` passes. Invoked with (callback).</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">A callback which is called after the test
+function has failed and repeated execution of `iteratee` has stopped. `callback`
+will be passed an error and any arguments passed to the final `iteratee`'s
+callback. Invoked with (err, [results]);</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="async.js.html">async.js</a>, <a href="async.js.html#line5169">line 5169</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    undefined
+</div>
+
+
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>var count = 0;
+async.whilst(
+    function() { return count &lt; 5; },
+    function(callback) {
+        count++;
+        setTimeout(function() {
+            callback(null, count);
+        }, 1000);
+    },
+    function (err, n) {
+        // 5 seconds have passed, n = 5
+    }
+);</code></pre>
+
+
+
+        
+    
+
+    
+        <h3 class="subsection-title">Type Definitions</h3>
+
+        
+                
+<h4 class="name" id=".CargoObject">CargoObject</h4>
+
+
+
+
+<div class="description">
+    A cargo of tasks for the worker function to complete. Cargo inherits all of
+the same methods and event callbacks as <a href="module-ControlFlow.html#.queue">`queue`</a>.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>length</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">A function returning the number of items
+waiting to be processed. Invoke like `cargo.length()`.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>payload</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">An `integer` for determining how many tasks
+should be process per round. This property can be changed after a `cargo` is
+created to alter the payload on-the-fly.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>push</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Adds `task` to the `queue`. The callback is
+called once the `worker` has finished processing the task. Instead of a
+single task, an array of `tasks` can be submitted. The respective callback is
+used for every task in the list. Invoke like `cargo.push(task, [callback])`.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>saturated</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">A callback that is called when the
+`queue.length()` hits the concurrency and further tasks will be queued.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>empty</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">A callback that is called when the last item
+from the `queue` is given to a `worker`.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>drain</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">A callback that is called when the last item
+from the `queue` has returned from the `worker`.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>idle</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">a function returning false if there are items
+waiting or being processed, or true if not. Invoke like `cargo.idle()`.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>pause</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">a function that pauses the processing of tasks
+until `resume()` is called. Invoke like `cargo.pause()`.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>resume</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">a function that resumes the processing of
+queued tasks when the queue is paused. Invoke like `cargo.resume()`.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>kill</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">a function that removes the `drain` callback and
+empties remaining tasks from the queue forcing it to go idle. Invoke like `cargo.kill()`.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="async.js.html">async.js</a>, <a href="async.js.html#line2358">line 2358</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id=".QueueObject">QueueObject</h4>
+
+
+
+
+<div class="description">
+    A queue of tasks for the worker function to complete.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>length</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">a function returning the number of items
+waiting to be processed. Invoke with `queue.length()`.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>started</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">a boolean indicating whether or not any
+items have been pushed and processed by the queue.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>running</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">a function returning the number of items
+currently being processed. Invoke with `queue.running()`.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>workersList</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">a function returning the array of items
+currently being processed. Invoke with `queue.workersList()`.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>idle</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">a function returning false if there are items
+waiting or being processed, or true if not. Invoke with `queue.idle()`.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>concurrency</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">an integer for determining how many `worker`
+functions should be run in parallel. This property can be changed after a
+`queue` is created to alter the concurrency on-the-fly.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>push</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">add a new task to the `queue`. Calls `callback`
+once the `worker` has finished processing the task. Instead of a single task,
+a `tasks` array can be submitted. The respective callback is used for every
+task in the list. Invoke with `queue.push(task, [callback])`,</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>unshift</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">add a new task to the front of the `queue`.
+Invoke with `queue.unshift(task, [callback])`.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>remove</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">remove items from the queue that match a test
+function.  The test function will be passed an object with a `data` property,
+and a `priority` property, if this is a
+<a href="module-ControlFlow.html#.priorityQueue">priorityQueue</a> object.
+Invoked with `queue.remove(testFn)`, where `testFn` is of the form
+`function ({data, priority}) {}` and returns a Boolean.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>saturated</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">a callback that is called when the number of
+running workers hits the `concurrency` limit, and further tasks will be
+queued.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>unsaturated</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">a callback that is called when the number
+of running workers is less than the `concurrency` & `buffer` limits, and
+further tasks will not be queued.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>buffer</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">A minimum threshold buffer in order to say that
+the `queue` is `unsaturated`.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>empty</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">a callback that is called when the last item
+from the `queue` is given to a `worker`.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>drain</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">a callback that is called when the last item
+from the `queue` has returned from the `worker`.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>error</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">a callback that is called when a task errors.
+Has the signature `function(error, task)`.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>paused</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">a boolean for determining whether the queue is
+in a paused state.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>pause</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">a function that pauses the processing of tasks
+until `resume()` is called. Invoke with `queue.pause()`.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>resume</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">a function that resumes the processing of
+queued tasks when the queue is paused. Invoke with `queue.resume()`.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>kill</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">a function that removes the `drain` callback and
+empties remaining tasks from the queue forcing it to go idle. No more tasks
+should be pushed to the queue after calling this function. Invoke with `queue.kill()`.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="async.js.html">async.js</a>, <a href="async.js.html#line3974">line 3974</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-async.html">async</a></li><li><a href="module-Collections.html">Collections</a></li><li><a href="module-ControlFlow.html">ControlFlow</a></li><li><a href="module-Utils.html">Utils</a></li></ul><h3>Classes</h3><ul><li><a href="-_anonymous_-self.extractAllTokens.html">extractAllTokens</a></li><li><a href="graphBuilder.html">graphBuilder</a></li></ul><h3>Events</h3><ul><li><a href="activate_node.html#.event:jstree">jstree</a></li><li><a href="after_close.html#.event:jstree">jstree</a></li><li><a href="after_open.html#.event:jstree">jstree</a></li><li><a href="before_open.html#.event:jstree">jstree</a></li><li><a href="changed.html#.event:jstree">jstree</a></li><li><a href="check_all.html#.event:jstree">jstree</a></li><li><a href="check_node.html#.event:jstree">jstree</a></li><li><a href="clear_buffer.html#.event:jstree">jstree</a></li><li><a href="clear_search.html#.event:jstree">jstree</a></li><li><a href="close_all.html#.event:jstree">jstree</a></li><li><a href="close_node.html#.event:jstree">jstree</a></li><li><a href="context_hide.html#.event:vakata">vakata</a></li><li><a href="context_parse.html#.event:vakata">vakata</a></li><li><a href="context_show.html#.event:vakata">vakata</a></li><li><a href="copy.html#.event:jstree">jstree</a></li><li><a href="copy_node.html#.event:jstree">jstree</a></li><li><a href="create_node.html#.event:jstree">jstree</a></li><li><a href="cut.html#.event:jstree">jstree</a></li><li><a href="dehover_node.html#.event:jstree">jstree</a></li><li><a href="delete_node.html#.event:jstree">jstree</a></li><li><a href="deselect_all.html#.event:jstree">jstree</a></li><li><a href="deselect_node.html#.event:jstree">jstree</a></li><li><a href="destroy.html#.event:jstree">jstree</a></li><li><a href="disable_checkbox.html#.event:jstree">jstree</a></li><li><a href="disable_node.html#.event:jstree">jstree</a></li><li><a href="dnd_move.html#.event:vakata">vakata</a></li><li><a href="dnd_scroll.html#.event:vakata">vakata</a></li><li><a href="dnd_start.html#.event:vakata">vakata</a></li><li><a href="dnd_stop.html#.event:vakata">vakata</a></li><li><a href="enable_checkbox.html#.event:jstree">jstree</a></li><li><a href="enable_node.html#.event:jstree">jstree</a></li><li><a href="hide_all.html#.event:jstree">jstree</a></li><li><a href="hide_dots.html#.event:jstree">jstree</a></li><li><a href="hide_ellipsis.html#.event:jstree">jstree</a></li><li><a href="hide_icons.html#.event:jstree">jstree</a></li><li><a href="hide_node.html#.event:jstree">jstree</a></li><li><a href="hide_stripes.html#.event:jstree">jstree</a></li><li><a href="hover_node.html#.event:jstree">jstree</a></li><li><a href="init.html#.event:jstree">jstree</a></li><li><a href="load_all.html#.event:jstree">jstree</a></li><li><a href="load_node.html#.event:jstree">jstree</a></li><li><a href="loaded.html#.event:jstree">jstree</a></li><li><a href="loading.html#.event:jstree">jstree</a></li><li><a href="model.html#.event:jstree">jstree</a></li><li><a href="move_node.html#.event:jstree">jstree</a></li><li><a href="open_all.html#.event:jstree">jstree</a></li><li><a href="open_node.html#.event:jstree">jstree</a></li><li><a href="paste.html#.event:jstree">jstree</a></li><li><a href="ready.html#.event:jstree">jstree</a></li><li><a href="redraw.html#.event:jstree">jstree</a></li><li><a href="refresh.html#.event:jstree">jstree</a></li><li><a href="refresh_node.html#.event:jstree">jstree</a></li><li><a href="rename_node.html#.event:jstree">jstree</a></li><li><a href="search.html#.event:jstree">jstree</a></li><li><a href="select_all.html#.event:jstree">jstree</a></li><li><a href="select_node.html#.event:jstree">jstree</a></li><li><a href="set_id.html#.event:jstree">jstree</a></li><li><a href="set_state.html#.event:jstree">jstree</a></li><li><a href="set_text.html#.event:jstree">jstree</a></li><li><a href="set_theme.html#.event:jstree">jstree</a></li><li><a href="show_all.html#.event:jstree">jstree</a></li><li><a href="show_contextmenu.html#.event:jstree">jstree</a></li><li><a href="show_dots.html#.event:jstree">jstree</a></li><li><a href="show_ellipsis.html#.event:jstree">jstree</a></li><li><a href="show_icons.html#.event:jstree">jstree</a></li><li><a href="show_node.html#.event:jstree">jstree</a></li><li><a href="show_stripes.html#.event:jstree">jstree</a></li><li><a href="state_ready.html#.event:jstree">jstree</a></li><li><a href="uncheck_all.html#.event:jstree">jstree</a></li><li><a href="uncheck_node.html#.event:jstree">jstree</a></li></ul><h3>Global</h3><ul><li><a href="global.html#$@%257B0%257D@">$</a></li><li><a href="global.html#_create_prototype_node()">_create_prototype_node()</a></li><li><a href="global.html#can_paste()">can_paste()</a></li><li><a href="global.html#check_all()">check_all()</a></li><li><a href="global.html#check_nodeobj">check_node</a></li><li><a href="global.html#clear_buffer()">clear_buffer()</a></li><li><a href="global.html#clear_search()">clear_search()</a></li><li><a href="global.html#clear_state()">clear_state()</a></li><li><a href="global.html#copyobj">copy</a></li><li><a href="global.html#cutobj">cut</a></li><li><a href="global.html#delete_nodeobj">delete_node</a></li><li><a href="global.html#deselect_all%255Bsupress_event%255D">deselect_all</a></li><li><a href="global.html#destroy()">destroy()</a></li><li><a href="global.html#disable_checkboxobj">disable_checkbox</a></li><li><a href="global.html#disable_nodeobj">disable_node</a></li><li><a href="global.html#enable_nodeobj">enable_node</a></li><li><a href="global.html#get_bottom_checked%255Bfull%255D">get_bottom_checked</a></li><li><a href="global.html#get_bottom_selected%255Bfull%255D">get_bottom_selected</a></li><li><a href="global.html#get_buffer()">get_buffer()</a></li><li><a href="global.html#get_checked%255Bfull%255D">get_checked</a></li><li><a href="global.html#get_checked_descendantsobj">get_checked_descendants</a></li><li><a href="global.html#get_children_domobj">get_children_dom</a></li><li><a href="global.html#get_container()">get_container()</a></li><li><a href="global.html#get_iconobj">get_icon</a></li><li><a href="global.html#get_parentobj">get_parent</a></li><li><a href="global.html#get_rulesobj">get_rules</a></li><li><a href="global.html#get_selected%255Bfull%255D">get_selected</a></li><li><a href="global.html#get_textobj">get_text</a></li><li><a href="global.html#get_theme()">get_theme()</a></li><li><a href="global.html#get_top_checked%255Bfull%255D">get_top_checked</a></li><li><a href="global.html#get_top_selected%255Bfull%255D">get_top_selected</a></li><li><a href="global.html#get_undetermined%255Bfull%255D">get_undetermined</a></li><li><a href="global.html#hide_all()">hide_all()</a></li><li><a href="global.html#hide_checkboxes()">hide_checkboxes()</a></li><li><a href="global.html#hide_dots()">hide_dots()</a></li><li><a href="global.html#hide_ellipsis()">hide_ellipsis()</a></li><li><a href="global.html#hide_iconobj">hide_icon</a></li><li><a href="global.html#hide_icons()">hide_icons()</a></li><li><a href="global.html#hide_nodeobj">hide_node</a></li><li><a href="global.html#hide_stripes()">hide_stripes()</a></li><li><a href="global.html#is_checkedobj">is_checked</a></li><li><a href="global.html#is_closedobj">is_closed</a></li><li><a href="global.html#is_disabledobj">is_disabled</a></li><li><a href="global.html#is_hiddenobj">is_hidden</a></li><li><a href="global.html#is_leafobj">is_leaf</a></li><li><a href="global.html#is_loadedobj">is_loaded</a></li><li><a href="global.html#is_loadingobj">is_loading</a></li><li><a href="global.html#is_openobj">is_open</a></li><li><a href="global.html#is_parentobj">is_parent</a></li><li><a href="global.html#is_selectedobj">is_selected</a></li><li><a href="global.html#is_undeterminedobj">is_undetermined</a></li><li><a href="global.html#jsTreeController">jsTreeController</a></li><li><a href="global.html#last_error()">last_error()</a></li><li><a href="global.html#redraw%255Bfull%255D">redraw</a></li><li><a href="global.html#refresh()">refresh()</a></li><li><a href="global.html#refresh_nodeobj">refresh_node</a></li><li><a href="global.html#requirejs">requirejs</a></li><li><a href="global.html#restore_state()">restore_state()</a></li><li><a href="global.html#save_state()">save_state()</a></li><li><a href="global.html#select_all%255Bsupress_event%255D">select_all</a></li><li><a href="global.html#set_theme_variantvariant_name">set_theme_variant</a></li><li><a href="global.html#show_all()">show_all()</a></li><li><a href="global.html#show_checkboxes()">show_checkboxes()</a></li><li><a href="global.html#show_dots()">show_dots()</a></li><li><a href="global.html#show_iconobj">show_icon</a></li><li><a href="global.html#show_icons()">show_icons()</a></li><li><a href="global.html#show_nodeobj">show_node</a></li><li><a href="global.html#show_stripes()">show_stripes()</a></li><li><a href="global.html#toggle_checkboxes()">toggle_checkboxes()</a></li><li><a href="global.html#toggle_dots()">toggle_dots()</a></li><li><a href="global.html#toggle_icons()">toggle_icons()</a></li><li><a href="global.html#toggle_nodeobj">toggle_node</a></li><li><a href="global.html#toggle_stripes()">toggle_stripes()</a></li><li><a href="global.html#uncheck_all()">uncheck_all()</a></li><li><a href="global.html#uncheck_nodeobj">uncheck_node</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Tue Nov 27 2018 09:44:05 GMT+0100 (Paris, Madrid)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

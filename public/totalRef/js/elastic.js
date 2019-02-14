@@ -39,6 +39,7 @@ var elasticProxy = (function () {
             type: "POST",
             url: self.elasticParams.elasticUrl,
             data: payload,
+            crossDomain: true,
             dataType: "json",
             success: function (data, textStatus, jqXHR) {
                 var iterations = 0;

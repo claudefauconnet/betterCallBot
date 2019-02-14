@@ -1,20 +1,217 @@
 {
-  "query": {
-    "bool": {
-      "should": [
-        {
-          "term": {
-            "name": "time"
-          }
-        },
-        {
-          "term": {
-            "synonyms": "time"
-          }
+  "took": 7,
+  "timed_out": false,
+  "_shards": {
+    "total": 5,
+    "successful": 5,
+    "skipped": 0,
+    "failed": 0
+  },
+  "hits": {
+    "total": 32,
+    "max_score": 3.8548007,
+    "hits": [
+      {
+        "_index": "totalref_thesaurus",
+        "_type": "concept",
+        "_id": "_78526896",
+        "_score": 3.8548007,
+        "_source": {
+          "name": "proportioning pump (api 675)",
+          "synonyms": [
+            "proportioning pump",
+            "api 675",
+            "api std 675"
+          ],
+          "ancestors": [
+            "equipment",
+            "pump"
+          ]
         }
-      ],
-      "minimum_should_match": 1,
-      "boost": 1.0
-    }
+      },
+      {
+        "_index": "totalref_thesaurus",
+        "_type": "concept",
+        "_id": "_78526895",
+        "_score": 3.8026793,
+        "_source": {
+          "name": "polymer pump",
+          "synonyms": [
+            "polymer material pumps",
+            "polymer pumps"
+          ],
+          "ancestors": [
+            "equipment",
+            "pump"
+          ]
+        }
+      },
+      {
+        "_index": "totalref_thesaurus",
+        "_type": "concept",
+        "_id": "_78526915",
+        "_score": 3.4910276,
+        "_source": {
+          "name": "melt pump",
+          "synonyms": [
+            "melt pumps",
+            "melt gear pumps"
+          ],
+          "ancestors": [
+            "equipment",
+            "pump"
+          ]
+        }
+      },
+      {
+        "_index": "totalref_thesaurus",
+        "_type": "concept",
+        "_id": "_78526908",
+        "_score": 3.4529252,
+        "_source": {
+          "name": "sealless pumps (hermetically closed)",
+          "synonyms": [
+            "sealless pump",
+            "sealless centrifugal pumps",
+            "sealless pumps",
+            "sealless rotodynamic pumps"
+          ],
+          "ancestors": [
+            "equipment",
+            "pump"
+          ]
+        }
+      },
+      {
+        "_index": "totalref_thesaurus",
+        "_type": "concept",
+        "_id": "_78526892",
+        "_score": 3.3939803,
+        "_source": {
+          "name": "reciprocating displacement pumps",
+          "synonyms": [
+            "reciprocating pump",
+            "reciprocating wash water pumps",
+            "reciprocating pumps",
+            "reciprocating or high speed integrally geared pumps"
+          ],
+          "ancestors": [
+            "equipment",
+            "pump"
+          ]
+        }
+      },
+      {
+        "_index": "totalref_thesaurus",
+        "_type": "concept",
+        "_id": "_78526891",
+        "_score": 3.2705624,
+        "_source": {
+          "name": "vertical pump",
+          "synonyms": [
+            "vertical pumps",
+            "vertical in-line pumps",
+            "vertical barrel pump",
+            "vertical in-line centrifugal pumps",
+            "vertical in-line (type oh3) pumps",
+            "vertical shaft turbine - type pumps",
+            "vertical arrangement for api 685 canned pump",
+            "vertical suspended barrel pump",
+            "vertical high speed pump",
+            "vertical centrifugal pumps",
+            "vertical high-speed pumps",
+            "vertical centrifugal pump",
+            "vertical arrangement of chemical pumps"
+          ],
+          "ancestors": [
+            "equipment",
+            "pump",
+            "centrifugalpump"
+          ]
+        }
+      },
+      {
+        "_index": "totalref_thesaurus",
+        "_type": "concept",
+        "_id": "_78526884",
+        "_score": 3.2401247,
+        "_source": {
+          "name": "centrifugal pump api 610",
+          "synonyms": [
+            "api 610",
+            "api std 610",
+            "610: centrifugal pumps according to api",
+            "610 centrifugal pumps api",
+            "610 centrifugal pumps - api",
+            "610 – centrifugal pumps api",
+            "610: centrifugal pumps api",
+            "610: centrifugal pumps - api",
+            "610 centrifugal pumps according to api",
+            "api 682 and api 610",
+            "610: centrifugal pump according to api"
+          ],
+          "ancestors": [
+            "equipment",
+            "pump",
+            "centrifugalpump"
+          ]
+        }
+      },
+      {
+        "_index": "totalref_thesaurus",
+        "_type": "concept",
+        "_id": "_78526889",
+        "_score": 3.0708153,
+        "_source": {
+          "name": "multistage pump",
+          "synonyms": [
+            "multistage pumps",
+            "multistage between bearing pumps",
+            "multistage between bearings pumps",
+            "multistage centrifugal pumps",
+            "multistage ethylene product pumps",
+            "multistage horizontal centrifugal pump"
+          ],
+          "ancestors": [
+            "equipment",
+            "pump",
+            "centrifugalpump"
+          ]
+        }
+      },
+      {
+        "_index": "totalref_thesaurus",
+        "_type": "concept",
+        "_id": "_78526882",
+        "_score": 2.9246042,
+        "_source": {
+          "name": "pump",
+          "synonyms": [
+            "pumps",
+            "pumped",
+            "pumping"
+          ],
+          "ancestors": [
+            "equipment"
+          ]
+        }
+      },
+      {
+        "_index": "totalref_thesaurus",
+        "_type": "concept",
+        "_id": "_78526948",
+        "_score": 2.8821003,
+        "_source": {
+          "name": " diesel engines for fire water pumps",
+          "synonyms": [
+            "diesel engine fire water pumps"
+          ],
+          "ancestors": [
+            "equipment",
+            "dieselengine"
+          ]
+        }
+      }
+    ]
   }
 }
