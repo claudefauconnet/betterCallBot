@@ -69,6 +69,14 @@ function getStartToEnd(start, theLen) {
 
 //$(document).ready(function() {
 onVisjsGraphReady=function(){
+
+
+    if (callback)
+        callback();
+
+
+
+    return;
     container=$("#graphDiv");
     container.on("mousemove", function(e) {
         if (drag) {

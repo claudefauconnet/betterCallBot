@@ -14,7 +14,8 @@ var visjsGraph = (function () {
         self.currentScale;
 
 
-        self.currentLayoutType = "random";
+        //  self.currentLayoutType = "random";
+        self.currentLayoutType = "hierarchical";
         self.currentLayoutDirection = "";
         self.currentShape = "dot";
 
@@ -33,13 +34,13 @@ var visjsGraph = (function () {
         self.physics = {
 
             "barnesHut": {
-               // "gravitationalConstant": -39950,
+                // "gravitationalConstant": -39950,
                 "gravitationalConstant": -10000,
                 "centralGravity": 0.35
             },
             "minVelocity": 0.75,
-            stabilization:{enabled: false},
-           // timestep: physicsTimeStep,
+            stabilization: {enabled: false},
+            // timestep: physicsTimeStep,
 
         }
         var showNodesLabelMinScale = .3;
@@ -167,19 +168,19 @@ var visjsGraph = (function () {
                  options.scale = _options.scale;*/
             options.manipulation = false;
 
-
+            options.layout = {hierarchical: {sortMethod: "directed", direction: "LR"}}
             if (data.edges.length > 1000)
                 options.layout = {improvedLayout: false}
 
             if (_options.fixed) {
-                options.physics={}
+                options.physics = {}
                 options.physics = false;
             }
             else {
 
                 self.physicsOn = true;
                 self.physics.enabled = true;
-                options.physics = self.physics
+                //  options.physics = self.physics
 
             }
             var firstNode = data.nodes._data[Object.keys(data.nodes._data)[0]];
@@ -189,7 +190,7 @@ var visjsGraph = (function () {
 
 
             var wrapper = $(".vis-configuration-wrapper")
-            if (!wrapper.length) {
+            if (false && !wrapper.length) {
                 options.configure = {
 
                     filter: function (option, path) {
@@ -205,7 +206,7 @@ var visjsGraph = (function () {
                 }
             }
 
-
+            options.smooth = true
             network = new vis.Network(container, data, options);
             //  network.dragView=false;
             self.network = network;
@@ -232,7 +233,7 @@ var visjsGraph = (function () {
             window.setTimeout(function () {
                 self.physics.enabled = false;
                 if (_options.fixed) {
-                    _options.physics={}
+                    _options.physics = {}
                     _options.physics = false;
                 }
                 else {
@@ -243,8 +244,8 @@ var visjsGraph = (function () {
 
                 if (!_options.scale) {
                     network.fit();
-                    if(!_options.fixed)
-                    self.setLabelsVisibility()
+                    if (!_options.fixed)
+                        self.setLabelsVisibility()
                 }
                 if (_options.onFinishDraw) {
 
@@ -410,6 +411,7 @@ var visjsGraph = (function () {
                 //  console.log('deselectEdge Event:', params);
             });
             network.on(" afterDrawing", function (params) {
+                self.context = ctx;
                 onVisjsGraphReady();
                 //  console.log('graph loaded Event');
             });
@@ -520,22 +522,22 @@ var visjsGraph = (function () {
 
 
         self.drawLegend = function (labels, relTypes) {
-            self.legendLabels=[];
-            labels.forEach(function(label){
-                if(label!="" &&  self.legendLabels.indexOf(label)<0 )
-                    self.legendLabels .push(label);
+            self.legendLabels = [];
+            labels.forEach(function (label) {
+                if (label != "" && self.legendLabels.indexOf(label) < 0)
+                    self.legendLabels.push(label);
             })
 
-            expandGraph.initSourceLabel(self.legendLabels)
+            // expandGraph.initSourceLabel(self.legendLabels)
             var html = "<table>";
             var onClick = "";
-            var usedLabels=[];
+            var usedLabels = [];
             for (var i = 0; i < labels.length; i++) {
 
                 var label = labels[i];
-                if(usedLabels.indexOf(label)<0) {
+                if (usedLabels.indexOf(label) < 0) {
                     usedLabels.push(label)
-                    if (label && label != "" && nodeColors[label]){
+                    if (label && label != "" && nodeColors[label]) {
 
                         html += "<tr" + onClick + "><td><span  class='legendSpan' id='legendSpan_" + label + "' style='background-color: " + nodeColors[label] + ";width:20px;height: 20px'>&nbsp;&nbsp;&nbsp;</span></td><td><span style='font-size: 10px'>" + label + "</span></td></tr>"
                     }
@@ -556,7 +558,6 @@ var visjsGraph = (function () {
 
                 $("#graphInfosSpan").html(" scale " + Math.round(scale * 100) + "%");
                 //  if (_options.showNodesLabel == false && scale > self.scaleToShowLabels) {
-
 
 
                 var nodes = [];
@@ -802,24 +803,24 @@ var visjsGraph = (function () {
         }
 
 
-        self.changeLayout = function (select) {
-            self.layout = $(select).val();
+        self.changeLayout = function (layout) {
+            self.layout = layout;
             var options = {}
 
-            if (self.layout == "physics") {
-
+            if (self.layout == "random") {
+                self.layout = "physics";
                 options.physics = {
                     enabled: true,
-                    stabilization:{enabled: false},
+                    stabilization: {enabled: false},
 
                 };
 
             }
 
-            if (self.layout == "hierarchical") {
+            else {
                 options.layout = {
                     hierarchical: {
-                        direction: "UD"
+                        direction: self.layout
                     }
                     ,
                     stabilization: {enabled: false},
@@ -835,7 +836,7 @@ var visjsGraph = (function () {
                 animation: {
                     scale: 1.0,
                     animation: {
-                        duration: 1000,
+                        duration: 500,
                     }
                 }
             })
@@ -854,13 +855,14 @@ var visjsGraph = (function () {
                         {
                             scale: 1.0,
                             animation: {
-                                duration: 1000,
+                                duration: 500,
                             }
                         });
                 }
 
             }
         }
+
 
         self.findNode = function (expression, color, radius) {
             var regex = new RegExp(".*" + expression + ".*", 'i');
@@ -1196,55 +1198,56 @@ var visjsGraph = (function () {
 
         }
 
+        self.filterGraphByIds = function (ids, show) {
+            var selectedNodes = [];
+            var selectedEdges = [];
 
-        self.filterGraph = function (objectType, booleanOption, property, operator, value, type) {
+            ids.forEach(function (id) {
+                selectedNodes.push({id: "" + id, hidden: !show});
+                var connectedEdgesIds = network.getConnectedEdges("" + id);
+                connectedEdgesIds.forEach(function (edgeId) {
+                    selectedEdges.push({id: "" + edgeId, hidden: !show})
+                })
+            })
+            self.nodes.update(selectedNodes);
+            self.edges.update(selectedEdges);
+
+        }
+
+
+        self.filterGraph = function (booleanOption, property, value) {
             //  self.saveGraph();
 
 
-            if (objectType == "node") {
+            var selectedNodes = [];
+            var selectedEdges = [];
+            for (var key in  self.nodes._data) {
 
 
-                var selectedNodes = [];
-                var selectedEdges = [];
-                for (var key in  self.nodes._data) {
+                var node = self.nodes._data[key];
+
+                var connectedEdgesIds = network.getConnectedEdges(key);
+
+                var nodeIsOk =( node[property] && node[property] == value)?true:false;
+
+                if(nodeIsOk===true)
+                    var x=1
+                if (booleanOption == "not")
+                    nodeIsOk = !nodeIsOk;
+
+                var hidden = (nodeIsOk || booleanOption == "all") ? false : true;
+                selectedNodes.push({id: "" + node.id, hidden: hidden});
+
+                connectedEdgesIds.forEach(function (edgeId) {
+                    selectedEdges.push({id: "" + edgeId, hidden: hidden})
+                })
 
 
-                    var node = self.nodes._data[key];
-                    if (context.currentNode && context.currentNode.id && context.currentNode.id == node.id)
-                        ;
-                    else {
-                        var connectedEdgesIds = network.getConnectedEdges(key);
-
-                        /* var nodeEdges = [];
-                          for (var i = 0; i < connectedEdges.length; i++) {
-                              var connectedEdgeId = connectedEdges[i].id;
-                              nodeEdges.push(connectedEdgeId);
-
-                          }*/
-
-                        var nodeOk = paint.isLabelNodeOk(node, property, operator, value, type);
-                        if (booleanOption == "not")
-                            nodeOk = !nodeOk;
-
-                        var hidden = (nodeOk || booleanOption == "all") ? false : true;
-                        selectedNodes.push({id: "" + node.id, hidden: hidden});
-
-                        connectedEdgesIds.forEach(function (edgeId) {
-
-
-                            selectedEdges.push({id: "" + edgeId, hidden: hidden})
-                        })
-
-
-                    }
-                }
-                self.nodes.update(selectedNodes);
-                self.edges.update(selectedEdges);
             }
-            else if (objectType == "relation") {
 
-                //    TO DO   !!!!
-            }
+            self.nodes.update(selectedNodes);
+            self.edges.update(selectedEdges);
+
         }
 
 

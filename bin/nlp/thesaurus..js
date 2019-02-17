@@ -1,4 +1,5 @@
 var skos = require("./skos..js");
+var elasticQuery = require("./elasticQuery..js");
 var fs = require('fs');
 var request = require("request");
 var async = require('async');
@@ -26,16 +27,83 @@ var thesaurus = {
 
 
 
+    buildNeo4jGraphThesaurus: function (skosFile,souslesensSchema) {
+
+
+    },
 
 
 
 
 
-    buildElasticThesaurus: function () {
+
+    buildElasticThesaurus: function (skosFile,elasticIndex) {
+        var thesaurus = [];
         async.series([
             //transform skos toJson
             function(callback){
-                skos.loadSkosToTree("totalRef", function (err, result) {
+                skos.loadSkosToTree(skosFile,null, function (err, result) {
+                    if(err)
+                        callback(err);
+
+                    result.forEach(function (entry) {
+
+                        if(entry.id=="C01194")
+                            var x=1
+                        var ancestors = entry.parent.substring(entry.parent.indexOf("#") + 1).split("-")
+                      // console.log( ancestors[0])
+                        ancestors.forEach(function(ancestor, indice){
+                            if(indice>0)
+                                var x=3;
+                            else {
+                                if (ancestor == "")
+                                    ancestor = "root";
+                                ancestors[indice] = ancestor.toLowerCase()
+                            }
+                        })
+                        var synonyms = [];
+                        entry.data.synonyms.forEach(function (entry) {
+                            synonyms.push(entry)
+                        })
+                        thesaurus.push({name: entry.text, synonyms: synonyms,parent:ancestors[0], ancestors: ancestors,id:entry.id.toLowerCase()});
+
+                    })
+
+//console.log(JSON.stringify(thesaurus,null,2))
+                    callback(null);
+                })
+            },
+            function (callback) {
+                if (true) {
+
+                    elasticQuery.indexJsonArray(elasticIndex, elasticIndex, thesaurus, {}, function (err, result) {
+                        if(err)
+                            callback(err);
+
+                        callback(null);
+                    })
+
+
+                }
+            }
+        ],function(err){
+            if(err)
+                console.log(err)
+            console.log("index "+elasticIndex+"done")
+
+        })
+
+
+    },
+
+
+
+
+    buildElasticThesaurusXX: function () {
+        async.series([
+            //transform skos toJson
+            function(callback){
+                skos.loadSkosToTree("totalRef", null,function (err, result) {
                     var xx = result;
                     var thesaurus = [];
                     result.forEach(function (entry) {
@@ -167,27 +235,9 @@ var thesaurus = {
 }
 
 if (true) {
-thesaurus.buildElasticThesaurus();
-    // https://www.monterail.com/blog/how-to-index-objects-elasticsearch
-    /*
-    {"mappings": {
-  "thesaurus": {
-    "properties": {
-      "text": { "type": "text" },
-        "type": { "type": "keyword" },
-      "data": {
-        "type": "nested",
-        "properties": {
-          "parentText": { "type": "text" },
-          "synonyms": { "type": "nested"}
-        }
-      }
-    }
-  }
-}
+//thesaurus.buildElasticThesaurus("thesaurusIngenieur","thesaurus-ingenieur");
+ thesaurus.buildElasticThesaurus("unescothes","thesaurus-unesco");
 
-}
-     */
 
 }
 

@@ -1,27 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-    <script src="js/visjs/visJsGraph.js"></script>
+    <meta charset="UTF-8">
+    <title>Title</title>
     <script src="js/visjs/visjs.js"></script>
-    <link href="js/visjs/vis-network.min.css.js">
+    <script src="js/visjs/visJsGraph.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="js/visjs/vis-network.min.css.js"/>
+
+
     <script src="../common/js/jquery/jquery.min.js"></script>
     <script src="../common/js/jquery/jquery-ui.min.js"></script>
+    <script src="js/async.js"></script>
 
     <script src="js/mainController.js"></script>
     <script src="js/elastic.js"></script>
+<script>
+    var totalWidth,totalHeight
 
-    <meta charset="UTF-8">
-    <title>Title</title>
+   $(function(){
+
+
+       totalWidth = $(window).width() - 20;
+       totalHeight = $(window).height() - 20;
+       $("#graphDiv").width(totalWidth).height(totalHeight);
+    })
+</script>
 </head>
 <body>
 
 
-<button onclick="mainController.loadNodes(407)"> load</button>
+
+thesaurus<select onchange=" mainController.loadThesaurus($(this).val())">
+    <option></option>
+    <option >thesaurus-ingenieur</option>
+    <option >thesaurus-unesco</option>
+</select>
 
 
-<div id="graphDiv" style="width: 500px; height: 500px">
+layout<select id="layoutSelect" onchange="visjsGraph.changeLayout($(this).val())">
+    <option value="LR">hierarchical left right</option>
+    <option value="UD">hierarchical top down</option>
+    <option value="random">random seed</option>
+
+
+</select>
+<input id="searchInput"> <button onclick="mainController.search($('#searchInput').val())">chercher</button>
+<div id="graphDiv" style="width: 600px; height: 400px">
+
+
 </div>
+
+
+
+
 
 </body>
 </html>
+
+
